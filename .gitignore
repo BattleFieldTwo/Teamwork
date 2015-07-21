@@ -1,0 +1,5 @@
+﻿*.exe.manifest
+*.cache
+*.suo
+*.exe
+*.manifest
