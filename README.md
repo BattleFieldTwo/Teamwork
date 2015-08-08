@@ -7,3 +7,7 @@ This is the official repository for the teamwork project in High Quality Code @ 
   - Vyara Hristova - [vyarah](https://telerikacademy.com/Users/vyarah) @ Telerik Academy Student System.
   - Tsvetanka Chipilova - [zvet80](https://telerikacademy.com/Users/zvet80) @ Telerik Academy Student System.
   - Georgi Kermekchiev - [jokerbg](https://telerikacademy.com/Users/jokerbg) @ Telerik Academy Student System.
+
+# Official Telerik Academy HQC repo:
+  - [HQC Teamworks initial repo](https://github.com/TelerikAcademy/High-Quality-Code/tree/master/Teamwork)
+  - This repository contains basic guidelines and requirements for all the teams.
