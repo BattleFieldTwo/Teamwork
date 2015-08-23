@@ -52,7 +52,7 @@
     <Compile Include="MineThree.cs" />
     <Compile Include="MineTwo.cs" />
     <Compile Include="MineType.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="BattleField.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
