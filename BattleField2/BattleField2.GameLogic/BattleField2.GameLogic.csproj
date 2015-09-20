@@ -48,10 +48,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\BattleField2.Common\BattleField2.Common.csproj">
-      <Project>{79a78a9f-0c29-476b-847b-2f32b6fb9335}</Project>
-      <Name>BattleField2.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BattleField2.Models\BattleField2.Models.csproj">
       <Project>{64daf9bf-dbef-4264-a55c-a9274521902e}</Project>
       <Name>BattleField2.Models</Name>
