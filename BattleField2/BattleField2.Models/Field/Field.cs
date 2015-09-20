@@ -99,21 +99,6 @@
             }
         }
 
-        //tuka sa mogyshtite metodi za gyrmejite
-
-        //Checking if entered coordinates are valid
-        private bool PrevIsValid(int coord)
-        {
-            bool result = (coord - 1) >= 0;
-            return result;
-        }
-
-        private bool NextIsValid(int coord, int size)
-        {
-            bool result = (coord + 1) < size;
-            return result;
-        }
-
         public int CountRemainingMines()
         {
             int count = 0;
