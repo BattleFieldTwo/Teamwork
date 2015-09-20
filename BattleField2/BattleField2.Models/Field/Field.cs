@@ -127,8 +127,6 @@
                 }
             }
 
-            Console.WriteLine(count);
-
             return count;
         }
 
