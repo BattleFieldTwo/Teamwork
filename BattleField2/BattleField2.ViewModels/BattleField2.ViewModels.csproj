@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EDCAE976-CB76-422C-B61F-F431949751C9}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{66C463BE-C82D-44B1-8778-989270855A0A}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BattleField2.GameLogic</RootNamespace>
-    <AssemblyName>BattleField2.GameLogic</AssemblyName>
+    <RootNamespace>BattleField2.ViewModels</RootNamespace>
+    <AssemblyName>BattleField2.ViewModels</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -41,8 +44,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GameEngine.cs" />
-    <Compile Include="GameMain.cs" />
+    <Compile Include="ConsoleView.cs" />
+    <Compile Include="Contracts\IViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,10 +59,6 @@
     <ProjectReference Include="..\BattleField2.Models\BattleField2.Models.csproj">
       <Project>{64daf9bf-dbef-4264-a55c-a9274521902e}</Project>
       <Name>BattleField2.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BattleField2.ViewModels\BattleField2.ViewModels.csproj">
-      <Project>{66c463be-c82d-44b1-8778-989270855a0a}</Project>
-      <Name>BattleField2.ViewModels</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

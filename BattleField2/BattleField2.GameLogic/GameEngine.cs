@@ -2,116 +2,69 @@
 {
     using System;
 
+    using BattleField2.Common;
+    using BattleField2.Models.Coordinates;
     using BattleField2.Models.Contracts;
     using BattleField2.Models.Field;
     using BattleField2.Models.Mines;
+    using BattleField2.ViewModels.Contracts;
 
     public class GameEngine
     {
-        public static void Main()
+        private readonly IViewModel renderer;
+        private Field currentBattleField;
+        private Coordinates currentCoordinates;
+        private int currentFieldSize;
+
+        public GameEngine(IViewModel renderer)
         {
-            string inputFieldSize;
+            // TODO: Make a full property and checks to this!
+            this.renderer = renderer;
+        }
 
-            Console.WriteLine("Welcome to the Battle Field game");
+        public void InitializeGame()
+        {
+            this.renderer.DisplayWelcomeMessage(Constants.WelcomeMessage);
 
-            do
-            {
-                Console.Write("Enter legal size of board: ");
-                inputFieldSize = Console.ReadLine();
-            } while (!InputFieldSizeIsValid(inputFieldSize));
+            this.currentFieldSize = this.renderer.GetFieldSize(Constants.InviteToGiveSizeMessage);
 
-            int currentFieldSize = Int32.Parse(inputFieldSize);
+            this.currentBattleField = new Field(currentFieldSize);
 
-            Field currentBattleField = new Field(currentFieldSize);
-            currentBattleField.GenerateField();
-            currentBattleField.PositionMines();
-            DrawField(currentBattleField);
+            this.currentBattleField.GenerateField();
 
+            this.currentBattleField.PositionMines();
 
-            string coordinates;
-            int XCoord, YCoord;
-
+            this.renderer.DrawField(currentBattleField);
+        }
+        
+        public void PlayGame()
+        {
             do
             {
                 do
                 {
-                    Console.Write("Enter coordinates: ");
-                    coordinates = Console.ReadLine();
-                    XCoord = Convert.ToInt32(coordinates.Substring(0, 1));
-                    YCoord = Convert.ToInt32(coordinates.Substring(2));
+                    this.currentCoordinates = this.renderer.GetInputCoordinates(Constants.InviteToEnterCoordinatesMessage);
 
-                    if ((XCoord < 0) || (YCoord > currentBattleField.CurrentFieldSize - 1) ||
-                        (currentBattleField.FieldPositions[XCoord, YCoord] == " - "))
+                    if (!this.currentBattleField.ValidateMoveCoordinates(this.currentCoordinates))
                     {
-                        Console.WriteLine("Invalid Move");
+                        this.renderer.NotifyForInvalidMove(Constants.InvalidMoveNotificationMessage);
                     }
-                } while ((XCoord < 0) || (YCoord > currentBattleField.CurrentFieldSize - 1) || (currentBattleField.FieldPositions[XCoord, YCoord] == " - "));
+                } while (!this.currentBattleField.ValidateMoveCoordinates(this.currentCoordinates));
 
-                int mineValue = Convert.ToInt32(currentBattleField.FieldPositions[XCoord, YCoord]);
+                int mineValue = Convert.ToInt32(this.currentBattleField.FieldPositions[this.currentCoordinates.Row, this.currentCoordinates.Col]);
 
-                IMine currentMine = MineFactory.GetMine(mineValue, XCoord, YCoord);
+                IMine currentMine = MineFactory.GetMine(mineValue, currentCoordinates);
 
-                currentBattleField.FieldPositions = currentMine.Detonate(currentBattleField.CurrentFieldSize, currentBattleField.FieldPositions);
+                this.currentBattleField.FieldPositions = currentMine.Detonate(this.currentBattleField.CurrentFieldSize,
+                    this.currentBattleField.FieldPositions);
 
-                currentBattleField.DetonatedMines++;
-                DrawField(currentBattleField);
+                this.currentBattleField.DetonatedMines++;
+                
+                this.renderer.DrawField(this.currentBattleField);
 
-            } while (currentBattleField.CountRemainingMines() != 0);
+            } while (this.currentBattleField.CountRemainingMines() > 0);
 
-            Console.WriteLine("Game Over. Detonated Mines: " + currentBattleField.DetonatedMines);
-            Console.ReadKey();
-        }
-
-        private static bool InputFieldSizeIsValid(string inputFieldSize)
-        {
-            int fieldSize;
-            if(!(Int32.TryParse(inputFieldSize, out fieldSize)))
-            {
-                return false;
-            }
-            else if (fieldSize < 0)
-            {
-                return false;
-            }
-            else if (fieldSize > 11)
-            {
-                return false;
-            }
-
-            return true;
-        }
-
-        private static void DrawField(Field currentField)
-        {
-            //top side numbers
-            Console.Write("   ");
-            for (int i = 0; i < currentField.CurrentFieldSize; i++)
-            {
-                Console.Write(" " + i + "  ");
-            }
-            Console.WriteLine("");
-
-            Console.Write("    ");
-            for (int i = 0; i < 4 * currentField.CurrentFieldSize - 3; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("");
-            //top side numbers
-
-
-            Console.WriteLine("");
-
-            for (int i = 0; i < currentField.CurrentFieldSize; i++)
-            {
-                //left side numbers
-                Console.Write(i.ToString() + "|");
-                for (int j = 0; j < currentField.CurrentFieldSize; j++)
-                {
-                    Console.Write(" " + currentField.FieldPositions[i, j]);
-                }
-                Console.WriteLine(""); Console.WriteLine(""); Console.WriteLine("");
-            }
+            this.renderer.GameOver(Constants.GameOverMessage, this.currentBattleField.DetonatedMines);
         }
     }
 }

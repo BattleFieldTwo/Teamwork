@@ -2,6 +2,8 @@
 {
     using System;
 
+    using BattleField2.Models.Coordinates;
+
     public class Field
     {
         private int currentFieldSize;
@@ -128,7 +130,22 @@
                 }
             }
 
+            Console.WriteLine(count);
+
             return count;
+        }
+
+        public bool ValidateMoveCoordinates(Coordinates inputCoordinates)
+        {
+            if ((inputCoordinates.Col < 0) ||
+                (inputCoordinates.Col > this.CurrentFieldSize - 1) ||
+                (this.FieldPositions[inputCoordinates.Row, inputCoordinates.Col] == " - ") ||
+                (this.FieldPositions[inputCoordinates.Row, inputCoordinates.Col] == " X "))
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

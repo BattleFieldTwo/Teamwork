@@ -1,12 +1,16 @@
 ﻿namespace BattleField2.Models.Mines
 {
     using BattleField2.Models.Contracts;
+    using BattleField2.Models.Coordinates;
 
     public class MineFactory
     {
-        public static IMine GetMine(int type, int x, int y)
+        public static IMine GetMine(int type, Coordinates currentCoordinates)
         {
             IMine currentMine = null;
+            int x = currentCoordinates.Col;
+            int y = currentCoordinates.Row;
+
             switch (type)
             {
                 case 1:
