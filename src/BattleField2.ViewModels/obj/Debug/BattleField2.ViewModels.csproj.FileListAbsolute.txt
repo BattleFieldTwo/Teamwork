@@ -1,0 +1,2 @@
+C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\src\BattleField2.ViewModels\obj\Debug\BattleField2.ViewModels.csprojResolveAssemblyReference.cache
+C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\src\BattleField2.ViewModels\bin\Debug\BattleField2.ViewModels.exe.config
