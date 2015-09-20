@@ -11,51 +11,51 @@
         {
             fieldPositions = base.Detonate(currentFieldSize, fieldPositions);
 
-            if (PrevIsValid(this.XCoord - 1))
+            if (PrevIsValid(this.Row - 1))
             {
-                if (PrevIsValid(this.YCoord))
+                if (PrevIsValid(this.Col))
                 {
-                    fieldPositions[this.XCoord - 2, this.YCoord - 1] = " X ";
+                    fieldPositions[this.Row - 2, this.Col - 1] = " X ";
                 }
-                if (NextIsValid(this.YCoord, currentFieldSize))
+                if (NextIsValid(this.Col, currentFieldSize))
                 {
-                    fieldPositions[this.XCoord - 2, this.YCoord + 1] = " X ";
+                    fieldPositions[this.Row - 2, this.Col + 1] = " X ";
                 }
             }
 
-            if (PrevIsValid(this.YCoord - 1))
+            if (PrevIsValid(this.Col - 1))
             {
-                if (PrevIsValid(this.XCoord))
+                if (PrevIsValid(this.Row))
                 {
-                    fieldPositions[this.XCoord - 1, this.YCoord - 2] = " X ";
+                    fieldPositions[this.Row - 1, this.Col - 2] = " X ";
                 }
-                if (NextIsValid(this.XCoord, currentFieldSize))
+                if (NextIsValid(this.Row, currentFieldSize))
                 {
-                    fieldPositions[this.XCoord + 1, this.YCoord - 2] = " X ";
+                    fieldPositions[this.Row + 1, this.Col - 2] = " X ";
                 }
             }
 
-            if (NextIsValid(this.XCoord + 1, currentFieldSize))
+            if (NextIsValid(this.Row + 1, currentFieldSize))
             {
-                if (PrevIsValid(this.YCoord))
+                if (PrevIsValid(this.Col))
                 {
-                    fieldPositions[this.XCoord + 2, this.YCoord - 1] = " X ";
+                    fieldPositions[this.Row + 2, this.Col - 1] = " X ";
                 }
-                if (NextIsValid(this.YCoord, currentFieldSize))
+                if (NextIsValid(this.Col, currentFieldSize))
                 {
-                    fieldPositions[this.XCoord + 2, this.YCoord + 1] = " X ";
+                    fieldPositions[this.Row + 2, this.Col + 1] = " X ";
                 }
             }
 
-            if (NextIsValid(this.YCoord + 1, currentFieldSize))
+            if (NextIsValid(this.Col + 1, currentFieldSize))
             {
-                if (PrevIsValid(this.XCoord))
+                if (PrevIsValid(this.Row))
                 {
-                    fieldPositions[this.XCoord - 1, this.YCoord + 2] = " X ";
+                    fieldPositions[this.Row - 1, this.Col + 2] = " X ";
                 }
-                if (NextIsValid(this.XCoord, currentFieldSize))
+                if (NextIsValid(this.Row, currentFieldSize))
                 {
-                    fieldPositions[this.XCoord + 1, this.YCoord + 2] = " X ";
+                    fieldPositions[this.Row + 1, this.Col + 2] = " X ";
                 }
             }
 

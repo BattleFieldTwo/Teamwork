@@ -44,8 +44,6 @@
                 Console.Write("-");
             }
             Console.WriteLine("");
-            //top side numbers
-
 
             Console.WriteLine("");
 
@@ -69,9 +67,9 @@
 
             // TODO: Check if the input is in valid format!!!
 
-            int XCoord = Convert.ToInt32(coordinates.Substring(0, 1));
-            int YCoord = Convert.ToInt32(coordinates.Substring(2));
-            Coordinates currentCoordinates = new Coordinates(YCoord, XCoord);
+            int rowCoord = Convert.ToInt32(coordinates.Substring(0, 1));
+            int colCoord = Convert.ToInt32(coordinates.Substring(2, 1));
+            Coordinates currentCoordinates = new Coordinates(rowCoord, colCoord);
 
             return currentCoordinates;
         }

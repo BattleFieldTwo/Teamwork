@@ -8,9 +8,9 @@ namespace BattleField2.Models.Contracts
 {
     public interface IMine
     {
-        int XCoord { get; set; }
+        int Row { get; set; }
 
-        int YCoord { get; set; }
+        int Col { get; set; }
 
         bool PrevIsValid(int coord);
 

@@ -4,30 +4,30 @@
 
     public class MineOne : IMine
     {
-        private int xCoord;
-        private int yCoord;
+        private int col;
+        private int row;
 
 
-        public int XCoord
+        public int Row
         {
-            get { return xCoord; }
+            get { return col; }
 
             // TODO: Checks!
-            set { xCoord = value; }
+            set { col = value; }
         }
 
-        public int YCoord
+        public int Col
         {
-            get { return yCoord; }
+            get { return row; }
 
             // TODO: Checks!
-            set { yCoord = value; }
+            set { row = value; }
         }
 
-        public MineOne(int xCoord, int yCoord)
+        public MineOne(int row, int col)
         {
-            this.XCoord = xCoord;
-            this.YCoord = yCoord;
+            this.Row = col;
+            this.Col = row;
         }
         
         
@@ -46,23 +46,23 @@
 
         public virtual string[,] Detonate(int currentFieldSize, string[,] fieldPositions)
         {
-            fieldPositions[this.XCoord, this.YCoord] = " X ";
+            fieldPositions[this.Row, this.Col] = " X ";
 
-            if (PrevIsValid(this.XCoord) && PrevIsValid(this.YCoord))
+            if (PrevIsValid(this.Row) && PrevIsValid(this.Col))
             {
-                fieldPositions[this.XCoord - 1, this.YCoord - 1] = " X ";
+                fieldPositions[this.Row - 1, this.Col - 1] = " X ";
             }
-            if (PrevIsValid(this.XCoord) && NextIsValid(this.YCoord, currentFieldSize))
+            if (PrevIsValid(this.Row) && NextIsValid(this.Col, currentFieldSize))
             {
-                fieldPositions[this.XCoord - 1, this.YCoord + 1] = " X ";
+                fieldPositions[this.Row - 1, this.Col + 1] = " X ";
             }
-            if (NextIsValid(this.XCoord, currentFieldSize) && PrevIsValid(this.YCoord))
+            if (NextIsValid(this.Row, currentFieldSize) && PrevIsValid(this.Col))
             {
-                fieldPositions[this.XCoord + 1, this.YCoord - 1] = " X ";
+                fieldPositions[this.Row + 1, this.Col - 1] = " X ";
             }
-            if (NextIsValid(this.XCoord, currentFieldSize) && NextIsValid(this.YCoord, currentFieldSize))
+            if (NextIsValid(this.Row, currentFieldSize) && NextIsValid(this.Col, currentFieldSize))
             {
-                fieldPositions[this.XCoord + 1, this.YCoord + 1] = " X ";
+                fieldPositions[this.Row + 1, this.Col + 1] = " X ";
             }
 
             return fieldPositions;

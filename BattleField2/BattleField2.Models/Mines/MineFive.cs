@@ -11,21 +11,21 @@
         {
             fieldPositions = base.Detonate(currentFieldSize, fieldPositions);
 
-            if (PrevIsValid(this.XCoord - 1) && PrevIsValid(this.YCoord - 1))
+            if (PrevIsValid(this.Row - 1) && PrevIsValid(this.Col - 1))
             {
-                fieldPositions[this.XCoord - 2, this.YCoord - 2] = " X ";
+                fieldPositions[this.Row - 2, this.Col - 2] = " X ";
             }
-            if (PrevIsValid(this.XCoord - 1) && NextIsValid(this.YCoord + 1, currentFieldSize))
+            if (PrevIsValid(this.Row - 1) && NextIsValid(this.Col + 1, currentFieldSize))
             {
-                fieldPositions[this.XCoord - 2, this.YCoord + 2] = " X ";
+                fieldPositions[this.Row - 2, this.Col + 2] = " X ";
             }
-            if (NextIsValid(this.XCoord + 1, currentFieldSize) && PrevIsValid(this.YCoord - 1))
+            if (NextIsValid(this.Row + 1, currentFieldSize) && PrevIsValid(this.Col - 1))
             {
-                fieldPositions[this.XCoord + 2, this.YCoord - 2] = " X ";
+                fieldPositions[this.Row + 2, this.Col - 2] = " X ";
             }
-            if (NextIsValid(this.XCoord + 1, currentFieldSize) && NextIsValid(this.YCoord + 1, currentFieldSize))
+            if (NextIsValid(this.Row + 1, currentFieldSize) && NextIsValid(this.Col + 1, currentFieldSize))
             {
-                fieldPositions[this.XCoord + 2, this.YCoord + 2] = " X ";
+                fieldPositions[this.Row + 2, this.Col + 2] = " X ";
             }
 
             return fieldPositions;

@@ -8,25 +8,25 @@
         public static IMine GetMine(int type, Coordinates currentCoordinates)
         {
             IMine currentMine = null;
-            int x = currentCoordinates.Col;
-            int y = currentCoordinates.Row;
+            int col = currentCoordinates.Col;
+            int row = currentCoordinates.Row;
 
             switch (type)
             {
                 case 1:
-                    currentMine = new MineOne(x, y);
+                    currentMine = new MineOne(col, row);
                     break;
                 case 2:
-                    currentMine = new MineTwo(x, y);
+                    currentMine = new MineTwo(col, row);
                     break;
                 case 3:
-                    currentMine = new MineThree(x, y);
+                    currentMine = new MineThree(col, row);
                     break;
                 case 4:
-                    currentMine = new MineFour(x, y);
+                    currentMine = new MineFour(col, row);
                     break;
                 case 5:
-                    currentMine = new MineFive(x, y);
+                    currentMine = new MineFive(col, row);
                     break;
                 default:
                     break;

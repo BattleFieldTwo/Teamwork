@@ -62,7 +62,7 @@
         }
 
         public void PositionMines()
-        {//tuka ne sym siguren kakvo tochno pravq ama pyk raboti
+        {
             int minesDownLimit = Convert.ToInt32(0.15 * this.CurrentFieldSize * this.CurrentFieldSize);
             int minesUpperLimit = Convert.ToInt32(0.30 * this.CurrentFieldSize * this.CurrentFieldSize);
 
@@ -82,15 +82,12 @@
 
                 do
                 {
-                    int currentMineXCoordinate;
-                    int currentMineYCoordinate;
+                    int currentMineRow = Convert.ToInt32(rnd.Next(0, this.CurrentFieldSize - 1));
+                    int currentMineCol = Convert.ToInt32(rnd.Next(0, this.CurrentFieldSize - 1));
 
-                    currentMineXCoordinate = Convert.ToInt32(rnd.Next(0, this.CurrentFieldSize - 1));
-                    currentMineYCoordinate = Convert.ToInt32(rnd.Next(0, this.CurrentFieldSize - 1));
-
-                    if (this.FieldPositions[currentMineXCoordinate, currentMineYCoordinate] == " - ")
+                    if (this.FieldPositions[currentMineRow, currentMineCol] == " - ")
                     {
-                        this.FieldPositions[currentMineXCoordinate, currentMineYCoordinate] =
+                        this.FieldPositions[currentMineRow, currentMineCol] =
                             " " + Convert.ToString(rnd.Next(1, 6) + " ");
                         alreadyPositionedMine = false;
                     }
@@ -123,7 +120,7 @@
 
             for (int i = 0; i < this.CurrentFieldSize; i++)
             {
-                for (int j = 0; i < this.CurrentFieldSize; i++)
+                for (int j = 0; j < this.CurrentFieldSize; j++)
                 {
                     if ((this.FieldPositions[i, j] != " X ") && (this.FieldPositions[i, j] != " - "))
                         count++;
