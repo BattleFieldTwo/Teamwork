@@ -1,12 +1,8 @@
 ﻿namespace BattleField2.GameLogic
 {
-    using System;
-
     using BattleField2.Common;
     using BattleField2.Models.Coordinates;
-    using BattleField2.Models.Contracts;
     using BattleField2.Models.Field;
-    using BattleField2.Models.Mines;
     using BattleField2.ViewModels.Contracts;
 
     public class GameEngine

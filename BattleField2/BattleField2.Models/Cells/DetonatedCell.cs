@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace BattleField2.Models.Cells
+﻿namespace BattleField2.Models.Cells
 {
     using BattleField2.Models.Coordinates;
 

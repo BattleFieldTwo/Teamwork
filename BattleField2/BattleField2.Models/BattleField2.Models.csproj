@@ -49,7 +49,7 @@
     <Compile Include="Cells\DetonatedCell.cs" />
     <Compile Include="Cells\EmptyCell.cs" />
     <Compile Include="Cells\Cell.cs" />
-    <Compile Include="Contracts\Mine.cs" />
+    <Compile Include="Mines\Mine.cs" />
     <Compile Include="Coordinates\Coordinates.cs" />
     <Compile Include="Field\Field.cs" />
     <Compile Include="Mines\MineFactory.cs" />

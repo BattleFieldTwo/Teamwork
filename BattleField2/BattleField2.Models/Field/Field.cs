@@ -1,12 +1,10 @@
-﻿using BattleField2.Models.Mines;
-
-namespace BattleField2.Models.Field
+﻿namespace BattleField2.Models.Field
 {
     using System;
 
     using BattleField2.Models.Cells;
     using BattleField2.Models.Coordinates;
-    using BattleField2.Models.Contracts;
+    using BattleField2.Models.Mines;
 
     public class Field
     {

@@ -1,4 +1,4 @@
-﻿namespace BattleField2.Models.Contracts
+﻿namespace BattleField2.Models.Mines
 {
     using BattleField2.Models.Coordinates;
     using BattleField2.Models.Cells;

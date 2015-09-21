@@ -1,13 +1,6 @@
 ﻿namespace BattleField2.Models.Cells
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
-
     using BattleField2.Models.Mines;
-    using BattleField2.Models.Contracts;
     using BattleField2.Models.Coordinates;
 
     class CellFactory

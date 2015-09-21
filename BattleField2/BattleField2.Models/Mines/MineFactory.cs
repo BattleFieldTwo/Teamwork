@@ -1,6 +1,5 @@
 ﻿namespace BattleField2.Models.Mines
 {
-    using BattleField2.Models.Contracts;
     using BattleField2.Models.Coordinates;
 
     public class MineFactory
