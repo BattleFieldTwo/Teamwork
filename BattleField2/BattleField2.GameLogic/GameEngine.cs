@@ -37,6 +37,9 @@
         
         public void PlayGame()
         {
+            this.view.GiveMinesCount(this.currentBattleField.InitialMines);
+
+            int remainingMines;
             do
             {
                 Coordinates currentCoordinates;
@@ -50,18 +53,17 @@
                     }
                 } while (!this.currentBattleField.ValidateMoveCoordinates(currentCoordinates));
 
-                int mineValue = Convert.ToInt32(this.currentBattleField.FieldPositions[currentCoordinates.Row, currentCoordinates.Col]);
-
-                IMine currentMine = MineFactory.GetMine(mineValue, currentCoordinates);
-
-                this.currentBattleField.FieldPositions = currentMine.Detonate(this.currentBattleField.CurrentFieldSize,
-                    this.currentBattleField.FieldPositions);
-
+                this.currentBattleField.FieldPositions = this.currentBattleField.FieldPositions[currentCoordinates.Row, currentCoordinates.Col].Detonate(
+                    this.currentBattleField.CurrentFieldSize, this.currentBattleField.FieldPositions);
+                
                 this.currentBattleField.DetonatedMines++;
                 
                 this.view.DrawField(this.currentBattleField);
 
-            } while (this.currentBattleField.CountRemainingMines() > 0);
+                remainingMines = this.currentBattleField.CountRemainingMines();
+                this.view.GiveMinesCount(remainingMines);
+
+            } while (remainingMines > 0);
 
             this.view.GameOver(Constants.GameOverMessage, this.currentBattleField.DetonatedMines);
         }

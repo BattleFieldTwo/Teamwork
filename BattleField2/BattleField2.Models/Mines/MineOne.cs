@@ -1,71 +1,47 @@
 ﻿namespace BattleField2.Models.Mines
 {
+    using BattleField2.Models.Cells;
     using BattleField2.Models.Contracts;
+    using BattleField2.Models.Coordinates;
 
-    public class MineOne : IMine
+
+    public class MineOne : Mine
     {
-        private int col;
-        private int row;
-
-
-        public int Row
+        public MineOne(Coordinates currentCoordinates)
+            : base(currentCoordinates)
         {
-            get { return col; }
-
-            // TODO: Checks!
-            set { col = value; }
-        }
-
-        public int Col
-        {
-            get { return row; }
-
-            // TODO: Checks!
-            set { row = value; }
-        }
-
-        public MineOne(int row, int col)
-        {
-            this.Row = col;
-            this.Col = row;
         }
         
-        
-        //Checking if entered coordinates are valid
-        public bool PrevIsValid(int coord)
+        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)
         {
-            bool result = (coord - 1) >= 0;
-            return result;
-        }
+            int row = this.Coordinates.Row;
+            int col = this.Coordinates.Col;
 
-        public bool NextIsValid(int coord, int size)
-        {
-            bool result = (coord + 1) < size;
-            return result;
-        }
+            fieldPositions[row, col] = CellFactory.GetCell(this.Coordinates, CellType.Detonated);
 
-        public virtual string[,] Detonate(int currentFieldSize, string[,] fieldPositions)
-        {
-            fieldPositions[this.Row, this.Col] = " X ";
-
-            if (PrevIsValid(this.Row) && PrevIsValid(this.Col))
+            if (PrevIsValid(row) && PrevIsValid(col))
             {
-                fieldPositions[this.Row - 1, this.Col - 1] = " X ";
+                fieldPositions = fieldPositions[row - 1, col - 1].Detonate(currentFieldSize, fieldPositions);
             }
-            if (PrevIsValid(this.Row) && NextIsValid(this.Col, currentFieldSize))
+            if (PrevIsValid(row) && NextIsValid(col, currentFieldSize))
             {
-                fieldPositions[this.Row - 1, this.Col + 1] = " X ";
+                fieldPositions = fieldPositions[row - 1, col + 1].Detonate(currentFieldSize, fieldPositions);
             }
-            if (NextIsValid(this.Row, currentFieldSize) && PrevIsValid(this.Col))
+            if (NextIsValid(row, currentFieldSize) && PrevIsValid(col))
             {
-                fieldPositions[this.Row + 1, this.Col - 1] = " X ";
+                fieldPositions = fieldPositions[row + 1, col - 1].Detonate(currentFieldSize, fieldPositions);
             }
-            if (NextIsValid(this.Row, currentFieldSize) && NextIsValid(this.Col, currentFieldSize))
+            if (NextIsValid(row, currentFieldSize) && NextIsValid(col, currentFieldSize))
             {
-                fieldPositions[this.Row + 1, this.Col + 1] = " X ";
+                fieldPositions = fieldPositions[row + 1, col + 1].Detonate(currentFieldSize, fieldPositions);
             }
 
             return fieldPositions;
+        }
+
+        public override string Drow()
+        {
+            return " 1 ";
         }
     }
 }

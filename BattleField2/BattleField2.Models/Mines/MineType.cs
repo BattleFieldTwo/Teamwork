@@ -1,11 +1,12 @@
 ﻿namespace BattleField2.Models.Mines
 {
-    internal enum MineType
+    public enum MineType
     {
         MineOne,
         MineTwo,
         MineThree,
         MineFour,
-        MineFive
+        MineFive,
+        None
     }
 }

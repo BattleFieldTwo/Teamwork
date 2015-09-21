@@ -5,28 +5,27 @@
 
     public class MineFactory
     {
-        public static IMine GetMine(int type, Coordinates currentCoordinates)
+        // Refactor static methods!
+        public static Mine GetMine(MineType type, Coordinates currentCoordinates)
         {
-            IMine currentMine = null;
-            int col = currentCoordinates.Col;
-            int row = currentCoordinates.Row;
+            Mine currentMine = null;
 
             switch (type)
             {
-                case 1:
-                    currentMine = new MineOne(col, row);
+                case MineType.MineOne:
+                    currentMine = new MineOne(currentCoordinates);
                     break;
-                case 2:
-                    currentMine = new MineTwo(col, row);
+                case MineType.MineTwo:
+                    currentMine = new MineTwo(currentCoordinates);
                     break;
-                case 3:
-                    currentMine = new MineThree(col, row);
+                case MineType.MineThree:
+                    currentMine = new MineThree(currentCoordinates);
                     break;
-                case 4:
-                    currentMine = new MineFour(col, row);
+                case MineType.MineFour:
+                    currentMine = new MineFour(currentCoordinates);
                     break;
-                case 5:
-                    currentMine = new MineFive(col, row);
+                case MineType.MineFive:
+                    currentMine = new MineFive(currentCoordinates);
                     break;
                 default:
                     break;

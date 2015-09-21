@@ -1,34 +1,45 @@
 ﻿namespace BattleField2.Models.Mines
 {
+    using BattleField2.Models.Cells;
+    using BattleField2.Models.Coordinates;
+
     class MineThree : MineTwo
     {
-        public MineThree(int xCoord, int yCoord)
-            : base(xCoord, yCoord)
+        public MineThree(Coordinates currentCoordinates)
+            : base(currentCoordinates)
         {
         }
 
-        public override string[,] Detonate(int currentFieldSize, string[,] fieldPositions)
+        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)
         {
+            int row = this.Coordinates.Row;
+            int col = this.Coordinates.Col; 
+
             fieldPositions = base.Detonate(currentFieldSize, fieldPositions);
 
-            if (PrevIsValid(this.Row - 1))
+            if (PrevIsValid(row - 1))
             {
-                fieldPositions[this.Row - 2, this.Col] = " X ";
+                fieldPositions = fieldPositions[row - 2, col].Detonate(currentFieldSize, fieldPositions);
             }
-            if (PrevIsValid(this.Col - 1))
+            if (PrevIsValid(col - 1))
             {
-                fieldPositions[this.Row, this.Col - 2] = " X ";
+                fieldPositions = fieldPositions[row, col - 2].Detonate(currentFieldSize, fieldPositions);
             }
-            if (NextIsValid(this.Row + 1, currentFieldSize))
+            if (NextIsValid(row + 1, currentFieldSize))
             {
-                fieldPositions[this.Row + 2, this.Col] = " X ";
+                fieldPositions = fieldPositions[row + 2, col].Detonate(currentFieldSize, fieldPositions);
             }
-            if (NextIsValid(this.Col + 1, currentFieldSize))
+            if (NextIsValid(col + 1, currentFieldSize))
             {
-                fieldPositions[this.Row, this.Col + 2] = " X ";
+                fieldPositions = fieldPositions[row, col + 2].Detonate(currentFieldSize, fieldPositions);
             }
 
             return fieldPositions;
+        }
+
+        public override string Drow()
+        {
+            return " 3 ";
         }
     }
 }

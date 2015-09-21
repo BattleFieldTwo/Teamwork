@@ -44,7 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contracts\IMine.cs" />
+    <Compile Include="Cells\CellFactory.cs" />
+    <Compile Include="Cells\CellType.cs" />
+    <Compile Include="Cells\DetonatedCell.cs" />
+    <Compile Include="Cells\EmptyCell.cs" />
+    <Compile Include="Cells\Cell.cs" />
+    <Compile Include="Contracts\Mine.cs" />
     <Compile Include="Coordinates\Coordinates.cs" />
     <Compile Include="Field\Field.cs" />
     <Compile Include="Mines\MineFactory.cs" />
@@ -59,7 +64,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BattleField2.Common\BattleField2.Common.csproj">
+      <Project>{79a78a9f-0c29-476b-847b-2f32b6fb9335}</Project>
+      <Name>BattleField2.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

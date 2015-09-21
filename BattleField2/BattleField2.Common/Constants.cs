@@ -7,6 +7,6 @@
         public const string InviteToEnterCoordinatesMessage = "Enter coordinates: ";
         public const string InvalidMoveNotificationMessage = "Invalid Move";
         public const string GameOverMessage = "Game Over. Detonated Mines: ";
-
+        public const string MinesCountMessage = "mines count is: ";
     }
 }

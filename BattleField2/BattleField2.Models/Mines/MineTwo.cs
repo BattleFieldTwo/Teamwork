@@ -1,34 +1,45 @@
 ﻿namespace BattleField2.Models.Mines
 {
+    using BattleField2.Models.Cells;
+    using BattleField2.Models.Coordinates;
+
     class MineTwo : MineOne
     {
-        public MineTwo(int xCoord, int yCoord)
-            : base(xCoord, yCoord)
+        public MineTwo(Coordinates currentCoordinates)
+            : base(currentCoordinates)
         {
         }
 
-        public override string[,] Detonate(int currentFieldSize, string[,] fieldPositions)
+        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)
         {
+            int row = this.Coordinates.Row;
+            int col = this.Coordinates.Col; 
+            
             fieldPositions = base.Detonate(currentFieldSize, fieldPositions);
 
-            if (PrevIsValid(this.Row))
+            if (PrevIsValid(row))
             {
-                fieldPositions[this.Row - 1, this.Col] = " X ";
+                fieldPositions = fieldPositions[row - 1, col].Detonate(currentFieldSize, fieldPositions);
             }
-            if (PrevIsValid(this.Col))
+            if (PrevIsValid(col))
             {
-                fieldPositions[this.Row, this.Col - 1] = " X ";
+                fieldPositions = fieldPositions[row, col - 1].Detonate(currentFieldSize, fieldPositions);
             }
-            if (NextIsValid(this.Row, currentFieldSize))
+            if (NextIsValid(row, currentFieldSize))
             {
-                fieldPositions[this.Row + 1, this.Col] = " X ";
+                fieldPositions = fieldPositions[row + 1, col].Detonate(currentFieldSize, fieldPositions);
             }
-            if (NextIsValid(this.Col, currentFieldSize))
+            if (NextIsValid(col, currentFieldSize))
             {
-                fieldPositions[this.Row, this.Col + 1] = " X ";
+                fieldPositions = fieldPositions[row, col + 1].Detonate(currentFieldSize, fieldPositions);
             }
 
             return fieldPositions;
+        }
+
+        public override string Drow()
+        {
+            return " 2 ";
         }
     }
 }

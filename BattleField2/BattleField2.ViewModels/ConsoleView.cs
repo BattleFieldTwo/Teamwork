@@ -53,7 +53,7 @@
                 Console.Write(i.ToString() + "|");
                 for (int j = 0; j < currentBattleField.CurrentFieldSize; j++)
                 {
-                    Console.Write(" " + currentBattleField.FieldPositions[i, j]);
+                    Console.Write(" " + currentBattleField.FieldPositions[i, j].Drow());
                 }
                 Console.WriteLine(""); Console.WriteLine(""); Console.WriteLine("");
             }
@@ -83,6 +83,11 @@
         {
             Console.WriteLine(gameOverMessage + detonatedMines);
             Console.ReadKey();
+        }
+
+        public void GiveMinesCount(int count)
+        {
+            Console.WriteLine(Constants.MinesCountMessage + count);
         }
     }
 }

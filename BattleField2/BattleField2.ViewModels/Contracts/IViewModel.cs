@@ -16,5 +16,7 @@
         void NotifyForInvalidMove(string invalidMoveNotificationMessage);
 
         void GameOver(string gameOverMessage, int detonatedMines);
+
+        void GiveMinesCount(int count);
     }
 }

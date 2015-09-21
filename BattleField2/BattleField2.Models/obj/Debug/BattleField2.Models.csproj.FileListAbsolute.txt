@@ -10,3 +10,5 @@ C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\BattleField2\BattleField2
 C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\BattleField2\BattleField2.Models\obj\Debug\BattleField2.Models.csprojResolveAssemblyReference.cache
 C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\BattleField2\BattleField2.Models\obj\Debug\BattleField2.Models.dll
 C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\BattleField2\BattleField2.Models\obj\Debug\BattleField2.Models.pdb
+C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\BattleField2\BattleField2.Models\bin\Debug\BattleField2.Common.dll
+C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\BattleField2\BattleField2.Models\bin\Debug\BattleField2.Common.pdb
