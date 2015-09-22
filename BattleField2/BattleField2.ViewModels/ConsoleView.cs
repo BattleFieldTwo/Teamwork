@@ -9,6 +9,21 @@
 
     public class ConsoleView : IViewModel
     {
+        // Implemented Sigleton DP here
+        private static ConsoleView instance;
+
+        private ConsoleView() { }
+
+        public static ConsoleView Instance()
+        {
+            if (instance == null)
+            {
+                instance = new ConsoleView();
+            }
+            return instance;
+        }
+
+
         public void DisplayWelcomeMessage(string welcomeMessage)
         {
             Console.WriteLine(welcomeMessage);

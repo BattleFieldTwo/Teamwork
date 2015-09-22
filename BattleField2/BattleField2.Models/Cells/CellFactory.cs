@@ -5,7 +5,7 @@
 
     class CellFactory
     {
-        // Refactor static methods!
+        // Refactor static methods????
         public static Cell GetCell(Coordinates currentCoordinates, CellType type, MineType mineType = MineType.None)
         {
             Cell currentCell = null;

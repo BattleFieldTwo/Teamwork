@@ -9,11 +9,22 @@
     {
         private readonly IViewModel view;
         private Field currentBattleField;
+        private static GameEngine instance;
 
-        public GameEngine(IViewModel view)
+        // Implemented Sigleton DP here
+        private GameEngine(IViewModel view)
         {
             // TODO: Make a full property and checks to this!
             this.view = view;
+        }
+
+        public static GameEngine Instance(IViewModel view)
+        {
+            if (instance == null)
+            {
+                instance = new GameEngine(view);
+            }
+            return instance;
         }
 
         public void InitializeGame()

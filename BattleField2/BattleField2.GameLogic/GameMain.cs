@@ -8,9 +8,9 @@
         public static void Main()
         {
             // Creating a renderer in the console.
-            IViewModel consoleView = new ConsoleView();
+            IViewModel consoleView = ConsoleView.Instance();
 
-            GameEngine gameEngine = new GameEngine(consoleView);
+            GameEngine gameEngine = GameEngine.Instance(consoleView);
 
             gameEngine.InitializeGame();
 
