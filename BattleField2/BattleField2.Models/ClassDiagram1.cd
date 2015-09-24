@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="BattleField2.Models.Cells.Cell">
+    <Position X="3.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAgAAAAIAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Cells\Cell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleField2.Models.Cells.CellFactory">
+    <Position X="9.5" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cells\CellFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleField2.Models.Cells.DetonatedCell">
+    <Position X="6.5" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Cells\DetonatedCell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleField2.Models.Cells.EmptyCell">
+    <Position X="0.5" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Cells\EmptyCell.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleField2.Models.Field.Field">
+    <Position X="9.5" Y="8.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAIAEAgAABEAAAAAAIACAACAAgAIAgIAAAA=</HashCode>
+      <FileName>Field\Field.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleField2.Models.Mines.Mine">
+    <Position X="3.5" Y="3.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAA=</HashCode>
+      <FileName>Mines\Mine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleField2.Models.Mines.MineFactory">
+    <Position X="9.5" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mines\MineFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleField2.Models.Mines.MineFive">
+    <Position X="3.5" Y="12.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Mines\MineFive.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleField2.Models.Mines.MineFour">
+    <Position X="3.5" Y="10.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Mines\MineFour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleField2.Models.Mines.MineOne">
+    <Position X="3.5" Y="5.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Mines\MineOne.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleField2.Models.Mines.MineThree">
+    <Position X="3.5" Y="8.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Mines\MineThree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BattleField2.Models.Mines.MineTwo">
+    <Position X="3.5" Y="7" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Mines\MineTwo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="BattleField2.Models.Coordinates.Coordinates">
+    <Position X="9.5" Y="6.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAEAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Coordinates\Coordinates.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="BattleField2.Models.Cells.CellType">
+    <Position X="9.5" Y="1.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAIAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Cells\CellType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="BattleField2.Models.Mines.MineType">
+    <Position X="9.5" Y="4.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAABAAAEAAAAAAAACAQAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Mines\MineType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
