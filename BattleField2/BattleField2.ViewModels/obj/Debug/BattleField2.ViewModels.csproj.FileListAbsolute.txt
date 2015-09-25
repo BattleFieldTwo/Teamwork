@@ -8,3 +8,13 @@ C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\BattleField2\BattleField2
 C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\BattleField2\BattleField2.ViewModels\bin\Debug\BattleField2.Models.pdb
 C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\BattleField2\BattleField2.ViewModels\obj\Debug\BattleField2.ViewModels.dll
 C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\BattleField2\BattleField2.ViewModels\obj\Debug\BattleField2.ViewModels.pdb
+E:\Users\Vyara\Documents\Visual Studio 2013\Projects2\HQC Team Work\Teamwork\BattleField2\BattleField2.ViewModels\bin\Debug\BattleField2.ViewModels.dll.config
+E:\Users\Vyara\Documents\Visual Studio 2013\Projects2\HQC Team Work\Teamwork\BattleField2\BattleField2.ViewModels\bin\Debug\BattleField2.ViewModels.dll
+E:\Users\Vyara\Documents\Visual Studio 2013\Projects2\HQC Team Work\Teamwork\BattleField2\BattleField2.ViewModels\bin\Debug\BattleField2.ViewModels.pdb
+E:\Users\Vyara\Documents\Visual Studio 2013\Projects2\HQC Team Work\Teamwork\BattleField2\BattleField2.ViewModels\bin\Debug\BattleField2.Common.dll
+E:\Users\Vyara\Documents\Visual Studio 2013\Projects2\HQC Team Work\Teamwork\BattleField2\BattleField2.ViewModels\bin\Debug\BattleField2.Models.dll
+E:\Users\Vyara\Documents\Visual Studio 2013\Projects2\HQC Team Work\Teamwork\BattleField2\BattleField2.ViewModels\bin\Debug\BattleField2.Common.pdb
+E:\Users\Vyara\Documents\Visual Studio 2013\Projects2\HQC Team Work\Teamwork\BattleField2\BattleField2.ViewModels\bin\Debug\BattleField2.Models.pdb
+E:\Users\Vyara\Documents\Visual Studio 2013\Projects2\HQC Team Work\Teamwork\BattleField2\BattleField2.ViewModels\obj\Debug\BattleField2.ViewModels.csprojResolveAssemblyReference.cache
+E:\Users\Vyara\Documents\Visual Studio 2013\Projects2\HQC Team Work\Teamwork\BattleField2\BattleField2.ViewModels\obj\Debug\BattleField2.ViewModels.dll
+E:\Users\Vyara\Documents\Visual Studio 2013\Projects2\HQC Team Work\Teamwork\BattleField2\BattleField2.ViewModels\obj\Debug\BattleField2.ViewModels.pdb
