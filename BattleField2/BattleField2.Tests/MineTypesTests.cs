@@ -1,9 +1,9 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-namespace BattleField2.Tests
+﻿namespace BattleField2.Tests
 {
-    //to be implemented
+    using System;
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+
+    //TODO
     [TestClass]
     public class UnitTest1
     {
