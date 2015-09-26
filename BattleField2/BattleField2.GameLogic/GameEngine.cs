@@ -1,4 +1,6 @@
-﻿namespace BattleField2.GameLogic
+﻿using BattleField2.Models.Mines;
+
+namespace BattleField2.GameLogic
 {
     using BattleField2.Common;
     using BattleField2.Models.Coordinates;
@@ -60,7 +62,7 @@
                     }
                 } while (!this.currentBattleField.ValidateMoveCoordinates(currentCoordinates));
 
-                this.currentBattleField.FieldPositions = this.currentBattleField.FieldPositions[currentCoordinates.Row, currentCoordinates.Col].Detonate(
+                this.currentBattleField.FieldPositions = (this.currentBattleField.FieldPositions[currentCoordinates.Row, currentCoordinates.Col] as Mine).Detonate(
                     this.currentBattleField.CurrentFieldSize, this.currentBattleField.FieldPositions);
                 
                 this.currentBattleField.DetonatedMines++;

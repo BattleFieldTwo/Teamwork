@@ -21,23 +21,22 @@
 
             if (PrevIsValid(row - 1) && PrevIsValid(col - 1))
             {
-                fieldPositions = fieldPositions[row - 2, col - 2].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row - 2, col - 2] = CellFactory.GetCell(CellType.Detonated);
             }
             if (PrevIsValid(row - 1) && NextIsValid(col + 1, currentFieldSize))
             {
-                fieldPositions = fieldPositions[row - 2, col + 2].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row - 2, col + 2] = CellFactory.GetCell(CellType.Detonated);
             }
             if (NextIsValid(row + 1, currentFieldSize) && PrevIsValid(col - 1))
             {
-                fieldPositions = fieldPositions[row + 2, col - 2].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row + 2, col - 2] = CellFactory.GetCell(CellType.Detonated);
             }
             if (NextIsValid(row + 1, currentFieldSize) && NextIsValid(col + 1, currentFieldSize))
             {
-                fieldPositions = fieldPositions[row + 2, col + 2].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row + 2, col + 2] = CellFactory.GetCell(CellType.Detonated);
             }
 
             return fieldPositions;
-            
         }
 
         public override string StringRepresentation

@@ -22,19 +22,19 @@
 
             if (PrevIsValid(row - 1))
             {
-                fieldPositions = fieldPositions[row - 2, col].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row - 2, col] = CellFactory.GetCell(CellType.Detonated);
             }
             if (PrevIsValid(col - 1))
             {
-                fieldPositions = fieldPositions[row, col - 2].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row, col - 2] = CellFactory.GetCell(CellType.Detonated);
             }
             if (NextIsValid(row + 1, currentFieldSize))
             {
-                fieldPositions = fieldPositions[row + 2, col].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row + 2, col] = CellFactory.GetCell(CellType.Detonated);
             }
             if (NextIsValid(col + 1, currentFieldSize))
             {
-                fieldPositions = fieldPositions[row, col + 2].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row, col + 2] = CellFactory.GetCell(CellType.Detonated);
             }
 
             return fieldPositions;

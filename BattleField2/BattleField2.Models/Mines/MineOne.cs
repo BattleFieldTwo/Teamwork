@@ -17,23 +17,23 @@
             int row = this.Coordinates.Row;
             int col = this.Coordinates.Col;
 
-            fieldPositions[row, col] = CellFactory.GetCell(this.Coordinates, CellType.Detonated);
+            fieldPositions[row, col] = CellFactory.GetCell(CellType.Detonated);
 
             if (PrevIsValid(row) && PrevIsValid(col))
             {
-                fieldPositions = fieldPositions[row - 1, col - 1].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row - 1, col - 1] = CellFactory.GetCell(CellType.Detonated);
             }
             if (PrevIsValid(row) && NextIsValid(col, currentFieldSize))
             {
-                fieldPositions = fieldPositions[row - 1, col + 1].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row - 1, col + 1] = CellFactory.GetCell(CellType.Detonated);
             }
             if (NextIsValid(row, currentFieldSize) && PrevIsValid(col))
             {
-                fieldPositions = fieldPositions[row + 1, col - 1].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row + 1, col - 1] = CellFactory.GetCell(CellType.Detonated);
             }
             if (NextIsValid(row, currentFieldSize) && NextIsValid(col, currentFieldSize))
             {
-                fieldPositions = fieldPositions[row + 1, col + 1].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row + 1, col + 1] = CellFactory.GetCell(CellType.Detonated); 
             }
 
             return fieldPositions;

@@ -23,11 +23,11 @@
             {
                 if (PrevIsValid(col))
                 {
-                    fieldPositions = fieldPositions[row - 2, col - 1].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row - 2, col - 1] = CellFactory.GetCell(CellType.Detonated);
                 }
                 if (NextIsValid(col, currentFieldSize))
                 {
-                    fieldPositions = fieldPositions[row - 2, col + 1].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row - 2, col + 1] = CellFactory.GetCell(CellType.Detonated);
                 }
             }
 
@@ -35,11 +35,11 @@
             {
                 if (PrevIsValid(row))
                 {
-                    fieldPositions = fieldPositions[row - 1, col - 2].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row - 1, col - 2] = CellFactory.GetCell(CellType.Detonated);
                 }
                 if (NextIsValid(row, currentFieldSize))
                 {
-                    fieldPositions = fieldPositions[row + 1, col - 2].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row + 1, col - 2] = CellFactory.GetCell(CellType.Detonated);
                 }
             }
 
@@ -47,11 +47,11 @@
             {
                 if (PrevIsValid(col))
                 {
-                    fieldPositions = fieldPositions[row + 2, col - 1].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row + 2, col - 1] = CellFactory.GetCell(CellType.Detonated);
                 }
                 if (NextIsValid(col, currentFieldSize))
                 {
-                    fieldPositions = fieldPositions[row + 2, col + 1].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row + 2, col + 1] = CellFactory.GetCell(CellType.Detonated);
                 }
             }
 
@@ -59,11 +59,11 @@
             {
                 if (PrevIsValid(row))
                 {
-                    fieldPositions = fieldPositions[row - 1, col + 2].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row - 1, col + 2] = CellFactory.GetCell(CellType.Detonated);
                 }
                 if (NextIsValid(row, currentFieldSize))
                 {
-                    fieldPositions = fieldPositions[row + 1, col + 2].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row + 1, col + 2] = CellFactory.GetCell(CellType.Detonated);
                 }
             }
 
