@@ -4,6 +4,8 @@
 
     class EmptyCell : Cell
     {
+        private readonly string stringRepresentation = " - ";
+        
         public EmptyCell(Coordinates currentCoordinates)
             : base(currentCoordinates)
         {
@@ -16,9 +18,9 @@
             return fieldPositions;
         }
 
-        public override string Drow()
+        public override string StringRepresentation
         {
-            return " - ";
+            get { return this.stringRepresentation; }
         }
     }
 }

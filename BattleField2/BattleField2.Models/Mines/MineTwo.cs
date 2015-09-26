@@ -5,6 +5,8 @@
 
     class MineTwo : MineOne
     {
+        private readonly string stringRepresentation = " 2 ";
+        
         public MineTwo(Coordinates currentCoordinates)
             : base(currentCoordinates)
         {
@@ -37,9 +39,9 @@
             return fieldPositions;
         }
 
-        public override string Drow()
+        public override string StringRepresentation
         {
-            return " 2 ";
+            get { return this.stringRepresentation; }
         }
     }
 }

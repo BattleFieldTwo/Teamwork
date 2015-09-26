@@ -68,7 +68,7 @@
                 Console.Write(i.ToString() + "|");
                 for (int j = 0; j < currentBattleField.CurrentFieldSize; j++)
                 {
-                    Console.Write(" " + currentBattleField.FieldPositions[i, j].Drow());
+                    Console.Write(" " + currentBattleField.FieldPositions[i, j].StringRepresentation);
                 }
                 Console.WriteLine(""); Console.WriteLine(""); Console.WriteLine("");
             }

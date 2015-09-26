@@ -21,6 +21,6 @@
         
         public abstract Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions);
 
-        public abstract string Drow();
+        abstract public string StringRepresentation { get; }
     }
 }

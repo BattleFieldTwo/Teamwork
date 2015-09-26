@@ -4,6 +4,8 @@
 
     class DetonatedCell : Cell
     {
+        private readonly string stringRepresentation = " X ";
+            
         public DetonatedCell(Coordinates currentCoordinates)
             : base(currentCoordinates)
         {
@@ -14,9 +16,9 @@
             return fieldPositions;
         }
 
-        public override string Drow()
+        public override string StringRepresentation
         {
-            return " X ";
+            get { return this.stringRepresentation; }
         }
     }
 }
