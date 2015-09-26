@@ -70,7 +70,7 @@
                 {
                     Coordinates currentCoordinates = new Coordinates(i, j);
 
-                    this.fieldPositions[i, j] = CellFactory.GetCell(currentCoordinates, CellType.Empty);
+                    this.fieldPositions[i, j] = CellFactory.GetCell(CellType.Empty);
                 }
             }
         }
@@ -91,7 +91,7 @@
                 {
                     int numberTypeOfMine = rnd.Next(0, 5);
                     MineType type = (MineType)numberTypeOfMine;
-                    this.FieldPositions[currentMineRow, currentMineCol] = CellFactory.GetCell(currentCoordinates, CellType.Mine, type);
+                    this.FieldPositions[currentMineRow, currentMineCol] = MineFactory.GetMine(type, currentCoordinates);
 
                     numberOfAlreadyPositionedMines++;
                 }

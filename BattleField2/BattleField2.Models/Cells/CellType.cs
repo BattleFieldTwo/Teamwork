@@ -2,7 +2,6 @@
 {
     internal enum CellType
     {
-        Mine,
         Empty,
         Detonated
     }

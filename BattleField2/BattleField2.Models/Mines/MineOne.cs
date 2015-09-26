@@ -5,6 +5,8 @@
 
     public class MineOne : Mine
     {
+        private readonly string stringRepresentation = " 1 ";
+        
         public MineOne(Coordinates currentCoordinates)
             : base(currentCoordinates)
         {
@@ -15,31 +17,31 @@
             int row = this.Coordinates.Row;
             int col = this.Coordinates.Col;
 
-            fieldPositions[row, col] = CellFactory.GetCell(this.Coordinates, CellType.Detonated);
+            fieldPositions[row, col] = CellFactory.GetCell(CellType.Detonated);
 
             if (PrevIsValid(row) && PrevIsValid(col))
             {
-                fieldPositions = fieldPositions[row - 1, col - 1].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row - 1, col - 1] = CellFactory.GetCell(CellType.Detonated);
             }
             if (PrevIsValid(row) && NextIsValid(col, currentFieldSize))
             {
-                fieldPositions = fieldPositions[row - 1, col + 1].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row - 1, col + 1] = CellFactory.GetCell(CellType.Detonated);
             }
             if (NextIsValid(row, currentFieldSize) && PrevIsValid(col))
             {
-                fieldPositions = fieldPositions[row + 1, col - 1].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row + 1, col - 1] = CellFactory.GetCell(CellType.Detonated);
             }
             if (NextIsValid(row, currentFieldSize) && NextIsValid(col, currentFieldSize))
             {
-                fieldPositions = fieldPositions[row + 1, col + 1].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row + 1, col + 1] = CellFactory.GetCell(CellType.Detonated); 
             }
 
             return fieldPositions;
         }
 
-        public override string Drow()
+        public override string StringRepresentation
         {
-            return " 1 ";
+            get { return this.stringRepresentation; }
         }
     }
 }

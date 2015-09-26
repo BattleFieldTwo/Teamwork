@@ -5,6 +5,8 @@
 
     class MineTwo : MineOne
     {
+        private readonly string stringRepresentation = " 2 ";
+        
         public MineTwo(Coordinates currentCoordinates)
             : base(currentCoordinates)
         {
@@ -19,27 +21,27 @@
 
             if (PrevIsValid(row))
             {
-                fieldPositions = fieldPositions[row - 1, col].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row - 1, col] = CellFactory.GetCell(CellType.Detonated);
             }
             if (PrevIsValid(col))
             {
-                fieldPositions = fieldPositions[row, col - 1].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row, col - 1] = CellFactory.GetCell(CellType.Detonated);
             }
             if (NextIsValid(row, currentFieldSize))
             {
-                fieldPositions = fieldPositions[row + 1, col].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row + 1, col] = CellFactory.GetCell(CellType.Detonated);
             }
             if (NextIsValid(col, currentFieldSize))
             {
-                fieldPositions = fieldPositions[row, col + 1].Detonate(currentFieldSize, fieldPositions);
+                fieldPositions[row, col + 1] = CellFactory.GetCell(CellType.Detonated);
             }
 
             return fieldPositions;
         }
 
-        public override string Drow()
+        public override string StringRepresentation
         {
-            return " 2 ";
+            get { return this.stringRepresentation; }
         }
     }
 }

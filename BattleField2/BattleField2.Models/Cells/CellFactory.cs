@@ -6,20 +6,17 @@
     class CellFactory
     {
         // Refactor static methods????
-        public static Cell GetCell(Coordinates currentCoordinates, CellType type, MineType mineType = MineType.None)
+        public static Cell GetCell(CellType type)
         {
             Cell currentCell = null;
 
             switch (type)
             {
-                case CellType.Mine:
-                    currentCell = MineFactory.GetMine(mineType, currentCoordinates);
-                    break;
                 case CellType.Empty:
-                    currentCell = new EmptyCell(currentCoordinates);
+                    currentCell = new EmptyCell();
                     break;
                 case CellType.Detonated:
-                    currentCell = new DetonatedCell(currentCoordinates);
+                    currentCell = new DetonatedCell();
                     break;
                 default:
                     break;

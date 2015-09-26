@@ -4,21 +4,11 @@
 
     class EmptyCell : Cell
     {
-        public EmptyCell(Coordinates currentCoordinates)
-            : base(currentCoordinates)
-        {
-        }
+        private readonly string stringRepresentation = " - ";
 
-        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)
+        public override string StringRepresentation
         {
-            fieldPositions[this.Coordinates.Row, this.Coordinates.Col] = CellFactory.GetCell(this.Coordinates,
-                CellType.Detonated);
-            return fieldPositions;
-        }
-
-        public override string Drow()
-        {
-            return " - ";
+            get { return this.stringRepresentation; }
         }
     }
 }

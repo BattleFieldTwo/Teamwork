@@ -5,6 +5,8 @@
 
     class MineFour : MineThree
     {
+        private readonly string stringRepresentation = " 4 ";
+
         public MineFour(Coordinates currentCoordinates)
             : base(currentCoordinates)
         {
@@ -21,11 +23,11 @@
             {
                 if (PrevIsValid(col))
                 {
-                    fieldPositions = fieldPositions[row - 2, col - 1].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row - 2, col - 1] = CellFactory.GetCell(CellType.Detonated);
                 }
                 if (NextIsValid(col, currentFieldSize))
                 {
-                    fieldPositions = fieldPositions[row - 2, col + 1].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row - 2, col + 1] = CellFactory.GetCell(CellType.Detonated);
                 }
             }
 
@@ -33,11 +35,11 @@
             {
                 if (PrevIsValid(row))
                 {
-                    fieldPositions = fieldPositions[row - 1, col - 2].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row - 1, col - 2] = CellFactory.GetCell(CellType.Detonated);
                 }
                 if (NextIsValid(row, currentFieldSize))
                 {
-                    fieldPositions = fieldPositions[row + 1, col - 2].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row + 1, col - 2] = CellFactory.GetCell(CellType.Detonated);
                 }
             }
 
@@ -45,11 +47,11 @@
             {
                 if (PrevIsValid(col))
                 {
-                    fieldPositions = fieldPositions[row + 2, col - 1].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row + 2, col - 1] = CellFactory.GetCell(CellType.Detonated);
                 }
                 if (NextIsValid(col, currentFieldSize))
                 {
-                    fieldPositions = fieldPositions[row + 2, col + 1].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row + 2, col + 1] = CellFactory.GetCell(CellType.Detonated);
                 }
             }
 
@@ -57,20 +59,20 @@
             {
                 if (PrevIsValid(row))
                 {
-                    fieldPositions = fieldPositions[row - 1, col + 2].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row - 1, col + 2] = CellFactory.GetCell(CellType.Detonated);
                 }
                 if (NextIsValid(row, currentFieldSize))
                 {
-                    fieldPositions = fieldPositions[row + 1, col + 2].Detonate(currentFieldSize, fieldPositions);
+                    fieldPositions[row + 1, col + 2] = CellFactory.GetCell(CellType.Detonated);
                 }
             }
 
             return fieldPositions;
         }
 
-        public override string Drow()
+        public override string StringRepresentation
         {
-            return " 4 ";
+            get { return this.stringRepresentation; }
         }
     }
 }

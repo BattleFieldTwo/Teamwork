@@ -1,5 +1,0 @@
-C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\src\obj\x86\Debug\TeamBattleField2.csprojResolveAssemblyReference.cache
-C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\src\bin\Debug\Team_Battle_Field_2.exe
-C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\src\bin\Debug\Team_Battle_Field_2.pdb
-C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\src\obj\x86\Debug\Team_Battle_Field_2.exe
-C:\Users\veso\Drive\(0)TelerikAcademy\(8) KPK\Teamwork\src\obj\x86\Debug\Team_Battle_Field_2.pdb
