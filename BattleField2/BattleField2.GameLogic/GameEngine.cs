@@ -1,80 +1,115 @@
-﻿using BattleField2.Models.Mines;
-
-namespace BattleField2.GameLogic
+﻿namespace BattleField2.GameEngine
 {
     using BattleField2.Common;
     using BattleField2.Models.Coordinates;
     using BattleField2.Models.Field;
-    using BattleField2.ViewModels.Contracts;
+    using BattleField2.Models.Mines;
+    using BattleField2.Renderers;
+    using System;
 
     public class GameEngine
     {
-        private readonly IViewModel view;
-        private Field currentBattleField;
+        private readonly IGameRenderer renderer;
+        private Field battleField;
         private static GameEngine instance;
 
-        // Implemented Sigleton DP here
-        private GameEngine(IViewModel view)
+        private GameEngine(IGameRenderer renderer)
         {
-            // TODO: Make a full property and checks to this!
-            this.view = view;
+            this.renderer = renderer;
         }
 
-        public static GameEngine Instance(IViewModel view)
+        public static GameEngine Instance(IGameRenderer renderer)
         {
             if (instance == null)
             {
-                instance = new GameEngine(view);
+                instance = new GameEngine(renderer);
             }
+
             return instance;
         }
 
         public void InitializeGame()
         {
-            this.view.DisplayWelcomeMessage(Constants.WelcomeMessage);
+            this.renderer.DisplayMessage(Constants.WelcomeMessage);
+            int currentFieldSize = this.EnterFieldSize();
 
-            int currentFieldSize = this.view.GetFieldSize(Constants.InviteToGiveSizeMessage);
+            this.battleField = new Field(currentFieldSize);
 
-            this.currentBattleField = new Field(currentFieldSize);
+            this.battleField.GenerateField();
 
-            this.currentBattleField.GenerateField();
+            this.battleField.PositionMines();
 
-            this.currentBattleField.PositionMines();
-
-            this.view.DrawField(currentBattleField);
+            this.renderer.DrawField(battleField);
         }
         
         public void PlayGame()
         {
-            this.view.GiveMinesCount(this.currentBattleField.InitialMines);
+            this.renderer.DisplayMessage(Constants.MinesCountMessage + this.battleField.InitialMines);
 
             int remainingMines;
             do
             {
-                Coordinates currentCoordinates;
-                do
-                {
-                    currentCoordinates = this.view.GetInputCoordinates(Constants.InviteToEnterCoordinatesMessage);
+                Coordinates currentCoordinates = this.EnterInputCoordinates();
 
-                    if (!this.currentBattleField.ValidateMoveCoordinates(currentCoordinates))
-                    {
-                        this.view.NotifyForInvalidMove(Constants.InvalidMoveNotificationMessage);
-                    }
-                } while (!this.currentBattleField.ValidateMoveCoordinates(currentCoordinates));
-
-                this.currentBattleField.FieldPositions = (this.currentBattleField.FieldPositions[currentCoordinates.Row, currentCoordinates.Col] as Mine).Detonate(
-                    this.currentBattleField.CurrentFieldSize, this.currentBattleField.FieldPositions);
+                this.battleField.FieldPositions = (this.battleField.FieldPositions[currentCoordinates.Row, currentCoordinates.Col] as Mine).Detonate(
+                    this.battleField.CurrentFieldSize, this.battleField.FieldPositions);
                 
-                this.currentBattleField.DetonatedMines++;
+                this.battleField.DetonatedMines++;
                 
-                this.view.DrawField(this.currentBattleField);
+                this.renderer.DrawField(this.battleField);
 
-                remainingMines = this.currentBattleField.CountRemainingMines();
-                this.view.GiveMinesCount(remainingMines);
+                remainingMines = this.battleField.CountRemainingMines();
+                this.renderer.DisplayMessage(Constants.MinesCountMessage + remainingMines);
 
             } while (remainingMines > 0);
 
-            this.view.GameOver(Constants.GameOverMessage, this.currentBattleField.DetonatedMines);
+            this.GameOver();
+        }
+
+        private int EnterFieldSize()
+        {
+            string inputFieldSize;
+            do
+            {
+                this.renderer.DisplayMessage(Constants.InviteToEnterSizeMessage);
+                inputFieldSize = this.renderer.EnterCommand();
+            } while (!Validations.IsValidInputFieldSize(inputFieldSize));
+
+            int currentFieldSize = Int32.Parse(inputFieldSize);
+
+            return currentFieldSize;
+        }
+
+        //TODO refactor this method
+        private Coordinates EnterInputCoordinates()
+        {
+            Coordinates currentCoordinates;
+
+            do
+            {
+                this.renderer.DisplayMessage(Constants.InviteToEnterCoordinatesMessage);
+
+                string coordinates = this.renderer.EnterCommand();
+                if (!Validations.IsValidInputCoordinates(coordinates, this.battleField.CurrentFieldSize))
+                {
+                    this.renderer.DisplayMessage(Constants.InvalidMoveNotificationMessage);
+                    continue;
+                }
+
+                int rowCoord = Convert.ToInt32(coordinates.Substring(0, 1));
+                int colCoord = Convert.ToInt32(coordinates.Substring(2, 1));
+                currentCoordinates = new Coordinates(rowCoord, colCoord);
+                break;
+
+            } while (true);
+            
+            return currentCoordinates;
+        }
+
+        public void GameOver()
+        {
+            this.renderer.DisplayMessage(Constants.GameOverMessage + this.battleField.DetonatedMines);
+            this.renderer.Wait();
         }
     }
 }
