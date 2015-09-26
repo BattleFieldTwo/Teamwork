@@ -34,11 +34,11 @@
             {
                 return false;
             }
-            else if (row < Constants.MinFieldSize || row >= fieldSize)
+            else if (row < Constants.MinFieldSize - 1 || row >= fieldSize)
             {
                 return false;
             }
-            else if (col < Constants.MinFieldSize || col >= fieldSize)
+            else if (col < Constants.MinFieldSize - 1 || col >= fieldSize)
             {
                 return false;
             }

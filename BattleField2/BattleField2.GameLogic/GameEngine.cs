@@ -49,7 +49,17 @@
             int remainingMines;
             do
             {
-                Coordinates currentCoordinates = this.EnterInputCoordinates();
+                Coordinates currentCoordinates;
+
+                do
+                {
+                    currentCoordinates = this.EnterInputCoordinates();
+
+                    if (!this.battleField.ValidateMoveCoordinates(currentCoordinates))
+                    {
+                        this.renderer.DisplayMessage(Constants.InvalidMoveNotificationMessage);
+                    }
+                } while (!this.battleField.ValidateMoveCoordinates(currentCoordinates));
 
                 this.battleField.FieldPositions = (this.battleField.FieldPositions[currentCoordinates.Row, currentCoordinates.Col] as Mine).Detonate(
                     this.battleField.CurrentFieldSize, this.battleField.FieldPositions);
