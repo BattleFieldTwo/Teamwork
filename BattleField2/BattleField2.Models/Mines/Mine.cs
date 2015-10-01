@@ -3,7 +3,7 @@
     using Coordinates;
     using Cells;
 
-    internal class Mine : Explosive
+    public class Mine : Explosive
     {
         private Coordinates coordinates;
         private readonly string stringRepresentation = " 1 ";

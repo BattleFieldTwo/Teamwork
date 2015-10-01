@@ -5,18 +5,17 @@
     public class MineFactory
     {
         // Refactor static methods!
-        public static Mine GetMine(MineType type, Coordinates currentCoordinates)
+        public static Explosive GetMine(MineType type, Coordinates currentCoordinates)
         {
-            Mine currentMine = null;
+            var currentMine = new Mine(currentCoordinates);
+            var levelTwo = new MineLevelTwoUpgrade(currentMine);
 
             switch (type)
             {
-                case MineType.MineOne:
-                    currentMine = new MineOne(currentCoordinates);
-                    break;
+                //case MineType.MineOne:
+                //    break;
                 case MineType.MineTwo:
-                    currentMine = new MineTwo(currentCoordinates);
-                    break;
+                    return levelTwo;
                 case MineType.MineThree:
                     currentMine = new MineThree(currentCoordinates);
                     break;
