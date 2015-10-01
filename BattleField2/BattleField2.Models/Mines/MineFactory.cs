@@ -10,23 +10,24 @@
             var currentMine = new Mine(currentCoordinates);
             var levelTwo = new MineLevelTwoUpgrade(currentMine);
             var levelThree = new MineLevelThreeUpgrade(levelTwo);
+            var levelFour = new MineLevelFourUpgrade(levelThree);
+            var levelFive = new MineLevelFiveUpgrade(levelFour);
 
             switch (type)
             {
+                case MineType.MineOne:
+                    return currentMine;
                 case MineType.MineTwo:
                     return levelTwo;
                 case MineType.MineThree:
                     return levelThree;
                 case MineType.MineFour:
-                    currentMine = new MineFour(currentCoordinates);
-                    break;
+                    return levelFour;
                 case MineType.MineFive:
-                    currentMine = new MineFive(currentCoordinates);
-                    break;
-                default:
-                    break;
+                    return levelFive;
             }
-            return currentMine;
+
+            return null;
         }
 
         //public static mine getmine(minetype type, coordinates currentcoordinates)
