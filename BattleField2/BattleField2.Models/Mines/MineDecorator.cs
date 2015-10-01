@@ -6,9 +6,9 @@ namespace BattleField2.Models.Mines
 
     internal abstract class MineDecorator : Explosive
     {
-        protected MineDecorator(Mine mine)
+        protected MineDecorator(Explosive explosive)
         {
-            this.Mine = mine;
+            this.Mine = explosive as Mine;
         }
 
         protected Mine Mine { get; private set; }

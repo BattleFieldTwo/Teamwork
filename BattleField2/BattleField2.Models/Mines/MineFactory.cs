@@ -9,11 +9,10 @@
         {
             var currentMine = new Mine(currentCoordinates);
             var levelTwo = new MineLevelTwoUpgrade(currentMine);
+            var levelThree = new MineLevelThreeUpgrade(levelTwo);
 
             switch (type)
             {
-                //case MineType.MineOne:
-                //    break;
                 case MineType.MineTwo:
                     return levelTwo;
                 case MineType.MineThree:
@@ -30,5 +29,32 @@
             }
             return currentMine;
         }
+
+        //public static mine getmine(minetype type, coordinates currentcoordinates)
+        //{
+        //    mine currentmine = null;
+
+        //    switch (type)
+        //    {
+        //        case minetype.mineone:
+        //            currentmine = new mineone(currentcoordinates);
+        //            break;
+        //        case minetype.minetwo:
+        //            currentmine = new minetwo(currentcoordinates);
+        //            break;
+        //        case minetype.minethree:
+        //            currentmine = new minethree(currentcoordinates);
+        //            break;
+        //        case minetype.minefour:
+        //            currentmine = new minefour(currentcoordinates);
+        //            break;
+        //        case minetype.minefive:
+        //            currentmine = new minefive(currentcoordinates);
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //    return currentmine;
+        //}
     }
 }

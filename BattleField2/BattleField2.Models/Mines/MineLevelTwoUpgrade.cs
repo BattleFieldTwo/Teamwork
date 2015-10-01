@@ -8,13 +8,11 @@ namespace BattleField2.Models.Mines
     {
         private readonly string stringRepresentation = " 2 ";
 
-        public MineLevelTwoUpgrade(Mine mine)
+        public MineLevelTwoUpgrade(Explosive mine)
             : base(mine)
         {
-            this.Mine = mine;
-        }
 
-        public Mine Mine { get; set; }
+        }
 
 
         public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)

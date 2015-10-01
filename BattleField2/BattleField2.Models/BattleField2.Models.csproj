@@ -57,6 +57,7 @@
     <Compile Include="Mines\MineFactory.cs" />
     <Compile Include="Mines\MineFive.cs" />
     <Compile Include="Mines\MineFour.cs" />
+    <Compile Include="Mines\MineLevelThreeUpgrade.cs" />
     <Compile Include="Mines\MineLevelTwoUpgrade.cs" />
     <Compile Include="Mines\MineOne.cs" />
     <Compile Include="Mines\MineThree.cs" />
