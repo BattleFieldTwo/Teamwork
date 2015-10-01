@@ -9,7 +9,7 @@ namespace BattleField2.Models.Mines
 
         protected MineDecorator(Explosive mine)
         {
-            this.Mine = mine; //could be improved 
+            this.Mine = mine; 
         }
 
         //TODO: checks
