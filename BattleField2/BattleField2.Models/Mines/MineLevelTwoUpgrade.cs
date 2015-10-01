@@ -3,6 +3,7 @@ namespace BattleField2.Models.Mines
 {
 
     using Cells;
+    using Coordinates;
 
     internal class MineLevelTwoUpgrade : MineDecorator
     {
@@ -11,14 +12,14 @@ namespace BattleField2.Models.Mines
         public MineLevelTwoUpgrade(Explosive mine)
             : base(mine)
         {
-
+            this.Coordinates = mine.Coordinates;
         }
 
 
         public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)
         {
-            int row = Mine.Coordinates.Row;
-            int col = Mine.Coordinates.Col;
+            int row = this.Coordinates.Row;
+            int col = this.Coordinates.Col;
 
             fieldPositions = base.Detonate(currentFieldSize, fieldPositions);
 

@@ -16,8 +16,7 @@
                 case MineType.MineTwo:
                     return levelTwo;
                 case MineType.MineThree:
-                    currentMine = new MineThree(currentCoordinates);
-                    break;
+                    return levelThree;
                 case MineType.MineFour:
                     currentMine = new MineFour(currentCoordinates);
                     break;

@@ -6,12 +6,15 @@ namespace BattleField2.Models.Mines
 
     internal abstract class MineDecorator : Explosive
     {
-        protected MineDecorator(Explosive explosive)
+
+        protected MineDecorator(Explosive mine)
         {
-            this.Mine = explosive as Mine;
+            this.Mine = mine; //could be improved 
         }
 
-        protected Mine Mine { get; private set; }
+        //TODO: checks
+        protected Explosive Mine { get; set; }
+
 
         public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)
         {
