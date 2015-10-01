@@ -53,6 +53,7 @@
     <Compile Include="Mines\Mine.cs" />
     <Compile Include="Coordinates\Coordinates.cs" />
     <Compile Include="Field\Field.cs" />
+    <Compile Include="Mines\MineDecorator.cs" />
     <Compile Include="Mines\MineFactory.cs" />
     <Compile Include="Mines\MineFive.cs" />
     <Compile Include="Mines\MineFour.cs" />
