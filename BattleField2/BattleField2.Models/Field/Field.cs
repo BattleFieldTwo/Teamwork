@@ -107,7 +107,7 @@
             {
                 for (int j = 0; j < this.CurrentFieldSize; j++)
                 {
-                    if ((this.FieldPositions[i, j] is Mine))
+                    if ((this.FieldPositions[i, j] is Explosive))
                         count++;
                 }
             }
