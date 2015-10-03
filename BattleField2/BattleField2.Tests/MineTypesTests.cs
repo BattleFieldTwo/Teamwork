@@ -12,13 +12,12 @@
         [TestMethod]
         public void CheckIfCreatingAMineWithALevelUpgradeWorksAsExpected_LevelOne()
         {
-            int currentFieldSize = 4;
             var fieldPositions = new Cell[4, 4];
             var currentCellFactory = CellFactory.Instance();
             var testCell = new Cell[1, 2];
             var mineMock = new Mock<Mine>(); //basic Mine class 
             //var levelOneUpgrade = new TypeOneUpgrade(mineMock.Object); //Decorated Mine object
-            mineMock.Setup(m => m.Detonate(currentFieldSize, fieldPositions, currentCellFactory)).Returns(testCell);
+            mineMock.Setup(m => m.Detonate(fieldPositions, currentCellFactory)).Returns(testCell);
             //Assert.AreEqual(levelOneUpgrade.Detonate(currentFieldSize, fieldPositions), testCell);
         }
 

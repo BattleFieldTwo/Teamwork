@@ -16,9 +16,9 @@ namespace BattleField2.Models.Mines
         protected Explosive Mine { get; set; }
 
 
-        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions, CellFactory currentCellFactory)
+        public override Cell[,] Detonate(Cell[,] fieldPositions, CellFactory currentCellFactory)
         {
-            return this.Mine.Detonate(currentFieldSize, fieldPositions, currentCellFactory);
+            return this.Mine.Detonate(fieldPositions, currentCellFactory);
         }
     }
 }

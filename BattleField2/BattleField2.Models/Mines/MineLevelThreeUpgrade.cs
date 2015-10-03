@@ -14,12 +14,13 @@ namespace BattleField2.Models.Mines
         }
 
 
-        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions, CellFactory currentCellFactory)
+        public override Cell[,] Detonate(Cell[,] fieldPositions, CellFactory currentCellFactory)
         {
             int row = this.Coordinates.Row;
             int col = this.Coordinates.Col;
+            int currentFieldSize = fieldPositions.GetLength(0);
 
-            fieldPositions = base.Detonate(currentFieldSize, fieldPositions, currentCellFactory);
+            fieldPositions = base.Detonate(fieldPositions, currentCellFactory);
 
             if (Mine.PrevIsValid(row - 1))
             {
