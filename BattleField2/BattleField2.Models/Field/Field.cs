@@ -95,7 +95,7 @@
                 {
                     int numberTypeOfMine = rnd.Next(0, 5);
                     MineType type = (MineType)numberTypeOfMine;
-                    this.FieldPositions[currentMineRow, currentMineCol] = MineFactory.GetMine(type, currentCoordinates);
+                    this.FieldPositions[currentMineRow, currentMineCol] = MineFactory.GetMine(type);
 
                     numberOfAlreadyPositionedMines++;
                 }

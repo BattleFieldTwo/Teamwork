@@ -1,6 +1,8 @@
 ﻿namespace BattleField2.Models.Mines
 {
     using Cells;
+    using Coordinates;
+
     internal class MineLevelFourUpgrade : MineDecorator
     {
         private readonly string stringRepresentation = " 4 ";
@@ -8,18 +10,17 @@
         public MineLevelFourUpgrade(Explosive mine)
             : base(mine)
         {
-            this.Coordinates = mine.Coordinates;
         }
 
 
-        public override Cell[,] Detonate(Cell[,] fieldPositions, CellFactory currentCellFactory)
+        public override Cell[,] Detonate(Cell[,] fieldPositions, CellFactory currentCellFactory, Coordinates currentCoordinates)
         {
-            int row = this.Coordinates.Row;
-            int col = this.Coordinates.Col;
+            int row = currentCoordinates.Row;
+            int col = currentCoordinates.Col;
             int currentFieldSize = fieldPositions.GetLength(0);
 
 
-            fieldPositions = base.Detonate(fieldPositions, currentCellFactory);
+            fieldPositions = base.Detonate(fieldPositions, currentCellFactory, currentCoordinates);
 
             if (PrevIsValid(row - 1))
             {

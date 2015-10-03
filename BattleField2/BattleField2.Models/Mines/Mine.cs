@@ -8,15 +8,10 @@
 
         private readonly string stringRepresentation = " 1 ";
 
-        public Mine(Coordinates currentCoordinates)
+        public override Cell[,] Detonate(Cell[,] fieldPositions, CellFactory currentCellFactory, Coordinates currentCoordinates)
         {
-            this.Coordinates = currentCoordinates;
-        }
-
-        public override Cell[,] Detonate(Cell[,] fieldPositions, CellFactory currentCellFactory)
-        {
-            int row = this.Coordinates.Row;
-            int col = this.Coordinates.Col;
+            int row = currentCoordinates.Row;
+            int col = currentCoordinates.Col;
             int currentFieldSize = fieldPositions.GetLength(0);
 
             fieldPositions[row, col] = currentCellFactory.GetCell(CellType.Detonated);

@@ -5,9 +5,9 @@
     public class MineFactory
     {
         // Refactor static methods!
-        public static Explosive GetMine(MineType type, Coordinates currentCoordinates)
+        public static Explosive GetMine(MineType type)
         {
-            var currentMine = new Mine(currentCoordinates);
+            var currentMine = new Mine();
             var levelTwo = new MineLevelTwoUpgrade(currentMine);
             var levelThree = new MineLevelThreeUpgrade(levelTwo);
             var levelFour = new MineLevelFourUpgrade(levelThree);

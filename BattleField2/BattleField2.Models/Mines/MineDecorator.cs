@@ -3,6 +3,7 @@ namespace BattleField2.Models.Mines
 {
 
     using Cells;
+    using Coordinates;
 
     internal abstract class MineDecorator : Explosive
     {
@@ -16,9 +17,9 @@ namespace BattleField2.Models.Mines
         protected Explosive Mine { get; set; }
 
 
-        public override Cell[,] Detonate(Cell[,] fieldPositions, CellFactory currentCellFactory)
+        public override Cell[,] Detonate(Cell[,] fieldPositions, CellFactory currentCellFactory, Coordinates currentCoordinates)
         {
-            return this.Mine.Detonate(fieldPositions, currentCellFactory);
+            return this.Mine.Detonate(fieldPositions, currentCellFactory, currentCoordinates);
         }
     }
 }

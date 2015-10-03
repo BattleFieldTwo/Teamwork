@@ -4,6 +4,7 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Models.Mines;
     using Models.Cells;
+    using Models.Coordinates;
     using Moq;
 
     [TestClass]
@@ -14,10 +15,12 @@
         {
             var fieldPositions = new Cell[4, 4];
             var currentCellFactory = CellFactory.Instance();
+            // These coordinates should be the position of the mine
+            var currentCoordinates = new Coordinates(2, 2);
             var testCell = new Cell[1, 2];
             var mineMock = new Mock<Mine>(); //basic Mine class 
             //var levelOneUpgrade = new TypeOneUpgrade(mineMock.Object); //Decorated Mine object
-            mineMock.Setup(m => m.Detonate(fieldPositions, currentCellFactory)).Returns(testCell);
+            mineMock.Setup(m => m.Detonate(fieldPositions, currentCellFactory, currentCoordinates)).Returns(testCell);
             //Assert.AreEqual(levelOneUpgrade.Detonate(currentFieldSize, fieldPositions), testCell);
         }
 
