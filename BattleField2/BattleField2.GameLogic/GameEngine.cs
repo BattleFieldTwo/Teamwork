@@ -3,9 +3,8 @@
     using BattleField2.Common;
     using BattleField2.Models.Coordinates;
     using BattleField2.Models.Field;
-    using BattleField2.Renderers;
-    using BattleField2.ViewModels.Contracts;
     using BattleField2.Models.Mines;
+    using BattleField2.Renderers;
     using System;
 
     public class GameEngine
@@ -31,6 +30,7 @@
 
         public void InitializeGame()
         {
+            this.renderer.Clear();
             this.renderer.DisplayMessage(Constants.WelcomeMessage);
             int currentFieldSize = this.EnterFieldSize();
 
@@ -121,6 +121,8 @@
         {
             this.renderer.DisplayMessage(Constants.GameOverMessage + this.battleField.DetonatedMines);
             this.renderer.Wait();
+            this.InitializeGame();
+            this.PlayGame();
         }
     }
 }

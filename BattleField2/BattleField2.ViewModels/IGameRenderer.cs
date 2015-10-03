@@ -9,6 +9,8 @@
 
         void DrawField(Field currentBattleField);
 
+        void Clear();
+
         string EnterCommand();
 
         void Wait();
