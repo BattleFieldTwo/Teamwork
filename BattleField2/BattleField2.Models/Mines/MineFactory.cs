@@ -4,27 +4,45 @@
 
     public class MineFactory
     {
-        // Refactor static methods!
-        public static Explosive GetMine(MineType type)
-        {
-            var currentMine = new Mine();
-            var levelTwo = new MineLevelTwoUpgrade(currentMine);
-            var levelThree = new MineLevelThreeUpgrade(levelTwo);
-            var levelFour = new MineLevelFourUpgrade(levelThree);
-            var levelFive = new MineLevelFiveUpgrade(levelFour);
+        private static MineFactory instance;
+        private Explosive levelOne;
+        private Explosive levelTwo;
+        private Explosive levelThree;
+        private Explosive levelFour;
+        private Explosive levelFive;
 
+        private MineFactory()
+        {
+            this.levelOne = new Mine();
+            this.levelTwo = new MineLevelTwoUpgrade(levelOne);
+            this.levelThree = new MineLevelThreeUpgrade(levelTwo);
+            this.levelFour = new MineLevelFourUpgrade(levelThree);
+            this.levelFive = new MineLevelFiveUpgrade(levelFour);
+        }
+
+        public static MineFactory Instance()
+        {
+            if (instance == null)
+            {
+                instance = new MineFactory();
+            }
+            return instance;
+        }
+
+        public Explosive GetMine(MineType type)
+        {
             switch (type)
             {
                 case MineType.MineOne:
-                    return currentMine;
+                    return this.levelOne;
                 case MineType.MineTwo:
-                    return levelTwo;
+                    return this.levelTwo;
                 case MineType.MineThree:
-                    return levelThree;
+                    return this.levelThree;
                 case MineType.MineFour:
-                    return levelFour;
+                    return this.levelFour;
                 case MineType.MineFive:
-                    return levelFive;
+                    return this.levelFive;
             }
 
             return null;

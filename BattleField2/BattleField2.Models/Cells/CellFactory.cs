@@ -34,7 +34,6 @@
             set { detonated = value; }
         }
 
-        // Refactor static methods????
         public Cell GetCell(CellType type)
         {
             Cell currentCell = null;

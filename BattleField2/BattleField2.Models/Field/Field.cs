@@ -12,6 +12,8 @@
         private int detonatedMines;
         private int initialMines;
         private CellFactory currentCellFactory;
+        private MineFactory currentMineFactory;
+
 
         public Field(int currentFieldSize)
         {
@@ -19,6 +21,7 @@
             this.DetonatedMines = 0;
             this.InitialMines = CalculateInitialMines();
             this.CurrentCellFactory = CellFactory.Instance();
+            this.CurrentMineFactory = MineFactory.Instance();
         }
 
         public Cell[,] FieldPositions
@@ -63,7 +66,18 @@
             {
                 this.currentCellFactory  = value;
             }
-    }
+        }
+
+        public MineFactory CurrentMineFactory
+        {
+            get { return currentMineFactory; }
+
+            // TODO: Implement checks!
+            private set
+            {
+                this.currentMineFactory = value;
+            }
+        }
 
         public void GenerateField()
         {
@@ -95,7 +109,7 @@
                 {
                     int numberTypeOfMine = rnd.Next(0, 5);
                     MineType type = (MineType)numberTypeOfMine;
-                    this.FieldPositions[currentMineRow, currentMineCol] = MineFactory.GetMine(type);
+                    this.FieldPositions[currentMineRow, currentMineCol] = CurrentMineFactory.GetMine(type);
 
                     numberOfAlreadyPositionedMines++;
                 }
@@ -147,5 +161,7 @@
 
             return minesCount;
         }
+
+        
     }
 }
