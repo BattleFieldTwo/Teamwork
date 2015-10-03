@@ -45,16 +45,17 @@
 
         public void DrawField(Field currentBattleField)
         {
-            //top side numbers
+            int currentFieldSize = currentBattleField.FieldPositions.GetLength(0);
+                //top side numbers
             Console.Write("   ");
-            for (int i = 0; i < currentBattleField.CurrentFieldSize; i++)
+            for (int i = 0; i < currentFieldSize; i++)
             {
                 Console.Write(" " + i + "  ");
             }
             Console.WriteLine("");
 
             Console.Write("    ");
-            for (int i = 0; i < 4 * currentBattleField.CurrentFieldSize - 3; i++)
+            for (int i = 0; i < 4 * currentFieldSize - 3; i++)
             {
                 Console.Write("-");
             }
@@ -62,11 +63,11 @@
 
             Console.WriteLine("");
 
-            for (int i = 0; i < currentBattleField.CurrentFieldSize; i++)
+            for (int i = 0; i < currentFieldSize; i++)
             {
                 //left side numbers
                 Console.Write(i.ToString() + "|");
-                for (int j = 0; j < currentBattleField.CurrentFieldSize; j++)
+                for (int j = 0; j < currentFieldSize; j++)
                 {
                     Console.Write(" " + currentBattleField.FieldPositions[i, j].StringRepresentation);
                 }
