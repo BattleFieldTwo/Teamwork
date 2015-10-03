@@ -14,28 +14,28 @@ namespace BattleField2.Models.Mines
         }
 
 
-        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)
+        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions, CellFactory currentCellFactory)
         {
             int row = this.Coordinates.Row;
             int col = this.Coordinates.Col;
 
-            fieldPositions = base.Detonate(currentFieldSize, fieldPositions);
+            fieldPositions = base.Detonate(currentFieldSize, fieldPositions, currentCellFactory);
 
             if (Mine.PrevIsValid(row - 1))
             {
-                fieldPositions[row - 2, col] = CellFactory.GetCell(CellType.Detonated);
+                fieldPositions[row - 2, col] = currentCellFactory.GetCell(CellType.Detonated);
             }
             if (Mine.PrevIsValid(col - 1))
             {
-                fieldPositions[row, col - 2] = CellFactory.GetCell(CellType.Detonated);
+                fieldPositions[row, col - 2] = currentCellFactory.GetCell(CellType.Detonated);
             }
             if (Mine.NextIsValid(row + 1, currentFieldSize))
             {
-                fieldPositions[row + 2, col] = CellFactory.GetCell(CellType.Detonated);
+                fieldPositions[row + 2, col] = currentCellFactory.GetCell(CellType.Detonated);
             }
             if (Mine.NextIsValid(col + 1, currentFieldSize))
             {
-                fieldPositions[row, col + 2] = CellFactory.GetCell(CellType.Detonated);
+                fieldPositions[row, col + 2] = currentCellFactory.GetCell(CellType.Detonated);
             }
 
             return fieldPositions;

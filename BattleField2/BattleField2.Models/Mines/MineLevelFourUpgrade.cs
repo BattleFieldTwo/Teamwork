@@ -12,22 +12,22 @@
         }
 
 
-        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)
+        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions, CellFactory currentCellFactory)
         {
             int row = this.Coordinates.Row;
             int col = this.Coordinates.Col;
 
-            fieldPositions = base.Detonate(currentFieldSize, fieldPositions);
+            fieldPositions = base.Detonate(currentFieldSize, fieldPositions, currentCellFactory);
 
             if (PrevIsValid(row - 1))
             {
                 if (PrevIsValid(col))
                 {
-                    fieldPositions[row - 2, col - 1] = CellFactory.GetCell(CellType.Detonated);
+                    fieldPositions[row - 2, col - 1] = currentCellFactory.GetCell(CellType.Detonated);
                 }
                 if (NextIsValid(col, currentFieldSize))
                 {
-                    fieldPositions[row - 2, col + 1] = CellFactory.GetCell(CellType.Detonated);
+                    fieldPositions[row - 2, col + 1] = currentCellFactory.GetCell(CellType.Detonated);
                 }
             }
 
@@ -35,11 +35,11 @@
             {
                 if (PrevIsValid(row))
                 {
-                    fieldPositions[row - 1, col - 2] = CellFactory.GetCell(CellType.Detonated);
+                    fieldPositions[row - 1, col - 2] = currentCellFactory.GetCell(CellType.Detonated);
                 }
                 if (NextIsValid(row, currentFieldSize))
                 {
-                    fieldPositions[row + 1, col - 2] = CellFactory.GetCell(CellType.Detonated);
+                    fieldPositions[row + 1, col - 2] = currentCellFactory.GetCell(CellType.Detonated);
                 }
             }
 
@@ -47,11 +47,11 @@
             {
                 if (PrevIsValid(col))
                 {
-                    fieldPositions[row + 2, col - 1] = CellFactory.GetCell(CellType.Detonated);
+                    fieldPositions[row + 2, col - 1] = currentCellFactory.GetCell(CellType.Detonated);
                 }
                 if (NextIsValid(col, currentFieldSize))
                 {
-                    fieldPositions[row + 2, col + 1] = CellFactory.GetCell(CellType.Detonated);
+                    fieldPositions[row + 2, col + 1] = currentCellFactory.GetCell(CellType.Detonated);
                 }
             }
 
@@ -59,18 +59,14 @@
             {
                 if (PrevIsValid(row))
                 {
-                    fieldPositions[row - 1, col + 2] = CellFactory.GetCell(CellType.Detonated);
+                    fieldPositions[row - 1, col + 2] = currentCellFactory.GetCell(CellType.Detonated);
                 }
                 if (NextIsValid(row, currentFieldSize))
                 {
-                    fieldPositions[row + 1, col + 2] = CellFactory.GetCell(CellType.Detonated);
+                    fieldPositions[row + 1, col + 2] = currentCellFactory.GetCell(CellType.Detonated);
                 }
             }
-
-
             return fieldPositions;
-
-
         }
 
         public override string StringRepresentation

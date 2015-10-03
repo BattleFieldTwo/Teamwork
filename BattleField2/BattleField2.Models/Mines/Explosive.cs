@@ -16,7 +16,7 @@ namespace BattleField2.Models.Mines
             set { coordinates = value; }
         }
 
-        public abstract Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions);
+        public abstract Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions, CellFactory CurrentCellFactory);
 
         //Checking if entered coordinates are valid
         public bool PrevIsValid(int coord)

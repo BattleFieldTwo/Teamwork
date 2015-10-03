@@ -1,22 +1,51 @@
 ﻿namespace BattleField2.Models.Cells
 {
-    using BattleField2.Models.Mines;
-    using BattleField2.Models.Coordinates;
-
-    class CellFactory
+    public class CellFactory
     {
+        private Cell empty;
+        private Cell detonated;
+        private static CellFactory instance;
+
+        // Implemented Sigleton and Flyweight DP here
+        private CellFactory()
+        {
+            this.Empty = new EmptyCell();
+            this.Detonated = new DetonatedCell();
+        }
+
+        public static CellFactory Instance()
+        {
+            if (instance == null)
+            {
+                instance = new CellFactory();
+            }
+            return instance;
+        }
+
+        private Cell Empty
+        {
+            get { return empty; }
+            set { empty = value; }
+        }
+
+        private Cell Detonated
+        {
+            get { return detonated; }
+            set { detonated = value; }
+        }
+
         // Refactor static methods????
-        public static Cell GetCell(CellType type)
+        public Cell GetCell(CellType type)
         {
             Cell currentCell = null;
 
             switch (type)
             {
                 case CellType.Empty:
-                    currentCell = new EmptyCell();
+                    currentCell = this.Empty;
                     break;
                 case CellType.Detonated:
-                    currentCell = new DetonatedCell();
+                    currentCell = this.Detonated;
                     break;
                 default:
                     break;

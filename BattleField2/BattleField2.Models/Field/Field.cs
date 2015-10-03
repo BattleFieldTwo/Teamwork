@@ -12,6 +12,7 @@
         private Cell[,] fieldPositions;
         private int detonatedMines;
         private int initialMines;
+        private CellFactory currentCellFactory;
 
         public Field(int currentFieldSize)
         {
@@ -19,6 +20,7 @@
             this.FieldPositions = new Cell[currentFieldSize, currentFieldSize];
             this.DetonatedMines = 0;
             this.InitialMines = CalculateInitialMines();
+            this.CurrentCellFactory = CellFactory.Instance();
         }
 
         public Cell[,] FieldPositions
@@ -59,18 +61,30 @@
             get { return initialMines; }
 
             // TODO: Implement checks!
-            private set { initialMines = value; }
+            private set
+            {
+                this.initialMines = value;
+            }
         }
+
+        public CellFactory CurrentCellFactory
+        {
+            get { return currentCellFactory; }
+
+            // TODO: Implement checks!
+            private set
+            {
+                this.currentCellFactory  = value;
+            }
+    }
 
         public void GenerateField()
         {
-            for (int i = 0; i < currentFieldSize; i++)
+            for (int i = 0; i < this.currentFieldSize; i++)
             {
-                for (int j = 0; j < currentFieldSize; j++)
+                for (int j = 0; j < this.currentFieldSize; j++)
                 {
-                    Coordinates currentCoordinates = new Coordinates(i, j);
-
-                    this.fieldPositions[i, j] = CellFactory.GetCell(CellType.Empty);
+                    this.fieldPositions[i, j] = CurrentCellFactory.GetCell(CellType.Empty);
                 }
             }
         }
