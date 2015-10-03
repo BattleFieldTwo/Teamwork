@@ -1,10 +1,7 @@
 ﻿namespace BattleField2.Renderers
 {
-    using System;
-
     using BattleField2.Models.Field;
-    using BattleField2.Models.Coordinates;
-    using BattleField2.Common;
+    using System;
 
     public class ConsoleGameRenderer : IGameRenderer
     {
@@ -29,39 +26,33 @@
 
         public void DisplayMessage(string message)
         {
-            Console.Write(message);
+            Console.WriteLine(message);
         }
 
         public void DrawField(Field currentBattleField)
         {
+            Console.Clear();
             Console.Write("   ");
             for (int i = 0; i < currentBattleField.CurrentFieldSize; i++)
             {
                 Console.Write(" " + i + "  ");
             }
-            Console.WriteLine("");
-
-            Console.Write("    ");
-            for (int i = 0; i < 4 * currentBattleField.CurrentFieldSize - 3; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("");
-
-            Console.WriteLine("");
-
+            Console.WriteLine("\n    " + new string('-', 4 * currentBattleField.CurrentFieldSize - 3) + '\n');
             for (int i = 0; i < currentBattleField.CurrentFieldSize; i++)
             {
-                //left side numbers
-                Console.Write(i.ToString() + "|");
+                Console.Write(i + "|");
                 for (int j = 0; j < currentBattleField.CurrentFieldSize; j++)
                 {
                     Console.Write(" " + currentBattleField.FieldPositions[i, j].StringRepresentation);
                 }
-                Console.WriteLine(""); Console.WriteLine(""); Console.WriteLine("");
+                Console.WriteLine("\n\n");
             }
         }
 
+        public void Clear()
+        {
+            Console.Clear();
+        }
         public string EnterCommand()
         {
             string inputCommand = Console.ReadLine();
