@@ -104,7 +104,7 @@ namespace BattleField2.GameLogic
                 this.renderer.DisplayMessage(Constants.InviteToEnterCoordinatesMessage);
 
                 string coordinates = this.renderer.EnterCommand();
-                if (!Validations.IsValidInputCoordinates(coordinates, this.battleField.CurrentFieldSize))
+                if (!Validations.IsValidInputCoordinates(coordinates, this.battleField.FieldPositions.GetLength(0)))
                 {
                     this.renderer.DisplayMessage(Constants.InvalidMoveNotificationMessage);
                     continue;
