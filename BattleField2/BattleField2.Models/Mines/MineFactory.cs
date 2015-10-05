@@ -4,32 +4,75 @@
 
     public class MineFactory
     {
-        // Refactor static methods!
-        public static Mine GetMine(MineType type, Coordinates currentCoordinates)
-        {
-            Mine currentMine = null;
+        private static MineFactory instance;
+        private Explosive levelOne;
+        private Explosive levelTwo;
+        private Explosive levelThree;
+        private Explosive levelFour;
+        private Explosive levelFive;
 
+        private MineFactory()
+        {
+            this.levelOne = new Mine();
+            this.levelTwo = new MineLevelTwoUpgrade(levelOne);
+            this.levelThree = new MineLevelThreeUpgrade(levelTwo);
+            this.levelFour = new MineLevelFourUpgrade(levelThree);
+            this.levelFive = new MineLevelFiveUpgrade(levelFour);
+        }
+
+        public static MineFactory Instance()
+        {
+            if (instance == null)
+            {
+                instance = new MineFactory();
+            }
+            return instance;
+        }
+
+        public Explosive GetMine(MineType type)
+        {
             switch (type)
             {
                 case MineType.MineOne:
-                    currentMine = new MineOne(currentCoordinates);
-                    break;
+                    return this.levelOne;
                 case MineType.MineTwo:
-                    currentMine = new MineTwo(currentCoordinates);
-                    break;
+                    return this.levelTwo;
                 case MineType.MineThree:
-                    currentMine = new MineThree(currentCoordinates);
-                    break;
+                    return this.levelThree;
                 case MineType.MineFour:
-                    currentMine = new MineFour(currentCoordinates);
-                    break;
+                    return this.levelFour;
                 case MineType.MineFive:
-                    currentMine = new MineFive(currentCoordinates);
-                    break;
-                default:
-                    break;
+                    return this.levelFive;
             }
-            return currentMine;
+
+            return null;
         }
+
+        //public static mine getmine(minetype type, coordinates currentcoordinates)
+        //{
+        //    mine currentmine = null;
+
+        //    switch (type)
+        //    {
+        //        case minetype.mineone:
+        //            currentmine = new mineone(currentcoordinates);
+        //            break;
+        //        case minetype.minetwo:
+        //            currentmine = new minetwo(currentcoordinates);
+        //            break;
+        //        case minetype.minethree:
+        //            currentmine = new minethree(currentcoordinates);
+        //            break;
+        //        case minetype.minefour:
+        //            currentmine = new minefour(currentcoordinates);
+        //            break;
+        //        case minetype.minefive:
+        //            currentmine = new minefive(currentcoordinates);
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //    return currentmine;
+        //}
     }
 }
