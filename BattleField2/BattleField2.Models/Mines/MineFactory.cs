@@ -7,11 +7,11 @@
         // Refactor static methods!
         public static Explosive GetMine(MineType type, Coordinates currentCoordinates)
         {
-            var currentMine = new Mine(currentCoordinates);
-            var levelTwo = new MineLevelTwoUpgrade(currentMine);
-            var levelThree = new MineLevelThreeUpgrade(levelTwo);
-            var levelFour = new MineLevelFourUpgrade(levelThree);
-            var levelFive = new MineLevelFiveUpgrade(levelFour);
+            var currentMine = new MineLevelOneUpgrade(currentCoordinates);
+            var levelTwo = new MineLevelTwoUpgrade(currentCoordinates);
+            var levelThree = new MineLevelThreeUpgrade(currentCoordinates);
+            var levelFour = new MineLevelFourUpgrade(currentCoordinates);
+            var levelFive = new MineLevelFiveUpgrade(currentCoordinates);
 
             switch (type)
             {

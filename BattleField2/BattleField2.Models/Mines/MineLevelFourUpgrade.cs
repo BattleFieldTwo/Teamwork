@@ -1,76 +1,35 @@
 ﻿namespace BattleField2.Models.Mines
 {
+    using System.Collections.Generic;
+    using Coordinates;
     using Cells;
+
     internal class MineLevelFourUpgrade : MineDecorator
     {
+        private readonly int mineSpan = 2;
         private readonly string stringRepresentation = " 4 ";
 
-        public MineLevelFourUpgrade(Explosive mine)
-            : base(mine)
+        public MineLevelFourUpgrade(Coordinates currentCoordinates)
+            : base(currentCoordinates)
         {
-            this.Coordinates = mine.Coordinates;
         }
 
-
-        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)
+        public override Cell[,] Detonate(int fieldSize, Cell[,] field)
         {
             int row = this.Coordinates.Row;
             int col = this.Coordinates.Col;
 
-            fieldPositions = base.Detonate(currentFieldSize, fieldPositions);
-
-            if (PrevIsValid(row - 1))
+            List<Coordinates> toEmpty = new List<Coordinates>()
             {
-                if (PrevIsValid(col))
-                {
-                    fieldPositions[row - 2, col - 1] = CellFactory.GetCell(CellType.Detonated);
-                }
-                if (NextIsValid(col, currentFieldSize))
-                {
-                    fieldPositions[row - 2, col + 1] = CellFactory.GetCell(CellType.Detonated);
-                }
-            }
+                new Coordinates(row - this.mineSpan, col - this.mineSpan),
+                new Coordinates(row - this.mineSpan, col + this.mineSpan),
+                new Coordinates(row + this.mineSpan, col - this.mineSpan),
+                new Coordinates(row + this.mineSpan, col + this.mineSpan),
+            };
 
-            if (PrevIsValid(col - 1))
-            {
-                if (PrevIsValid(row))
-                {
-                    fieldPositions[row - 1, col - 2] = CellFactory.GetCell(CellType.Detonated);
-                }
-                if (NextIsValid(row, currentFieldSize))
-                {
-                    fieldPositions[row + 1, col - 2] = CellFactory.GetCell(CellType.Detonated);
-                }
-            }
+            this.DetonateMineBase(fieldSize, field, mineSpan, toEmpty);
 
-            if (NextIsValid(row + 1, currentFieldSize))
-            {
-                if (PrevIsValid(col))
-                {
-                    fieldPositions[row + 2, col - 1] = CellFactory.GetCell(CellType.Detonated);
-                }
-                if (NextIsValid(col, currentFieldSize))
-                {
-                    fieldPositions[row + 2, col + 1] = CellFactory.GetCell(CellType.Detonated);
-                }
-            }
-
-            if (NextIsValid(col + 1, currentFieldSize))
-            {
-                if (PrevIsValid(row))
-                {
-                    fieldPositions[row - 1, col + 2] = CellFactory.GetCell(CellType.Detonated);
-                }
-                if (NextIsValid(row, currentFieldSize))
-                {
-                    fieldPositions[row + 1, col + 2] = CellFactory.GetCell(CellType.Detonated);
-                }
-            }
-
-
-            return fieldPositions;
-
-
+            return field;
         }
 
         public override string StringRepresentation
