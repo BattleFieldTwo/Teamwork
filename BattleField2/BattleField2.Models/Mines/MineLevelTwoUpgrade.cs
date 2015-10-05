@@ -1,48 +1,23 @@
-﻿
-namespace BattleField2.Models.Mines
+﻿namespace BattleField2.Models.Mines
 {
-
     using Cells;
     using Coordinates;
 
     internal class MineLevelTwoUpgrade : MineDecorator
     {
+        private readonly int mineSpan = 1;
         private readonly string stringRepresentation = " 2 ";
 
-        public MineLevelTwoUpgrade(Explosive mine)
-            : base(mine)
+        public MineLevelTwoUpgrade(Coordinates currentCoordinates)
+            : base(currentCoordinates)
         {
-            this.Coordinates = mine.Coordinates;
         }
 
-
-        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)
+        public override Cell[,] Detonate(int fieldSize, Cell[,] field)
         {
-            int row = this.Coordinates.Row;
-            int col = this.Coordinates.Col;
+            this.DetonateMineBase(fieldSize, field, mineSpan);
 
-            fieldPositions = base.Detonate(currentFieldSize, fieldPositions);
-
-            if (Mine.PrevIsValid(row))
-            {
-                fieldPositions[row - 1, col] = CellFactory.GetCell(CellType.Detonated);
-            }
-            if (Mine.PrevIsValid(col))
-            {
-                fieldPositions[row, col - 1] = CellFactory.GetCell(CellType.Detonated);
-            }
-            if (Mine.NextIsValid(row, currentFieldSize))
-            {
-                fieldPositions[row + 1, col] = CellFactory.GetCell(CellType.Detonated);
-            }
-            if (Mine.NextIsValid(col, currentFieldSize))
-            {
-                fieldPositions[row, col + 1] = CellFactory.GetCell(CellType.Detonated);
-            }
-
-            return fieldPositions;
-
-
+            return field;
         }
 
         public override string StringRepresentation

@@ -1,46 +1,36 @@
-﻿
-namespace BattleField2.Models.Mines
+﻿namespace BattleField2.Models.Mines
 {
+    using System.Collections.Generic;
+    using Coordinates;
     using Cells;
 
     internal class MineLevelThreeUpgrade : MineDecorator
     {
+        private readonly int mineSpan = 2;
         private readonly string stringRepresentation = " 3 ";
 
-        public MineLevelThreeUpgrade(Explosive mine)
-            : base(mine)
+        public MineLevelThreeUpgrade(Coordinates currentCoordinates)
+            : base(currentCoordinates)
         {
-            this.Coordinates = mine.Coordinates;
         }
 
-
-        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)
+        public override Cell[,] Detonate(int fieldSize, Cell[,] field)
         {
             int row = this.Coordinates.Row;
             int col = this.Coordinates.Col;
 
-            fieldPositions = base.Detonate(currentFieldSize, fieldPositions);
-
-            if (Mine.PrevIsValid(row - 1))
+            List<Coordinates> toDetonate = new List<Coordinates>()
             {
-                fieldPositions[row - 2, col] = CellFactory.GetCell(CellType.Detonated);
-            }
-            if (Mine.PrevIsValid(col - 1))
-            {
-                fieldPositions[row, col - 2] = CellFactory.GetCell(CellType.Detonated);
-            }
-            if (Mine.NextIsValid(row + 1, currentFieldSize))
-            {
-                fieldPositions[row + 2, col] = CellFactory.GetCell(CellType.Detonated);
-            }
-            if (Mine.NextIsValid(col + 1, currentFieldSize))
-            {
-                fieldPositions[row, col + 2] = CellFactory.GetCell(CellType.Detonated);
-            }
+                new Coordinates(row - this.mineSpan, col),
+                new Coordinates(row + this.mineSpan, col),
+                new Coordinates(row, col - this.mineSpan),
+                new Coordinates(row, col + this.mineSpan)
+            };
 
-            return fieldPositions;
+            this.DetonateMineBase(fieldSize, field, this.mineSpan - 1);
+            this.DetonateAdditional(fieldSize, field, toDetonate);
 
-
+            return field;
         }
 
         public override string StringRepresentation

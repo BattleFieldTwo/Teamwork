@@ -62,7 +62,7 @@
                     }
                 } while (!this.battleField.ValidateMoveCoordinates(currentCoordinates));
 
-                this.battleField.FieldPositions = (this.battleField.FieldPositions[currentCoordinates.Row, currentCoordinates.Col] as Mine).Detonate(
+                this.battleField.FieldPositions = (this.battleField.FieldPositions[currentCoordinates.Row, currentCoordinates.Col] as Explosive).Detonate(
                     this.battleField.CurrentFieldSize, this.battleField.FieldPositions);
 
                 this.battleField.DetonatedMines++;
