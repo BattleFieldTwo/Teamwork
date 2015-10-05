@@ -34,7 +34,7 @@ namespace BattleField2.GameLogic
         public void InitializeGame()
         {
             this.renderer.Clear();
-            this.renderer.DisplayMessage(Constants.WelcomeMessage);
+            this.renderer.DisplayMessage(Constants.WELCOMEMESSAGE);
             int currentFieldSize = this.EnterFieldSize();
 
             this.battleField = new Field(currentFieldSize);
@@ -48,7 +48,7 @@ namespace BattleField2.GameLogic
 
         public void PlayGame()
         {
-            this.renderer.DisplayMessage(Constants.MinesCountMessage + this.battleField.InitialMines);
+            this.renderer.DisplayMessage(Constants.MINESCOUNTMESSAGE + this.battleField.InitialMines);
 
             int remainingMines;
             do
@@ -61,7 +61,7 @@ namespace BattleField2.GameLogic
 
                     if (!this.battleField.ValidateMoveCoordinates(currentCoordinates))
                     {
-                        this.renderer.DisplayMessage(Constants.InvalidMoveNotificationMessage);
+                        this.renderer.DisplayMessage(Constants.INVALIDMOVENOTIFICATIONMESSAGE);
                     }
                 } while (!this.battleField.ValidateMoveCoordinates(currentCoordinates));
 
@@ -73,7 +73,7 @@ namespace BattleField2.GameLogic
                 this.renderer.DrawField(this.battleField);
 
                 remainingMines = this.battleField.CountRemainingMines();
-                this.renderer.DisplayMessage(Constants.MinesCountMessage + remainingMines);
+                this.renderer.DisplayMessage(Constants.MINESCOUNTMESSAGE + remainingMines);
 
             } while (remainingMines > 0);
 
@@ -85,7 +85,7 @@ namespace BattleField2.GameLogic
             string inputFieldSize;
             do
             {
-                this.renderer.DisplayMessage(Constants.InviteToEnterSizeMessage);
+                this.renderer.DisplayMessage(Constants.INVITETOENTERSIZEMESSAGE);
                 inputFieldSize = this.renderer.EnterCommand();
             } while (!Validations.IsValidInputFieldSize(inputFieldSize));
 
@@ -101,12 +101,12 @@ namespace BattleField2.GameLogic
 
             do
             {
-                this.renderer.DisplayMessage(Constants.InviteToEnterCoordinatesMessage);
+                this.renderer.DisplayMessage(Constants.INVITETOENTERCOORDINATESMESSAGE);
 
                 string coordinates = this.renderer.EnterCommand();
                 if (!Validations.IsValidInputCoordinates(coordinates, this.battleField.FieldPositions.GetLength(0)))
                 {
-                    this.renderer.DisplayMessage(Constants.InvalidMoveNotificationMessage);
+                    this.renderer.DisplayMessage(Constants.INVALIDMOVENOTIFICATIONMESSAGE);
                     continue;
                 }
 
@@ -122,7 +122,7 @@ namespace BattleField2.GameLogic
 
         public void GameOver()
         {
-            this.renderer.DisplayMessage(Constants.GameOverMessage + this.battleField.DetonatedMines);
+            this.renderer.DisplayMessage(Constants.GAMEOVERMESSAGE + this.battleField.DetonatedMines);
             this.renderer.Wait();
             this.InitializeGame();
             this.PlayGame();
