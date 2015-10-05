@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace BattleField2.Common
 {
@@ -43,6 +44,30 @@ namespace BattleField2.Common
                 return false;
             }
 
+            return true;
+        }
+
+        public static bool isValidPlayerScore(int score)
+        {
+            if(score < 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public static bool isValidPlayerName(string name)
+        {
+            Regex RgxUrl = new Regex(Constants.PLAYERNAMEREGEXPATTERN);
+            
+            if (name.Equals(""))
+            {
+                return false;
+            }
+            if (RgxUrl.IsMatch(name))
+            {
+                return false;
+            }
             return true;
         }
     }
