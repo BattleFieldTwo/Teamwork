@@ -4,6 +4,7 @@ namespace BattleField2.Models.Mines
     using System.Collections.Generic;
     using Coordinates;
     using Cells;
+    using Coordinates;
 
     internal class MineLevelThreeUpgrade : MineDecorator
     {
@@ -15,6 +16,7 @@ namespace BattleField2.Models.Mines
         {
         }
 
+<<<<<<< HEAD
         public override Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates)
         {
             int row = currentCoordinates.Row;
@@ -27,6 +29,35 @@ namespace BattleField2.Models.Mines
                 new Coordinates(row, col - this.mineSpan),
                 new Coordinates(row, col + this.mineSpan)
             };
+=======
+
+        public override Cell[,] Detonate(Cell[,] fieldPositions, CellFactory currentCellFactory, Coordinates currentCoordinates)
+        {
+            int row = currentCoordinates.Row;
+            int col = currentCoordinates.Col;
+            int currentFieldSize = fieldPositions.GetLength(0);
+
+            fieldPositions = base.Detonate(fieldPositions, currentCellFactory, currentCoordinates);
+
+            if (Mine.PrevIsValid(row - 1))
+            {
+                fieldPositions[row - 2, col] = currentCellFactory.GetCell(CellType.Detonated);
+            }
+            if (Mine.PrevIsValid(col - 1))
+            {
+                fieldPositions[row, col - 2] = currentCellFactory.GetCell(CellType.Detonated);
+            }
+            if (Mine.NextIsValid(row + 1, currentFieldSize))
+            {
+                fieldPositions[row + 2, col] = currentCellFactory.GetCell(CellType.Detonated);
+            }
+            if (Mine.NextIsValid(col + 1, currentFieldSize))
+            {
+                fieldPositions[row, col + 2] = currentCellFactory.GetCell(CellType.Detonated);
+            }
+
+            return fieldPositions;
+>>>>>>> master
 
             this.DetonateMineBase(fieldPositions, currentCoordinates, this.mineSpan - 1);
             this.DetonateAdditional(fieldPositions, currentCoordinates, toDetonate);

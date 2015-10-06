@@ -14,6 +14,7 @@
         protected Explosive Mine { get; set; }
 
 
+<<<<<<< HEAD
         public override Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates)
         {
             return this.Mine.Detonate(fieldPositions, currentCoordinates);
@@ -53,6 +54,11 @@
                     fieldPositions[toDetonated[i].Row, toDetonated[i].Col] = new DetonatedCell();
                 }
             }
+=======
+        public override Cell[,] Detonate(Cell[,] fieldPositions, CellFactory currentCellFactory, Coordinates currentCoordinates)
+        {
+            return this.Mine.Detonate(fieldPositions, currentCellFactory, currentCoordinates);
+>>>>>>> master
         }
     }
 }

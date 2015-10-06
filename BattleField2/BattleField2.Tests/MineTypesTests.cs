@@ -20,7 +20,11 @@
             var testCell = new Cell[1, 2];
             var mineMock = new Mock<Explosive>(); //basic Mine class 
             //var levelOneUpgrade = new TypeOneUpgrade(mineMock.Object); //Decorated Mine object
+<<<<<<< HEAD
             mineMock.Setup(m => m.Detonate(fieldPositions, currentCoordinates)).Returns(testCell);
+=======
+            mineMock.Setup(m => m.Detonate(fieldPositions, currentCellFactory, currentCoordinates)).Returns(testCell);
+>>>>>>> master
             //Assert.AreEqual(levelOneUpgrade.Detonate(currentFieldSize, fieldPositions), testCell);
         }
 

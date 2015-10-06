@@ -66,7 +66,11 @@ namespace BattleField2.GameLogic
                 } while (!this.battleField.ValidateMoveCoordinates(currentCoordinates));
 
                 this.battleField.FieldPositions = (this.battleField.FieldPositions[currentCoordinates.Row, currentCoordinates.Col] as Explosive).Detonate(
+<<<<<<< HEAD
                     this.battleField.FieldPositions, currentCoordinates);
+=======
+                    this.battleField.FieldPositions, this.battleField.CurrentCellFactory, currentCoordinates);
+>>>>>>> master
 
                 this.battleField.DetonatedMines++;
 
