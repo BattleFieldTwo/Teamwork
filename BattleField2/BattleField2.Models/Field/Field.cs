@@ -107,7 +107,7 @@
 
                 if (this.FieldPositions[currentMineRow, currentMineCol] is EmptyCell)
                 {
-                    int numberTypeOfMine = rnd.Next(0, 5);
+                    int numberTypeOfMine = rnd.Next(0, (int)MineType.MineCount);
                     MineType type = (MineType)numberTypeOfMine;
                     this.FieldPositions[currentMineRow, currentMineCol] = CurrentMineFactory.GetMine(type);
 

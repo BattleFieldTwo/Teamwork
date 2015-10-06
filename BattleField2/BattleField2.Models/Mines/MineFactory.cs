@@ -13,11 +13,11 @@
 
         private MineFactory()
         {
-            this.levelOne = new Mine();
-            this.levelTwo = new MineLevelTwoUpgrade(levelOne);
-            this.levelThree = new MineLevelThreeUpgrade(levelTwo);
-            this.levelFour = new MineLevelFourUpgrade(levelThree);
-            this.levelFive = new MineLevelFiveUpgrade(levelFour);
+            this.levelOne = new MineLevelOneUpgrade();
+            this.levelTwo = new MineLevelTwoUpgrade();
+            this.levelThree = new MineLevelThreeUpgrade();
+            this.levelFour = new MineLevelFourUpgrade();
+            this.levelFive = new MineLevelFiveUpgrade();
         }
 
         public static MineFactory Instance()

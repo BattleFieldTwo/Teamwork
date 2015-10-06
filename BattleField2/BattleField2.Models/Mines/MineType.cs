@@ -7,6 +7,7 @@
         MineThree,
         MineFour,
         MineFive,
+        MineCount,
         None
     }
 }

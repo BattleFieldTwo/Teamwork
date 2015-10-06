@@ -18,9 +18,9 @@
             // These coordinates should be the position of the mine
             var currentCoordinates = new Coordinates(2, 2);
             var testCell = new Cell[1, 2];
-            var mineMock = new Mock<Mine>(); //basic Mine class 
+            var mineMock = new Mock<Explosive>(); //basic Mine class 
             //var levelOneUpgrade = new TypeOneUpgrade(mineMock.Object); //Decorated Mine object
-            mineMock.Setup(m => m.Detonate(fieldPositions, currentCellFactory, currentCoordinates)).Returns(testCell);
+            mineMock.Setup(m => m.Detonate(fieldPositions, currentCoordinates)).Returns(testCell);
             //Assert.AreEqual(levelOneUpgrade.Detonate(currentFieldSize, fieldPositions), testCell);
         }
 
