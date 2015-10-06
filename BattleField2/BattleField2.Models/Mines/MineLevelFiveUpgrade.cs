@@ -6,18 +6,12 @@
     internal class MineLevelFiveUpgrade : MineDecorator
     {
         private readonly string stringRepresentation = " 5 ";
-        private readonly int mineSpan = 2;
 
-        public MineLevelFiveUpgrade()
-            : base()
+        public MineLevelFiveUpgrade(Explosive mine)
+            : base(mine)
         {
         }
 
-<<<<<<< HEAD
-        public override Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates)
-        {
-            this.DetonateMineBase(fieldPositions, currentCoordinates, this.mineSpan);
-=======
 
         public override Cell[,] Detonate(Cell[,] fieldPositions, CellFactory currentCellFactory, Coordinates currentCoordinates)
         {
@@ -43,7 +37,6 @@
             {
                 fieldPositions[row + 2, col + 2] = currentCellFactory.GetCell(CellType.Detonated);
             }
->>>>>>> master
 
             return fieldPositions;
         }
