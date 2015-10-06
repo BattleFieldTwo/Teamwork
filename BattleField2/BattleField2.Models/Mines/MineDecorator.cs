@@ -1,5 +1,4 @@
-﻿
-namespace BattleField2.Models.Mines
+﻿namespace BattleField2.Models.Mines
 {
     using System.Collections.Generic;
     using Cells;
