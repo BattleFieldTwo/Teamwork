@@ -31,17 +31,19 @@
 
         public void DrawField(Field currentBattleField)
         {
+            int fieldSize = currentBattleField.FieldPositions.GetLength(0);
+
             Console.Clear();
             Console.Write("   ");
-            for (int i = 0; i < currentBattleField.CurrentFieldSize; i++)
+            for (int i = 0; i < fieldSize; i++)
             {
                 Console.Write(" " + i + "  ");
             }
-            Console.WriteLine("\n    " + new string('-', 4 * currentBattleField.CurrentFieldSize - 3) + '\n');
-            for (int i = 0; i < currentBattleField.CurrentFieldSize; i++)
+            Console.WriteLine("\n    " + new string('-', 4 * fieldSize - 3) + '\n');
+            for (int i = 0; i < fieldSize; i++)
             {
                 Console.Write(i + "|");
-                for (int j = 0; j < currentBattleField.CurrentFieldSize; j++)
+                for (int j = 0; j < fieldSize; j++)
                 {
                     Console.Write(" " + currentBattleField.FieldPositions[i, j].StringRepresentation);
                 }

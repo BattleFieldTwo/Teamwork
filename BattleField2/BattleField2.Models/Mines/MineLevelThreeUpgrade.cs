@@ -1,4 +1,5 @@
-﻿namespace BattleField2.Models.Mines
+﻿
+namespace BattleField2.Models.Mines
 {
     using System.Collections.Generic;
     using Coordinates;
@@ -6,18 +7,18 @@
 
     internal class MineLevelThreeUpgrade : MineDecorator
     {
-        private readonly int mineSpan = 2;
         private readonly string stringRepresentation = " 3 ";
+        private readonly int mineSpan = 2;
 
-        public MineLevelThreeUpgrade(Coordinates currentCoordinates)
-            : base(currentCoordinates)
+        public MineLevelThreeUpgrade()
+            : base()
         {
         }
 
-        public override Cell[,] Detonate(int fieldSize, Cell[,] field)
+        public override Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates)
         {
-            int row = this.Coordinates.Row;
-            int col = this.Coordinates.Col;
+            int row = currentCoordinates.Row;
+            int col = currentCoordinates.Col;
 
             List<Coordinates> toDetonate = new List<Coordinates>()
             {
@@ -27,10 +28,10 @@
                 new Coordinates(row, col + this.mineSpan)
             };
 
-            this.DetonateMineBase(fieldSize, field, this.mineSpan - 1);
-            this.DetonateAdditional(fieldSize, field, toDetonate);
+            this.DetonateMineBase(fieldPositions, currentCoordinates, this.mineSpan - 1);
+            this.DetonateAdditional(fieldPositions, currentCoordinates, toDetonate);
 
-            return field;
+            return fieldPositions;
         }
 
         public override string StringRepresentation

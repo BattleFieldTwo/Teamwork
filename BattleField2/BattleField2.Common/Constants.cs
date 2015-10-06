@@ -2,14 +2,15 @@
 {
     public static class Constants
     {
-        public const string WelcomeMessage = "Welcome to the Battle Field game";
-        public const string InviteToEnterSizeMessage = "Enter legal size of board: ";
-        public const string InviteToEnterCoordinatesMessage = "Enter coordinates: ";
-        public const string InvalidMoveNotificationMessage = "Invalid Move";
-        public const string GameOverMessage = "Game Over. Detonated Mines: ";
-        public const string MinesCountMessage = "mines count is: ";
+        public const string WELCOMEMESSAGE = "Welcome to the Battle Field game";
+        public const string INVITETOENTERSIZEMESSAGE = "Enter legal size of board: ";
+        public const string INVITETOENTERCOORDINATESMESSAGE = "Enter coordinates: ";
+        public const string INVALIDMOVENOTIFICATIONMESSAGE = "Invalid Move";
+        public const string GAMEOVERMESSAGE = "Game Over. Detonated Mines: ";
+        public const string MINESCOUNTMESSAGE = "mines count is: ";
+        public const string PLAYERNAMEREGEXPATTERN = "[^a-zA-Z0-9]";
 
-        public const int MinFieldSize = 1;
-        public const int MaxFieldSize = 10;
+        public const int MINFIELDSIZE = 1;
+        public const int MAXFIELDSIZE = 10;
     }
 }

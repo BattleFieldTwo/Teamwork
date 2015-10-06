@@ -1,23 +1,23 @@
 ﻿namespace BattleField2.Models.Mines
 {
-    using Coordinates;
     using Cells;
+    using Coordinates;
 
     internal class MineLevelFiveUpgrade : MineDecorator
     {
-        private readonly int mineSpan = 2;
         private readonly string stringRepresentation = " 5 ";
+        private readonly int mineSpan = 2;
 
-        public MineLevelFiveUpgrade(Coordinates currentCoordinates)
-            : base(currentCoordinates)
+        public MineLevelFiveUpgrade()
+            : base()
         {
         }
 
-        public override Cell[,] Detonate(int fieldSize, Cell[,] field)
+        public override Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates)
         {
-            this.DetonateMineBase(fieldSize, field, this.mineSpan);
+            this.DetonateMineBase(fieldPositions, currentCoordinates, this.mineSpan);
 
-            return field;
+            return fieldPositions;
         }
 
         public override string StringRepresentation

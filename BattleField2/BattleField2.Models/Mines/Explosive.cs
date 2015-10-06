@@ -6,20 +6,9 @@ namespace BattleField2.Models.Mines
 
     public abstract class Explosive : Cell
     {
-        private Coordinates coordinates;
-
-        public Coordinates Coordinates
-        {
-            get { return coordinates; }
-
-            // TODO: Checks!
-            set { coordinates = value; }
-        }
-
-        public abstract Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions);
+        public abstract Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates);
 
         //Checking if entered coordinates are valid
-
         public bool IsValid(int i, int j, int size)
         {
             bool result = (0 <= i && i < size) &&

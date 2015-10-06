@@ -6,18 +6,18 @@
 
     internal class MineLevelFourUpgrade : MineDecorator
     {
-        private readonly int mineSpan = 2;
         private readonly string stringRepresentation = " 4 ";
+        private readonly int mineSpan = 2;
 
-        public MineLevelFourUpgrade(Coordinates currentCoordinates)
-            : base(currentCoordinates)
+        public MineLevelFourUpgrade()
+            : base()
         {
         }
 
-        public override Cell[,] Detonate(int fieldSize, Cell[,] field)
+        public override Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates)
         {
-            int row = this.Coordinates.Row;
-            int col = this.Coordinates.Col;
+            int row = currentCoordinates.Row;
+            int col = currentCoordinates.Col;
 
             List<Coordinates> toEmpty = new List<Coordinates>()
             {
@@ -27,9 +27,9 @@
                 new Coordinates(row + this.mineSpan, col + this.mineSpan),
             };
 
-            this.DetonateMineBase(fieldSize, field, mineSpan, toEmpty);
+            this.DetonateMineBase(fieldPositions, currentCoordinates, this.mineSpan, toEmpty);
 
-            return field;
+            return fieldPositions;
         }
 
         public override string StringRepresentation

@@ -1,6 +1,6 @@
 ﻿namespace BattleField2.Models.Cells
 {
-    internal enum CellType
+    public enum CellType
     {
         Empty,
         Detonated

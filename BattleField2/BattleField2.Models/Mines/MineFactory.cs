@@ -4,27 +4,45 @@
 
     public class MineFactory
     {
-        // Refactor static methods!
-        public static Explosive GetMine(MineType type, Coordinates currentCoordinates)
-        {
-            var currentMine = new MineLevelOneUpgrade(currentCoordinates);
-            var levelTwo = new MineLevelTwoUpgrade(currentCoordinates);
-            var levelThree = new MineLevelThreeUpgrade(currentCoordinates);
-            var levelFour = new MineLevelFourUpgrade(currentCoordinates);
-            var levelFive = new MineLevelFiveUpgrade(currentCoordinates);
+        private static MineFactory instance;
+        private Explosive levelOne;
+        private Explosive levelTwo;
+        private Explosive levelThree;
+        private Explosive levelFour;
+        private Explosive levelFive;
 
+        private MineFactory()
+        {
+            this.levelOne = new MineLevelOneUpgrade();
+            this.levelTwo = new MineLevelTwoUpgrade();
+            this.levelThree = new MineLevelThreeUpgrade();
+            this.levelFour = new MineLevelFourUpgrade();
+            this.levelFive = new MineLevelFiveUpgrade();
+        }
+
+        public static MineFactory Instance()
+        {
+            if (instance == null)
+            {
+                instance = new MineFactory();
+            }
+            return instance;
+        }
+
+        public Explosive GetMine(MineType type)
+        {
             switch (type)
             {
                 case MineType.MineOne:
-                    return currentMine;
+                    return this.levelOne;
                 case MineType.MineTwo:
-                    return levelTwo;
+                    return this.levelTwo;
                 case MineType.MineThree:
-                    return levelThree;
+                    return this.levelThree;
                 case MineType.MineFour:
-                    return levelFour;
+                    return this.levelFour;
                 case MineType.MineFive:
-                    return levelFive;
+                    return this.levelFive;
             }
 
             return null;

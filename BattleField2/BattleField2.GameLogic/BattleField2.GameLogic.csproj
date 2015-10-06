@@ -43,7 +43,6 @@
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
     <Compile Include="GameEngine.cs" />
-    <Compile Include="GameMain.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -58,9 +57,9 @@
       <Project>{64daf9bf-dbef-4264-a55c-a9274521902e}</Project>
       <Name>BattleField2.Models</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BattleField2.ViewModels\BattleField2.ViewModels.csproj">
+    <ProjectReference Include="..\BattleField2.Renderers\BattleField2.Renderers.csproj">
       <Project>{66c463be-c82d-44b1-8778-989270855a0a}</Project>
-      <Name>BattleField2.ViewModels</Name>
+      <Name>BattleField2.Renderers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace BattleField2.Common
 {
@@ -12,7 +13,7 @@ namespace BattleField2.Common
             {
                 return false;
             }
-            else if (fieldSize < Constants.MinFieldSize || fieldSize > Constants.MaxFieldSize)
+            else if (fieldSize < Constants.MINFIELDSIZE || fieldSize > Constants.MAXFIELDSIZE)
             {
                 return false;
             }
@@ -34,15 +35,39 @@ namespace BattleField2.Common
             {
                 return false;
             }
-            else if (row < Constants.MinFieldSize - 1 || row >= fieldSize)
+            else if (row < Constants.MINFIELDSIZE - 1 || row >= fieldSize)
             {
                 return false;
             }
-            else if (col < Constants.MinFieldSize - 1 || col >= fieldSize)
+            else if (col < Constants.MINFIELDSIZE - 1 || col >= fieldSize)
             {
                 return false;
             }
 
+            return true;
+        }
+
+        public static bool isValidPlayerScore(int score)
+        {
+            if(score < 0)
+            {
+                return false;
+            }
+            return true;
+        }
+
+        public static bool isValidPlayerName(string name)
+        {
+            Regex RgxUrl = new Regex(Constants.PLAYERNAMEREGEXPATTERN);
+            
+            if (name.Equals(""))
+            {
+                return false;
+            }
+            if (RgxUrl.IsMatch(name))
+            {
+                return false;
+            }
             return true;
         }
     }

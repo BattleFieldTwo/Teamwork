@@ -7,51 +7,51 @@ namespace BattleField2.Models.Mines
 
     internal abstract class MineDecorator : Explosive
     {
-        protected MineDecorator(Coordinates coordinates)
+        protected MineDecorator()
         {
-            this.Coordinates = coordinates;
         }
 
         //TODO: checks
         protected Explosive Mine { get; set; }
 
 
-        public override Cell[,] Detonate(int currentFieldSize, Cell[,] fieldPositions)
+        public override Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates)
         {
-            return this.Mine.Detonate(currentFieldSize, fieldPositions);
+            return this.Mine.Detonate(fieldPositions, currentCoordinates);
         }
 
-        public void DetonateMineBase(int fieldSize, Cell[,] field, int mineSpan, List<Coordinates> toEmpty = null)
+        public void DetonateMineBase(Cell[,] fieldPositions, Coordinates currentCoordinates, int mineSpan, List<Coordinates> toEmpty = null)
         {
-            int row = this.Coordinates.Row;
-            int col = this.Coordinates.Col;
+            int row = currentCoordinates.Row;
+            int col = currentCoordinates.Col;
+            int currentfieldsize = fieldPositions.GetLength(0);
 
             for (int i = row - mineSpan; i <= row + mineSpan; i++)
             {
                 for (int j = col - mineSpan; j <= col + mineSpan; j++)
                 {
-                    if (IsValid(i, j, fieldSize))
+                    bool noEmpty = (toEmpty == null) || (toEmpty.IndexOf(new Coordinates(i, j)) == -1);
+                    bool isValid = IsValid(i, j, currentfieldsize);
+
+                    if (isValid && noEmpty)
                     {
-                        if (toEmpty != null && toEmpty.IndexOf(new Coordinates(i, j)) > -1)
-                        {
-                            continue;
-                        }
-                        else
-                        {
-                            field[i, j] = CellFactory.GetCell(CellType.Detonated);
-                        }
+                        fieldPositions[i, j] = new DetonatedCell();
                     }
                 }
             }
         }
 
-        public void DetonateAdditional(int fieldSize, Cell[,] field, List<Coordinates> toDetonated)
+        public void DetonateAdditional(Cell[,] fieldPositions, Coordinates currentCoordinates, List<Coordinates> toDetonated)
         {
+            int currentfieldsize = fieldPositions.GetLength(0);
+
             for (int i = 0; i < toDetonated.Count; i++)
             {
-                if (IsValid(toDetonated[i].Row, toDetonated[i].Col, fieldSize))
+                bool isValid = IsValid(toDetonated[i].Row, toDetonated[i].Col, currentfieldsize);
+
+                if (isValid)
                 {
-                    field[toDetonated[i].Row, toDetonated[i].Col] = CellFactory.GetCell(CellType.Detonated);
+                    fieldPositions[toDetonated[i].Row, toDetonated[i].Col] = new DetonatedCell();
                 }
             }
         }

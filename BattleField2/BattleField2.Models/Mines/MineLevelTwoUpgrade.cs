@@ -5,19 +5,20 @@
 
     internal class MineLevelTwoUpgrade : MineDecorator
     {
-        private readonly int mineSpan = 1;
         private readonly string stringRepresentation = " 2 ";
+        private readonly int mineSpan = 1;
 
-        public MineLevelTwoUpgrade(Coordinates currentCoordinates)
-            : base(currentCoordinates)
+        public MineLevelTwoUpgrade()
+            : base()
         {
         }
 
-        public override Cell[,] Detonate(int fieldSize, Cell[,] field)
-        {
-            this.DetonateMineBase(fieldSize, field, mineSpan);
 
-            return field;
+        public override Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates)
+        {
+            this.DetonateMineBase(fieldPositions, currentCoordinates, this.mineSpan);
+
+            return fieldPositions;
         }
 
         public override string StringRepresentation

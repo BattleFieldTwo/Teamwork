@@ -2,23 +2,23 @@
 {
     using System.Collections.Generic;
     using Coordinates;
-    using Cells;    
+    using Cells;
 
     internal class MineLevelOneUpgrade : MineDecorator
     {
-        private readonly int mineSpan = 1;
         private readonly string stringRepresentation = " 1 ";
+        private readonly int mineSpan = 1;
 
-        public MineLevelOneUpgrade(Coordinates currentCoordinates)
-            :base(currentCoordinates)
+        public MineLevelOneUpgrade()
+            : base()
         {
         }
 
-        public override Cell[,] Detonate(int fieldSize, Cell[,] field)
+        public override Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates)
         {
-            int row = this.Coordinates.Row;
-            int col = this.Coordinates.Col;
-            
+            int row = currentCoordinates.Row;
+            int col = currentCoordinates.Col;
+
             List<Coordinates> toEmpty = new List<Coordinates>()
             {
                 new Coordinates(row - this.mineSpan, col),
@@ -27,15 +27,17 @@
                 new Coordinates(row, col + this.mineSpan)
             };
 
-            this.DetonateMineBase(fieldSize, field, mineSpan, toEmpty);
+            this.DetonateMineBase(fieldPositions, currentCoordinates, this.mineSpan, toEmpty);
 
-            return field;
+            return fieldPositions;
         }
 
         public override string StringRepresentation
         {
             get { return this.stringRepresentation; }
         }
+
+
     }
     //public abstract class Mine : Cell
     //{
