@@ -1,20 +1,24 @@
-﻿
-namespace BattleField2.Models.Mines
+﻿namespace BattleField2.Models.Mines
 {
-
     using Cells;
     using Coordinates;
 
     internal class MineLevelTwoUpgrade : MineDecorator
     {
         private readonly string stringRepresentation = " 2 ";
+        private readonly int mineSpan = 1;
 
-        public MineLevelTwoUpgrade(Explosive mine)
-            : base(mine)
+        public MineLevelTwoUpgrade()
+            : base()
         {
         }
 
 
+<<<<<<< HEAD
+        public override Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates)
+        {
+            this.DetonateMineBase(fieldPositions, currentCoordinates, this.mineSpan);
+=======
         public override Cell[,] Detonate(Cell[,] fieldPositions, CellFactory currentCellFactory, Coordinates currentCoordinates)
         {
             int row = currentCoordinates.Row;
@@ -39,10 +43,9 @@ namespace BattleField2.Models.Mines
             {
                 fieldPositions[row, col + 1] = currentCellFactory.GetCell(CellType.Detonated);
             }
+>>>>>>> master
 
             return fieldPositions;
-
-
         }
 
         public override string StringRepresentation
