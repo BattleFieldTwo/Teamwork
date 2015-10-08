@@ -52,7 +52,7 @@
 
         public void DrawField(Models.Cells.Cell[,] fieldPositions)
         {
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ColorConfig.SetColor(Constants.DEFAULT_COLOR);
             int fieldSize = fieldPositions.GetLength(0); 
             
             this.Clear();
@@ -65,26 +65,26 @@
             Console.ResetColor();
             for (int i = 0; i < fieldSize; i++)
             {
-                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.ForegroundColor = ColorConfig.SetColor(Constants.DEFAULT_COLOR);
                 Console.Write(i + "|");
                 Console.ResetColor();
                 for (int j = 0; j < fieldSize; j++)
                 {
                     if(fieldPositions[i, j].StringRepresentation == " - ")
                     {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ColorConfig.SetColor(Constants.EMPTY_CELL_COLOR);
                         Console.Write(" " + fieldPositions[i, j].StringRepresentation);
                         Console.ResetColor();
                     }
                     else if (fieldPositions[i, j].StringRepresentation == " X ")
                     {
-                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ColorConfig.SetColor(Constants.EXPLODED_CELL_COLOR);
                         Console.Write(" " + fieldPositions[i, j].StringRepresentation);
                         Console.ResetColor();
                     }
                     else
                     {
-                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ColorConfig.SetColor(Constants.MINE_CELL_COLOR);
                         Console.Write(" " + fieldPositions[i, j].StringRepresentation);
                         Console.ResetColor();
                     }

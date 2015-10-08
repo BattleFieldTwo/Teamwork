@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColorConfig.cs" />
     <Compile Include="ConsoleGameRenderer.cs" />
     <Compile Include="Contracts\IViewModel.cs" />
     <Compile Include="IGameRenderer.cs" />
