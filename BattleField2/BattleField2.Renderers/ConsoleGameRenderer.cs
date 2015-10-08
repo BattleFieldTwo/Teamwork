@@ -1,6 +1,5 @@
 ﻿namespace BattleField2.Renderers
 {
-    using BattleField2.Models.Field;
     using System;
 
     public class ConsoleGameRenderer : IGameRenderer
