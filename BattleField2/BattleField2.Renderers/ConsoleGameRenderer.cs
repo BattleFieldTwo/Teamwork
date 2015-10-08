@@ -102,8 +102,22 @@
 
         public void SetSize(int width, int height)
         {
-            Console.WindowWidth = width;
-            Console.WindowHeight = height;
+            try
+            {
+                Console.WindowWidth = width;
+                Console.WindowHeight = height;
+            }
+            catch(ArgumentOutOfRangeException e)
+            {
+                if(e.ParamName == "height")
+                {
+                    Console.WindowHeight = Console.LargestWindowHeight;
+                }
+                else
+                {
+                    Console.WindowWidth = Console.LargestWindowWidth;
+                }
+            }
         }
     }
 }
