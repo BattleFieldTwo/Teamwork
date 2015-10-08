@@ -4,6 +4,7 @@
     using BattleField2.Models.Coordinates;
     using BattleField2.Models.Field;
     using BattleField2.Models.Mines;
+    using BattleField2.Models.Player;
     using BattleField2.Renderers;
     using System;
 
@@ -12,6 +13,7 @@
         private readonly IGameRenderer renderer;
         private Field battleField;
         private static GameEngine instance;
+        private Player player = new Player("player"); //TODO
 
         private GameEngine(IGameRenderer renderer)
         {
@@ -70,8 +72,11 @@
 
                 this.renderer.DrawField(this.battleField.FieldPositions);
 
+                this.player.GetScore(remainingMines, this.battleField.CountRemainingMines());
                 remainingMines = this.battleField.CountRemainingMines();
+
                 this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + remainingMines);
+                this.renderer.DisplayMessage(Constants.SCORE_MESSAGE + this.player.Score);
 
             } while (remainingMines > 0);
 
