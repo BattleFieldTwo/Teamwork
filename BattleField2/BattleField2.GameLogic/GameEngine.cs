@@ -48,9 +48,9 @@ namespace BattleField2.GameLogic
 
         public void PlayGame()
         {
-            this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + this.battleField.InitialMines);
+            int remainingMines = this.battleField.CountRemainingMines();
+            this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + remainingMines);
 
-            int remainingMines;
             do
             {
                 Coordinates currentCoordinates;

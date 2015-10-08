@@ -10,7 +10,6 @@
     {
         private Cell[,] fieldPositions;
         private int detonatedMines;
-        private int initialMines;
         private CellFactory currentCellFactory;
         private MineFactory currentMineFactory;
 
@@ -19,7 +18,6 @@
         {
             this.FieldPositions = new Cell[currentFieldSize, currentFieldSize];
             this.DetonatedMines = 0;
-            this.InitialMines = CalculateInitialMines();
             this.CurrentCellFactory = CellFactory.Instance();
             this.CurrentMineFactory = MineFactory.Instance();
         }
@@ -43,17 +41,6 @@
             set
             {
                 this.detonatedMines = value;
-            }
-        }
-
-        public int InitialMines
-        {
-            get { return initialMines; }
-
-            // TODO: Implement checks!
-            private set
-            {
-                this.initialMines = value;
             }
         }
 
@@ -97,13 +84,12 @@
             Random rnd = new Random();
             int numberOfAlreadyPositionedMines = 0;
             int currentFieldSize = this.FieldPositions.GetLength(0);
+            int initialMines = CalculateInitialMines();
 
             do
             {
                 int currentMineRow = Convert.ToInt32(rnd.Next(0, currentFieldSize - 1));
                 int currentMineCol = Convert.ToInt32(rnd.Next(0, currentFieldSize - 1));
-
-                Coordinates currentCoordinates = new Coordinates(currentMineRow, currentMineCol);
 
                 if (this.FieldPositions[currentMineRow, currentMineCol] is EmptyCell)
                 {
@@ -113,7 +99,7 @@
 
                     numberOfAlreadyPositionedMines++;
                 }
-            } while (this.InitialMines - numberOfAlreadyPositionedMines > 0);
+            } while (initialMines - numberOfAlreadyPositionedMines > 0);
 
         }
 
