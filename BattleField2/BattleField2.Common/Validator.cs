@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace BattleField2.Common
 {
-    public static class Validations
+    public static class Validator
     {
         public static bool IsValidInputFieldSize(string inputFieldSize)
         {

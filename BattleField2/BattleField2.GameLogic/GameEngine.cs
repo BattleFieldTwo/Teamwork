@@ -87,7 +87,7 @@ namespace BattleField2.GameLogic
             {
                 this.renderer.DisplayMessage(Constants.INVITETOENTERSIZEMESSAGE);
                 inputFieldSize = this.renderer.EnterCommand();
-            } while (!Validations.IsValidInputFieldSize(inputFieldSize));
+            } while (!Validator.IsValidInputFieldSize(inputFieldSize));
 
             int currentFieldSize = Int32.Parse(inputFieldSize);
 
@@ -104,7 +104,7 @@ namespace BattleField2.GameLogic
                 this.renderer.DisplayMessage(Constants.INVITETOENTERCOORDINATESMESSAGE);
 
                 string coordinates = this.renderer.EnterCommand();
-                if (!Validations.IsValidInputCoordinates(coordinates, this.battleField.FieldPositions.GetLength(0)))
+                if (!Validator.IsValidInputCoordinates(coordinates, this.battleField.FieldPositions.GetLength(0)))
                 {
                     this.renderer.DisplayMessage(Constants.INVALIDMOVENOTIFICATIONMESSAGE);
                     continue;
