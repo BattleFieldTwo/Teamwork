@@ -1,8 +1,8 @@
-﻿using System;
-using System.Text.RegularExpressions;
-
-namespace BattleField2.Common
+﻿namespace BattleField2.Common
 {
+    using System;
+    using System.Text.RegularExpressions;
+
     public static class Validator
     {
         public static bool IsValidInputFieldSize(string inputFieldSize)
