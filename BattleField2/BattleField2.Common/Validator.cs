@@ -13,7 +13,7 @@ namespace BattleField2.Common
             {
                 return false;
             }
-            else if (fieldSize < Constants.MINFIELDSIZE || fieldSize > Constants.MAXFIELDSIZE)
+            else if (fieldSize < Constants.MIN_FIELDSIZE || fieldSize > Constants.MAX_FIELDSIZE)
             {
                 return false;
             }
@@ -35,11 +35,11 @@ namespace BattleField2.Common
             {
                 return false;
             }
-            else if (row < Constants.MINFIELDSIZE - 1 || row >= fieldSize)
+            else if (row < Constants.MIN_FIELDSIZE - 1 || row >= fieldSize)
             {
                 return false;
             }
-            else if (col < Constants.MINFIELDSIZE - 1 || col >= fieldSize)
+            else if (col < Constants.MIN_FIELDSIZE - 1 || col >= fieldSize)
             {
                 return false;
             }
@@ -58,7 +58,7 @@ namespace BattleField2.Common
 
         public static bool isValidPlayerName(string name)
         {
-            Regex RgxUrl = new Regex(Constants.PLAYERNAMEREGEXPATTERN);
+            Regex RgxUrl = new Regex(Constants.PLAYER_NAME_REGEX_PATTERN);
             
             if (name.Equals(""))
             {
