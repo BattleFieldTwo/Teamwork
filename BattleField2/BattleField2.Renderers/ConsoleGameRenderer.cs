@@ -1,6 +1,5 @@
 ﻿namespace BattleField2.Renderers
 {
-    using BattleField2.Models.Field;
     using System;
 
     public class ConsoleGameRenderer : IGameRenderer
@@ -29,28 +28,6 @@
             Console.WriteLine(message);
         }
 
-        public void DrawField(Field currentBattleField)
-        {
-            int fieldSize = currentBattleField.FieldPositions.GetLength(0);
-
-            Console.Clear();
-            Console.Write("   ");
-            for (int i = 0; i < fieldSize; i++)
-            {
-                Console.Write(" " + i + "  ");
-            }
-            Console.WriteLine("\n    " + new string('-', 4 * fieldSize - 3) + '\n');
-            for (int i = 0; i < fieldSize; i++)
-            {
-                Console.Write(i + "|");
-                for (int j = 0; j < fieldSize; j++)
-                {
-                    Console.Write(" " + currentBattleField.FieldPositions[i, j].StringRepresentation);
-                }
-                Console.WriteLine("\n\n");
-            }
-        }
-
         public void Clear()
         {
             Console.Clear();
@@ -64,6 +41,29 @@
         public void Wait()
         {
             Console.ReadKey();
+        }
+
+
+        public void DrawField(Models.Cells.Cell[,] fieldPositions)
+        {
+            int fieldSize = fieldPositions.GetLength(0); 
+            
+            Console.Clear();
+            Console.Write("   ");
+            for (int i = 0; i < fieldSize; i++)
+            {
+                Console.Write(" " + i + "  ");
+            }
+            Console.WriteLine("\n    " + new string('-', 4 * fieldSize - 3) + '\n');
+            for (int i = 0; i < fieldSize; i++)
+            {
+                Console.Write(i + "|");
+                for (int j = 0; j < fieldSize; j++)
+                {
+                    Console.Write(" " + fieldPositions[i, j].StringRepresentation);
+                }
+                Console.WriteLine("\n\n");
+            }
         }
     }
 }

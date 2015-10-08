@@ -22,7 +22,7 @@
             }
             set
             {
-                if (Validations.isValidPlayerName(value))
+                if (Validator.isValidPlayerName(value))
                 {
                     this.name = value;
                 }
@@ -36,7 +36,7 @@
             }
             set
             {
-                if (Validations.isValidPlayerScore(value))
+                if (Validator.isValidPlayerScore(value))
                 {
                     this.score = value;
                 }

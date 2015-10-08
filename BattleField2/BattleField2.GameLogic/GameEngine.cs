@@ -1,6 +1,4 @@
-﻿using BattleField2.Models.Mines;
-
-namespace BattleField2.GameLogic
+﻿namespace BattleField2.GameLogic
 {
     using BattleField2.Common;
     using BattleField2.Models.Coordinates;
@@ -17,7 +15,6 @@ namespace BattleField2.GameLogic
 
         private GameEngine(IGameRenderer renderer)
         {
-            // TODO: Make a full property and checks to this!
             this.renderer = renderer;
         }
 
@@ -34,7 +31,7 @@ namespace BattleField2.GameLogic
         public void InitializeGame()
         {
             this.renderer.Clear();
-            this.renderer.DisplayMessage(Constants.WELCOMEMESSAGE);
+            this.renderer.DisplayMessage(Constants.WELCOME_MESSAGE);
             int currentFieldSize = this.EnterFieldSize();
 
             this.battleField = new Field(currentFieldSize);
@@ -43,14 +40,14 @@ namespace BattleField2.GameLogic
 
             this.battleField.PositionMines();
 
-            this.renderer.DrawField(battleField);
+            this.renderer.DrawField(this.battleField.FieldPositions);
         }
 
         public void PlayGame()
         {
-            this.renderer.DisplayMessage(Constants.MINESCOUNTMESSAGE + this.battleField.InitialMines);
+            int remainingMines = this.battleField.CountRemainingMines();
+            this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + remainingMines);
 
-            int remainingMines;
             do
             {
                 Coordinates currentCoordinates;
@@ -61,7 +58,7 @@ namespace BattleField2.GameLogic
 
                     if (!this.battleField.ValidateMoveCoordinates(currentCoordinates))
                     {
-                        this.renderer.DisplayMessage(Constants.INVALIDMOVENOTIFICATIONMESSAGE);
+                        this.renderer.DisplayMessage(Constants.INVALID_MOVE_NOTIFICATION_MESSAGE);
                     }
                 } while (!this.battleField.ValidateMoveCoordinates(currentCoordinates));
 
@@ -70,10 +67,10 @@ namespace BattleField2.GameLogic
 
                 this.battleField.DetonatedMines++;
 
-                this.renderer.DrawField(this.battleField);
+                this.renderer.DrawField(this.battleField.FieldPositions);
 
                 remainingMines = this.battleField.CountRemainingMines();
-                this.renderer.DisplayMessage(Constants.MINESCOUNTMESSAGE + remainingMines);
+                this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + remainingMines);
 
             } while (remainingMines > 0);
 
@@ -85,9 +82,9 @@ namespace BattleField2.GameLogic
             string inputFieldSize;
             do
             {
-                this.renderer.DisplayMessage(Constants.INVITETOENTERSIZEMESSAGE);
+                this.renderer.DisplayMessage(Constants.INVITE_TO_ENTER_SIZE_MESSAGE);
                 inputFieldSize = this.renderer.EnterCommand();
-            } while (!Validations.IsValidInputFieldSize(inputFieldSize));
+            } while (!Validator.IsValidInputFieldSize(inputFieldSize));
 
             int currentFieldSize = Int32.Parse(inputFieldSize);
 
@@ -101,12 +98,12 @@ namespace BattleField2.GameLogic
 
             do
             {
-                this.renderer.DisplayMessage(Constants.INVITETOENTERCOORDINATESMESSAGE);
+                this.renderer.DisplayMessage(Constants.INVITE_TO_ENTER_COORDINATES_MESSAGE);
 
                 string coordinates = this.renderer.EnterCommand();
-                if (!Validations.IsValidInputCoordinates(coordinates, this.battleField.FieldPositions.GetLength(0)))
+                if (!Validator.IsValidInputCoordinates(coordinates, this.battleField.FieldPositions.GetLength(0)))
                 {
-                    this.renderer.DisplayMessage(Constants.INVALIDMOVENOTIFICATIONMESSAGE);
+                    this.renderer.DisplayMessage(Constants.INVALID_MOVE_NOTIFICATION_MESSAGE);
                     continue;
                 }
 
@@ -122,7 +119,7 @@ namespace BattleField2.GameLogic
 
         public void GameOver()
         {
-            this.renderer.DisplayMessage(Constants.GAMEOVERMESSAGE + this.battleField.DetonatedMines);
+            this.renderer.DisplayMessage(Constants.GAME_OVER_MESSAGE + this.battleField.DetonatedMines);
             this.renderer.Wait();
             this.InitializeGame();
             this.PlayGame();
