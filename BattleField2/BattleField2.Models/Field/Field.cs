@@ -84,7 +84,7 @@
             Random rnd = new Random();
             int numberOfAlreadyPositionedMines = 0;
             int currentFieldSize = this.FieldPositions.GetLength(0);
-            int initialMines = CalculateInitialMines();
+            int initialMines = CalculateInitialMines(rnd);
 
             do
             {
@@ -135,19 +135,15 @@
             return true;
         }
 
-        private int CalculateInitialMines()
+        private int CalculateInitialMines(Random rnd)
         {
             int currentFieldSize = this.FieldPositions.GetLength(0);
             int minesDownLimit = Convert.ToInt32(0.15 * currentFieldSize * currentFieldSize);
             int minesUpperLimit = Convert.ToInt32(0.30 * currentFieldSize * currentFieldSize);
 
-            Random rnd = new Random();
-
             int minesCount = Convert.ToInt32(rnd.Next(minesDownLimit, minesUpperLimit));
 
             return minesCount;
         }
-
-        
     }
 }
