@@ -10,16 +10,16 @@
     {
         private Cell[,] fieldPositions;
         private int detonatedMines;
-        private CellFactory currentCellFactory;
-        private MineFactory currentMineFactory;
+        private readonly CellFactory currentCellFactory;
+        private readonly MineFactory currentMineFactory;
 
 
         public Field(int currentFieldSize)
         {
             this.FieldPositions = new Cell[currentFieldSize, currentFieldSize];
             this.DetonatedMines = 0;
-            this.CurrentCellFactory = CellFactory.Instance();
-            this.CurrentMineFactory = MineFactory.Instance();
+            this.currentCellFactory = CellFactory.Instance();
+            this.currentMineFactory = MineFactory.Instance();
         }
 
         public Cell[,] FieldPositions
@@ -44,28 +44,6 @@
             }
         }
 
-        public CellFactory CurrentCellFactory
-        {
-            get { return currentCellFactory; }
-
-            // TODO: Implement checks!
-            private set
-            {
-                this.currentCellFactory  = value;
-            }
-        }
-
-        public MineFactory CurrentMineFactory
-        {
-            get { return currentMineFactory; }
-
-            // TODO: Implement checks!
-            private set
-            {
-                this.currentMineFactory = value;
-            }
-        }
-
         public void GenerateField()
         {
             int currentFieldSize = this.FieldPositions.GetLength(0);
@@ -74,7 +52,7 @@
             {
                 for (int j = 0; j < currentFieldSize; j++)
                 {
-                    this.fieldPositions[i, j] = CurrentCellFactory.GetCell(CellType.Empty);
+                    this.fieldPositions[i, j] = currentCellFactory.GetCell(CellType.Empty);
                 }
             }
         }
@@ -95,7 +73,7 @@
                 {
                     int numberTypeOfMine = rnd.Next(0, (int)MineType.MineCount);
                     MineType type = (MineType)numberTypeOfMine;
-                    this.FieldPositions[currentMineRow, currentMineCol] = CurrentMineFactory.GetMine(type);
+                    this.FieldPositions[currentMineRow, currentMineCol] = currentMineFactory.GetMine(type);
 
                     numberOfAlreadyPositionedMines++;
                 }

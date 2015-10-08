@@ -1,6 +1,4 @@
-﻿using BattleField2.Models.Mines;
-
-namespace BattleField2.GameLogic
+﻿namespace BattleField2.GameLogic
 {
     using BattleField2.Common;
     using BattleField2.Models.Coordinates;
@@ -17,7 +15,6 @@ namespace BattleField2.GameLogic
 
         private GameEngine(IGameRenderer renderer)
         {
-            // TODO: Make a full property and checks to this!
             this.renderer = renderer;
         }
 
