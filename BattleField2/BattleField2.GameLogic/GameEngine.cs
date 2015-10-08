@@ -30,6 +30,7 @@
 
         public void InitializeGame()
         {
+            this.renderer.SetSize(Constants.APP_WIDTH, Constants.APP_HEIGHT);
             this.renderer.Clear();
             this.renderer.DisplayMessage(Constants.WELCOME_MESSAGE);
             int currentFieldSize = this.EnterFieldSize();

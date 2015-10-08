@@ -10,7 +10,14 @@
         public const string MINES_COUNT_MESSAGE = "mines count is: ";
         public const string PLAYER_NAME_REGEX_PATTERN = "[^a-zA-Z0-9]";
 
+        public const int APP_WIDTH = 90;
+        public const int APP_HEIGHT = 40;
+
         public const int MIN_FIELDSIZE = 1;
         public const int MAX_FIELDSIZE = 10;
+
+        public const int MESSAGE_LEFT_POSSITION = 45;
+        public const int MESSAGE_TOP_POSSITION = 10;
+
     }
 }
