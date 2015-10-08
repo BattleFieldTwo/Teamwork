@@ -16,5 +16,7 @@ namespace BattleField2.Renderers
         string EnterCommand();
 
         void Wait();
+
+        void SetSize(int width, int height);
     }
 }

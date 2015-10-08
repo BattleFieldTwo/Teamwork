@@ -1,13 +1,16 @@
 ﻿namespace BattleField2.Renderers
 {
+    using BattleField2.Common;
     using System;
 
     public class ConsoleGameRenderer : IGameRenderer
     {
         private static ConsoleGameRenderer instance;
+        private int displayedMessages;
 
         private ConsoleGameRenderer() 
         {
+            this.displayedMessages = 0;
         }
 
         public static ConsoleGameRenderer Instance
@@ -25,11 +28,14 @@
 
         public void DisplayMessage(string message)
         {
-            Console.WriteLine(message);
+            Console.SetCursorPosition(Constants.MESSAGE_LEFT_POSSITION, Constants.MESSAGE_TOP_POSSITION + this.displayedMessages);
+            Console.Write(message);
+            this.displayedMessages++;
         }
 
         public void Clear()
         {
+            this.displayedMessages = 0;
             Console.Clear();
         }
         public string EnterCommand()
@@ -48,8 +54,8 @@
         {
             int fieldSize = fieldPositions.GetLength(0); 
             
-            Console.Clear();
-            Console.Write("   ");
+            this.Clear();
+            Console.Write(new string(' ', 3));
             for (int i = 0; i < fieldSize; i++)
             {
                 Console.Write(" " + i + "  ");
@@ -64,6 +70,13 @@
                 }
                 Console.WriteLine("\n\n");
             }
+        }
+
+
+        public void SetSize(int width, int height)
+        {
+            Console.WindowWidth = width;
+            Console.WindowHeight = height;
         }
     }
 }
