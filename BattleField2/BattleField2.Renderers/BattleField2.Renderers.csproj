@@ -45,7 +45,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleGameRenderer.cs" />
-    <Compile Include="ConsoleView.cs" />
     <Compile Include="Contracts\IViewModel.cs" />
     <Compile Include="IGameRenderer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
