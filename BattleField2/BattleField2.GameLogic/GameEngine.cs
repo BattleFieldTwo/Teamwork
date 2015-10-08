@@ -43,7 +43,7 @@ namespace BattleField2.GameLogic
 
             this.battleField.PositionMines();
 
-            this.renderer.DrawField(battleField);
+            this.renderer.DrawField(this.battleField.FieldPositions);
         }
 
         public void PlayGame()
@@ -70,7 +70,7 @@ namespace BattleField2.GameLogic
 
                 this.battleField.DetonatedMines++;
 
-                this.renderer.DrawField(this.battleField);
+                this.renderer.DrawField(this.battleField.FieldPositions);
 
                 remainingMines = this.battleField.CountRemainingMines();
                 this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + remainingMines);

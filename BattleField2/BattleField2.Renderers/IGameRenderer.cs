@@ -1,4 +1,6 @@
-﻿namespace BattleField2.Renderers
+﻿using BattleField2.Models.Cells;
+
+namespace BattleField2.Renderers
 {
     using BattleField2.Models.Field;
     using BattleField2.Models.Coordinates;
@@ -7,7 +9,7 @@
     {
         void DisplayMessage(string message);
 
-        void DrawField(Field currentBattleField);
+        void DrawField(Cell[,] fieldPositions);
 
         void Clear();
 
