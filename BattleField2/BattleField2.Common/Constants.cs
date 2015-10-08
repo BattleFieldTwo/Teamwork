@@ -12,7 +12,7 @@
         public const string SCORE_MESSAGE = "Score: ";
 
         public const int APP_WIDTH = 90;
-        public const int APP_HEIGHT = 32;
+        public const int APP_HEIGHT = 45;
 
         public const int MIN_FIELDSIZE = 1;
         public const int MAX_FIELDSIZE = 10;
