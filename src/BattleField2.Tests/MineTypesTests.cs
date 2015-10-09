@@ -19,7 +19,7 @@
             var currentCoordinates = new Coordinates(2, 2);
             var testCell = new Cell[1, 2];
             var mineMock = new Mock<Explosive>(); //basic Mine class 
-            //var levelOneUpgrade = new TypeOneUpgrade(mineMock.Object); //Decorated Mine object
+            //mineMock = new MineLevelOneUpgrade(); //Decorated Mine object
             mineMock.Setup(m => m.Detonate(fieldPositions, currentCoordinates)).Returns(testCell);
             //Assert.AreEqual(levelOneUpgrade.Detonate(currentFieldSize, fieldPositions), testCell);
         }
