@@ -28,6 +28,7 @@
 
         public void DisplayMessage(string message)
         {
+            Console.ForegroundColor = ColorConfig.SetColor(Constants.DEFAULT_MESSAGE_COLOR);
             Console.SetCursorPosition(Constants.MESSAGE_LEFT_POSSITION, Constants.MESSAGE_TOP_POSSITION + this.displayedMessages);
             Console.Write(message);
             this.displayedMessages++;

@@ -1,17 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="e3c12aa7-3ef1-4d05-a7bb-be19af17d291" Title="BattleField2.Common" Url="html/ebd900c6-e6f2-769f-4d01-346d2982ab2b.htm">
-    <HelpTOCNode Id="378ca11f-aa34-4010-b126-d35a57278f7f" Title="Constants Class" Url="html/d48cb40c-6e32-d921-bac4-499f521e81e8.htm">
-      <HelpTOCNode Id="c9b1559d-e9e2-4acc-b008-c5efdf4f22e4" Title="Constants Fields" Url="html/d85ba585-4666-bd79-9cc2-18832e667ca3.htm">
+  <HelpTOCNode Id="f3625330-1459-4e94-ab4e-d3af8a560ae0" Title="BattleField2.Common" Url="html/ebd900c6-e6f2-769f-4d01-346d2982ab2b.htm">
+    <HelpTOCNode Id="1b7dd794-1714-44c7-b7b5-0d331286bb8d" Title="Constants Class" Url="html/d48cb40c-6e32-d921-bac4-499f521e81e8.htm">
+      <HelpTOCNode Id="046e2eb5-35f2-4758-9341-e770227d6880" Title="Constants Fields" Url="html/d85ba585-4666-bd79-9cc2-18832e667ca3.htm">
         <HelpTOCNode Title="APP_HEIGHT Field" Url="html/5ae22b8a-7568-4658-7d2f-b90e7f9eeb69.htm" />
         <HelpTOCNode Title="APP_WIDTH Field" Url="html/be99d983-a469-dfb1-1474-47e625cdbd40.htm" />
         <HelpTOCNode Title="DEFAULT_COLOR Field" Url="html/b5e10f14-1746-3d00-17c0-be38e070ead3.htm" />
+        <HelpTOCNode Title="DEFAULT_MESSAGE_COLOR Field" Url="html/4dab8771-0588-e2ec-07f8-ab9906628801.htm" />
         <HelpTOCNode Title="EMPTY_CELL_COLOR Field" Url="html/7afca75d-c8e0-066f-f797-aa7a920c9469.htm" />
         <HelpTOCNode Title="EXPLODED_CELL_COLOR Field" Url="html/4c254723-5856-7959-c1de-cbba385faf1b.htm" />
         <HelpTOCNode Title="GAME_OVER_MESSAGE Field" Url="html/4b4c1ca6-7c75-66f7-4fbc-ef5dedbec135.htm" />
+        <HelpTOCNode Title="HI_MESSAGE Field" Url="html/ca9be24a-c8fe-d2ef-088e-3b56c359a2b4.htm" />
         <HelpTOCNode Title="INVALID_MOVE_NOTIFICATION_MESSAGE Field" Url="html/147f0c2a-2575-20aa-2dc3-bf8d222f14ac.htm" />
         <HelpTOCNode Title="INVITE_TO_ENTER_COORDINATES_MESSAGE Field" Url="html/e141fa75-aa35-656e-aba6-3d3ba8a33abd.htm" />
+        <HelpTOCNode Title="INVITE_TO_ENTER_NAME_MESSAGE Field" Url="html/353136ef-e44f-9897-1ef3-55a2dede7178.htm" />
         <HelpTOCNode Title="INVITE_TO_ENTER_SIZE_MESSAGE Field" Url="html/e7dfeff3-bfad-2c99-74e3-32bb4ac03427.htm" />
         <HelpTOCNode Title="MAX_FIELDSIZE Field" Url="html/3176c8df-b31e-1d25-1e38-4f0369ae15c4.htm" />
         <HelpTOCNode Title="MESSAGE_LEFT_POSSITION Field" Url="html/08c7851b-a1d1-9247-eaaa-ab186a64cee8.htm" />
@@ -24,8 +27,8 @@
         <HelpTOCNode Title="WELCOME_MESSAGE Field" Url="html/2e6ab682-7368-4e78-4847-030d9178d641.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="a9209b23-35f4-4eb7-8915-b65fe91961cb" Title="Validator Class" Url="html/78b2f3bd-73d0-572f-2842-377093c27bd4.htm">
-      <HelpTOCNode Id="57921d99-821b-489b-9666-0c27bd7867e4" Title="Validator Methods" Url="html/cd24625e-b823-2524-08f6-d919b6ee558b.htm">
+    <HelpTOCNode Id="18995cdd-9997-42a5-b9bf-c5af8c0d1ac0" Title="Validator Class" Url="html/78b2f3bd-73d0-572f-2842-377093c27bd4.htm">
+      <HelpTOCNode Id="37d60ff1-93bc-47fa-af30-b6e4fc968e59" Title="Validator Methods" Url="html/cd24625e-b823-2524-08f6-d919b6ee558b.htm">
         <HelpTOCNode Title="IsValidInputCoordinates Method " Url="html/6a09d26b-df83-e81c-95ae-8772d7f906d0.htm" />
         <HelpTOCNode Title="IsValidInputFieldSize Method " Url="html/4a7ab886-dd92-dbbc-67e5-b4330c74978d.htm" />
         <HelpTOCNode Title="isValidPlayerName Method " Url="html/7904b61d-862a-71d7-0603-02b7e68b6a3f.htm" />
