@@ -43,17 +43,17 @@
             }
         }
 
-        public void GetScore(int previousMinesCount, int nextMinesCount)
+        public int CalculateScore(int previousMinesCount, int nextMinesCount)
         {
             int differenceInMinesDetonated = previousMinesCount - nextMinesCount;
 
             if (differenceInMinesDetonated == 1)
             {
-                this.Score += 1;
+                return 1;
             }
             else
             {
-                this.Score += 1 + (differenceInMinesDetonated - 1) * 2; //can be changed
+                return 1 + (differenceInMinesDetonated - 1) * 2; //can be changed
             }
         }
     }

@@ -75,7 +75,7 @@
 
                 this.renderer.DrawField(this.battleField.FieldPositions);
 
-                this.player.GetScore(remainingMines, this.battleField.CountRemainingMines());
+                this.player.Score += this.player.CalculateScore(remainingMines, this.battleField.CountRemainingMines());
                 remainingMines = this.battleField.CountRemainingMines();
 
                 this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + remainingMines);
