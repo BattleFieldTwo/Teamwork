@@ -1,4 +1,7 @@
-﻿namespace BattleField2.Common
+﻿/// <summary>
+/// Namespace that holds general information - CONSTANTS, Data validations etc.
+/// </summary>
+namespace BattleField2.Common
 {
     /// <summary>
     /// This class consists of predefined CONSTANT values that we use
