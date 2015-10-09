@@ -4,6 +4,8 @@
     {
         public const string WELCOME_MESSAGE = "Welcome to the Battle Field game";
         public const string INVITE_TO_ENTER_SIZE_MESSAGE = "Enter legal size of board: ";
+        public const string INVITE_TO_ENTER_NAME_MESSAGE = "Enter your name:  ";
+        public const string HI_MESSAGE = "Hi, ";
         public const string INVITE_TO_ENTER_COORDINATES_MESSAGE = "Enter coordinates: ";
         public const string INVALID_MOVE_NOTIFICATION_MESSAGE = "Invalid Move";
         public const string GAME_OVER_MESSAGE = "Game Over. Detonated Mines: ";
