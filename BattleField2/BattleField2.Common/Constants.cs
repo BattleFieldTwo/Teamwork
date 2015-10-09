@@ -14,9 +14,14 @@
         /// 
         /// </summary>
         public const string INVITE_TO_ENTER_SIZE_MESSAGE = "Enter legal size of board: ";
+<<<<<<< HEAD
         /// <summary>
         /// 
         /// </summary>
+=======
+        public const string INVITE_TO_ENTER_NAME_MESSAGE = "Enter your name:  ";
+        public const string HI_MESSAGE = "Hi, ";
+>>>>>>> master
         public const string INVITE_TO_ENTER_COORDINATES_MESSAGE = "Enter coordinates: ";
         /// <summary>
         /// 

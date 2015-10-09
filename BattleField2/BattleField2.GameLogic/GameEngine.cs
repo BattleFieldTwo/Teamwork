@@ -13,7 +13,7 @@
         private readonly IGameRenderer renderer;
         private Field battleField;
         private static GameEngine instance;
-        private Player player = new Player("player"); //TODO
+        private Player player = new Player();
 
         private GameEngine(IGameRenderer renderer)
         {
@@ -35,6 +35,8 @@
             this.renderer.SetSize(Constants.APP_WIDTH, Constants.APP_HEIGHT);
             this.renderer.Clear();
             this.renderer.DisplayMessage(Constants.WELCOME_MESSAGE);
+            this.player.Name = this.EnterPlayerName();
+            this.renderer.DisplayMessage(Constants.HI_MESSAGE + this.player.Name);
             int currentFieldSize = this.EnterFieldSize();
 
             this.battleField = new Field(currentFieldSize);
@@ -50,6 +52,7 @@
         {
             int remainingMines = this.battleField.CountRemainingMines();
             this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + remainingMines);
+            this.renderer.DisplayMessage(Constants.SCORE_MESSAGE + this.player.Score);
 
             do
             {
@@ -95,6 +98,18 @@
             int currentFieldSize = Int32.Parse(inputFieldSize);
 
             return currentFieldSize;
+        }
+
+        private string EnterPlayerName()
+        {
+            string inputPlayerName;
+            do
+            {
+                this.renderer.DisplayMessage(Constants.INVITE_TO_ENTER_NAME_MESSAGE);
+                inputPlayerName = this.renderer.EnterCommand();
+            } while (!Validator.isValidPlayerName(inputPlayerName));
+
+            return inputPlayerName;
         }
 
         //TODO refactor this method
