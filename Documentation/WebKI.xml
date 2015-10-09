@@ -13,6 +13,7 @@
   <HelpKINode Title="Constants.APP_HEIGHT field" Url="html/5ae22b8a-7568-4658-7d2f-b90e7f9eeb69.htm" />
   <HelpKINode Title="Constants.APP_WIDTH field" Url="html/be99d983-a469-dfb1-1474-47e625cdbd40.htm" />
   <HelpKINode Title="Constants.DEFAULT_COLOR field" Url="html/b5e10f14-1746-3d00-17c0-be38e070ead3.htm" />
+  <HelpKINode Title="Constants.DEFAULT_MESSAGE_COLOR field" Url="html/4dab8771-0588-e2ec-07f8-ab9906628801.htm" />
   <HelpKINode Title="Constants.EMPTY_CELL_COLOR field" Url="html/7afca75d-c8e0-066f-f797-aa7a920c9469.htm" />
   <HelpKINode Title="Constants.EXPLODED_CELL_COLOR field" Url="html/4c254723-5856-7959-c1de-cbba385faf1b.htm" />
   <HelpKINode Title="Constants.GAME_OVER_MESSAGE field" Url="html/4b4c1ca6-7c75-66f7-4fbc-ef5dedbec135.htm" />
@@ -31,6 +32,7 @@
   <HelpKINode Title="Constants.SCORE_MESSAGE field" Url="html/ea8118a6-5fdd-8f74-723a-ec2aaba5c4ca.htm" />
   <HelpKINode Title="Constants.WELCOME_MESSAGE field" Url="html/2e6ab682-7368-4e78-4847-030d9178d641.htm" />
   <HelpKINode Title="DEFAULT_COLOR field" Url="html/b5e10f14-1746-3d00-17c0-be38e070ead3.htm" />
+  <HelpKINode Title="DEFAULT_MESSAGE_COLOR field" Url="html/4dab8771-0588-e2ec-07f8-ab9906628801.htm" />
   <HelpKINode Title="EMPTY_CELL_COLOR field" Url="html/7afca75d-c8e0-066f-f797-aa7a920c9469.htm" />
   <HelpKINode Title="EXPLODED_CELL_COLOR field" Url="html/4c254723-5856-7959-c1de-cbba385faf1b.htm" />
   <HelpKINode Title="GAME_OVER_MESSAGE field" Url="html/4b4c1ca6-7c75-66f7-4fbc-ef5dedbec135.htm" />
