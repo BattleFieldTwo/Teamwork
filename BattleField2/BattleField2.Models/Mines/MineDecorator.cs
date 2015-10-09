@@ -40,20 +40,5 @@ namespace BattleField2.Models.Mines
                 }
             }
         }
-
-        public void DetonateAdditional(Cell[,] fieldPositions, Coordinates currentCoordinates, List<Coordinates> toDetonated)
-        {
-            int currentfieldsize = fieldPositions.GetLength(0);
-
-            for (int i = 0; i < toDetonated.Count; i++)
-            {
-                bool isValid = IsValid(toDetonated[i].Row, toDetonated[i].Col, currentfieldsize);
-
-                if (isValid)
-                {
-                    fieldPositions[toDetonated[i].Row, toDetonated[i].Col] = new DetonatedCell();
-                }
-            }
-        }
     }
 }

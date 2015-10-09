@@ -19,17 +19,22 @@ namespace BattleField2.Models.Mines
         {
             int row = currentCoordinates.Row;
             int col = currentCoordinates.Col;
+            List<Coordinates> toEmpty = new List<Coordinates>();
 
-            List<Coordinates> toDetonate = new List<Coordinates>()
+            for (int i = row - mineSpan; i <= row + mineSpan; i++)
             {
-                new Coordinates(row - this.mineSpan, col),
-                new Coordinates(row + this.mineSpan, col),
-                new Coordinates(row, col - this.mineSpan),
-                new Coordinates(row, col + this.mineSpan)
-            };
+                for (int j = col - mineSpan; j <= col + mineSpan; j++)
+                {
+                    if ((i == row - mineSpan || j == col - mineSpan ||
+                        i == row + mineSpan || j == col + mineSpan) &&
+                        i != row && j != col)
+                    {
+                        toEmpty.Add(new Coordinates(i, j));
+                    }
+                }
+            }
 
-            this.DetonateMineBase(fieldPositions, currentCoordinates, this.mineSpan - 1);
-            this.DetonateAdditional(fieldPositions, currentCoordinates, toDetonate);
+            this.DetonateMineBase(fieldPositions, currentCoordinates, this.mineSpan, toEmpty);
 
             return fieldPositions;
         }

@@ -7,8 +7,9 @@
         public const string INVITE_TO_ENTER_COORDINATES_MESSAGE = "Enter coordinates: ";
         public const string INVALID_MOVE_NOTIFICATION_MESSAGE = "Invalid Move";
         public const string GAME_OVER_MESSAGE = "Game Over. Detonated Mines: ";
-        public const string MINES_COUNT_MESSAGE = "mines count is: ";
+        public const string MINES_COUNT_MESSAGE = "Mines count is: ";
         public const string PLAYER_NAME_REGEX_PATTERN = "[^a-zA-Z0-9]";
+        public const string SCORE_MESSAGE = "Score: ";
 
         public const int APP_WIDTH = 90;
         public const int APP_HEIGHT = 45;

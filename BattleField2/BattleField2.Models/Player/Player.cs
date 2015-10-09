@@ -2,7 +2,7 @@
 {
     using Common;
     using System;
-    class Player
+    public class Player
     {
         private string name;
         private int score;
@@ -40,6 +40,20 @@
                 {
                     this.score = value;
                 }
+            }
+        }
+
+        public void GetScore(int previousMinesCount, int nextMinesCount)
+        {
+            int differenceInMinesDetonated = previousMinesCount - nextMinesCount;
+
+            if (differenceInMinesDetonated == 1)
+            {
+                this.Score += 1;
+            }
+            else
+            {
+                this.Score += 1 + (differenceInMinesDetonated - 1) * 2; //can be changed
             }
         }
     }
