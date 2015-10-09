@@ -95,5 +95,9 @@
         /// Gives to ConsoleColor the default color value. 
         /// </summary>
         public const string DEFAULT_COLOR = "Blue";
+        /// <summary>
+        /// Gives to ConsoleColor the default message color value.
+        /// </summary>
+        public const string DEFAULT_MESSAGE_COLOR = "DarkYellow";
     }
 }
