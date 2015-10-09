@@ -16,8 +16,10 @@
   <HelpKINode Title="Constants.EMPTY_CELL_COLOR field" Url="html/7afca75d-c8e0-066f-f797-aa7a920c9469.htm" />
   <HelpKINode Title="Constants.EXPLODED_CELL_COLOR field" Url="html/4c254723-5856-7959-c1de-cbba385faf1b.htm" />
   <HelpKINode Title="Constants.GAME_OVER_MESSAGE field" Url="html/4b4c1ca6-7c75-66f7-4fbc-ef5dedbec135.htm" />
+  <HelpKINode Title="Constants.HI_MESSAGE field" Url="html/ca9be24a-c8fe-d2ef-088e-3b56c359a2b4.htm" />
   <HelpKINode Title="Constants.INVALID_MOVE_NOTIFICATION_MESSAGE field" Url="html/147f0c2a-2575-20aa-2dc3-bf8d222f14ac.htm" />
   <HelpKINode Title="Constants.INVITE_TO_ENTER_COORDINATES_MESSAGE field" Url="html/e141fa75-aa35-656e-aba6-3d3ba8a33abd.htm" />
+  <HelpKINode Title="Constants.INVITE_TO_ENTER_NAME_MESSAGE field" Url="html/353136ef-e44f-9897-1ef3-55a2dede7178.htm" />
   <HelpKINode Title="Constants.INVITE_TO_ENTER_SIZE_MESSAGE field" Url="html/e7dfeff3-bfad-2c99-74e3-32bb4ac03427.htm" />
   <HelpKINode Title="Constants.MAX_FIELDSIZE field" Url="html/3176c8df-b31e-1d25-1e38-4f0369ae15c4.htm" />
   <HelpKINode Title="Constants.MESSAGE_LEFT_POSSITION field" Url="html/08c7851b-a1d1-9247-eaaa-ab186a64cee8.htm" />
@@ -32,8 +34,10 @@
   <HelpKINode Title="EMPTY_CELL_COLOR field" Url="html/7afca75d-c8e0-066f-f797-aa7a920c9469.htm" />
   <HelpKINode Title="EXPLODED_CELL_COLOR field" Url="html/4c254723-5856-7959-c1de-cbba385faf1b.htm" />
   <HelpKINode Title="GAME_OVER_MESSAGE field" Url="html/4b4c1ca6-7c75-66f7-4fbc-ef5dedbec135.htm" />
+  <HelpKINode Title="HI_MESSAGE field" Url="html/ca9be24a-c8fe-d2ef-088e-3b56c359a2b4.htm" />
   <HelpKINode Title="INVALID_MOVE_NOTIFICATION_MESSAGE field" Url="html/147f0c2a-2575-20aa-2dc3-bf8d222f14ac.htm" />
   <HelpKINode Title="INVITE_TO_ENTER_COORDINATES_MESSAGE field" Url="html/e141fa75-aa35-656e-aba6-3d3ba8a33abd.htm" />
+  <HelpKINode Title="INVITE_TO_ENTER_NAME_MESSAGE field" Url="html/353136ef-e44f-9897-1ef3-55a2dede7178.htm" />
   <HelpKINode Title="INVITE_TO_ENTER_SIZE_MESSAGE field" Url="html/e7dfeff3-bfad-2c99-74e3-32bb4ac03427.htm" />
   <HelpKINode Title="IsValidInputCoordinates method" Url="html/6a09d26b-df83-e81c-95ae-8772d7f906d0.htm" />
   <HelpKINode Title="IsValidInputFieldSize method" Url="html/4a7ab886-dd92-dbbc-67e5-b4330c74978d.htm" />

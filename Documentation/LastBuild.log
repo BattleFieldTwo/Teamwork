@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder" version="2015.1.12.0" projectFile="C:\Users\Ivan\OneDrive\Documents\test.shfbproj" started="10/9/2015 12:17:57 PM">
+<shfbBuild product="Sandcastle Help File Builder" version="2015.1.12.0" projectFile="C:\Users\Ivan\OneDrive\Documents\test.shfbproj" started="10/9/2015 3:01:04 PM">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -23,7 +23,7 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00.0313
+</plugIn>    Last step completed in 00:00:00.0340
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
@@ -32,7 +32,7 @@ Generating API filter for MRefBuilder...
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 10/9/2015 12:17:58 PM.
+Build started 10/9/2015 3:01:06 PM.
 Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
@@ -41,7 +41,7 @@ GenerateRefInfo:
   Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
   Loaded 1 assemblies for reflection and 1 dependency assemblies.
-  Wrote information on 1 namespaces, 2 types, and 22 members
+  Wrote information on 1 namespaces, 2 types, and 24 members
   Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
   XslTransform (v2015.1.12.0)
   Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
@@ -51,13 +51,13 @@ Done Building Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentatio
 
 Build succeeded.
 
-Time Elapsed 00:00:01.45
-    Last step completed in 00:00:01.8991
+Time Elapsed 00:00:01.39
+    Last step completed in 00:00:01.8594
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 10/9/2015 12:18:00 PM.
+Build started 10/9/2015 3:01:07 PM.
 Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2015.1.12.0)
@@ -77,26 +77,26 @@ Done Building Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentatio
 
 Build succeeded.
 
-Time Elapsed 00:00:01.18
-    Last step completed in 00:00:01.7031
+Time Elapsed 00:00:01.11
+    Last step completed in 00:00:01.5564
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0365
+    Last step completed in 00:00:00.0510
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0270
+    Last step completed in 00:00:00.0313
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0125
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 10/9/2015 12:18:02 PM.
+Build started 10/9/2015 3:01:09 PM.
 Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2015.1.12.0)
@@ -107,24 +107,24 @@ Done Building Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentatio
 
 Build succeeded.
 
-Time Elapsed 00:00:00.70
+Time Elapsed 00:00:00.82
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:01.1625
+    Last step completed in 00:00:01.4773
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.2462
+    Last step completed in 00:00:00.3603
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\sandcastle.config
-    Last step completed in 00:00:00.1076
+    Last step completed in 00:00:00.0824
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 10/9/2015 12:18:04 PM.
+Build started 10/9/2015 3:01:11 PM.
 Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj&quot; on node 1 (default targets).
 BuildReferenceTopics:
   BuildAssembler (v2015.1.12.0)
@@ -133,54 +133,24 @@ BuildReferenceTopics:
   Loading configuration...
   Processing topics...
 BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Common] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.APP_HEIGHT] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.APP_WIDTH] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.DEFAULT_COLOR] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.EMPTY_CELL_COLOR] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.EXPLODED_CELL_COLOR] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.GAME_OVER_MESSAGE] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.INVALID_MOVE_NOTIFICATION_MESSAGE] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.INVITE_TO_ENTER_COORDINATES_MESSAGE] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.INVITE_TO_ENTER_SIZE_MESSAGE] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.MAX_FIELDSIZE] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.MESSAGE_LEFT_POSSITION] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.MESSAGE_TOP_POSSITION] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.MIN_FIELDSIZE] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.MINE_CELL_COLOR] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.MINES_COUNT_MESSAGE] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.PLAYER_NAME_REGEX_PATTERN] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.SCORE_MESSAGE] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Common.Constants.WELCOME_MESSAGE] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Common.Validator] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.IsValidInputCoordinates(System.String,System.Int32)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.IsValidInputCoordinates(System.String,System.Int32)] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.IsValidInputCoordinates(System.String,System.Int32)] Missing &lt;param name=&quot;inputCoordinates&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.IsValidInputCoordinates(System.String,System.Int32)] Missing &lt;param name=&quot;fieldSize&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.IsValidInputFieldSize(System.String)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.IsValidInputFieldSize(System.String)] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.IsValidInputFieldSize(System.String)] Missing &lt;param name=&quot;inputFieldSize&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.isValidPlayerName(System.String)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.isValidPlayerName(System.String)] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.isValidPlayerName(System.String)] Missing &lt;param name=&quot;name&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.isValidPlayerScore(System.Int32)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.isValidPlayerScore(System.Int32)] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Common.Validator.isValidPlayerScore(System.Int32)] Missing &lt;param name=&quot;score&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-  Processed 27 topic(s)
-  33 warning(s)
+  Processed 29 topic(s)
+  3 warning(s)
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 2 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 1 of 30.
 Done Building Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:12.30
-    Last step completed in 00:00:12.9768
+Time Elapsed 00:00:12.34
+    Last step completed in 00:00:12.9579
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
 
 Clearing any prior web output
-    Last step completed in 00:00:00.2017
+    Last step completed in 00:00:00.1719
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -192,11 +162,11 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing website files in C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\Website
-Processed 27 HTML files
+Processed 29 HTML files
 Sorting keywords and generating See Also indices
 Saving website keyword index to C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\WebKI.xml
 Saving website table of contents to C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\WebTOC.xml
-    Last step completed in 00:00:01.3327
+    Last step completed in 00:00:01.2876
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -276,25 +246,25 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\icons\TocOpen.gif -&gt; C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\Website\icons\TocOpen.gif
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\branding-Website.js -&gt; C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\Website\scripts\branding-Website.js
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\Web\scripts\jquery-1.11.0.min.js -&gt; C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\Website\scripts\jquery-1.11.0.min.js
-    Last step completed in 00:00:01.5158
+    Last step completed in 00:00:01.4466
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating website table of contents file...
-    Last step completed in 00:00:00.0180
+    Last step completed in 00:00:00.0156
 </buildStep>
 <buildStep step="GenerateFullTextIndex">
 Generating full-text index for the website...
 
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
 Adding lightweight search and TOC elements to each topic...
-</plugIn>    Last step completed in 00:00:00.9282
+</plugIn>    Last step completed in 00:00:00.8125
 </buildStep>
 <buildStep step="CopyingWebsiteFiles">
 Copying website files to output folder...
 
 Copied 100 files
-Copied 129 files for the website content
-    Last step completed in 00:00:01.0609
+Copied 132 files for the website content
+    Last step completed in 00:00:01.0115
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
@@ -302,7 +272,7 @@ Removing intermediate files...
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 10/9/2015 12:18:22 PM.  Total time: 00:00:24.6050
+Build completed successfully at 10/9/2015 3:01:29 PM.  Total time: 00:00:24.6630
 
 </buildStep>
 </shfbBuild>

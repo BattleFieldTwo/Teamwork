@@ -12,7 +12,7 @@
         /// Method that validates the field size value.
         /// </summary>
         /// <param name="inputFieldSize">The field size value input given by the current Player.</param>
-        /// <returns></returns>
+        /// <returns>Returns a boolean value representing the validity of the field size.</returns>
         public static bool IsValidInputFieldSize(string inputFieldSize)
         {
             int fieldSize;
@@ -34,7 +34,7 @@
         /// </summary>
         /// <param name="inputCoordinates">Coordinates input by the user.</param>
         /// <param name="fieldSize">The current battlefield size.</param>
-        /// <returns></returns>
+        /// <returns>Returns a boolean value representing the validity of the input coordinates.</returns>
         public static bool IsValidInputCoordinates(string inputCoordinates, int fieldSize)
         {
             string[] cords = inputCoordinates.Split(' ');
