@@ -13,7 +13,7 @@
         private readonly IGameRenderer renderer;
         private Field battleField;
         private static GameEngine instance;
-        private Player player = new Player();
+        private Player player;
 
         private GameEngine(IGameRenderer renderer)
         {
@@ -35,7 +35,7 @@
             this.renderer.SetSize(Constants.APP_WIDTH, Constants.APP_HEIGHT);
             this.renderer.Clear();
             this.renderer.DisplayMessage(Constants.WELCOME_MESSAGE);
-            this.player.Name = this.EnterPlayerName();
+            this.EnterPlayerName();
             this.renderer.DisplayMessage(Constants.HI_MESSAGE + this.player.Name);
             int currentFieldSize = this.EnterFieldSize();
 
@@ -100,7 +100,7 @@
             return currentFieldSize;
         }
 
-        private string EnterPlayerName()
+        private void EnterPlayerName()
         {
             string inputPlayerName;
             do
@@ -108,8 +108,7 @@
                 this.renderer.DisplayMessage(Constants.INVITE_TO_ENTER_NAME_MESSAGE);
                 inputPlayerName = this.renderer.EnterCommand();
             } while (!Validator.isValidPlayerName(inputPlayerName));
-
-            return inputPlayerName;
+            this.player = new Player(inputPlayerName);
         }
 
         //TODO refactor this method

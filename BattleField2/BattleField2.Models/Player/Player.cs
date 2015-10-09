@@ -7,7 +7,7 @@
         private string name;
         private int score;
 
-        public Player() { }
+        private Player() { }
 
         public Player(string name)
         {
