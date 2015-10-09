@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="APP_HEIGHT field" Url="html/5ae22b8a-7568-4658-7d2f-b90e7f9eeb69.htm" />
+  <HelpKINode Title="APP_WIDTH field" Url="html/be99d983-a469-dfb1-1474-47e625cdbd40.htm" />
+  <HelpKINode Title="BattleField2.Common namespace" Url="html/ebd900c6-e6f2-769f-4d01-346d2982ab2b.htm" />
+  <HelpKINode Title="BattleField2.Common.Constants class" Url="html/d48cb40c-6e32-d921-bac4-499f521e81e8.htm" />
+  <HelpKINode Title="BattleField2.Common.Validator class" Url="html/78b2f3bd-73d0-572f-2842-377093c27bd4.htm" />
+  <HelpKINode Title="Constants class">
+    <HelpKINode Title="Constants Class" Url="html/d48cb40c-6e32-d921-bac4-499f521e81e8.htm" />
+    <HelpKINode Title="about Constants class" Url="html/d48cb40c-6e32-d921-bac4-499f521e81e8.htm" />
+    <HelpKINode Title="fields" Url="html/d85ba585-4666-bd79-9cc2-18832e667ca3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Constants.APP_HEIGHT field" Url="html/5ae22b8a-7568-4658-7d2f-b90e7f9eeb69.htm" />
+  <HelpKINode Title="Constants.APP_WIDTH field" Url="html/be99d983-a469-dfb1-1474-47e625cdbd40.htm" />
+  <HelpKINode Title="Constants.DEFAULT_COLOR field" Url="html/b5e10f14-1746-3d00-17c0-be38e070ead3.htm" />
+  <HelpKINode Title="Constants.EMPTY_CELL_COLOR field" Url="html/7afca75d-c8e0-066f-f797-aa7a920c9469.htm" />
+  <HelpKINode Title="Constants.EXPLODED_CELL_COLOR field" Url="html/4c254723-5856-7959-c1de-cbba385faf1b.htm" />
+  <HelpKINode Title="Constants.GAME_OVER_MESSAGE field" Url="html/4b4c1ca6-7c75-66f7-4fbc-ef5dedbec135.htm" />
+  <HelpKINode Title="Constants.INVALID_MOVE_NOTIFICATION_MESSAGE field" Url="html/147f0c2a-2575-20aa-2dc3-bf8d222f14ac.htm" />
+  <HelpKINode Title="Constants.INVITE_TO_ENTER_COORDINATES_MESSAGE field" Url="html/e141fa75-aa35-656e-aba6-3d3ba8a33abd.htm" />
+  <HelpKINode Title="Constants.INVITE_TO_ENTER_SIZE_MESSAGE field" Url="html/e7dfeff3-bfad-2c99-74e3-32bb4ac03427.htm" />
+  <HelpKINode Title="Constants.MAX_FIELDSIZE field" Url="html/3176c8df-b31e-1d25-1e38-4f0369ae15c4.htm" />
+  <HelpKINode Title="Constants.MESSAGE_LEFT_POSSITION field" Url="html/08c7851b-a1d1-9247-eaaa-ab186a64cee8.htm" />
+  <HelpKINode Title="Constants.MESSAGE_TOP_POSSITION field" Url="html/d103e77e-5422-7d48-2c3e-217f046c7618.htm" />
+  <HelpKINode Title="Constants.MINES_COUNT_MESSAGE field" Url="html/05f4fdb0-e4d3-c982-7311-cb9e787ddd5f.htm" />
+  <HelpKINode Title="Constants.MINE_CELL_COLOR field" Url="html/f23921fc-7882-9565-9757-889cc8b68c4d.htm" />
+  <HelpKINode Title="Constants.MIN_FIELDSIZE field" Url="html/7e91e032-1959-c44d-04f1-1c83b063ba67.htm" />
+  <HelpKINode Title="Constants.PLAYER_NAME_REGEX_PATTERN field" Url="html/7a691667-6d9f-1420-a220-644c1f128802.htm" />
+  <HelpKINode Title="Constants.SCORE_MESSAGE field" Url="html/ea8118a6-5fdd-8f74-723a-ec2aaba5c4ca.htm" />
+  <HelpKINode Title="Constants.WELCOME_MESSAGE field" Url="html/2e6ab682-7368-4e78-4847-030d9178d641.htm" />
+  <HelpKINode Title="DEFAULT_COLOR field" Url="html/b5e10f14-1746-3d00-17c0-be38e070ead3.htm" />
+  <HelpKINode Title="EMPTY_CELL_COLOR field" Url="html/7afca75d-c8e0-066f-f797-aa7a920c9469.htm" />
+  <HelpKINode Title="EXPLODED_CELL_COLOR field" Url="html/4c254723-5856-7959-c1de-cbba385faf1b.htm" />
+  <HelpKINode Title="GAME_OVER_MESSAGE field" Url="html/4b4c1ca6-7c75-66f7-4fbc-ef5dedbec135.htm" />
+  <HelpKINode Title="INVALID_MOVE_NOTIFICATION_MESSAGE field" Url="html/147f0c2a-2575-20aa-2dc3-bf8d222f14ac.htm" />
+  <HelpKINode Title="INVITE_TO_ENTER_COORDINATES_MESSAGE field" Url="html/e141fa75-aa35-656e-aba6-3d3ba8a33abd.htm" />
+  <HelpKINode Title="INVITE_TO_ENTER_SIZE_MESSAGE field" Url="html/e7dfeff3-bfad-2c99-74e3-32bb4ac03427.htm" />
+  <HelpKINode Title="IsValidInputCoordinates method" Url="html/6a09d26b-df83-e81c-95ae-8772d7f906d0.htm" />
+  <HelpKINode Title="IsValidInputFieldSize method" Url="html/4a7ab886-dd92-dbbc-67e5-b4330c74978d.htm" />
+  <HelpKINode Title="isValidPlayerName method" Url="html/7904b61d-862a-71d7-0603-02b7e68b6a3f.htm" />
+  <HelpKINode Title="isValidPlayerScore method" Url="html/2456173f-c888-dfca-46aa-cef5374bbdf0.htm" />
+  <HelpKINode Title="MAX_FIELDSIZE field" Url="html/3176c8df-b31e-1d25-1e38-4f0369ae15c4.htm" />
+  <HelpKINode Title="MESSAGE_LEFT_POSSITION field" Url="html/08c7851b-a1d1-9247-eaaa-ab186a64cee8.htm" />
+  <HelpKINode Title="MESSAGE_TOP_POSSITION field" Url="html/d103e77e-5422-7d48-2c3e-217f046c7618.htm" />
+  <HelpKINode Title="MINES_COUNT_MESSAGE field" Url="html/05f4fdb0-e4d3-c982-7311-cb9e787ddd5f.htm" />
+  <HelpKINode Title="MINE_CELL_COLOR field" Url="html/f23921fc-7882-9565-9757-889cc8b68c4d.htm" />
+  <HelpKINode Title="MIN_FIELDSIZE field" Url="html/7e91e032-1959-c44d-04f1-1c83b063ba67.htm" />
+  <HelpKINode Title="PLAYER_NAME_REGEX_PATTERN field" Url="html/7a691667-6d9f-1420-a220-644c1f128802.htm" />
+  <HelpKINode Title="SCORE_MESSAGE field" Url="html/ea8118a6-5fdd-8f74-723a-ec2aaba5c4ca.htm" />
+  <HelpKINode Title="Validator class">
+    <HelpKINode Title="Validator Class" Url="html/78b2f3bd-73d0-572f-2842-377093c27bd4.htm" />
+    <HelpKINode Title="about Validator class" Url="html/78b2f3bd-73d0-572f-2842-377093c27bd4.htm" />
+    <HelpKINode Title="methods" Url="html/cd24625e-b823-2524-08f6-d919b6ee558b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Validator.IsValidInputCoordinates method" Url="html/6a09d26b-df83-e81c-95ae-8772d7f906d0.htm" />
+  <HelpKINode Title="Validator.IsValidInputFieldSize method" Url="html/4a7ab886-dd92-dbbc-67e5-b4330c74978d.htm" />
+  <HelpKINode Title="Validator.isValidPlayerName method" Url="html/7904b61d-862a-71d7-0603-02b7e68b6a3f.htm" />
+  <HelpKINode Title="Validator.isValidPlayerScore method" Url="html/2456173f-c888-dfca-46aa-cef5374bbdf0.htm" />
+  <HelpKINode Title="WELCOME_MESSAGE field" Url="html/2e6ab682-7368-4e78-4847-030d9178d641.htm" />
+</HelpKI>
