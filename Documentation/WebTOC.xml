@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <HelpTOC>
 
-  <HelpTOCNode Id="f3625330-1459-4e94-ab4e-d3af8a560ae0" Title="BattleField2.Common" Url="html/ebd900c6-e6f2-769f-4d01-346d2982ab2b.htm">
-    <HelpTOCNode Id="1b7dd794-1714-44c7-b7b5-0d331286bb8d" Title="Constants Class" Url="html/d48cb40c-6e32-d921-bac4-499f521e81e8.htm">
-      <HelpTOCNode Id="046e2eb5-35f2-4758-9341-e770227d6880" Title="Constants Fields" Url="html/d85ba585-4666-bd79-9cc2-18832e667ca3.htm">
+  <HelpTOCNode Id="7976a07c-37dc-4c7d-a6be-bf14e7525e47" Title="BattleField2.Common" Url="html/ebd900c6-e6f2-769f-4d01-346d2982ab2b.htm">
+    <HelpTOCNode Id="59feaa73-a17c-4bf5-be02-d02dc982b9de" Title="Constants Class" Url="html/d48cb40c-6e32-d921-bac4-499f521e81e8.htm">
+      <HelpTOCNode Id="83f9e7d4-87e0-467f-bf51-457241e9fb50" Title="Constants Fields" Url="html/d85ba585-4666-bd79-9cc2-18832e667ca3.htm">
         <HelpTOCNode Title="APP_HEIGHT Field" Url="html/5ae22b8a-7568-4658-7d2f-b90e7f9eeb69.htm" />
         <HelpTOCNode Title="APP_WIDTH Field" Url="html/be99d983-a469-dfb1-1474-47e625cdbd40.htm" />
         <HelpTOCNode Title="DEFAULT_COLOR Field" Url="html/b5e10f14-1746-3d00-17c0-be38e070ead3.htm" />
@@ -27,8 +27,8 @@
         <HelpTOCNode Title="WELCOME_MESSAGE Field" Url="html/2e6ab682-7368-4e78-4847-030d9178d641.htm" />
       </HelpTOCNode>
     </HelpTOCNode>
-    <HelpTOCNode Id="18995cdd-9997-42a5-b9bf-c5af8c0d1ac0" Title="Validator Class" Url="html/78b2f3bd-73d0-572f-2842-377093c27bd4.htm">
-      <HelpTOCNode Id="37d60ff1-93bc-47fa-af30-b6e4fc968e59" Title="Validator Methods" Url="html/cd24625e-b823-2524-08f6-d919b6ee558b.htm">
+    <HelpTOCNode Id="db3e3175-6eba-478d-af3d-915e05d24f7b" Title="Validator Class" Url="html/78b2f3bd-73d0-572f-2842-377093c27bd4.htm">
+      <HelpTOCNode Id="84edb08b-2fc7-4d0e-aa37-346ac3b40586" Title="Validator Methods" Url="html/cd24625e-b823-2524-08f6-d919b6ee558b.htm">
         <HelpTOCNode Title="IsValidInputCoordinates Method " Url="html/6a09d26b-df83-e81c-95ae-8772d7f906d0.htm" />
         <HelpTOCNode Title="IsValidInputFieldSize Method " Url="html/4a7ab886-dd92-dbbc-67e5-b4330c74978d.htm" />
         <HelpTOCNode Title="isValidPlayerName Method " Url="html/7904b61d-862a-71d7-0603-02b7e68b6a3f.htm" />
