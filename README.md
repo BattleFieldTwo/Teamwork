@@ -32,11 +32,9 @@ Redesigned the project structure: Team Battlefield 2
 
     -   Models – containing all the models used ;
 
-    -   ViewModels – containing the Contracts and Implementations of the ViewModels;
+    -   WpfGUI – containing the WPF Graphical user interface - Contracts and implementations;
 
-    -   DesktopUi – containing the XAML View;
-
--   Renamed main class “Program” to “EmtryPoint”;
+-   Renamed main class “Program” to “EntryPoint”;
 
 -   Created class “GameEngin” containing the game logic;
 
