@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BattleField2.ViewModels</name>
+    </assembly>
+    <members>
+        <member name="T:BattleField2.Renderers.ColorConfig">
+            <summary>
+            This class holds some configuration details related to the color rendering in the application.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Renderers.ColorConfig.SetColor(System.String)">
+            <summary>
+            Method that sets the Console color based on given string.
+            </summary>
+            <param name="color">String value representing a Color name to be parsed.</param>
+            <returns>New object of type ConsoleColor to be implemented as a new color setting by the console.</returns>
+        </member>
+        <member name="T:BattleField2.Renderers.ConsoleGameRenderer">
+            <summary>
+            ConsoleGameRenderer class implements the IGameRenderer interface and
+            provides most of the main methods that we use inside the GameEngine class.
+            </summary>
+        </member>
+        <member name="P:BattleField2.Renderers.ConsoleGameRenderer.Instance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BattleField2.Renderers.ConsoleGameRenderer.DisplayMessage(System.String)">
+            <summary>
+            Method that gets a string and prints it as a message to the Console.
+            </summary>
+            <param name="message">Message to be printed on the Console.</param>
+        </member>
+        <member name="M:BattleField2.Renderers.ConsoleGameRenderer.Clear">
+            <summary>
+            Method that clears the Console screen.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Renderers.ConsoleGameRenderer.EnterCommand">
+            <summary>
+            Method that waits for a user input as a command and returns that command.
+            </summary>
+            <returns>The command that was inputed.</returns>
+        </member>
+        <member name="M:BattleField2.Renderers.ConsoleGameRenderer.Wait">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BattleField2.Renderers.ConsoleGameRenderer.DrawCell(System.String)">
+            <summary>
+            Method that draw a given cell from the game field.
+            We get the cell content as an input parameter and then evaluate what to print
+            and with what color based on that content.
+            </summary>
+            <param name="cellContent">Cell content to be printed.</param>
+        </member>
+        <member name="M:BattleField2.Renderers.ConsoleGameRenderer.DrawField(BattleField2.Models.Cells.Cell[0:,0:])">
+            <summary>
+            Method that draws the whole game field.
+            </summary>
+            <param name="fieldPositions">Multi-dimensional array of Cell Objects that will build the game field.</param>
+        </member>
+        <member name="M:BattleField2.Renderers.ConsoleGameRenderer.SetSize(System.Int32,System.Int32)">
+            <summary>
+            Method that is used to set the size of the game field.
+            NOTE: In case of unsupported width or height the game field
+            size will be set to the maximum size for the current system
+            Console.
+            </summary>
+            <param name="width">Game field width.</param>
+            <param name="height">Game field height.</param>
+        </member>
+        <member name="T:BattleField2.Renderers.IGameRenderer">
+            <summary>
+            IGameRenderer interface to be implemented and inherited.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.DisplayMessage(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.DrawField(BattleField2.Models.Cells.Cell[0:,0:])">
+            <summary>
+            
+            </summary>
+            <param name="fieldPositions"></param>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.Clear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.EnterCommand">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.Wait">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:BattleField2.ViewModels.Contracts.IViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BattleField2.ViewModels.Contracts.IViewModel.DisplayWelcomeMessage(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="welcomeMessage"></param>
+        </member>
+        <member name="M:BattleField2.ViewModels.Contracts.IViewModel.GetFieldSize(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="inviteToGiveSizeMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BattleField2.ViewModels.Contracts.IViewModel.DrawField(BattleField2.Models.Field.Field)">
+            <summary>
+            
+            </summary>
+            <param name="currentBattleField"></param>
+        </member>
+        <member name="M:BattleField2.ViewModels.Contracts.IViewModel.GetInputCoordinates(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="inviteToEnterCoordinatesMessage"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BattleField2.ViewModels.Contracts.IViewModel.NotifyForInvalidMove(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="invalidMoveNotificationMessage"></param>
+        </member>
+        <member name="M:BattleField2.ViewModels.Contracts.IViewModel.GameOver(System.String,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="gameOverMessage"></param>
+            <param name="detonatedMines"></param>
+        </member>
+        <member name="M:BattleField2.ViewModels.Contracts.IViewModel.GiveMinesCount(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="count"></param>
+        </member>
+    </members>
+</doc>
