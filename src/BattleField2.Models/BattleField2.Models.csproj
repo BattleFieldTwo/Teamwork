@@ -60,6 +60,7 @@
     <Compile Include="Mines\MineLevelThreeUpgrade.cs" />
     <Compile Include="Mines\MineLevelTwoUpgrade.cs" />
     <Compile Include="Mines\MineType.cs" />
+    <Compile Include="Player\HighScore.cs" />
     <Compile Include="Player\Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

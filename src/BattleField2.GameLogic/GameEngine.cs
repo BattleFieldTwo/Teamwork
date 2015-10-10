@@ -17,8 +17,9 @@
         private readonly IGameRenderer renderer;
         private Field battleField;
         private static GameEngine instance;
-        private Player player;
-        
+        private Player currentPlayer;
+        private HighScore highScore = new HighScore();
+
         private GameEngine(IGameRenderer renderer)
         {
             this.renderer = renderer;
@@ -46,7 +47,7 @@
                 this.renderer.DisplayMessage(Constants.INVITE_TO_ENTER_NAME_MESSAGE);
                 inputPlayerName = this.renderer.EnterCommand();
             } while (!Validator.isValidPlayerName(inputPlayerName));
-            this.player = new Player(inputPlayerName);
+            this.currentPlayer = new Player(inputPlayerName);
         }
 
         //TODO refactor this method
@@ -97,7 +98,7 @@
             this.renderer.Clear();
             this.renderer.DisplayMessage(Constants.WELCOME_MESSAGE);
             this.EnterPlayerName();
-            this.renderer.DisplayMessage(Constants.HI_MESSAGE + this.player.Name);
+            this.renderer.DisplayMessage(Constants.HI_MESSAGE + this.currentPlayer.Name);
             int currentFieldSize = this.EnterFieldSize();
 
             this.battleField = new Field(currentFieldSize);
@@ -115,7 +116,7 @@
         {
             int remainingMines = this.battleField.CountRemainingMines();
             this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + remainingMines);
-            this.renderer.DisplayMessage(Constants.SCORE_MESSAGE + this.player.Score);
+            this.renderer.DisplayMessage(Constants.SCORE_MESSAGE + this.currentPlayer.Score);
 
             do
             {
@@ -138,14 +139,15 @@
 
                 this.renderer.DrawField(this.battleField.FieldPositions);
 
-                this.player.Score += this.player.CalculateScore(remainingMines, this.battleField.CountRemainingMines());
+                this.currentPlayer.Score += this.currentPlayer.CalculateScore(remainingMines, this.battleField.CountRemainingMines());
                 remainingMines = this.battleField.CountRemainingMines();
 
                 this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + remainingMines);
-                this.renderer.DisplayMessage(Constants.SCORE_MESSAGE + this.player.Score);
+                this.renderer.DisplayMessage(Constants.SCORE_MESSAGE + this.currentPlayer.Score);
 
             } while (remainingMines > 0);
 
+            highScore.SaveHighScore(currentPlayer);
             this.GameOver();
         }
         
