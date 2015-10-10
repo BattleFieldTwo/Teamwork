@@ -34,7 +34,7 @@ Redesigned the project structure: Team Battlefield 2
 
     -   WpfGUI – containing the WPF Graphical user interface - Contracts and implementations;
 
--   Renamed main class “Program” to “EmtryPoint”;
+-   Renamed main class “Program” to “EntryPoint”;
 
 -   Created class “GameEngin” containing the game logic;
 
