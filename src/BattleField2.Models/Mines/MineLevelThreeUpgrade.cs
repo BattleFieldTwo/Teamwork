@@ -5,7 +5,7 @@ namespace BattleField2.Models.Mines
     using Coordinates;
     using Cells;
 
-    internal class MineLevelThreeUpgrade : MineDecorator
+    internal class MineLevelThreeUpgrade : Mine
     {
         private readonly string stringRepresentation = " 3 ";
         private readonly int mineSpan = 2;
