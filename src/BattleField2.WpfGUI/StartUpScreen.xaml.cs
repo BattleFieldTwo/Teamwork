@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +19,30 @@ namespace WpfGUI
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
+        private String fieldSizeInput;
+
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        public string FieldSizeInput
+        {
+            get { return fieldSizeInput; }
+            set
+            {
+                if (value != fieldSizeInput)
+                {
+                    fieldSizeInput = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

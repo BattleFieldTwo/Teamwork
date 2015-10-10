@@ -64,7 +64,7 @@
                 <TextBlock Text="prefered size of the field between 2 and 10: "/>
             </Grid>
             <Grid Grid.Column="1">
-                <TextBox x:Name="FieldSizeInput"/>
+                <TextBox x:Name="FieldSizeDef" Text="{Binding Path=FieldSizeInput}" />
             </Grid>
         </Grid>
         <Button Grid.Row="4" Content="Start Playing the Game!" Cursor="Hand"/>
