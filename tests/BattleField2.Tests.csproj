@@ -61,7 +61,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BattleField2.Models\BattleField2.Models.csproj">
+    <ProjectReference Include="..\src\BattleField2.Models\BattleField2.Models.csproj">
       <Project>{64daf9bf-dbef-4264-a55c-a9274521902e}</Project>
       <Name>BattleField2.Models</Name>
     </ProjectReference>
