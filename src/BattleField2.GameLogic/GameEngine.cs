@@ -75,10 +75,10 @@
             return currentCoordinates;
         }
         /// <summary>
-        /// 
+        /// This method initializes the GameEngine renderer.
         /// </summary>
-        /// <param name="renderer"></param>
-        /// <returns></returns>
+        /// <param name="renderer">Object of type IGameRenderer.</param>
+        /// <returns>New GameEngine instance holding the IGameRenderer object.</returns>
         public static GameEngine Instance(IGameRenderer renderer)
         {
             if (instance == null)
@@ -89,7 +89,9 @@
             return instance;
         }
         /// <summary>
-        ///
+        /// This method does the necessary pre-game initialization before the game.
+        /// Creates the game field. Generates the random mines. 
+        /// Gets the current player name. Prints some information messages. 
         /// </summary>
         public void InitializeGame()
         {
@@ -109,7 +111,9 @@
             this.renderer.DrawField(this.battleField.FieldPositions);
         }
         /// <summary>
-        /// 
+        /// This is the main method in our application.  
+        /// This is the method that does all the work in the Game Engine.
+        /// Gets the player input, prints messages, counts mines etc.
         /// </summary>
         public void PlayGame()
         {
@@ -150,7 +154,9 @@
         }
         
         /// <summary>
-        /// 
+        /// Method that gets executed everytime the game ends.
+        /// We get the end game messages from the Constants class and after that 
+        /// we re-initialize the game.
         /// </summary>
         public void GameOver()
         {
