@@ -4,5 +4,27 @@
         <name>BattleField2.Models</name>
     </assembly>
     <members>
+        <member name="T:BattleField2.Models.Player.HighScore">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Player.HighScore.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Player.HighScore.ListHighScore">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BattleField2.Models.Player.HighScore.SaveHighScore(BattleField2.Models.Player.Player)">
+            <summary>
+            
+            </summary>
+            <param name="currentPlayer"></param>
+        </member>
     </members>
 </doc>

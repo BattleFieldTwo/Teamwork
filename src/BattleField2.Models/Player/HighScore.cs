@@ -1,42 +1,19 @@
 ﻿namespace BattleField2.Models.Player
 {
+    using Common;
     using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
-
+    using System.Text;
+    /// <summary>
+    /// 
+    /// </summary>
     public class HighScore
     {
         private readonly string filePath = @"..\..\highscore.txt";
         private readonly int topListCount = 5;
         private List<Player> highScoreList = new List<Player>();
-
-        public HighScore()
-        {
-            this.ReadHighScoreFromFile();
-        }
-
-        public void ListHighScore()
-        {
-            this.SortHighScoreDesc();
-
-            for (int i = 0; i < this.highScoreList.Count; i++)
-            {
-                Console.WriteLine(string.Format("Rank {0}: {1}, Score: {2}", i + 1, this.highScoreList[i].Name, this.highScoreList[i].Score));
-            }
-        }
-
-        public void SaveHighScore(Player currentPlayer)
-        {
-            this.highScoreList.Add(currentPlayer);
-
-            if (this.highScoreList.Count > this.topListCount)
-            {
-                this.highScoreList.RemoveAt(this.topListCount - 1);
-            }
-
-            this.WriteHighScoreToFile();
-        }
 
         private void ReadHighScoreFromFile()
         {
@@ -78,6 +55,55 @@
             this.highScoreList = this.highScoreList
                                     .OrderByDescending(s => s.Score)
                                     .ToList();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public HighScore()
+        {
+            this.ReadHighScoreFromFile();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public string ListHighScore()
+        {
+            this.SortHighScoreDesc();
+            StringBuilder str = new StringBuilder();
+            str.Append(new String(' ', Constants.MESSAGE_LEFT_POSSITION));
+            str.Append(new String(' ', Constants.MESSAGE_LEFT_POSSITION) + "--=== HIGH SCORES ===--\n\n");
+
+            if (this.highScoreList.Count == 0)
+            {
+                str.Append(new String(' ', Constants.MESSAGE_LEFT_POSSITION));
+                str.Append("NO SCORES YET!\n");
+            }
+            for (int i = 0; i < this.highScoreList.Count; i++)
+            {
+                str.Append(new String(' ', Constants.MESSAGE_LEFT_POSSITION));
+                str.Append(string.Format("Rank {0}: {1}, Score: {2}\n", i + 1, this.highScoreList[i].Name, this.highScoreList[i].Score));
+            }
+
+            return str.ToString();
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="currentPlayer"></param>
+        public void SaveHighScore(Player currentPlayer)
+        {
+            this.highScoreList.Add(currentPlayer);
+
+            if (this.highScoreList.Count > this.topListCount)
+            {
+                this.highScoreList.RemoveAt(this.topListCount - 1);
+            }
+
+            this.WriteHighScoreToFile();
         }
     }
 }

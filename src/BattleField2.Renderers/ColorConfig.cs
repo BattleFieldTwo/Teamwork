@@ -1,5 +1,6 @@
 ﻿namespace BattleField2.Renderers
 {
+    using Common;
     using System;
     /// <summary>
     /// This class holds some configuration details related to the color rendering in the application.
