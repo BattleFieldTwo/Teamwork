@@ -2,9 +2,9 @@
 {
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Models.Mines;
     using Models.Cells;
     using Models.Coordinates;
+    using Models.Mines;
     using Moq;
     using System.Collections.Generic;
 

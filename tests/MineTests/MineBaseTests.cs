@@ -1,12 +1,8 @@
 ﻿namespace BattleField2.Tests
 {
-    using System;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
-    using Moq;
-    using System.Collections.Generic;
-    using Models.Coordinates;
-    using Models.Cells;
     using Models.Mines;
+    using Moq;
 
     [TestClass]
     public class MineBaseTests

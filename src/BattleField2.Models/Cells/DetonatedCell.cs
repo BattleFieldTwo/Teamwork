@@ -2,7 +2,7 @@
 {
     using BattleField2.Models.Coordinates;
 
-    class DetonatedCell : Cell
+   internal class DetonatedCell : Cell
     {
         private readonly string stringRepresentation = " X ";
 

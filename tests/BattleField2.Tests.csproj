@@ -56,10 +56,10 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="MineTypesTests.cs" />
+    <Compile Include="MineTests\MineTypesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MineFactoryTests.cs" />
-    <Compile Include="MineBaseTests.cs" />
+    <Compile Include="MineTests\MineFactoryTests.cs" />
+    <Compile Include="MineTests\MineBaseTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\src\BattleField2.Models\BattleField2.Models.csproj">
@@ -72,6 +72,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CellTests\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
