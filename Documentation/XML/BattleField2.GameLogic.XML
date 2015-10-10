@@ -20,6 +20,11 @@
             The application engine. This class does all the work and runs the game.
             </summary>
         </member>
+        <member name="M:BattleField2.GameLogic.GameEngine.GameMenu">
+            <summary>
+            
+            </summary>
+        </member>
         <member name="M:BattleField2.GameLogic.GameEngine.Instance(BattleField2.Renderers.IGameRenderer)">
             <summary>
             This method initializes the GameEngine renderer.
