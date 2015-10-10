@@ -1,15 +1,15 @@
-﻿<Window x:Class="WpfGUI.MainWindow"
+﻿<Window x:Class="WpfGUI.StartUpScreen"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:viewModels="clr-namespace:WpfGUI.ViewModels"
-        Title="Game Battlefield 2" Height="260" Width="500">
+        xmlns:viewModels="clr-namespace:BattleField2.WpfGUI.ViewModels"
+        Title="Game Battlefield 2" Height="600" Width="800">
 
     <Window.DataContext>
-        <viewModels:BattleFieldViewModel/>
+        <viewModels:StartUpScreen/>
     </Window.DataContext>
 
     <Window.Resources>
-        <viewModels:BattleFieldViewModel x:Key="ViewModel"/>
+        <!--<viewModels:BattleFieldViewModel x:Key="ViewModel"/>-->
         <Style TargetType="{x:Type Button}">
             <Setter Property="Background" Value="#FF74E21B"/>
             <Setter Property="Margin" Value="10"/>
@@ -33,40 +33,48 @@
         </Style>
     </Window.Resources>
 
-    <Grid Margin="10">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="60"/>
-        </Grid.RowDefinitions>
-        <Grid Grid.Row="0" Margin="10">
-            <TextBlock x:Name="vddvv" FontSize="20"  Text="Plase, enter... "/>
+    <Grid>
+        <Grid Visibility="{Binding GameVisibility}">
+            <TextBlock Text="Playing the game!"/>
         </Grid>
-        <Grid Grid.Row="1" Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="250"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
-                <TextBlock Text="your name: "/>
+        
+        <Grid Margin="150" Visibility="{Binding StartUpVisibility}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Margin="10">
+                <TextBlock x:Name="vddvv" FontSize="20"  Text="Plase, enter... "/>
             </Grid>
-            <Grid Grid.Column="1">
-                <TextBox x:Name="PlayerNameInput"/>
+            <Grid Grid.Row="1" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <TextBlock Text="your name: "/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox x:Name="PlayerNameDef" Text="{Binding Path=PlayerNameInput, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
             </Grid>
+            <Grid Grid.Row="2" Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <TextBlock Text="valid field size between 2 and 10: "/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox x:Name="FieldSizeDef" Text="{Binding Path=FieldSizeInput, UpdateSourceTrigger=PropertyChanged}"/>
+                </Grid>
+            </Grid>
+            <Button Grid.Row="4" Content="Start Playing the Game!" Cursor="Hand" Command="{Binding SendInitialInfo}"/>
         </Grid>
-        <Grid Grid.Row="2" Margin="10">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="250"/>
-                <ColumnDefinition Width="1*"/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
-                <TextBlock Text="prefered size of the field between 2 and 10: "/>
-            </Grid>
-            <Grid Grid.Column="1">
-                <TextBox x:Name="FieldSizeDef" Text="{Binding Path=FieldSizeInput}" />
-            </Grid>
-        </Grid>
-        <Button Grid.Row="4" Content="Start Playing the Game!" Cursor="Hand"/>
+            
+        
     </Grid>
 </Window>
