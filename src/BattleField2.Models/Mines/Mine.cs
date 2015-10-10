@@ -10,14 +10,14 @@ namespace BattleField2.Models.Mines
         public abstract Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates);
 
         //Checking if entered coordinates are valid
-        public bool IsValid(int i, int j, int size)
+        internal bool IsValid(int i, int j, int size)
         {
             bool result = (0 <= i && i < size) &&
                           (0 <= j && j < size);
             return result;
         }
 
-        public void DetonateMineBase(Cell[,] fieldPositions, Coordinates currentCoordinates, int mineSpan, List<Coordinates> toEmpty = null)
+        internal void DetonateMineBase(Cell[,] fieldPositions, Coordinates currentCoordinates, int mineSpan, List<Coordinates> toEmpty = null)
         {
             int row = currentCoordinates.Row;
             int col = currentCoordinates.Col;
