@@ -39,6 +39,43 @@
             return currentFieldSize;
         }
 
+        public void GameMenu()
+        {
+            this.renderer.SetSize(Constants.APP_WIDTH, Constants.APP_HEIGHT);
+            this.renderer.Clear();
+            string choice = "";
+            do
+            {
+                this.renderer.DisplayMessage(Constants.WELCOME_MESSAGE);
+                this.renderer.DisplayMessage("GAME MENU");
+                this.renderer.DisplayMessage("1. START NEW GAME");
+                this.renderer.DisplayMessage("2. HIGHSCORES");
+                this.renderer.DisplayMessage("3. EXIT");
+                this.renderer.DisplayMessage("\n");
+                this.renderer.DisplayMessage("Enter your choice: ");
+                choice = this.renderer.EnterCommand();
+
+                switch (choice)
+                {
+                    case "1":
+                        this.renderer.Clear();
+                        this.EnterPlayerName();
+                        this.renderer.DisplayMessage(Constants.HI_MESSAGE + this.currentPlayer.Name);
+                        this.InitializeGame();
+                        this.PlayGame();
+                        break;
+                    case "2":
+                        this.renderer.Clear();
+                        this.renderer.DisplayMessage(highScore.ListHighScore());
+                        break;
+                    case "3":
+                        this.renderer.Clear();
+                        Environment.Exit(0);
+                        break;
+                }
+            } while (!Validator.IsValidMenuChoice(3, choice));
+        }
+
         private void EnterPlayerName()
         {
             string inputPlayerName;
@@ -96,11 +133,6 @@
         /// </summary>
         public void InitializeGame()
         {
-            this.renderer.SetSize(Constants.APP_WIDTH, Constants.APP_HEIGHT);
-            this.renderer.Clear();
-            this.renderer.DisplayMessage(Constants.WELCOME_MESSAGE);
-            this.EnterPlayerName();
-            this.renderer.DisplayMessage(Constants.HI_MESSAGE + this.currentPlayer.Name);
             int currentFieldSize = this.EnterFieldSize();
 
             this.battleField = new Field(currentFieldSize);

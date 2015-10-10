@@ -12,7 +12,7 @@ namespace BattleField2.Common
         /// <summary>
         /// Predefined game start up welcoming message. 
         /// </summary>
-        public const string WELCOME_MESSAGE = "Welcome to the Battle Field game";
+        public const string WELCOME_MESSAGE = "--=== BATTLE FIELD 2 ===--";
         /// <summary>
         /// In-game information message.
         /// </summary>
