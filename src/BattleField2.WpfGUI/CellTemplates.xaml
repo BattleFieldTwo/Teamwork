@@ -1,0 +1,71 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:BattleField2.WpfGUI"
+                    xmlns:viewModels="clr-namespace:BattleField2.WpfGUI.ViewModels">
+
+    <DataTemplate x:Key="MineFiveTemplate">
+        <Grid>
+            <Button Style="{StaticResource activeButtonStyle}">
+                <Image DataContext="{Binding}" Source="/Icons/Lamb-01.png"/>
+            </Button>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MineFourTemplate">
+        <Grid>
+            <Button Style="{StaticResource activeButtonStyle}">
+                <Image DataContext="{Binding}" Source="/Icons/Hen-01.png"/>
+            </Button>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="DetonatedCellTemplate">
+        <Grid>
+            <Button Style="{StaticResource inactiveButtonStyle}">
+                <Image DataContext="{Binding}" Source="/Icons/Raspberry-01.png"/>
+            </Button>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="EmptyCellTemplate">
+        <Grid>
+            <Button Style="{StaticResource inactiveButtonStyle}">
+                <Image DataContext="{Binding}" Source="/Icons/Blueberry-01.png"/>
+            </Button>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MineThreeTemplate">
+        <Grid>
+            <Button Style="{StaticResource activeButtonStyle}">
+                <Image DataContext="{Binding}" Source="/Icons/Milk-01.png"/>
+            </Button>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MineTwoTemplate">
+        <Grid>
+            <Button Style="{StaticResource activeButtonStyle}">
+                <Image DataContext="{Binding}" Source="/Icons/Egg-01.png"/>
+            </Button>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MineOneTemplate">
+        <Grid>
+            <Button Style="{StaticResource activeButtonStyle}">
+                <Image DataContext="{Binding}" Source="/Icons/Rabbit-01.png"/>
+            </Button>
+        </Grid>
+    </DataTemplate>
+
+    <local:CellTemplateSelector x:Key="templateSelector"
+            MineOneTemplate="{StaticResource MineOneTemplate}" 
+            MineTwoTemplate="{StaticResource MineTwoTemplate}"
+            MineThreeTemplate="{StaticResource MineThreeTemplate}"
+            EmptyCellTemplate="{StaticResource EmptyCellTemplate}"
+            DetonatedCellTemplate="{StaticResource DetonatedCellTemplate}"
+            MineFourTemplate="{StaticResource MineFourTemplate}"
+            MineFiveTemplate="{StaticResource MineFiveTemplate}"/>
+
+</ResourceDictionary>
