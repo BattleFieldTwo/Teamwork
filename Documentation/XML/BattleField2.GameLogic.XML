@@ -22,24 +22,30 @@
         </member>
         <member name="M:BattleField2.GameLogic.GameEngine.Instance(BattleField2.Renderers.IGameRenderer)">
             <summary>
-            
+            This method initializes the GameEngine renderer.
             </summary>
-            <param name="renderer"></param>
-            <returns></returns>
+            <param name="renderer">Object of type IGameRenderer.</param>
+            <returns>New GameEngine instance holding the IGameRenderer object.</returns>
         </member>
         <member name="M:BattleField2.GameLogic.GameEngine.InitializeGame">
-             <summary>
-            
-             </summary>
+            <summary>
+            This method does the necessary pre-game initialization before the game.
+            Creates the game field. Generates the random mines. 
+            Gets the current player name. Prints some information messages. 
+            </summary>
         </member>
         <member name="M:BattleField2.GameLogic.GameEngine.PlayGame">
             <summary>
-            
+            This is the main method in our application.  
+            This is the method that does all the work in the Game Engine.
+            Gets the player input, prints messages, counts mines etc.
             </summary>
         </member>
         <member name="M:BattleField2.GameLogic.GameEngine.GameOver">
             <summary>
-            
+            Method that gets executed everytime the game ends.
+            We get the end game messages from the Constants class and after that 
+            we re-initialize the game.
             </summary>
         </member>
     </members>
