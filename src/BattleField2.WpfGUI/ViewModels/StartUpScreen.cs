@@ -19,6 +19,10 @@ namespace BattleField2.WpfGUI.ViewModels
 {
 
     using BattleField2.Common;
+using BattleField2.Models.Cells;
+using BattleField2.Models.Field;
+using System.Collections.ObjectModel;
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -28,7 +32,13 @@ namespace BattleField2.WpfGUI.ViewModels
         private string playerNameImput = "YourName";
         private Visibility startUpVisibility = Visibility.Visible;
         private Visibility gameVisibility = Visibility.Hidden;
-        private Visibility gameOverVisibility = Visibility.Visible; 
+        private Visibility gameOverVisibility = Visibility.Visible;
+
+        private Field battleField;
+
+        public ObservableCollection<Cell> Cells;
+        
+        
 
         public StartUpScreen()
         {
@@ -97,6 +107,14 @@ namespace BattleField2.WpfGUI.ViewModels
             }
         }
 
+        public Field BattleField
+        {
+            get { return battleField; }
+
+            // TODO: Implement checks!
+            set { battleField = value; }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string propertyName)
@@ -119,6 +137,17 @@ namespace BattleField2.WpfGUI.ViewModels
         {
             this.StartUpVisibility = Visibility.Hidden;
             this.GameVisibility = Visibility.Visible;
+
+            this.InitializeGame();
+        }
+
+        private void InitializeGame()
+        {
+            this.BattleField = new Field(int.Parse(this.FieldSizeInput));
+
+            this.battleField.GenerateField();
+
+            this.battleField.PositionMines();
         }
     }
 }

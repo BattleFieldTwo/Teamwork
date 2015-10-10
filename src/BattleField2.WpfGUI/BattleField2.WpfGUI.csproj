@@ -53,8 +53,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CellTemplateSelector.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="ViewModels\StartUpScreen.cs" />
+    <Page Include="ButtonRecources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CellTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="StartUpScreen.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -96,6 +105,21 @@
       <Project>{79a78a9f-0c29-476b-847b-2f32b6fb9335}</Project>
       <Name>BattleField2.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\BattleField2.Models\BattleField2.Models.csproj">
+      <Project>{64daf9bf-dbef-4264-a55c-a9274521902e}</Project>
+      <Name>BattleField2.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Icons\BlueBerry-01.png" />
+    <Resource Include="Icons\Egg-01.png" />
+    <Resource Include="Icons\Fox-01.png" />
+    <Resource Include="Icons\Hen-01.png" />
+    <Resource Include="Icons\Lamb-01.png" />
+    <Resource Include="Icons\Milk-01.png" />
+    <Resource Include="Icons\Rabbit-01.png" />
+    <Resource Include="Icons\RaspBerry-01.png" />
+    <Resource Include="Icons\Wolf-01.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

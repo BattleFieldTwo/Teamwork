@@ -31,11 +31,25 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+        
+        
     </Window.Resources>
 
     <Grid>
         <Grid Visibility="{Binding GameVisibility}">
-            <TextBlock Text="Playing the game!"/>
+            <ItemsControl ItemsSource="{Binding Cells}" ItemTemplateSelector="{StaticResource templateSelector}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas x:Name="FarmCanvas"/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemContainerStyle>
+                    <Style TargetType="ContentPresenter">
+                        <Setter Property="Canvas.Left" Value="{Binding Path=TopLeft, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource leftConverter}}"/>
+                        <Setter Property="Canvas.Top" Value="{Binding Path=TopLeft, Mode=OneWay, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource topConverter}}" />
+                    </Style>
+                </ItemsControl.ItemContainerStyle>
+            </ItemsControl>
         </Grid>
         
         <Grid Margin="150" Visibility="{Binding StartUpVisibility}">
