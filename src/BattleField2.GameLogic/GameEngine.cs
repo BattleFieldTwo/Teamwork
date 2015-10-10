@@ -102,6 +102,7 @@
                 string coordinates = this.renderer.EnterCommand();
                 if (!Validator.IsValidInputCoordinates(coordinates, this.battleField.FieldPositions.GetLength(0)))
                 {
+                    this.renderer.Clear();
                     this.renderer.DisplayMessage(Constants.INVALID_MOVE_NOTIFICATION_MESSAGE);
                     continue;
                 }
@@ -167,6 +168,10 @@
 
                     if (!this.battleField.ValidateMoveCoordinates(currentCoordinates))
                     {
+                        this.renderer.Clear();
+                        this.renderer.DrawField(this.battleField.FieldPositions);
+                        this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + remainingMines);
+                        this.renderer.DisplayMessage(Constants.SCORE_MESSAGE + this.currentPlayer.Score);
                         this.renderer.DisplayMessage(Constants.INVALID_MOVE_NOTIFICATION_MESSAGE);
                     }
                 } while (!this.battleField.ValidateMoveCoordinates(currentCoordinates));

@@ -79,6 +79,11 @@ namespace BattleField2.Common
         public const int MESSAGE_TOP_POSSITION = 10;
 
         /// <summary>
+        /// Constant variable that stores the relative path to the Highscore file.
+        /// </summary>
+        public const string HIGH_SCORE_FILE_PATH = @"..\..\highscore.txt";
+
+        /// <summary>
         /// Regex pattern that checks the validity of the Player name value on input.
         /// </summary>
         public const string PLAYER_NAME_REGEX_PATTERN = "[^a-zA-Z0-9]";

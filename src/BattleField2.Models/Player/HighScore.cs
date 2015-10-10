@@ -12,7 +12,7 @@
     /// </summary>
     public class HighScore
     {
-        private readonly string filePath = @"..\..\highscore.txt";
+        private readonly string filePath = Constants.HIGH_SCORE_FILE_PATH;
         private readonly int topListCount = 5;
         private List<Player> highScoreList = new List<Player>();
 
