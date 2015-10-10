@@ -3,7 +3,7 @@
     using Cells;
     using Coordinates;
 
-    internal class MineLevelFiveUpgrade : MineDecorator
+    internal class MineLevelFiveUpgrade : Mine
     {
         private readonly string stringRepresentation = " 5 ";
         private readonly int mineSpan = 2;

@@ -49,11 +49,11 @@
     <Compile Include="Cells\DetonatedCell.cs" />
     <Compile Include="Cells\EmptyCell.cs" />
     <Compile Include="Cells\Cell.cs" />
-    <Compile Include="Mines\Explosive.cs" />
+    <Compile Include="Mines\IExplosive.cs" />
+    <Compile Include="Mines\Mine.cs" />
     <Compile Include="Mines\MineLevelOneUpgrade.cs" />
     <Compile Include="Coordinates\Coordinates.cs" />
     <Compile Include="Field\Field.cs" />
-    <Compile Include="Mines\MineDecorator.cs" />
     <Compile Include="Mines\MineFactory.cs" />
     <Compile Include="Mines\MineLevelFiveUpgrade.cs" />
     <Compile Include="Mines\MineLevelFourUpgrade.cs" />

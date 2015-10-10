@@ -5,11 +5,11 @@
     public class MineFactory
     {
         private static MineFactory instance;
-        private readonly Explosive levelOne;
-        private readonly Explosive levelTwo;
-        private readonly Explosive levelThree;
-        private readonly Explosive levelFour;
-        private readonly Explosive levelFive;
+        private readonly Mine levelOne;
+        private readonly Mine levelTwo;
+        private readonly Mine levelThree;
+        private readonly Mine levelFour;
+        private readonly Mine levelFive;
 
         private MineFactory()
         {
@@ -29,7 +29,7 @@
             return instance;
         }
 
-        public Explosive GetMine(MineType type)
+        public Mine GetMine(MineType type)
         {
             switch (type)
             {
