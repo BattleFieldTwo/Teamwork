@@ -5,11 +5,11 @@
     public class MineFactory
     {
         private static MineFactory instance;
-        private Explosive levelOne;
-        private Explosive levelTwo;
-        private Explosive levelThree;
-        private Explosive levelFour;
-        private Explosive levelFive;
+        private readonly Explosive levelOne;
+        private readonly Explosive levelTwo;
+        private readonly Explosive levelThree;
+        private readonly Explosive levelFour;
+        private readonly Explosive levelFive;
 
         private MineFactory()
         {

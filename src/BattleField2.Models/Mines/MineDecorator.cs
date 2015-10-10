@@ -12,13 +12,13 @@ namespace BattleField2.Models.Mines
         }
 
         //TODO: checks
-        protected Explosive Mine { get; set; }
+        //protected Explosive Mine { get; set; }
 
 
-        public override Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates)
-        {
-            return this.Mine.Detonate(fieldPositions, currentCoordinates);
-        }
+        //public override Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates)
+        //{
+        //    return this.Mine.Detonate(fieldPositions, currentCoordinates);
+        //}
 
         public void DetonateMineBase(Cell[,] fieldPositions, Coordinates currentCoordinates, int mineSpan, List<Coordinates> toEmpty = null)
         {
