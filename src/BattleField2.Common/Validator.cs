@@ -96,6 +96,7 @@
             }
             return true;
         }
+
         /// <summary>
         /// Validation method that validates the Menu choice input by the current player.
         /// </summary>

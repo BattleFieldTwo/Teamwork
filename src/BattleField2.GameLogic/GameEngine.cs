@@ -67,6 +67,8 @@
                     case "2":
                         this.renderer.Clear();
                         this.renderer.DisplayMessage(highScore.ListHighScore());
+                        this.renderer.EnterCommand();
+                        this.GameMenu();
                         break;
                     case "3":
                         this.renderer.Clear();
