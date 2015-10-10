@@ -38,7 +38,9 @@
 
             return currentFieldSize;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public void GameMenu()
         {
             this.renderer.SetSize(Constants.APP_WIDTH, Constants.APP_HEIGHT);
@@ -88,7 +90,6 @@
             } while (!Validator.isValidPlayerName(inputPlayerName));
             this.currentPlayer = new Player(inputPlayerName);
         }
-
         //TODO refactor this method
         private Coordinates EnterInputCoordinates()
         {
