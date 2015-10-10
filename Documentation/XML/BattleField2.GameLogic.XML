@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BattleField2.GameLogic</name>
+    </assembly>
+    <members>
+        <member name="T:BattleField2.GameLogic.EntryPoint">
+            <summary>
+            This class is just the entry point for the whole application.
+            </summary>
+        </member>
+        <member name="M:BattleField2.GameLogic.EntryPoint.Main">
+            <summary>
+            Application entry point start up. 
+            Here we Initialize the game and then start it.
+            </summary>
+        </member>
+        <member name="T:BattleField2.GameLogic.GameEngine">
+            <summary>
+            The application engine. This class does all the work and runs the game.
+            </summary>
+        </member>
+        <member name="M:BattleField2.GameLogic.GameEngine.Instance(BattleField2.Renderers.IGameRenderer)">
+            <summary>
+            
+            </summary>
+            <param name="renderer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:BattleField2.GameLogic.GameEngine.InitializeGame">
+             <summary>
+            
+             </summary>
+        </member>
+        <member name="M:BattleField2.GameLogic.GameEngine.PlayGame">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BattleField2.GameLogic.GameEngine.GameOver">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
