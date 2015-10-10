@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BattleField2.Models
+﻿namespace BattleField2.Models.Mines
 {
-    interface IExplosive
+    using Cells;
+    using Coordinates;
+
+    public interface IExplosive
     {
+        Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates);
     }
 }

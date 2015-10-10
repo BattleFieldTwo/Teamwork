@@ -4,7 +4,7 @@ namespace BattleField2.Models.Mines
     using Cells;
     using Coordinates;
 
-    public abstract class Explosive : Cell
+    public abstract class Mine : Cell, IExplosive
     {
         public abstract Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates);
 

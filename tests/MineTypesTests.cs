@@ -5,7 +5,7 @@
     using Models.Mines;
     using Models.Cells;
     using Models.Coordinates;
-    using Moq;
+    //using Moq;
 
     [TestClass]
     public class MineTypesTests
@@ -18,9 +18,9 @@
             // These coordinates should be the position of the mine
             var currentCoordinates = new Coordinates(2, 2);
             var testCell = new Cell[1, 2];
-            var mineMock = new Mock<Explosive>(); //basic Mine class 
+            //var mineMock = new Mock<Explosive>(); //basic Mine class 
             //mineMock = new MineLevelOneUpgrade(); //Decorated Mine object
-            mineMock.Setup(m => m.Detonate(fieldPositions, currentCoordinates)).Returns(testCell);
+            //mineMock.Setup(m => m.Detonate(fieldPositions, currentCoordinates)).Returns(testCell);
             //Assert.AreEqual(levelOneUpgrade.Detonate(currentFieldSize, fieldPositions), testCell);
         }
 

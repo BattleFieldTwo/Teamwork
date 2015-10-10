@@ -5,7 +5,7 @@ namespace BattleField2.Models.Mines
     using Cells;
     using Coordinates;
 
-    internal abstract class MineDecorator : Explosive
+    internal abstract class MineDecorator : Mine
     {
         protected MineDecorator()
         {
