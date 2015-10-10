@@ -54,7 +54,6 @@
     <Compile Include="Mines\MineLevelOneUpgrade.cs" />
     <Compile Include="Coordinates\Coordinates.cs" />
     <Compile Include="Field\Field.cs" />
-    <Compile Include="Mines\MineDecorator.cs" />
     <Compile Include="Mines\MineFactory.cs" />
     <Compile Include="Mines\MineLevelFiveUpgrade.cs" />
     <Compile Include="Mines\MineLevelFourUpgrade.cs" />
