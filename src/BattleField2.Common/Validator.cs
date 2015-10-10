@@ -1,8 +1,6 @@
 ﻿namespace BattleField2.Common
 {
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
     using System.Text.RegularExpressions;
     /// <summary>
     /// Class that holds various validation methods that are used

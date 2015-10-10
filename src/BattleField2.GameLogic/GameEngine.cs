@@ -49,7 +49,7 @@
             do
             {
                 this.renderer.DisplayMessage(Constants.WELCOME_MESSAGE);
-                this.renderer.DisplayMessage("GAME MENU");
+                this.renderer.DisplayMessage("\n");
                 this.renderer.DisplayMessage("1. START NEW GAME");
                 this.renderer.DisplayMessage("2. HIGHSCORES");
                 this.renderer.DisplayMessage("3. EXIT");
@@ -69,7 +69,7 @@
                     case "2":
                         this.renderer.Clear();
                         this.renderer.DisplayMessage(highScore.ListHighScore());
-                        this.renderer.EnterCommand();
+                        this.renderer.Wait();
                         this.GameMenu();
                         break;
                     case "3":
@@ -199,8 +199,7 @@
         {
             this.renderer.DisplayMessage(Constants.GAME_OVER_MESSAGE + this.battleField.DetonatedMines);
             this.renderer.Wait();
-            this.InitializeGame();
-            this.PlayGame();
+            this.GameMenu();
         }
     }
 }

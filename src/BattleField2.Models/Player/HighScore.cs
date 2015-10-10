@@ -7,7 +7,8 @@
     using System.Linq;
     using System.Text;
     /// <summary>
-    /// 
+    /// HighScore class handles the procedures involving the storage of the Players scores
+    /// and their listing.
     /// </summary>
     public class HighScore
     {
@@ -58,7 +59,7 @@
         }
 
         /// <summary>
-        /// 
+        /// Method that reads the high score results from file.
         /// </summary>
         public HighScore()
         {
@@ -66,9 +67,10 @@
         }
 
         /// <summary>
-        /// 
+        /// Method that first sorts the current content of the highScoreList
+        /// and then creates and formats a StringBuilder object to be returned as a string.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Returns a string that represents a list of the top Player results.</returns>
         public string ListHighScore()
         {
             this.SortHighScoreDesc();
@@ -91,9 +93,10 @@
         }
 
         /// <summary>
-        /// 
+        /// Method that gets the current player score at the end of the game
+        /// and adds it to the highScoreList.
         /// </summary>
-        /// <param name="currentPlayer"></param>
+        /// <param name="currentPlayer">Player object that represents the current player.</param>
         public void SaveHighScore(Player currentPlayer)
         {
             this.highScoreList.Add(currentPlayer);

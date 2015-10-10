@@ -18,8 +18,6 @@ namespace BattleField2.GameLogic
             IGameRenderer consoleRenderer = ConsoleGameRenderer.Instance;
             GameEngine gameEngine = GameEngine.Instance(consoleRenderer);
             gameEngine.GameMenu();
-            //gameEngine.InitializeGame();
-            //gameEngine.PlayGame();
         }
     }
 }
