@@ -116,51 +116,51 @@
         </member>
         <member name="T:BattleField2.ViewModels.Contracts.IViewModel">
             <summary>
-            
+            IViewModel interface to be inherited by a concrete ViewModel.
             </summary>
         </member>
         <member name="M:BattleField2.ViewModels.Contracts.IViewModel.DisplayWelcomeMessage(System.String)">
             <summary>
-            
+            Method to display the in-game messages.
             </summary>
-            <param name="welcomeMessage"></param>
+            <param name="welcomeMessage">Message to be handled.</param>
         </member>
         <member name="M:BattleField2.ViewModels.Contracts.IViewModel.GetFieldSize(System.String)">
             <summary>
-            
+            Method to get the field size.
             </summary>
             <param name="inviteToGiveSizeMessage"></param>
-            <returns></returns>
+            <returns>Returns field size.</returns>
         </member>
         <member name="M:BattleField2.ViewModels.Contracts.IViewModel.DrawField(BattleField2.Models.Field.Field)">
             <summary>
-            
+            Method to draw the game field.
             </summary>
-            <param name="currentBattleField"></param>
+            <param name="currentBattleField">Field object to be drawn.</param>
         </member>
         <member name="M:BattleField2.ViewModels.Contracts.IViewModel.GetInputCoordinates(System.String)">
             <summary>
-            
+            Method to get input coordinates.
             </summary>
             <param name="inviteToEnterCoordinatesMessage"></param>
-            <returns></returns>
+            <returns>Returns the new coordinates.</returns>
         </member>
         <member name="M:BattleField2.ViewModels.Contracts.IViewModel.NotifyForInvalidMove(System.String)">
             <summary>
-            
+            Method that notifies player on invalid move.
             </summary>
-            <param name="invalidMoveNotificationMessage"></param>
+            <param name="invalidMoveNotificationMessage">Message to notify for invalid string.</param>
         </member>
         <member name="M:BattleField2.ViewModels.Contracts.IViewModel.GameOver(System.String,System.Int32)">
             <summary>
-            
+            Method that gets called at the end of the game.
             </summary>
             <param name="gameOverMessage"></param>
             <param name="detonatedMines"></param>
         </member>
         <member name="M:BattleField2.ViewModels.Contracts.IViewModel.GiveMinesCount(System.Int32)">
             <summary>
-            
+            Method that gives the mines count.
             </summary>
             <param name="count"></param>
         </member>
