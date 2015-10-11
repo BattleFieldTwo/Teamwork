@@ -5,8 +5,7 @@
     using Moq;
     using Models.Field;
     using Models.Coordinates;
-
-    //using Telerik.JustMock;
+    using Models.Cells;
 
     [TestClass]
     public class FieldTests
@@ -68,6 +67,27 @@
 
         }
 
+        [TestMethod]
+        public void CheckIfFieldConstructorSetsProperFieldPositionsValue()
+        {
+            var testFieldSize = 4;
+            var testFieldPositions = new Cell[testFieldSize, testFieldSize];
+            var field = new Field(testFieldSize);
+
+            Assert.AreEqual(field.FieldPositions.ToString(), testFieldPositions.ToString());
+
+        }
+
+
+        [TestMethod]
+        public void CheckIfFieldConstructorSetsProperDetonatedMinesValue()
+        {
+            var testFieldSize = 4;
+            var field = new Field(testFieldSize);
+
+            Assert.AreEqual(field.DetonatedMines, 0);
+
+        }
 
     }
 }
