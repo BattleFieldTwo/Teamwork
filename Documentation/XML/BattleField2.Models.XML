@@ -55,6 +55,35 @@
             to output their given in-game representations.
             </summary>
         </member>
+        <member name="T:BattleField2.Models.Coordinates.Coordinates">
+            <summary>
+            Coordinates struct defines and handles the game field coordinates.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Models.Coordinates.Coordinates.Row">
+            <summary>
+            Readonly properties representing the Row and Column in the game field.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Models.Coordinates.Coordinates.Col">
+            <summary>
+            Readonly properties representing the Row and Column in the game field.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Coordinates.Coordinates.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Coordinates method that sets the current coordinates by given properties.
+            </summary>
+            <param name="row">Row coordinate parameter.</param>
+            <param name="col">Column coordinate parameter.</param>
+        </member>
+        <member name="M:BattleField2.Models.Coordinates.Coordinates.ToString">
+            <summary>
+            Overwritten ToString() method for the string representation
+            of the game field coordinates. 
+            </summary>
+            <returns>Returns the string representation of the given game field coordinates.</returns>
+        </member>
         <member name="T:BattleField2.Models.Player.HighScore">
             <summary>
             HighScore class handles the procedures involving the storage of the Players scores
