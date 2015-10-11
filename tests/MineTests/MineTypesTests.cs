@@ -6,7 +6,6 @@
     using Models.Coordinates;
     using Models.Mines;
     using Moq;
-    using System.Collections.Generic;
 
     [TestClass]
     public class MineTypesTests
@@ -27,10 +26,6 @@
         {
             var fieldPositions = new Cell[3, 3];
             var currentCoordinates = new Coordinates(2, 2);
-            var testCoordinates = new List<Coordinates>()
-            {
-
-            };
             var testCell = new Cell[1, 2];
             var baseMineMock = new Mock<Mine>();
             baseMineMock.Setup(b => b.Detonate(It.IsAny<Cell[,]>(), It.IsAny<Coordinates>())).Verifiable();
@@ -46,8 +41,8 @@
             var fieldPositions = new Cell[3, 3];
             var currentCoordinates = new Coordinates(2, 2);
             var testCell = new Cell[1, 2];
-            var minineMock = new MineLevelOneUpgrade();
-            Assert.AreEqual(minineMock.Detonate(fieldPositions, currentCoordinates), fieldPositions);
+            var mine = new MineLevelOneUpgrade();
+            Assert.AreEqual(mine.Detonate(fieldPositions, currentCoordinates), fieldPositions);
         }
 
         [TestMethod]
@@ -56,8 +51,8 @@
             var fieldPositions = new Cell[3, 3];
             var currentCoordinates = new Coordinates(2, 2);
             var testCell = new Cell[1, 2];
-            var minineMock = new MineLevelTwoUpgrade();
-            Assert.AreEqual(minineMock.Detonate(fieldPositions, currentCoordinates), fieldPositions);
+            var mine = new MineLevelTwoUpgrade();
+            Assert.AreEqual(mine.Detonate(fieldPositions, currentCoordinates), fieldPositions);
         }
 
         [TestMethod]
@@ -66,8 +61,8 @@
             var fieldPositions = new Cell[3, 3];
             var currentCoordinates = new Coordinates(2, 2);
             var testCell = new Cell[1, 2];
-            var minineMock = new MineLevelThreeUpgrade();
-            Assert.AreEqual(minineMock.Detonate(fieldPositions, currentCoordinates), fieldPositions);
+            var mine = new MineLevelThreeUpgrade();
+            Assert.AreEqual(mine.Detonate(fieldPositions, currentCoordinates), fieldPositions);
         }
 
         [TestMethod]
@@ -76,8 +71,8 @@
             var fieldPositions = new Cell[3, 3];
             var currentCoordinates = new Coordinates(2, 2);
             var testCell = new Cell[1, 2];
-            var minineMock = new MineLevelFourUpgrade();
-            Assert.AreEqual(minineMock.Detonate(fieldPositions, currentCoordinates), fieldPositions);
+            var mine = new MineLevelFourUpgrade();
+            Assert.AreEqual(mine.Detonate(fieldPositions, currentCoordinates), fieldPositions);
         }
 
         [TestMethod]
@@ -86,8 +81,8 @@
             var fieldPositions = new Cell[3, 3];
             var currentCoordinates = new Coordinates(2, 2);
             var testCell = new Cell[1, 2];
-            var minineMock = new MineLevelFiveUpgrade();
-            Assert.AreEqual(minineMock.Detonate(fieldPositions, currentCoordinates), fieldPositions);
+            var mine = new MineLevelFiveUpgrade();
+            Assert.AreEqual(mine.Detonate(fieldPositions, currentCoordinates), fieldPositions);
         }
 
         [TestMethod]
