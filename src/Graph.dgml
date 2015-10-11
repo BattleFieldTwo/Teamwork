@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="BottomToTop" Layout="Sugiyama" ZoomLevel="-1" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @14 Type=IExplosive)" Category="CodeSchema_Interface" Bounds="689.085507772868,343.677232076055,92.7833333333333,26" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" CommonLabel="IExplosive" Icon="Microsoft.VisualStudio.Interface.Public" Label="IExplosive" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Mines/IExplosive.cs StartLineNumber=5 StartCharacterOffset=21 EndLineNumber=5 EndCharacterOffset=31)" UseManualLocation="True" />
+    <Node Id="(@1 @14 Type=MineType)" Category="CodeSchema_Enum" Bounds="491.237552083333,184.038232666016,93.1733333333333,26" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPublic="True" CommonLabel="MineType" Icon="Microsoft.VisualStudio.Enum.Public" Label="MineType" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Mines/MineType.cs StartLineNumber=2 StartCharacterOffset=16 EndLineNumber=2 EndCharacterOffset=24)" UseManualLocation="True" />
+    <Node Id="(@1 @2 Type=CellType)" Category="CodeSchema_Enum" Bounds="943.142804497613,202.0771484375,85.9433333333325,26" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPublic="True" CommonLabel="CellType" Icon="Microsoft.VisualStudio.Enum.Public" Label="CellType" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Cells/CellType.cs StartLineNumber=2 StartCharacterOffset=16 EndLineNumber=2 EndCharacterOffset=24)" UseManualLocation="True" />
+    <Node Id="(@1 Namespace=BattleField2.Models.Coordinates Type=Coordinates)" Category="CodeSchema_Struct" Bounds="556.327499999999,123.753108569336,104.970000000001,26" CodeSchemaProperty_IsFinal="True" CodeSchemaProperty_IsPublic="True" CommonLabel="Coordinates" Icon="Microsoft.VisualStudio.Struct.Public" Label="Coordinates" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Coordinates/Coordinates.cs StartLineNumber=2 StartCharacterOffset=18 EndLineNumber=2 EndCharacterOffset=29)" UseManualLocation="True" />
+    <Node Id="(@1 Namespace=BattleField2.Models.Field Type=IField)" Category="CodeSchema_Interface" Bounds="704.053869172331,66.0493801698528,69.2099999999991,26" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" CommonLabel="IField" Icon="Microsoft.VisualStudio.Interface.Public" Label="IField" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Field/IField.cs StartLineNumber=7 StartCharacterOffset=21 EndLineNumber=7 EndCharacterOffset=27)" UseManualLocation="True" />
+    <Node Id="(@1 Namespace=BattleField2.Models.Player Type=HighScore)" Category="CodeSchema_Class" Bounds="920.383327636719,106.580156768799,95.6799999999998,26" CodeSchemaProperty_IsPublic="True" CommonLabel="HighScore" Icon="Microsoft.VisualStudio.Class.Public" Label="HighScore" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Player/HighScore.cs StartLineNumber=12 StartCharacterOffset=17 EndLineNumber=12 EndCharacterOffset=26)" />
+    <Node Id="(@1 Namespace=BattleField2.Models.Player Type=Player)" Category="CodeSchema_Class" Bounds="816.728327636719,103.431487491862,72.99,26" CodeSchemaProperty_IsPublic="True" CommonLabel="Player" Icon="Microsoft.VisualStudio.Class.Public" Label="Player" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Player/Player.cs StartLineNumber=4 StartCharacterOffset=17 EndLineNumber=4 EndCharacterOffset=23)" />
+    <Node Id="(@5 Namespace=BattleField2.Renderers Type=ColorConfig)" Category="CodeSchema_Class" Bounds="1080.21413574219,109.581112316895,104.55,26" CodeSchemaProperty_IsInternal="True" CommonLabel="ColorConfig" Icon="Microsoft.VisualStudio.Class.Internal" Label="ColorConfig" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Renderers/ColorConfig.cs StartLineNumber=7 StartCharacterOffset=10 EndLineNumber=7 EndCharacterOffset=21)" UseManualLocation="True" />
+    <Node Id="(@5 Namespace=BattleField2.Renderers Type=IGameRenderer)" Category="CodeSchema_Interface" Bounds="1162.31342692057,53.5810123168945,123.356666666667,26" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" CommonLabel="IGameRenderer" Icon="Microsoft.VisualStudio.Interface.Public" Label="IGameRenderer" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Renderers/IGameRenderer.cs StartLineNumber=9 StartCharacterOffset=21 EndLineNumber=9 EndCharacterOffset=34)" UseManualLocation="True" />
+    <Node Id="(@7 Namespace=BattleField2.Common Type=Constants)" Category="CodeSchema_Class" Bounds="542.548193359375,23.33984375,93.4666666666672,26" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="Constants" Icon="Microsoft.VisualStudio.Class.Public" Label="Constants" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Common/Constants.cs StartLineNumber=9 StartCharacterOffset=24 EndLineNumber=9 EndCharacterOffset=33)" UseManualLocation="True" />
+    <Node Id="(@7 Namespace=BattleField2.Common Type=Validator)" Category="CodeSchema_Class" Bounds="423.731526692709,21.51953125,88.8166666666657,26" CodeSchemaProperty_IsPublic="True" CodeSchemaProperty_IsStatic="True" CommonLabel="Validator" Icon="Microsoft.VisualStudio.Class.Public" Label="Validator" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Common/Validator.cs StartLineNumber=8 StartCharacterOffset=24 EndLineNumber=8 EndCharacterOffset=33)" UseManualLocation="True" />
+    <Node Id="@11" Category="CodeSchema_Class" Bounds="894.513632812501,-25.4878265106295,95.4199999999983,26" CodeSchemaProperty_IsPublic="True" CommonLabel="EntryPoint" Icon="Microsoft.VisualStudio.Class.Public" Label="EntryPoint" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.GameLogic/EntryPoint.cs StartLineNumber=9 StartCharacterOffset=17 EndLineNumber=9 EndCharacterOffset=27)" />
+    <Node Id="@12" Category="CodeSchema_Class" Bounds="715.557467352288,122.049480169853,66.0166666666664,26" CodeSchemaProperty_IsPublic="True" CommonLabel="Field" Icon="Microsoft.VisualStudio.Class.Public" Label="Field" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Field/Field.cs StartLineNumber=8 StartCharacterOffset=17 EndLineNumber=8 EndCharacterOffset=22)" />
+    <Node Id="@13" Category="CodeSchema_Class" Bounds="803.26386917233,47.431387491862,107.853333333333,26" CodeSchemaProperty_IsPublic="True" CommonLabel="GameEngine" Icon="Microsoft.VisualStudio.Class.Public" Label="GameEngine" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.GameLogic/GameEngine.cs StartLineNumber=13 StartCharacterOffset=17 EndLineNumber=13 EndCharacterOffset=27)" UseManualLocation="True" />
+    <Node Id="@15" Category="CodeSchema_Class" Bounds="702.609721950955,286.766845703125,67.75,26" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" CommonLabel="Mine" Icon="Microsoft.VisualStudio.Class.Public" Label="Mine" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Mines/Mine.cs StartLineNumber=7 StartCharacterOffset=26 EndLineNumber=7 EndCharacterOffset=30)" UseManualLocation="True" />
+    <Node Id="@16" Category="CodeSchema_Class" Bounds="677.69947116428,194.948516845703,106.336666666667,26" CodeSchemaProperty_IsPublic="True" CommonLabel="MineFactory" Icon="Microsoft.VisualStudio.Class.Public" Label="MineFactory" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Mines/MineFactory.cs StartLineNumber=4 StartCharacterOffset=17 EndLineNumber=4 EndCharacterOffset=28)" UseManualLocation="True" />
+    <Node Id="@17" Category="CodeSchema_Class" Bounds="414.262801106771,464.038732666016,161.383333333333,26" CodeSchemaProperty_IsInternal="True" CommonLabel="MineLevelFiveUpgrade" Icon="Microsoft.VisualStudio.Class.Internal" Label="MineLevelFiveUpgrade" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Mines/MineLevelFiveUpgrade.cs StartLineNumber=5 StartCharacterOffset=19 EndLineNumber=5 EndCharacterOffset=39)" UseManualLocation="True" />
+    <Node Id="@18" Category="CodeSchema_Class" Bounds="411.804010416667,408.038632666016,164.446666666667,26" CodeSchemaProperty_IsInternal="True" CommonLabel="MineLevelFourUpgrade" Icon="Microsoft.VisualStudio.Class.Internal" Label="MineLevelFourUpgrade" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Mines/MineLevelFourUpgrade.cs StartLineNumber=6 StartCharacterOffset=19 EndLineNumber=6 EndCharacterOffset=39)" UseManualLocation="True" />
+    <Node Id="@19" Category="CodeSchema_Class" Bounds="420.604796549479,240.038332666016,162.706666666667,26" CodeSchemaProperty_IsInternal="True" CommonLabel="MineLevelOneUpgrade" Icon="Microsoft.VisualStudio.Class.Internal" Label="MineLevelOneUpgrade" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Mines/MineLevelOneUpgrade.cs StartLineNumber=6 StartCharacterOffset=19 EndLineNumber=6 EndCharacterOffset=38)" UseManualLocation="True" />
+    <Node Id="@20" Category="CodeSchema_Class" Bounds="409.926330973307,352.038532666016,170.396666666667,26" CodeSchemaProperty_IsInternal="True" CommonLabel="MineLevelThreeUpgrade" Icon="Microsoft.VisualStudio.Class.Internal" Label="MineLevelThreeUpgrade" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Mines/MineLevelThreeUpgrade.cs StartLineNumber=7 StartCharacterOffset=19 EndLineNumber=7 EndCharacterOffset=40)" UseManualLocation="True" />
+    <Node Id="@21" Category="CodeSchema_Class" Bounds="416.692616780599,296.038432666016,162.583333333333,26" CodeSchemaProperty_IsInternal="True" CommonLabel="MineLevelTwoUpgrade" Icon="Microsoft.VisualStudio.Class.Internal" Label="MineLevelTwoUpgrade" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Mines/MineLevelTwoUpgrade.cs StartLineNumber=5 StartCharacterOffset=19 EndLineNumber=5 EndCharacterOffset=38)" UseManualLocation="True" />
+    <Node Id="@3" Category="CodeSchema_Class" Bounds="841.968521651153,344.290131870288,60.5200000000004,26" CodeSchemaProperty_IsAbstract="True" CodeSchemaProperty_IsPublic="True" CommonLabel="Cell" Icon="Microsoft.VisualStudio.Class.Public" Label="Cell" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Cells/Cell.cs StartLineNumber=4 StartCharacterOffset=26 EndLineNumber=4 EndCharacterOffset=30)" UseManualLocation="True" />
+    <Node Id="@4" Category="CodeSchema_Class" Bounds="814.036137830946,197.40234375,99.1066666666666,26" CodeSchemaProperty_IsPublic="True" CommonLabel="CellFactory" Icon="Microsoft.VisualStudio.Class.Public" Label="CellFactory" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Cells/CellFactory.cs StartLineNumber=2 StartCharacterOffset=17 EndLineNumber=2 EndCharacterOffset=28)" UseManualLocation="True" />
+    <Node Id="@6" Category="CodeSchema_Class" Bounds="969.593413289388,44.6183166503906,162.72,26" CodeSchemaProperty_IsPublic="True" CommonLabel="ConsoleGameRenderer" Icon="Microsoft.VisualStudio.Class.Public" Label="ConsoleGameRenderer" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Renderers/ConsoleGameRenderer.cs StartLineNumber=8 StartCharacterOffset=17 EndLineNumber=8 EndCharacterOffset=36)" UseManualLocation="True" />
+    <Node Id="@8" Category="CodeSchema_Class" Bounds="924.213055284288,287.3798828125,116.613333333335,26" CodeSchemaProperty_IsInternal="True" CommonLabel="DetonatedCell" Icon="Microsoft.VisualStudio.Class.Internal" Label="DetonatedCell" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Cells/DetonatedCell.cs StartLineNumber=4 StartCharacterOffset=18 EndLineNumber=4 EndCharacterOffset=31)" UseManualLocation="True" />
+    <Node Id="@9" Category="CodeSchema_Class" Bounds="800.359721950955,284.544921875,93.8533333333326,26" CodeSchemaProperty_IsInternal="True" CommonLabel="EmptyCell" Icon="Microsoft.VisualStudio.Class.Internal" Label="EmptyCell" SourceLocation="(Assembly=file:///C:/Users/Ric/Documents/GitHub/Teamwork/src/BattleField2.Models/Cells/EmptyCell.cs StartLineNumber=4 StartCharacterOffset=18 EndLineNumber=4 EndCharacterOffset=27)" UseManualLocation="True" />
+  </Nodes>
+  <Links>
+    <Link Source="(@1 @14 Type=IExplosive)" Target="@15" Bounds="735.707293446144,321.765435603201,0.387925196448805,21.9118104905489" />
+    <Link Source="(@1 @14 Type=MineType)" Target="@16" Bounds="584.410885416667,199.671173790374,84.3029253047339,4.76456993424395" />
+    <Link Source="(@1 @2 Type=CellType)" Target="@4" Bounds="922.136260905939,212.636131198459,21.0065435916742,0.801481236078644" />
+    <Link Source="(@1 Namespace=BattleField2.Models.Coordinates Type=Coordinates)" Target="@12" Bounds="661.297500000001,135.561142807394,45.2607537428302,0.551934654502475" />
+    <Link Source="(@1 Namespace=BattleField2.Models.Field Type=IField)" Target="@12" Bounds="740.958579179888,92.048778125,3.73956833680325,21.1377219948195" />
+    <Link Source="(@1 Namespace=BattleField2.Models.Player Type=HighScore)" Target="@13" Bounds="889.536678544022,77.6621664062149,54.2835978237426,28.9179727539414" />
+    <Link Source="(@1 Namespace=BattleField2.Models.Player Type=Player)" Target="@13" Bounds="854.144285030142,82.4088879365161,1.48930146089469,21.0226001005933" />
+    <Link Source="(@5 Namespace=BattleField2.Renderers Type=ColorConfig)" Target="@6" Bounds="1074.30893131039,76.2265720487893,41.8637302905599,33.3545402681052" />
+    <Link Source="(@5 Namespace=BattleField2.Renderers Type=IGameRenderer)" Target="@6" Bounds="1141.30141220518,62.2979811844791,21.0120147153957,1.08833878807448" />
+    <Link Source="@12" Target="@13" Bounds="767.490501866737,78.5265878802225,63.3570179361417,43.5222902447775" />
+    <Link Source="@13" Target="@11" Bounds="872.3500981317,6.37042298298657,47.8820191746751,41.0609645088754" />
+    <Link Source="@15" Target="@17" Bounds="539.583435058594,312.766845703125,181.661804199219,148.212127685547" />
+    <Link Source="@15" Target="@18" Bounds="528.396057128906,312.766845703125,182.472961425781,91.2837829589844" />
+    <Link Source="@15" Target="@19" Bounds="576.030560299511,267.796979506185,126.579119876271,25.220402747473" />
+    <Link Source="@15" Target="@20" Bounds="551.883654608598,308.927759899728,150.726025567184,40.7612749052678" />
+    <Link Source="@15" Target="@21" Bounds="588.269157286893,301.083719857953,114.340522888889,4.4449322344459" />
+    <Link Source="@16" Target="@12" Bounds="734.02386232125,156.794828838984,9.26271119493913,38.1536880067194" />
+    <Link Source="@17" Target="@16" Bounds="531.119506835938,228.626266479492,187.10107421875,235.412460327148" />
+    <Link Source="@18" Target="@16" Bounds="532.169860839844,228.04817199707,183.038513183594,179.990463256836" />
+    <Link Source="@19" Target="@16" Bounds="567.955869874617,220.15362688917,100.949651606067,19.8847031889552" />
+    <Link Source="@20" Target="@16" Bounds="532.419006347656,226.887191772461,176.882751464844,125.151351928711" />
+    <Link Source="@21" Target="@16" Bounds="527.93272257316,224.532168566711,164.730890843558,71.5062835817261" />
+    <Link Source="@3" Target="@15" Bounds="775.448995699264,316.2784153539,67.6486150820233,28.6668662004886" />
+    <Link Source="@3" Target="@8" Bounds="897.422805814411,317.506853705564,51.9054051040166,26.7831853569362" />
+    <Link Source="@3" Target="@9" Bounds="856.181151512762,318.850214404843,10.6206142889097,25.4398246576567" />
+    <Link Source="@4" Target="@12" Bounds="775.938166042701,152.980803343944,67.8074110267362,44.4215404060564" />
+    <Link Source="@6" Target="@11" Bounds="969.949592544345,5.3888146274817,60.841850423678,39.2295020229089" />
+    <Link Source="@8" Target="@4" Bounds="887.949969585766,228.832408425545,77.3869046307776,58.5474743869553" />
+    <Link Source="@9" Target="@4" Bounds="849.718693399585,232.248861733773,9.7836768902896,52.2960601412271" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Class" Label="Class" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Classes" />
+    <Category Id="CodeSchema_Enum" Label="Enum" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Enum" NavigationActionLabel="Enums" />
+    <Category Id="CodeSchema_Interface" Label="Interface" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Interface" NavigationActionLabel="Interfaces" />
+    <Category Id="CodeSchema_Struct" Label="Struct" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Struct" NavigationActionLabel="Structs" />
+    <Category Id="CodeSchema_Type" Label="Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Types" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsAbstract" Label="Is Abstract" Description="Flag to indicate member is 'Abstract' does not provide a full implementation" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsFinal" Label="Is Final" Description="Flag to indicate the member is 'Final' and cannot be derived from" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsInternal" Label="Is Internal" Description="Flag to indicate the method is 'Internal'" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPublic" Label="Is Public" Description="Flag to indicate the scope is Public" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsStatic" Label="Is Static" Description="Flag to indicate the member is a static member" DataType="System.Boolean" />
+    <Property Id="CommonLabel" DataType="System.String" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="SourceLocation" Label="Start Line Number" DataType="Microsoft.VisualStudio.GraphModel.CodeSchema.SourceLocation" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="ZoomLevel" DataType="System.String" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+    <Name Id="Type" Label="Type" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(64daf9bf-dbef-4264-a55c-a9274521902e.OutputPathUri)" />
+    <Alias n="2" Id="Namespace=BattleField2.Models.Cells" />
+    <Alias n="3" Id="(@1 @2 Type=Cell)" />
+    <Alias n="4" Id="(@1 @2 Type=CellFactory)" />
+    <Alias n="5" Uri="Assembly=$(66c463be-c82d-44b1-8778-989270855a0a.OutputPathUri)" />
+    <Alias n="6" Id="(@5 Namespace=BattleField2.Renderers Type=ConsoleGameRenderer)" />
+    <Alias n="7" Uri="Assembly=$(79a78a9f-0c29-476b-847b-2f32b6fb9335.OutputPathUri)" />
+    <Alias n="8" Id="(@1 @2 Type=DetonatedCell)" />
+    <Alias n="9" Id="(@1 @2 Type=EmptyCell)" />
+    <Alias n="10" Uri="Assembly=$(edcae976-cb76-422c-b61f-f431949751c9.OutputPathUri)" />
+    <Alias n="11" Id="(@10 Namespace=BattleField2.GameLogic Type=EntryPoint)" />
+    <Alias n="12" Id="(@1 Namespace=BattleField2.Models.Field Type=Field)" />
+    <Alias n="13" Id="(@10 Namespace=BattleField2.GameLogic Type=GameEngine)" />
+    <Alias n="14" Id="Namespace=BattleField2.Models.Mines" />
+    <Alias n="15" Id="(@1 @14 Type=Mine)" />
+    <Alias n="16" Id="(@1 @14 Type=MineFactory)" />
+    <Alias n="17" Id="(@1 @14 Type=MineLevelFiveUpgrade)" />
+    <Alias n="18" Id="(@1 @14 Type=MineLevelFourUpgrade)" />
+    <Alias n="19" Id="(@1 @14 Type=MineLevelOneUpgrade)" />
+    <Alias n="20" Id="(@1 @14 Type=MineLevelThreeUpgrade)" />
+    <Alias n="21" Id="(@1 @14 Type=MineLevelTwoUpgrade)" />
+  </IdentifierAliases>
+  <Paths>
+    <Path Id="64daf9bf-dbef-4264-a55c-a9274521902e.OutputPathUri" Value="file:///C:/Users/Ric/Documents/GitHub/Teamwork/Documentation/XML/BattleField2.Models.dll" />
+    <Path Id="66c463be-c82d-44b1-8778-989270855a0a.OutputPathUri" Value="file:///C:/Users/Ric/Documents/GitHub/Teamwork/Documentation/XML/BattleField2.ViewModels.dll" />
+    <Path Id="79a78a9f-0c29-476b-847b-2f32b6fb9335.OutputPathUri" Value="file:///C:/Users/Ric/Documents/GitHub/Teamwork/Documentation/XML/BattleField2.Common.dll" />
+    <Path Id="edcae976-cb76-422c-b61f-f431949751c9.OutputPathUri" Value="file:///C:/Users/Ric/Documents/GitHub/Teamwork/Documentation/XML/BattleField2.GameLogic.exe" />
+  </Paths>
+</DirectedGraph>
