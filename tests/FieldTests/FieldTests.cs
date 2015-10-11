@@ -6,6 +6,7 @@
     using Models.Field;
     using Models.Coordinates;
     using Models.Cells;
+    using Models.Mines;
 
     [TestClass]
     public class FieldTests
@@ -54,6 +55,21 @@
 
 
         [TestMethod]
+        public void CheckIfGenerateFieldMethodSetsACellToAnEmptyOneInsideField()
+        {
+            var testFieldSize = 9;
+            var field = new Field(testFieldSize);
+
+            field.GenerateField();
+            var testCell = field.FieldPositions[2, 3];
+            var testEmptyCell = new EmptyCell();
+
+            Assert.AreEqual(testCell.ToString(), testEmptyCell.ToString());
+
+        }
+
+
+        [TestMethod]
         public void CheckIfValidateMoveCoordinatesMethodIsBeingCalledProperly()
         {
             var fieldMock = new Mock<IField>();
@@ -86,6 +102,33 @@
             var field = new Field(testFieldSize);
 
             Assert.AreEqual(field.DetonatedMines, 0);
+
+        }
+
+        [TestMethod]
+        public void CheckIfPositionMinesMethodPositionsAtLeastOneMine()
+        {
+            var testFieldSize = 9;
+            var field = new Field(testFieldSize);
+
+            field.GenerateField();
+            field.PositionMines();
+
+            var countMines = 0;
+
+            for (int i = 0; i < testFieldSize; i++)
+            {
+                for (int j = 0; j < testFieldSize; j++)
+                {
+                    if (field.FieldPositions[i, j] is Mine )
+                    {
+                        countMines++;
+                    }
+                }
+            }
+
+            Assert.AreNotEqual(countMines, 0);
+
 
         }
 
