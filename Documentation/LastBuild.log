@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder" version="2015.1.12.0" projectFile="C:\Users\Ivan\OneDrive\Documents\test.shfbproj" started="10/10/2015 9:56:05 PM">
+<shfbBuild product="Sandcastle Help File Builder" version="2015.1.12.0" projectFile="C:\Users\Ivan\OneDrive\Documents\test.shfbproj" started="10/12/2015 12:54:40 AM">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -29,7 +29,7 @@ Source: C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\XML\BattleField2.T
 Source: C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\XML\BattleField2.Tests.xml
 Source: C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\XML\BattleField2.ViewModels.dll
     Found assembly &#39;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\XML\BattleField2.ViewModels.dll&#39;
-Source: C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\XML\BattleField2.ViewModels.XML
+Source: C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\XML\BattleField2.ViewModels.xml
 
 Copying XML comments files
     C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\XML\BattleField2.Common.XML -&gt; C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BattleField2.Common.XML
@@ -41,16 +41,16 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00.0275
+</plugIn>    Last step completed in 00:00:00.0450
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.0811
+    Last step completed in 00:00:00.1571
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 10/10/2015 9:56:06 PM.
+Build started 10/12/2015 12:54:43 AM.
 Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
@@ -59,7 +59,7 @@ GenerateRefInfo:
   Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
   Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
   Loaded 5 assemblies for reflection and 1 dependency assemblies.
-  Wrote information on 10 namespaces, 19 types, and 92 members
+  Wrote information on 14 namespaces, 27 types, and 160 members
   Copying file from &quot;reflection.org&quot; to &quot;reflection.all&quot;.
   XslTransform (v2015.1.12.0)
   Copyright c 2006-2015, Microsoft Corporation, All Rights Reserved.
@@ -69,13 +69,13 @@ Done Building Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentatio
 
 Build succeeded.
 
-Time Elapsed 00:00:01.85
-    Last step completed in 00:00:02.4123
+Time Elapsed 00:00:05.62
+    Last step completed in 00:00:06.5715
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 10/10/2015 9:56:09 PM.
+Build started 10/12/2015 12:54:50 AM.
 Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2015.1.12.0)
@@ -95,26 +95,26 @@ Done Building Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentatio
 
 Build succeeded.
 
-Time Elapsed 00:00:01.10
-    Last step completed in 00:00:01.6195
+Time Elapsed 00:00:04.10
+    Last step completed in 00:00:05.2687
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0490
+    Last step completed in 00:00:00.1976
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0330
+    Last step completed in 00:00:00.0075
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0170
+    Last step completed in 00:00:00.0030
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 10/10/2015 9:56:11 PM.
+Build started 10/12/2015 12:54:55 AM.
 Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2015.1.12.0)
@@ -125,24 +125,24 @@ Done Building Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentatio
 
 Build succeeded.
 
-Time Elapsed 00:00:00.73
+Time Elapsed 00:00:03.67
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:01.2405
+    Last step completed in 00:00:04.9564
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.2647
+    Last step completed in 00:00:00.7927
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\sandcastle.config
-    Last step completed in 00:00:00.0711
+    Last step completed in 00:00:00.0791
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 10/10/2015 9:56:12 PM.
+Build started 10/12/2015 12:55:01 AM.
 Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj&quot; on node 1 (default targets).
 BuildReferenceTopics:
   BuildAssembler (v2015.1.12.0)
@@ -150,121 +150,101 @@ BuildReferenceTopics:
   Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
   Loading configuration...
   Processing topics...
-BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Common] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.GameLogic] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Models.Cells] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Models.Cells.Cell] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [P:BattleField2.Models.Cells.Cell.StringRepresentation] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Models.Cells.CellFactory] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Cells.CellFactory.GetCell(BattleField2.Models.Cells.CellType)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Cells.CellFactory.GetCell(BattleField2.Models.Cells.CellType)] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Cells.CellFactory.GetCell(BattleField2.Models.Cells.CellType)] Missing &lt;param name=&quot;type&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Cells.CellFactory.Instance] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Cells.CellFactory.Instance] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Models.Cells.CellType] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Models.Coordinates] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Models.Coordinates.Coordinates] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Coordinates.Coordinates.#ctor(System.Int32,System.Int32)] Missing &lt;param name=&quot;row&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Coordinates.Coordinates.#ctor(System.Int32,System.Int32)] Missing &lt;param name=&quot;col&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Models.Coordinates.Coordinates.Col] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [F:BattleField2.Models.Coordinates.Coordinates.Row] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Coordinates.Coordinates.ToString] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Coordinates.Coordinates.ToString] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Models.Field] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Models.Field.Field] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Field.Field.#ctor(System.Int32)] Missing &lt;param name=&quot;currentFieldSize&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Field.Field.CountRemainingMines] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Field.Field.CountRemainingMines] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [P:BattleField2.Models.Field.Field.DetonatedMines] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [P:BattleField2.Models.Field.Field.FieldPositions] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Field.Field.GenerateField] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Field.Field.PositionMines] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Field.Field.ValidateMoveCoordinates(BattleField2.Models.Coordinates.Coordinates)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Field.Field.ValidateMoveCoordinates(BattleField2.Models.Coordinates.Coordinates)] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Field.Field.ValidateMoveCoordinates(BattleField2.Models.Coordinates.Coordinates)] Missing &lt;param name=&quot;inputCoordinates&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Models.Mines] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Models.Mines.IExplosive] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.IExplosive.Detonate(BattleField2.Models.Cells.Cell[0:,0:],BattleField2.Models.Coordinates.Coordinates)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.IExplosive.Detonate(BattleField2.Models.Cells.Cell[0:,0:],BattleField2.Models.Coordinates.Coordinates)] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.IExplosive.Detonate(BattleField2.Models.Cells.Cell[0:,0:],BattleField2.Models.Coordinates.Coordinates)] Missing &lt;param name=&quot;fieldPositions&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.IExplosive.Detonate(BattleField2.Models.Cells.Cell[0:,0:],BattleField2.Models.Coordinates.Coordinates)] Missing &lt;param name=&quot;currentCoordinates&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Models.Mines.Mine] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.Mine.Detonate(BattleField2.Models.Cells.Cell[0:,0:],BattleField2.Models.Coordinates.Coordinates)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.Mine.Detonate(BattleField2.Models.Cells.Cell[0:,0:],BattleField2.Models.Coordinates.Coordinates)] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.Mine.Detonate(BattleField2.Models.Cells.Cell[0:,0:],BattleField2.Models.Coordinates.Coordinates)] Missing &lt;param name=&quot;fieldPositions&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.Mine.Detonate(BattleField2.Models.Cells.Cell[0:,0:],BattleField2.Models.Coordinates.Coordinates)] Missing &lt;param name=&quot;currentCoordinates&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Models.Mines.MineFactory] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.MineFactory.GetMine(BattleField2.Models.Mines.MineType)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.MineFactory.GetMine(BattleField2.Models.Mines.MineType)] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.MineFactory.GetMine(BattleField2.Models.Mines.MineType)] Missing &lt;param name=&quot;type&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.MineFactory.Instance] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Mines.MineFactory.Instance] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Models.Mines.MineType] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Models.Player] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Models.Player.Player] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Player.Player.#ctor(System.String)] Missing &lt;param name=&quot;name&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Player.Player.CalculateScore(System.Int32,System.Int32)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Player.Player.CalculateScore(System.Int32,System.Int32)] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Player.Player.CalculateScore(System.Int32,System.Int32)] Missing &lt;param name=&quot;previousMinesCount&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Models.Player.Player.CalculateScore(System.Int32,System.Int32)] Missing &lt;param name=&quot;nextMinesCount&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [P:BattleField2.Models.Player.Player.Name] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [P:BattleField2.Models.Player.Player.Score] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Renderers] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [P:BattleField2.Renderers.ConsoleGameRenderer.Instance] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Renderers.ConsoleGameRenderer.Wait] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Renderers.IGameRenderer.Clear] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Renderers.IGameRenderer.DisplayMessage(System.String)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Renderers.IGameRenderer.DisplayMessage(System.String)] Missing &lt;param name=&quot;message&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Renderers.IGameRenderer.DrawField(BattleField2.Models.Cells.Cell[0:,0:])] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Renderers.IGameRenderer.DrawField(BattleField2.Models.Cells.Cell[0:,0:])] Missing &lt;param name=&quot;fieldPositions&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Renderers.IGameRenderer.EnterCommand] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Renderers.IGameRenderer.EnterCommand] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Renderers.IGameRenderer.SetSize(System.Int32,System.Int32)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Renderers.IGameRenderer.SetSize(System.Int32,System.Int32)] Missing &lt;param name=&quot;width&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Renderers.IGameRenderer.SetSize(System.Int32,System.Int32)] Missing &lt;param name=&quot;height&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Renderers.IGameRenderer.Wait] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Tests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Tests.MineBaseTests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineBaseTests.CheckIfIsValidMethodReturnsFalseWhenFirstArgumentIsInvalidAndTheSecondArgumentIsValid] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineBaseTests.CheckIfIsValidMethodReturnsFalseWhenFirstArgumentIsValidAndTheSecondArgumentIsInvalid] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineBaseTests.CheckIfIsValidMethodReturnsFalseWhenNegativeValuesAreGiven] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineBaseTests.CheckIfIsValidMethodReturnsFalseWhenZeroValuesAreGiven] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineBaseTests.CheckIfIsValidMethodReturnsTrueWhenValidValuesAreGiven] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Tests.MineFactoryTests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineFactoryTests.VerifyThatMineFactoryCreatesAProperMine_LevelFive] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineFactoryTests.VerifyThatMineFactoryCreatesAProperMine_LevelFour] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineFactoryTests.VerifyThatMineFactoryCreatesAProperMine_LevelOne] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineFactoryTests.VerifyThatMineFactoryCreatesAProperMine_LevelThree] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineFactoryTests.VerifyThatMineFactoryCreatesAProperMine_LevelTwo] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineFactoryTests.VerifyThatMineFactoryCreatesAProperMineByComparing_LevelFive] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineFactoryTests.VerifyThatMineFactoryCreatesAProperMineByComparing_LevelFour] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineFactoryTests.VerifyThatMineFactoryCreatesAProperMineByComparing_LevelOne] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineFactoryTests.VerifyThatMineFactoryCreatesAProperMineByComparing_LevelThree] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineFactoryTests.VerifyThatMineFactoryCreatesAProperMineByComparing_LevelTwo] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Tests.MineTypesTests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.CheckIfCreatingAMineWithALevelUpgradeWorksAsExpected_LevelFive] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.CheckIfCreatingAMineWithALevelUpgradeWorksAsExpected_LevelFour] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.CheckIfCreatingAMineWithALevelUpgradeWorksAsExpected_LevelOne] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.CheckIfCreatingAMineWithALevelUpgradeWorksAsExpected_LevelThree] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.CheckIfCreatingAMineWithALevelUpgradeWorksAsExpected_LevelTwo] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Tests.UnitTest1] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.UnitTest1.TestMethod1] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.ViewModels.Contracts] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.ViewModels.Contracts.IViewModel] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.DisplayWelcomeMessage(System.String)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.DisplayWelcomeMessage(System.String)] Missing &lt;param name=&quot;welcomeMessage&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.DrawField(BattleField2.Models.Field.Field)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.DrawField(BattleField2.Models.Field.Field)] Missing &lt;param name=&quot;currentBattleField&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GameOver(System.String,System.Int32)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.CheckIfIExplosiveDetonateMethodReturnsProperResult] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.CheckIfStringRepresentationMethodWorksReturnsAProperValue_MineLevelFiveUpgrade] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.CheckIfStringRepresentationMethodWorksReturnsAProperValue_MineLevelFourUpgrade] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.CheckIfStringRepresentationMethodWorksReturnsAProperValue_MineLevelOneUpgrade] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.CheckIfStringRepresentationMethodWorksReturnsAProperValue_MineLevelThreeUpgrade] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.CheckIfStringRepresentationMethodWorksReturnsAProperValue_MineLevelTwoUpgrade] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.ValidateThatMineDetonateMethodFunctions] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.ValidateThatMin?DetonateMethodFunctions_LevelFive] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.ValidateThatMin?DetonateMethodFunctions_LevelFour] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.ValidateThatMin?DetonateMethodFunctions_LevelOne] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.ValidateThatMin?DetonateMethodFunctions_LevelThree] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.MineTypesTests.ValidateThatMin?DetonateMethodFunctions_LevelTwo] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Tests.CellTests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Tests.CellTests.CellFactoryTests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.CellTests.CellFactoryTests.VerifyThatCellFactoryCreatesAProperCell_DetonatedCell] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.CellTests.CellFactoryTests.VerifyThatCellFactoryCreatesAProperCell_EmptyCell] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.CellTests.CellFactoryTests.VerifyThatCellFactoryCreatesAProperCellByComparing_DetonatedCell] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.CellTests.CellFactoryTests.VerifyThatCellFactoryCreatesAProperCellByComparing_EmptyCell] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Tests.CellTests.CellTypesTests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.CellTests.CellTypesTests.CheckIfADetonatedyCellIsBeingCreatedWithTheProperStringRepresentation] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.CellTests.CellTypesTests.CheckIfAnEmptyCellIsBeingCreatedWithTheProperStringRepresentation] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.CellTests.CellTypesTests.CheckIfStringRepresentationMethodFunctions] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Tests.CoordinatesTests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Tests.CoordinatesTests.BaseCoordinatesTests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.CoordinatesTests.BaseCoordinatesTests.TestIfCoordinatesToStringFunctionsProperly] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Tests.FieldTests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Tests.FieldTests.FieldTests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.FieldTests.FieldTests.CheckIfCountRemainingMinesGivesANumberThatIsNotZeroAtTheStartOfTheGame] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.FieldTests.FieldTests.CheckIfCountRemainingMinesMethodIsBeingCalledProperly] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.FieldTests.FieldTests.CheckIfFieldConstructorSetsProperDetonatedMinesValue] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.FieldTests.FieldTests.CheckIfFieldConstructorSetsProperFieldPositionsValue] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.FieldTests.FieldTests.CheckIfGenerateFieldMethodIsBeingCalledProperly] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.FieldTests.FieldTests.CheckIfGenerateFieldMethodSetsACellToAnEmptyOneInsideField] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.FieldTests.FieldTests.CheckIfPositionMinesMethodIsBeingCalledProperly] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.FieldTests.FieldTests.CheckIfPositionMinesMethodPositionsAtLeastOneMine] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.FieldTests.FieldTests.CheckIfValidateMoveCoordinatesMethodIsBeingCalledProperly] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.FieldTests.FieldTests.CheckIfValidateMovieCoordinatesReturnsCorrectly_InvalidCoordinates] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.FieldTests.FieldTests.CheckIfValidateMovieCoordinatesReturnsCorrectly_NegativeCoordinates] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.FieldTests.FieldTests.CheckIfValidateMovieCoordinatesReturnsCorrectly_ValidCoordinates] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Tests.PlayerTests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [T:BattleField2.Tests.PlayerTests.PlayerBaseClassTests] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTests.PlayerBaseClassTests.VerifyThatCalculateScoreMethodReturnsProperValueIfMinesDifferenceIsMoreThanOne] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTests.PlayerBaseClassTests.VerifyThatCalculateScoreMethodReturnsZeroIfMineDifferenceIsOne] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTests.PlayerBaseClassTests.VerifyThatPlayerNameIsSetCorrectlyIfValidDataIsProvided] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTests.PlayerBaseClassTests.VerifyThatPlayerNameIsSetToNullIfEmptyConstructorIsUsed] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTests.PlayerBaseClassTests.VerifyThatPlayerNameIsSetToNullIfInvalidDataIsProvided_EmptyString] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTests.PlayerBaseClassTests.VerifyThatPlayerNameIsSetToNullIfInvalidDataIsProvided_InvalidStringSymbols] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTests.PlayerBaseClassTests.VerifyThatPlayerScoreIsSetCorrectlyIfValidDataIsProvided_ValidScoreNotZero] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTests.PlayerBaseClassTests.VerifyThatPlayerScoreIsSetCorrectlyIfValidDataIsProvided_Zero] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
+BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTests.PlayerBaseClassTests.VerifyThatPlayerScoreIsSetTZeroIfInvalidDataIsProvided_NegativeNumber] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GameOver(System.String,System.Int32)] Missing &lt;param name=&quot;gameOverMessage&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GameOver(System.String,System.Int32)] Missing &lt;param name=&quot;detonatedMines&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GetFieldSize(System.String)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GetFieldSize(System.String)] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GetFieldSize(System.String)] Missing &lt;param name=&quot;inviteToGiveSizeMessage&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GetInputCoordinates(System.String)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GetInputCoordinates(System.String)] Missing &lt;returns&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GetInputCoordinates(System.String)] Missing &lt;param name=&quot;inviteToEnterCoordinatesMessage&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GiveMinesCount(System.Int32)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GiveMinesCount(System.Int32)] Missing &lt;param name=&quot;count&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.NotifyForInvalidMove(System.String)] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.NotifyForInvalidMove(System.String)] Missing &lt;param name=&quot;invalidMoveNotificationMessage&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-  Processed 135 topic(s)
-  101 warning(s)
+  Processed 224 topic(s)
+  81 warning(s)
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 2 of 15.
-  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 4 of 30.
+  CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 5 of 30.
 Done Building Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:12.40
-    Last step completed in 00:00:13.2090
+Time Elapsed 00:00:28.17
+    Last step completed in 00:00:30.0328
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00.0190
+    Last step completed in 00:00:00.0285
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -276,11 +256,11 @@ E-Mail: Eric@EWoodruff.us
 Using LCID &#39;1033&#39;, code page &#39;65001&#39;, encoding charset &#39;UTF-8&#39;.
 
 Processing Help 1 files in C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\HtmlHelp1
-Processed 135 HTML files
+Processed 224 HTML files
 Sorting keywords and generating See Also indices
 Saving HTML Help 1 keyword index to C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Documentation.hhk
 Saving HTML Help 1 table of contents to C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Documentation.hhc
-    Last step completed in 00:00:01.4612
+    Last step completed in 00:00:02.8219
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -347,19 +327,19 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\HtmlHelp1\styles\branding.css
-    Last step completed in 00:00:01.2507
+    Last step completed in 00:00:02.1153
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1 table of contents file...
-    Last step completed in 00:00:00.0156
+    Last step completed in 00:00:00.0251
 </buildStep>
 <buildStep step="GenerateHelpFileIndex">
 Generating HTML Help 1 index file...
-    Last step completed in 00:00:00.0160
+    Last step completed in 00:00:00.0213
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1 project file...
-    Last step completed in 00:00:00.0194
+    Last step completed in 00:00:00.0290
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1 file...
@@ -374,13 +354,13 @@ Compiling HTML Help 1 file...
   
   
   
-  Compile time: 0 minutes, 1 second
+  Compile time: 0 minutes, 3 seconds
   
-  137	Topics
+  226	Topics
   
-  1,371	Local links
+  2,291	Local links
   
-  531	Internet links
+  826	Internet links
   
   0	Graphics
   
@@ -388,19 +368,19 @@ Compiling HTML Help 1 file...
   
   
   
-  Created c:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\HtmlHelp1\Documentation.chm, 192,613 bytes
+  Created c:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\HtmlHelp1\Documentation.chm, 292,203 bytes
   
-  Compression decreased file by 924,456 bytes.
+  Compression decreased file by 1,548,307 bytes.
   
-    Last step completed in 00:00:03.1879
+    Last step completed in 00:00:06.5137
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.2220
+    Last step completed in 00:00:00.6796
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 10/10/2015 9:56:32 PM.  Total time: 00:00:26.7751
+Build completed successfully at 10/12/2015 12:55:43 AM.  Total time: 00:01:02.8727
 
 </buildStep>
 </shfbBuild>

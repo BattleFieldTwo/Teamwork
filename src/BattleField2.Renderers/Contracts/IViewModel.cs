@@ -3,6 +3,14 @@
     using BattleField2.Models.Field;
     using BattleField2.Models.Coordinates;
     /// <summary>
+    /// Namespace that holds the Renderers and VIewModels used during the game.
+    /// </summary>
+    [System.Runtime.CompilerServices.CompilerGenerated]
+    class NamespaceDoc
+    {
+
+    }
+    /// <summary>
     /// IViewModel interface to be inherited by a concrete ViewModel.
     /// </summary>
     public interface IViewModel

@@ -4,6 +4,11 @@
         <name>BattleField2.Common</name>
     </assembly>
     <members>
+        <member name="T:BattleField2.Common.NamespaceDoc">
+            <summary>
+            Namespace that holds general information - CONSTANTS, Data validations etc.
+            </summary>
+        </member>
         <member name="T:BattleField2.Common.Constants">
             <summary>
             This class consists of predefined CONSTANT values that we use

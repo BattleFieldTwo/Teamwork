@@ -1,9 +1,15 @@
-﻿/// <summary>
-/// Namespace that holds the main game logic and game engine.
-/// </summary>
-namespace BattleField2.GameLogic
+﻿namespace BattleField2.GameLogic
 {
     using BattleField2.Renderers;
+    /// <summary>
+    /// Namespace that holds the main game logic and game engine.
+    /// </summary>
+    [System.Runtime.CompilerServices.CompilerGenerated]
+    class NamespaceDoc
+    {
+
+    }
+
     /// <summary>
     /// This class is just the entry point for the whole application.
     /// </summary>

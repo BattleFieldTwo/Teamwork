@@ -43,6 +43,11 @@
             Enumeration value representing the Detonated cell type.
             </summary>
         </member>
+        <member name="T:BattleField2.Models.Cells.NamespaceDoc">
+            <summary>
+            Namespace that holds all the object models used in the application.
+            </summary>
+        </member>
         <member name="T:BattleField2.Models.Cells.Cell">
             <summary>
             The Cell class is an abstract class to be inherited 
@@ -163,6 +168,24 @@
             <param name="fieldPositions">Position parameter.</param>
             <param name="currentCoordinates">Coordinates parameter.</param>
             <returns></returns>
+        </member>
+        <member name="T:BattleField2.Models.Mines.MineFactory">
+            <summary>
+            MineFactory class for the creation of the different mine types.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Mines.MineFactory.Instance">
+            <summary>
+            Method that creates and returns a MineFactory instance if none is present.
+            </summary>
+            <returns>The current MineFactory instance.</returns>
+        </member>
+        <member name="M:BattleField2.Models.Mines.MineFactory.GetMine(BattleField2.Models.Mines.MineType)">
+            <summary>
+            Method that returns a given mine based on the input type.
+            </summary>
+            <param name="type">Mine type parameter.</param>
+            <returns>Returns a Mine object based on the input type.</returns>
         </member>
         <member name="T:BattleField2.Models.Mines.MineType">
             <summary>

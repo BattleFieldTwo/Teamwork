@@ -114,6 +114,11 @@
             <param name="width">Current window width.</param>
             <param name="height">Current window height.</param>
         </member>
+        <member name="T:BattleField2.ViewModels.Contracts.NamespaceDoc">
+            <summary>
+            Namespace that holds the Renderers and VIewModels used during the game.
+            </summary>
+        </member>
         <member name="T:BattleField2.ViewModels.Contracts.IViewModel">
             <summary>
             IViewModel interface to be inherited by a concrete ViewModel.

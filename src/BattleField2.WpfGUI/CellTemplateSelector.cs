@@ -4,6 +4,14 @@
     using System.Windows.Controls;
 
     using BattleField2.WpfGUI.CellDecorator;
+    /// <summary>
+    /// Namespace that holds the WPF GUI Logic and classes.
+    /// </summary>
+    [System.Runtime.CompilerServices.CompilerGenerated]
+    class NamespaceDoc
+    {
+
+    }
 
     /// <summary>
     /// This is template selector class, determing which specific Cell template

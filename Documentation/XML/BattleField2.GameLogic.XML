@@ -4,6 +4,11 @@
         <name>BattleField2.GameLogic</name>
     </assembly>
     <members>
+        <member name="T:BattleField2.GameLogic.NamespaceDoc">
+            <summary>
+            Namespace that holds the main game logic and game engine.
+            </summary>
+        </member>
         <member name="T:BattleField2.GameLogic.EntryPoint">
             <summary>
             This class is just the entry point for the whole application.
