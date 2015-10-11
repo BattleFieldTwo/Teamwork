@@ -22,35 +22,7 @@
             provides most of the main methods that we use inside the GameEngine class.
             </summary>
         </member>
-        <member name="T:BattleField2.Renderers.IGameRenderer">
-            <summary>
-            IGameRenderer interface to be implemented and inherited.
-            </summary>
-        </member>
-        <member name="M:BattleField2.Renderers.IGameRenderer.DisplayMessage(System.String)">
-            <summary>
-            
-            </summary>
-            <param name="message"></param>
-        </member>
-        <member name="M:BattleField2.Renderers.IGameRenderer.DrawField(BattleField2.Models.Cells.Cell[0:,0:])">
-            <summary>
-            
-            </summary>
-            <param name="fieldPositions"></param>
-        </member>
-        <member name="M:BattleField2.Renderers.IGameRenderer.Clear">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:BattleField2.Renderers.IGameRenderer.EnterCommand">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:BattleField2.Renderers.IGameRenderer.Wait">
+        <member name="P:BattleField2.Renderers.ConsoleGameRenderer.Instance">
             <summary>
             
             </summary>
@@ -101,7 +73,35 @@
             <param name="width">Game field width.</param>
             <param name="height">Game field height.</param>
         </member>
-        <member name="P:BattleField2.Renderers.ConsoleGameRenderer.Instance">
+        <member name="T:BattleField2.Renderers.IGameRenderer">
+            <summary>
+            IGameRenderer interface to be implemented and inherited.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.DisplayMessage(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.DrawField(BattleField2.Models.Cells.Cell[0:,0:])">
+            <summary>
+            
+            </summary>
+            <param name="fieldPositions"></param>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.Clear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.EnterCommand">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.Wait">
             <summary>
             
             </summary>

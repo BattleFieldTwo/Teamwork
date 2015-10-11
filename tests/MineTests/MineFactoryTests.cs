@@ -51,6 +51,7 @@
             Assert.AreEqual(factoryMineOne.StringRepresentation, " 5 ");
         }
 
+        [TestMethod]
         public void VerifyThatMineFactoryCreatesAProperMineByComparing_LevelOne()
         {
             var factoryMineOne = MineFactory.Instance().GetMine(MineType.MineOne);
