@@ -30,69 +30,31 @@ using System.Collections.ObjectModel;
     /// </summary>
     public class StartUpScreen : Window, INotifyPropertyChanged
     {
-        private string fieldSizeInput = "5";
-        private string playerNameImput = "YourName";
-        private Visibility startUpVisibility = Visibility.Hidden;
-        private Visibility gameVisibility = Visibility.Visible;
-        private Visibility gameOverVisibility = Visibility.Visible;
+        private string fieldSizeInput;
+        private string playerNameImput;
+
+        private Visibility startUpVisibility;
+        private Visibility gameVisibility;
+        private Visibility gameOverVisibility;
+
         private int detonatedMines;
-
         private Field battleField;
-
         private ObservableCollection<ObservableCell> cells;
-
-        public int DetonatedMines
-        {
-            get { return detonatedMines; }
-            set { detonatedMines = value; }
-        }
-        
-
-        public ObservableCollection<ObservableCell> Cells
-        {
-            get { return cells; }
-            set { cells = value; }
-        }
-
-        public RelayCommand DetonateCell { get; set; }
 
         public StartUpScreen()
         {
+            this.FieldSizeInput = "5";
+            this.PlayerNameInput = "YourName";
+
+            this.StartUpVisibility = Visibility.Visible;
+            this.GameVisibility = Visibility.Hidden;
+            this.GameOverVisibility = Visibility.Hidden;
+
+            this.Cells = new ObservableCollection<ObservableCell>(); 
+
+            this.SendInitialInfo = new RelayCommand(this.OnSendInitialInfoExecute, this.OnSendInitialInfoCanExecute);
             this.DetonateCell = new RelayCommand(this.OnDetonateCellExecute, this.OnDetonateCellCanExecute);
-            int fieldSize = 5;
-            this.BattleField = new Field(fieldSize);
-            this.Cells = new ObservableCollection<ObservableCell>();
-            this.DetonatedMines = 0;
-            this.BattleField.DetonatedMines = 0;
-
-            this.BattleField.GenerateField();
-
-            this.BattleField.PositionMines();
-
-            for (int i = 0; i < fieldSize; i++)
-            {
-                for (int j = 0; j < fieldSize; j++)
-                {
-                    this.Cells.Add(new ObservableCell(this.BattleField.FieldPositions[i, j], i, j));
-                }
-            }
-            
-            // this.SendInitialInfo = new RelayCommand(this.OnSendInitialInfoExecute, this.OnSendInitialInfoCanExecute);
         }
-
-
-
-       
-
-        public RelayCommand SendInitialInfo { get; set; }
-
-        //public void SendInitialInfo()
-        //{
-        //    if (Validator.isValidPlayerName(this.PlayerNameInput) &&
-        //        Validator.IsValidInputFieldSize(this.FieldSizeInput))
-        //    {
-        //    }
-        //}
 
         public string FieldSizeInput
         {
@@ -146,6 +108,25 @@ using System.Collections.ObjectModel;
             }
         }
 
+        public Visibility GameOverVisibility
+        {
+            get { return gameOverVisibility; }
+            set
+            {
+                if (value != gameOverVisibility)
+                {
+                    gameOverVisibility = value;
+                    OnPropertyChanged("GameVisibility");
+                }
+            }
+        }
+
+        public int DetonatedMines
+        {
+            get { return detonatedMines; }
+            set { detonatedMines = value; }
+        }
+
         public Field BattleField
         {
             get { return battleField; }
@@ -153,6 +134,15 @@ using System.Collections.ObjectModel;
             // TODO: Implement checks!
             set { battleField = value; }
         }
+
+        public ObservableCollection<ObservableCell> Cells
+        {
+            get { return cells; }
+            set { cells = value; }
+        }
+
+        public RelayCommand SendInitialInfo { get; set; }
+        public RelayCommand DetonateCell { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -177,7 +167,7 @@ using System.Collections.ObjectModel;
             this.StartUpVisibility = Visibility.Hidden;
             this.GameVisibility = Visibility.Visible;
 
-            this.InitializeGame();
+            this.InitializeGame(int.Parse(this.FieldSizeInput));
         }
 
         private bool OnDetonateCellCanExecute(object sender)
@@ -203,26 +193,20 @@ using System.Collections.ObjectModel;
         private void ReloadPositions()
         {
             int fieldSize = this.BattleField.FieldPositions.GetLength(0); 
-            
-            for (int i = 0; i < fieldSize; i++)
-            {
-                for (int j = 0; j < fieldSize; j++)
-                {
-                    this.Cells.Add(new ObservableCell(this.BattleField.FieldPositions[i, j], i, j));
-                }
-            }
+            this.Cells.Clear();
+            FillObservableCollection(fieldSize);
         }
 
-        private void InitializeGame()
+        private void InitializeGame(int fieldSize)
         {
-            int fieldSize = int.Parse(this.FieldSizeInput);
             this.BattleField = new Field(fieldSize);
-            this.Cells = new ObservableCollection<ObservableCell>();
+            this.BattleField.GenerateField();
+            this.BattleField.PositionMines();
+            FillObservableCollection(fieldSize);
+        }
 
-            this.battleField.GenerateField();
-
-            this.battleField.PositionMines();
-
+        private void FillObservableCollection(int fieldSize)
+        {
             for (int i = 0; i < fieldSize; i++)
             {
                 for (int j = 0; j < fieldSize; j++)
