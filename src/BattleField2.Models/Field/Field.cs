@@ -5,7 +5,9 @@
     using BattleField2.Models.Cells;
     using BattleField2.Models.Coordinates;
     using BattleField2.Models.Mines;
-
+    /// <summary>
+    /// Field class implementing the IField interface. 
+    /// </summary>
     public class Field : IField
     {
         private Cell[,] fieldPositions;
@@ -13,7 +15,20 @@
         private readonly CellFactory currentCellFactory;
         private readonly MineFactory currentMineFactory;
 
+        private int CalculateInitialMines(Random rnd)
+        {
+            int currentFieldSize = this.FieldPositions.GetLength(0);
+            int minesDownLimit = Convert.ToInt32(0.15 * currentFieldSize * currentFieldSize);
+            int minesUpperLimit = Convert.ToInt32(0.30 * currentFieldSize * currentFieldSize);
 
+            int minesCount = Convert.ToInt32(rnd.Next(minesDownLimit, minesUpperLimit));
+
+            return minesCount;
+        }
+        /// <summary>
+        /// Field consturctor method that gets a given field size parameter and generates the appropriate field.
+        /// </summary>
+        /// <param name="currentFieldSize">A valid size value for the game field size.</param>
         public Field(int currentFieldSize)
         {
             this.FieldPositions = new Cell[currentFieldSize, currentFieldSize];
@@ -21,7 +36,9 @@
             this.currentCellFactory = CellFactory.Instance();
             this.currentMineFactory = MineFactory.Instance();
         }
-
+        /// <summary>
+        /// A Cell defined property that sets and gets the current position in the game field.
+        /// </summary>
         public Cell[,] FieldPositions
         {
             get { return this.fieldPositions; }
@@ -32,7 +49,9 @@
                 this.fieldPositions = value;
             }
         }
-
+        /// <summary>
+        /// Public property that gets/sets the number of detonated mines.
+        /// </summary>
         public int DetonatedMines
         {
             get { return this.detonatedMines; }
@@ -43,7 +62,9 @@
                 this.detonatedMines = value;
             }
         }
-
+        /// <summary>
+        /// Method that generates a random game field.
+        /// </summary>
         public void GenerateField()
         {
             int currentFieldSize = this.FieldPositions.GetLength(0);
@@ -56,7 +77,9 @@
                 }
             }
         }
-
+        /// <summary>
+        /// Method that positions the mines on random after the field creation.
+        /// </summary>
         public void PositionMines()
         {
             Random rnd = new Random();
@@ -80,7 +103,10 @@
             } while (initialMines - numberOfAlreadyPositionedMines > 0);
 
         }
-
+        /// <summary>
+        /// Method that counts the current amount of mines on the field.
+        /// </summary>
+        /// <returns>Returns the number of mines remaining on the field.</returns>
         public int CountRemainingMines()
         {
             int count = 0;
@@ -97,7 +123,11 @@
 
             return count;
         }
-
+        /// <summary>
+        /// Method that validates the coordinates inputed by the current Player.
+        /// </summary>
+        /// <param name="inputCoordinates">Input coordinates to be validated.</param>
+        /// <returns>Return boolean representing the validity of the input coordinates.</returns>
         public bool ValidateMoveCoordinates(Coordinates inputCoordinates)
         {
             int currentFieldSize = this.FieldPositions.GetLength(0);
@@ -111,17 +141,6 @@
             }
 
             return true;
-        }
-
-        private int CalculateInitialMines(Random rnd)
-        {
-            int currentFieldSize = this.FieldPositions.GetLength(0);
-            int minesDownLimit = Convert.ToInt32(0.15 * currentFieldSize * currentFieldSize);
-            int minesUpperLimit = Convert.ToInt32(0.30 * currentFieldSize * currentFieldSize);
-
-            int minesCount = Convert.ToInt32(rnd.Next(minesDownLimit, minesUpperLimit));
-
-            return minesCount;
         }
     }
 }
