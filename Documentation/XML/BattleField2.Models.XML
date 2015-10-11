@@ -191,5 +191,35 @@
             </summary>
             <param name="currentPlayer">Player object that represents the current player.</param>
         </member>
+        <member name="T:BattleField2.Models.Player.Player">
+            <summary>
+            Player class handles the player in-game details.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Player.Player.#ctor(System.String)">
+            <summary>
+            Player constructor method creating a player instance 
+            with a given name.
+            </summary>
+            <param name="name">A player name value to be validated.</param>
+        </member>
+        <member name="P:BattleField2.Models.Player.Player.Name">
+            <summary>
+            Public player name property that gets/sets the current player name.
+            </summary>
+        </member>
+        <member name="P:BattleField2.Models.Player.Player.Score">
+            <summary>
+            Public property that gets/sets the current player score.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Player.Player.CalculateScore(System.Int32,System.Int32)">
+            <summary>
+            Method that calculates the current score of the player.
+            </summary>
+            <param name="previousMinesCount">The number of mines before last detonation.</param>
+            <param name="nextMinesCount">The number of mines after the last detonation.</param>
+            <returns>The updated player score based on last detonation.</returns>
+        </member>
     </members>
 </doc>
