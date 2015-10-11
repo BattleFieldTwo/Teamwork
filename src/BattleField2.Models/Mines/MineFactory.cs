@@ -1,7 +1,9 @@
 ﻿namespace BattleField2.Models.Mines
 {
     using BattleField2.Models.Coordinates;
-
+    /// <summary>
+    /// MineFactory class for the creation of the different mine types.
+    /// </summary>
     public class MineFactory
     {
         private static MineFactory instance;
@@ -19,7 +21,10 @@
             this.levelFour = new MineLevelFourUpgrade();
             this.levelFive = new MineLevelFiveUpgrade();
         }
-
+        /// <summary>
+        /// Method that creates and returns a MineFactory instance if none is present.
+        /// </summary>
+        /// <returns>The current MineFactory instance.</returns>
         public static MineFactory Instance()
         {
             if (instance == null)
@@ -28,7 +33,11 @@
             }
             return instance;
         }
-
+        /// <summary>
+        /// Method that returns a given mine based on the input type.
+        /// </summary>
+        /// <param name="type">Mine type parameter.</param>
+        /// <returns>Returns a Mine object based on the input type.</returns>
         public Mine GetMine(MineType type)
         {
             switch (type)

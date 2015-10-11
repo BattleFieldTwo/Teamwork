@@ -164,6 +164,24 @@
             <param name="currentCoordinates">Coordinates parameter.</param>
             <returns></returns>
         </member>
+        <member name="T:BattleField2.Models.Mines.MineFactory">
+            <summary>
+            MineFactory class for the creation of the different mine types.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Mines.MineFactory.Instance">
+            <summary>
+            Method that creates and returns a MineFactory instance if none is present.
+            </summary>
+            <returns>The current MineFactory instance.</returns>
+        </member>
+        <member name="M:BattleField2.Models.Mines.MineFactory.GetMine(BattleField2.Models.Mines.MineType)">
+            <summary>
+            Method that returns a given mine based on the input type.
+            </summary>
+            <param name="type">Mine type parameter.</param>
+            <returns>Returns a Mine object based on the input type.</returns>
+        </member>
         <member name="T:BattleField2.Models.Mines.MineType">
             <summary>
             Enumeration that holds the MineType types.
