@@ -1,7 +1,9 @@
 ﻿namespace BattleField2.Models.Cells
 {
     /// <summary>
-    /// 
+    /// CellFactory class uses a Singleton implemented instance to
+    /// create Cell objects with appropriate CellType enumeration type
+    /// based on given input. 
     /// </summary>
     public class CellFactory
     {

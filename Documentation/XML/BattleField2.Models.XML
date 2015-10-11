@@ -6,7 +6,9 @@
     <members>
         <member name="T:BattleField2.Models.Cells.CellFactory">
             <summary>
-            
+            CellFactory class uses a Singleton implemented instance to
+            create Cell objects with appropriate CellType enumeration type
+            based on given input. 
             </summary>
         </member>
         <member name="M:BattleField2.Models.Cells.CellFactory.Instance">
