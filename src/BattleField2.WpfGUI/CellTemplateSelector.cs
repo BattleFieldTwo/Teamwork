@@ -1,10 +1,10 @@
-﻿
-using System.Windows;
-using System.Windows.Controls;
-using BattleField2.Models.Cells;
-
-namespace BattleField2.WpfGUI
+﻿namespace BattleField2.WpfGUI
 {
+    using System.Windows;
+    using System.Windows.Controls;
+
+    using BattleField2.WpfGUI.CellDecorator;
+
     class CellTemplateSelector : DataTemplateSelector
     {
         public DataTemplate SelectorMineOneTemplate { get; set; }
@@ -23,8 +23,8 @@ namespace BattleField2.WpfGUI
 
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
-            ObservableCell o = item as ObservableCell;
-            switch (o.CurrentCell.GetType().Name)
+            ObservableCellDecorator o = item as ObservableCellDecorator;
+            switch (o.CellToBeDecorated.GetType().Name)
             {
                 case "MineLevelOneUpgrade":
                     return SelectorMineOneTemplate;

@@ -54,17 +54,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CellDecorator\CellDecorator.cs" />
+    <Compile Include="CellDecorator\ObservableCellDecorator.cs" />
     <Compile Include="CellTemplateSelector.cs" />
     <Compile Include="Converter\GridMarginConverter.cs" />
     <Compile Include="Converter\PositionConverter.cs" />
-    <Compile Include="ObservableCell.cs" />
     <Compile Include="RelayCommand.cs" />
-    <Compile Include="ViewModels\StartUpScreen.cs" />
+    <Compile Include="ViewModels\BattlefieldViewModel.cs" />
     <Page Include="CellTemplates.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StartUpScreen.xaml">
+    <Page Include="BattlefieldView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

@@ -1,34 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using BattleField2.Models.Coordinates;
-using BattleField2.Models.Mines;
+﻿using BattleField2.WpfGUI.CellDecorator;
 
 namespace BattleField2.WpfGUI.ViewModels
 {
+    using System.ComponentModel;
+    using System.Windows;
+    using System.Collections.ObjectModel;
 
+    using BattleField2.Models.Coordinates;
+    using BattleField2.Models.Mines;
     using BattleField2.Common;
     using BattleField2.Models.Field;
-    using System.Collections.ObjectModel;
     using BattleField2.Models.Player;
 
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for BattlefieldView.xaml
     /// </summary>
-    public class StartUpScreen : Window, INotifyPropertyChanged
+    public class BattlefieldViewModel : Window, INotifyPropertyChanged
     {
         private string fieldSizeInput;
         private string playerName;
@@ -42,10 +29,10 @@ namespace BattleField2.WpfGUI.ViewModels
         private int remainingMines;
 
         private Field battleField;
-        private ObservableCollection<ObservableCell> cells;
+        private ObservableCollection<ObservableCellDecorator> cells;
         private Player currentPlayer;
 
-        public StartUpScreen()
+        public BattlefieldViewModel()
         {
             this.FieldSizeInput = "5";
             this.PlayerName = "YourName";
@@ -54,7 +41,7 @@ namespace BattleField2.WpfGUI.ViewModels
             this.GameVisibility = Visibility.Hidden;
             this.GameOverVisibility = Visibility.Hidden;
 
-            this.Cells = new ObservableCollection<ObservableCell>(); 
+            this.Cells = new ObservableCollection<ObservableCellDecorator>(); 
 
             this.SendInitialInfo = new RelayCommand(this.OnSendInitialInfoExecute, this.OnSendInitialInfoCanExecute);
             this.DetonateCell = new RelayCommand(this.OnDetonateCellExecute, this.OnDetonateCellCanExecute);
@@ -171,13 +158,19 @@ namespace BattleField2.WpfGUI.ViewModels
             set { battleField = value; }
         }
 
-        public ObservableCollection<ObservableCell> Cells
+        public ObservableCollection<ObservableCellDecorator> Cells
         {
             get { return cells; }
             set { cells = value; }
         }
 
-        public Player CurrentPlayer { get; set; }
+        public Player CurrentPlayer
+        {
+            get { return currentPlayer; }
+
+            // TODO: Implement checks!
+            set { currentPlayer = value; }
+        }
 
         public RelayCommand SendInitialInfo { get; set; }
         public RelayCommand DetonateCell { get; set; }
@@ -210,7 +203,7 @@ namespace BattleField2.WpfGUI.ViewModels
 
         private bool OnDetonateCellCanExecute(object sender)
         {
-            if (sender is ObservableCell)
+            if (sender is ObservableCellDecorator)
             {
                 return true;
             }
@@ -219,8 +212,8 @@ namespace BattleField2.WpfGUI.ViewModels
 
         private void OnDetonateCellExecute(object sender)
         {
-            int row = (sender as ObservableCell).Row;
-            int col = (sender as ObservableCell).Col;
+            int row = (sender as ObservableCellDecorator).Row;
+            int col = (sender as ObservableCellDecorator).Col;
             Coordinates currentCoordinates = new Coordinates(row, col);
 
             this.BattleField.FieldPositions = (this.battleField.FieldPositions[row, col] as IExplosive).Detonate(
@@ -263,7 +256,7 @@ namespace BattleField2.WpfGUI.ViewModels
             {
                 for (int j = 0; j < fieldSize; j++)
                 {
-                    this.Cells.Add(new ObservableCell(this.BattleField.FieldPositions[i, j], i, j));
+                    this.Cells.Add(new ObservableCellDecorator(this.BattleField.FieldPositions[i, j], i, j));
                 }
             }
         }

@@ -4,9 +4,9 @@
         <name>BattleField2.WpfGUI</name>
     </assembly>
     <members>
-        <member name="T:BattleField2.WpfGUI.ViewModels.StartUpScreen">
+        <member name="T:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel">
             <summary>
-            Interaction logic for MainWindow.xaml
+            Interaction logic for BattlefieldView.xaml
             </summary>
         </member>
         <member name="T:WpfGUI.App">
@@ -43,12 +43,12 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
-        <member name="T:WpfGUI.StartUpScreen">
+        <member name="T:WpfGUI.BattlefieldView">
             <summary>
-            StartUpScreen
+            BattlefieldView
             </summary>
         </member>
-        <member name="M:WpfGUI.StartUpScreen.InitializeComponent">
+        <member name="M:WpfGUI.BattlefieldView.InitializeComponent">
             <summary>
             InitializeComponent
             </summary>
