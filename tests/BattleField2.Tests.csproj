@@ -66,6 +66,7 @@
     <Compile Include="CoordinatesTests\BaseCoordinatesTests.cs" />
     <Compile Include="FieldTests\FieldTests.cs" />
     <Compile Include="MineTests\MineTypesTests.cs" />
+    <Compile Include="PlayerTests\PlayerBaseClassTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MineTests\MineFactoryTests.cs" />
     <Compile Include="MineTests\MineBaseTests.cs" />
