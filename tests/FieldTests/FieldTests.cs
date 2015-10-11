@@ -120,7 +120,7 @@
             {
                 for (int j = 0; j < testFieldSize; j++)
                 {
-                    if (field.FieldPositions[i, j] is Mine )
+                    if (field.FieldPositions[i, j] is Mine)
                     {
                         countMines++;
                     }
@@ -129,6 +129,85 @@
 
             Assert.AreNotEqual(countMines, 0);
 
+
+        }
+
+        [TestMethod]
+        public void CheckIfCountRemainingMinesGivesANumberThatIsNotZeroAtTheStartOfTheGame()
+        {
+            var testFieldSize = 9;
+            var field = new Field(testFieldSize);
+
+            field.GenerateField();
+            field.PositionMines();
+
+            var countMines = 0;
+
+            for (int i = 0; i < testFieldSize; i++)
+            {
+                for (int j = 0; j < testFieldSize; j++)
+                {
+                    if (field.FieldPositions[i, j] is Mine)
+                    {
+                        countMines++;
+                    }
+                }
+            }
+
+            Assert.AreNotEqual(field.CountRemainingMines(), 0);
+
+
+        }
+
+
+        [TestMethod]
+        public void CheckIfValidateMovieCoordinatesReturnsCorrectly_InvalidCoordinates()
+        {
+            var testFieldSize = 9;
+            var field = new Field(testFieldSize);
+            var invalidCoordinates = new Coordinates(9, 9);
+            field.GenerateField();
+
+            Assert.IsFalse(field.ValidateMoveCoordinates(invalidCoordinates));
+
+        }
+
+
+        [TestMethod]
+        public void CheckIfValidateMovieCoordinatesReturnsCorrectly_NegativeCoordinates()
+        {
+            var testFieldSize = 9;
+            var field = new Field(testFieldSize);
+            var zeroCoordinates = new Coordinates(-1, -2);
+            field.GenerateField();
+
+            Assert.IsFalse(field.ValidateMoveCoordinates(zeroCoordinates));
+
+        }
+
+        [TestMethod]
+        public void CheckIfValidateMovieCoordinatesReturnsCorrectly_ValidCoordinates()
+        {
+            var testFieldSize = 9;
+            var field = new Field(testFieldSize);
+
+            field.GenerateField();
+            field.PositionMines();
+
+            Coordinates mineCell = new Coordinates();
+
+            for (int i = 0; i < testFieldSize; i++)
+            {
+                for (int j = 0; j < testFieldSize; j++)
+                {
+                    if (field.FieldPositions[i, j] is Mine)
+                    {
+                        mineCell = new Coordinates(i, j);
+                    }
+                }
+            }
+
+            Assert.IsTrue(field.ValidateMoveCoordinates(mineCell));
 
         }
 
