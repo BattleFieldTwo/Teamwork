@@ -17,7 +17,8 @@
         }
 
         /// <summary>
-        /// 
+        /// ConsoleGameRenderer that checks for an existing class instance 
+        /// and creates it if missing. Returns the current instance in both cases.
         /// </summary>
         public static ConsoleGameRenderer Instance
         {
@@ -64,7 +65,7 @@
         }
 
         /// <summary>
-        /// 
+        /// Method that is used to hold the execution of the application.
         /// </summary>
         public void Wait()
         {
