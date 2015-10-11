@@ -1,5 +1,8 @@
 ﻿namespace BattleField2.Models.Cells
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class CellFactory
     {
         private Cell empty;
@@ -13,15 +16,6 @@
             this.Detonated = new DetonatedCell();
         }
 
-        public static CellFactory Instance()
-        {
-            if (instance == null)
-            {
-                instance = new CellFactory();
-            }
-            return instance;
-        }
-
         private Cell Empty
         {
             get { return empty; }
@@ -33,7 +27,26 @@
             get { return detonated; }
             set { detonated = value; }
         }
-
+        /// <summary>
+        /// CellFactory method checks if their is an already created
+        /// CellFactory instance and returns it. If the instance is 
+        /// already create it returns it anyway.
+        /// </summary>
+        /// <returns>The existing CellFactory instance.</returns>
+        public static CellFactory Instance()
+        {
+            if (instance == null)
+            {
+                instance = new CellFactory();
+            }
+            return instance;
+        }
+        /// <summary>
+        /// GetCell method gets a valid enumeration CellType and returns a Cell Object
+        /// with the appropriate CellType.
+        /// </summary>
+        /// <param name="type">A valid CellType eunmeration type.</param>
+        /// <returns>A cell object with the appropriate CellType set by the given parameter.</returns>
         public Cell GetCell(CellType type)
         {
             Cell currentCell = null;

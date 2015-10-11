@@ -4,6 +4,27 @@
         <name>BattleField2.Models</name>
     </assembly>
     <members>
+        <member name="T:BattleField2.Models.Cells.CellFactory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Cells.CellFactory.Instance">
+            <summary>
+            CellFactory method checks if their is an already created
+            CellFactory instance and returns it. If the instance is 
+            already create it returns it anyway.
+            </summary>
+            <returns>The existing CellFactory instance.</returns>
+        </member>
+        <member name="M:BattleField2.Models.Cells.CellFactory.GetCell(BattleField2.Models.Cells.CellType)">
+            <summary>
+            GetCell method gets a valid enumeration CellType and returns a Cell Object
+            with the appropriate CellType.
+            </summary>
+            <param name="type">A valid CellType eunmeration type.</param>
+            <returns>A cell object with the appropriate CellType set by the given parameter.</returns>
+        </member>
         <member name="T:BattleField2.Models.Cells.CellType">
             <summary>
             Enumeration that holds the two basic CellType types.
