@@ -90,29 +90,33 @@
             } while (!Validator.isValidPlayerName(inputPlayerName));
             this.currentPlayer = new Player(inputPlayerName);
         }
-        //TODO refactor this method
+
         private Coordinates EnterInputCoordinates()
         {
-            Coordinates currentCoordinates;
 
-            do
+            string coordinates;
+
+            while (true)
             {
                 this.renderer.DisplayMessage(Constants.INVITE_TO_ENTER_COORDINATES_MESSAGE);
 
-                string coordinates = this.renderer.EnterCommand();
-                if (!Validator.IsValidInputCoordinates(coordinates, this.battleField.FieldPositions.GetLength(0)))
+                coordinates = this.renderer.EnterCommand();
+
+                if (Validator.IsValidInputCoordinates(coordinates, this.battleField.FieldPositions.GetLength(0)))
                 {
-                    this.renderer.Clear();
-                    this.renderer.DisplayMessage(Constants.INVALID_MOVE_NOTIFICATION_MESSAGE);
-                    continue;
+                    break;
                 }
 
-                int rowCoord = Convert.ToInt32(coordinates.Substring(0, 1));
-                int colCoord = Convert.ToInt32(coordinates.Substring(2, 1));
-                currentCoordinates = new Coordinates(rowCoord, colCoord);
-                break;
+                this.renderer.Clear();
+                this.renderer.DrawField(this.battleField.FieldPositions);
+                this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + this.battleField.CountRemainingMines());
+                this.renderer.DisplayMessage(Constants.SCORE_MESSAGE + this.currentPlayer.Score);
+                this.renderer.DisplayMessage(Constants.INVALID_MOVE_NOTIFICATION_MESSAGE);
+            }
 
-            } while (true);
+            int rowCoord = Convert.ToInt32(coordinates.Substring(0, 1));
+            int colCoord = Convert.ToInt32(coordinates.Substring(2, 1));
+            Coordinates currentCoordinates = new Coordinates(rowCoord, colCoord);
 
             return currentCoordinates;
         }
