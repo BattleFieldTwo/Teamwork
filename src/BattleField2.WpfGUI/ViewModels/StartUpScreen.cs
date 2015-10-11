@@ -20,10 +20,10 @@ using BattleField2.Models.Mines;
 namespace BattleField2.WpfGUI.ViewModels
 {
 
-using BattleField2.Common;
-using BattleField2.Models.Cells;
-using BattleField2.Models.Field;
-using System.Collections.ObjectModel;
+    using BattleField2.Common;
+    using BattleField2.Models.Field;
+    using System.Collections.ObjectModel;
+    using BattleField2.Models.Player;
 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -31,20 +31,24 @@ using System.Collections.ObjectModel;
     public class StartUpScreen : Window, INotifyPropertyChanged
     {
         private string fieldSizeInput;
-        private string playerNameImput;
+        private string playerName;
+        private int playerScore;
 
         private Visibility startUpVisibility;
         private Visibility gameVisibility;
         private Visibility gameOverVisibility;
 
         private int detonatedMines;
+        private int remainingMines;
+
         private Field battleField;
         private ObservableCollection<ObservableCell> cells;
+        private Player currentPlayer;
 
         public StartUpScreen()
         {
             this.FieldSizeInput = "5";
-            this.PlayerNameInput = "YourName";
+            this.PlayerName = "YourName";
 
             this.StartUpVisibility = Visibility.Visible;
             this.GameVisibility = Visibility.Hidden;
@@ -69,15 +73,28 @@ using System.Collections.ObjectModel;
             }
         }
 
-        public string PlayerNameInput
+        public string PlayerName
         {
-            get { return playerNameImput; }
+            get { return playerName; }
             set
             {
-                if (value != playerNameImput)
+                if (value != playerName)
                 {
-                    playerNameImput = value;
-                    OnPropertyChanged("PlayerNameInput");
+                    playerName = value;
+                    OnPropertyChanged("PlayerName");
+                }
+            }
+        }
+
+        public int PlayerScore
+        {
+            get { return playerScore; }
+            set
+            {
+                if (value != playerScore)
+                {
+                    playerScore = value;
+                    OnPropertyChanged("PlayerScore");
                 }
             }
         }
@@ -116,7 +133,7 @@ using System.Collections.ObjectModel;
                 if (value != gameOverVisibility)
                 {
                     gameOverVisibility = value;
-                    OnPropertyChanged("GameVisibility");
+                    OnPropertyChanged("GameOverVisibility");
                 }
             }
         }
@@ -124,7 +141,26 @@ using System.Collections.ObjectModel;
         public int DetonatedMines
         {
             get { return detonatedMines; }
-            set { detonatedMines = value; }
+            set
+            {
+                if (value != detonatedMines)
+                {
+                    detonatedMines = value;
+                    OnPropertyChanged("DetonatedMines");
+                }
+            }
+        }
+
+        public int RemainingMines
+        {
+            get { return remainingMines; }
+            set
+            {
+                if (value != remainingMines)
+                {
+                    remainingMines = value;
+                }
+            }
         }
 
         public Field BattleField
@@ -141,6 +177,8 @@ using System.Collections.ObjectModel;
             set { cells = value; }
         }
 
+        public Player CurrentPlayer { get; set; }
+
         public RelayCommand SendInitialInfo { get; set; }
         public RelayCommand DetonateCell { get; set; }
 
@@ -154,7 +192,7 @@ using System.Collections.ObjectModel;
 
         private bool OnSendInitialInfoCanExecute(object sender)
         {
-            if (Validator.isValidPlayerName(this.PlayerNameInput) &&
+            if (Validator.isValidPlayerName(this.PlayerName) &&
                 Validator.IsValidInputFieldSize(this.FieldSizeInput))
             {
                 return true;
@@ -188,6 +226,17 @@ using System.Collections.ObjectModel;
             this.BattleField.FieldPositions = (this.battleField.FieldPositions[row, col] as IExplosive).Detonate(
                     this.BattleField.FieldPositions, currentCoordinates);
             ReloadPositions();
+            this.DetonatedMines ++;
+
+            this.CurrentPlayer.Score += this.CurrentPlayer.CalculateScore(this.RemainingMines, this.battleField.CountRemainingMines());
+            this.PlayerScore = this.CurrentPlayer.Score;
+            this.RemainingMines = this.battleField.CountRemainingMines();
+
+            if (this.RemainingMines == 0)
+            {
+                this.GameVisibility = Visibility.Hidden;
+                this.GameOverVisibility = Visibility.Visible;
+            }
         }
 
         private void ReloadPositions()
@@ -202,7 +251,10 @@ using System.Collections.ObjectModel;
             this.BattleField = new Field(fieldSize);
             this.BattleField.GenerateField();
             this.BattleField.PositionMines();
+            this.DetonatedMines = 0;
+            this.RemainingMines = this.BattleField.CountRemainingMines();
             FillObservableCollection(fieldSize);
+            this.CurrentPlayer = new Player(this.PlayerName);
         }
 
         private void FillObservableCollection(int fieldSize)

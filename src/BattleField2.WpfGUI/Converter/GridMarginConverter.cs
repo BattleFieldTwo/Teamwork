@@ -8,7 +8,7 @@
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            int result = (10 - (int.Parse(value.ToString()))) * 25;
+            int result = (11 - (int.Parse(value.ToString()))) * 30;
             return result;
         }
 
