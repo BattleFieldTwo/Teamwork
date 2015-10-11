@@ -1,8 +1,13 @@
-﻿/// <summary>
-/// Namespace that holds general information - CONSTANTS, Data validations etc.
-/// </summary>
-namespace BattleField2.Common
+﻿namespace BattleField2.Common
 {
+    /// <summary>
+    /// Namespace that holds general information - CONSTANTS, Data validations etc.
+    /// </summary>
+    [System.Runtime.CompilerServices.CompilerGenerated]
+    class NamespaceDoc
+    {
+    }
+    
     /// <summary>
     /// This class consists of predefined CONSTANT values that we use
     /// in the application
