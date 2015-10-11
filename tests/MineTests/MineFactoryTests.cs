@@ -84,7 +84,7 @@
             var factoryMineFour = MineFactory.Instance().GetMine(MineType.MineFour);
             var mineLevelFour = new MineLevelFourUpgrade();
 
-            Assert.AreEqual(factoryMineFour.StringRepresentation, mineLevelFour);
+            Assert.AreEqual(factoryMineFour.StringRepresentation, mineLevelFour.StringRepresentation);
         }
 
         [TestMethod]
@@ -93,7 +93,7 @@
             var factoryMineFive = MineFactory.Instance().GetMine(MineType.MineFive);
             var mineLevelFive = new MineLevelFiveUpgrade();
 
-            Assert.AreEqual(factoryMineFive.StringRepresentation, mineLevelFive);
+            Assert.AreEqual(factoryMineFive.StringRepresentation, mineLevelFive.StringRepresentation);
         }
     }
 }
