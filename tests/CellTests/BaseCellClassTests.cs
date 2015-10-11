@@ -19,5 +19,21 @@
             Assert.AreEqual(baceCellMockObject.StringRepresentation, "test");
 
         }
+
+        [TestMethod]
+        public void CheckIfAnEmptyCellIsBeingCreatedWithTheProperStringRepresentation()
+        {
+            var emptyCell = new EmptyCell();
+
+            Assert.AreEqual(emptyCell.StringRepresentation, " - ");
+        }
+
+        [TestMethod]
+        public void CheckIfADetonatedyCellIsBeingCreatedWithTheProperStringRepresentation()
+        {
+            var detonatedCell = new DetonatedCell();
+
+            Assert.AreEqual(detonatedCell.StringRepresentation, " X ");
+        }
     }
 }
