@@ -50,6 +50,7 @@
     <Compile Include="Cells\DetonatedCell.cs" />
     <Compile Include="Cells\EmptyCell.cs" />
     <Compile Include="Cells\Cell.cs" />
+    <Compile Include="Field\IField.cs" />
     <Compile Include="Mines\IExplosive.cs" />
     <Compile Include="Mines\Mine.cs" />
     <Compile Include="Mines\MineLevelOneUpgrade.cs" />
@@ -67,7 +68,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BattleField2.Common\BattleField2.Common.csproj">

@@ -2,7 +2,7 @@
 {
     using BattleField2.Models.Coordinates;
 
-    class EmptyCell : Cell
+   internal class EmptyCell : Cell
     {
         private readonly string stringRepresentation = " - ";
 

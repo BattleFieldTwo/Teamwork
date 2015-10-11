@@ -38,8 +38,49 @@
 
             return currentFieldSize;
         }
+
+        private Coordinates EnterInputCoordinates()
+        {
+
+            string coordinates;
+
+            while (true)
+            {
+                this.renderer.DisplayMessage(Constants.INVITE_TO_ENTER_COORDINATES_MESSAGE);
+
+                coordinates = this.renderer.EnterCommand();
+
+                if (Validator.IsValidInputCoordinates(coordinates, this.battleField.FieldPositions.GetLength(0)))
+                {
+                    break;
+                }
+
+                this.renderer.Clear();
+                this.renderer.DrawField(this.battleField.FieldPositions);
+                this.renderer.DisplayMessage(Constants.MINES_COUNT_MESSAGE + this.battleField.CountRemainingMines());
+                this.renderer.DisplayMessage(Constants.SCORE_MESSAGE + this.currentPlayer.Score);
+                this.renderer.DisplayMessage(Constants.INVALID_MOVE_NOTIFICATION_MESSAGE);
+            }
+
+            int rowCoord = Convert.ToInt32(coordinates.Substring(0, 1));
+            int colCoord = Convert.ToInt32(coordinates.Substring(2, 1));
+            Coordinates currentCoordinates = new Coordinates(rowCoord, colCoord);
+
+            return currentCoordinates;
+        }
+        private void EnterPlayerName()
+        {
+            string inputPlayerName;
+            do
+            {
+                this.renderer.DisplayMessage(Constants.INVITE_TO_ENTER_NAME_MESSAGE);
+                inputPlayerName = this.renderer.EnterCommand();
+            } while (!Validator.isValidPlayerName(inputPlayerName));
+            this.currentPlayer = new Player(inputPlayerName);
+        }
         /// <summary>
-        /// 
+        /// GameMenu method initializes the main in-game menu and 
+        /// calls the appropriate methods during the game.
         /// </summary>
         public void GameMenu()
         {
@@ -78,43 +119,6 @@
                         break;
                 }
             } while (!Validator.IsValidMenuChoice(3, choice));
-        }
-
-        private void EnterPlayerName()
-        {
-            string inputPlayerName;
-            do
-            {
-                this.renderer.DisplayMessage(Constants.INVITE_TO_ENTER_NAME_MESSAGE);
-                inputPlayerName = this.renderer.EnterCommand();
-            } while (!Validator.isValidPlayerName(inputPlayerName));
-            this.currentPlayer = new Player(inputPlayerName);
-        }
-        //TODO refactor this method
-        private Coordinates EnterInputCoordinates()
-        {
-            Coordinates currentCoordinates;
-
-            do
-            {
-                this.renderer.DisplayMessage(Constants.INVITE_TO_ENTER_COORDINATES_MESSAGE);
-
-                string coordinates = this.renderer.EnterCommand();
-                if (!Validator.IsValidInputCoordinates(coordinates, this.battleField.FieldPositions.GetLength(0)))
-                {
-                    this.renderer.Clear();
-                    this.renderer.DisplayMessage(Constants.INVALID_MOVE_NOTIFICATION_MESSAGE);
-                    continue;
-                }
-
-                int rowCoord = Convert.ToInt32(coordinates.Substring(0, 1));
-                int colCoord = Convert.ToInt32(coordinates.Substring(2, 1));
-                currentCoordinates = new Coordinates(rowCoord, colCoord);
-                break;
-
-            } while (true);
-
-            return currentCoordinates;
         }
         /// <summary>
         /// This method initializes the GameEngine renderer.

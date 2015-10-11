@@ -1,45 +1,49 @@
-﻿
-using System.Windows;
-using System.Windows.Controls;
-using BattleField2.Models.Cells;
-
-namespace BattleField2.WpfGUI
+﻿namespace BattleField2.WpfGUI
 {
+    using System.Windows;
+    using System.Windows.Controls;
+
+    using BattleField2.WpfGUI.CellDecorator;
+
+    /// <summary>
+    /// This is template selector class, determing which specific Cell template
+    /// is passed to the XAML Canvas of the View.
+    /// </summary>
     class CellTemplateSelector : DataTemplateSelector
     {
-        public DataTemplate MineFiveTemplate { get; set; }
+        public DataTemplate SelectorMineOneTemplate { get; set; }
 
-        public DataTemplate MineFourTemplate { get; set; }
+        public DataTemplate SelectorMineTwoTemplate { get; set; }
 
-        public DataTemplate MineThreeTemplate { get; set; }
+        public DataTemplate SelectorMineThreeTemplate { get; set; }
 
-        public DataTemplate MineTwoTemplate { get; set; }
+        public DataTemplate SelectorMineFourTemplate { get; set; }
 
-        public DataTemplate MineOneTemplate { get; set; }
+        public DataTemplate SelectorMineFiveTemplate { get; set; }
 
-        public DataTemplate EmptyCellTemplate { get; set; }
+        public DataTemplate SelectorEmptyCellTemplate { get; set; }
 
-        public DataTemplate DetonatedCellTemplate { get; set; }
+        public DataTemplate SelectorDetonatedCellTemplate { get; set; }
 
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
-            Cell o = item as Cell;
-            switch (o.GetType().Name)
+            ObservableCellDecorator o = item as ObservableCellDecorator;
+            switch (o.CellToBeDecorated.GetType().Name)
             {
                 case "MineLevelOneUpgrade":
-                    return MineOneTemplate;
+                    return SelectorMineOneTemplate;
                 case "MineLevelTwoUpgrade":
-                    return MineTwoTemplate;
+                    return SelectorMineTwoTemplate;
                 case "MineLevelThreeUpgrade":
-                    return MineThreeTemplate;
+                    return SelectorMineThreeTemplate;
                 case "MineLevelFourUpgrade":
-                    return MineFourTemplate;
+                    return SelectorMineFourTemplate;
                 case "MineLevelFiveUpgrade":
-                    return MineFiveTemplate;
+                    return SelectorMineFiveTemplate;
                 case "EmptyCell":
-                    return EmptyCellTemplate;
+                    return SelectorEmptyCellTemplate;
                 case "DetonatedCell":
-                    return DetonatedCellTemplate;
+                    return SelectorDetonatedCellTemplate;
                 default: return null;
             }
         }

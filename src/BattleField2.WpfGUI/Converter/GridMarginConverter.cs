@@ -1,0 +1,24 @@
+﻿namespace BattleField2.WpfGUI.Converter
+{
+    using System;
+    using System.Globalization;
+    using System.Windows.Data;
+
+    /// <summary>
+    /// This is an converter, passing values for defining the margin of the Grid element
+    /// in which all the Cells are placed in the XAML View.
+    /// </summary>
+    public class GridMarginConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            int result = (11 - (int.Parse(value.ToString()))) * 30;
+            return result;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return null; // Not needed at the moment
+        }
+    }
+}

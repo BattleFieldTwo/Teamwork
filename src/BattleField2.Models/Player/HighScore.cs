@@ -73,7 +73,6 @@
         /// <returns>Returns a string that represents a list of the top Player results.</returns>
         public string ListHighScore()
         {
-            this.SortHighScoreDesc();
             StringBuilder str = new StringBuilder();
             str.Append(new String(' ', Constants.MESSAGE_LEFT_POSSITION));
             str.Append(new String(' ', Constants.MESSAGE_LEFT_POSSITION) + "--=== HIGH SCORES ===--\n\n");
@@ -100,10 +99,11 @@
         public void SaveHighScore(Player currentPlayer)
         {
             this.highScoreList.Add(currentPlayer);
+            this.SortHighScoreDesc();
 
             if (this.highScoreList.Count > this.topListCount)
             {
-                this.highScoreList.RemoveAt(this.topListCount - 1);
+                this.highScoreList.RemoveAt(this.topListCount);
             }
 
             this.WriteHighScoreToFile();

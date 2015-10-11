@@ -1,12 +1,12 @@
 ﻿<Application x:Class="WpfGUI.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="StartUpScreen.xaml">
+             xmlns:local="clr-namespace:BattleField2.WpfGUI"
+             StartupUri="BattlefieldView.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="CellTemplates.xaml"/>
-                <ResourceDictionary Source="ButtonRecources.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
