@@ -9,6 +9,22 @@
             Interaction logic for BattlefieldView.xaml
             </summary>
         </member>
+        <member name="T:BattleField2.WpfGUI.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
         <member name="T:WpfGUI.App">
             <summary>
             Interaction logic for App.xaml
@@ -25,22 +41,6 @@
         <member name="M:WpfGUI.App.Main">
             <summary>
             Application Entry Point.
-            </summary>
-        </member>
-        <member name="T:BattleField2.WpfGUI.Properties.Resources">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:BattleField2.WpfGUI.Properties.Resources.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:BattleField2.WpfGUI.Properties.Resources.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
             </summary>
         </member>
         <member name="T:WpfGUI.BattlefieldView">
