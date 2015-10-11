@@ -22,7 +22,8 @@
         </member>
         <member name="M:BattleField2.GameLogic.GameEngine.GameMenu">
             <summary>
-            
+            GameMenu method initializes the main in-game menu and 
+            calls the appropriate methods during the game.
             </summary>
         </member>
         <member name="M:BattleField2.GameLogic.GameEngine.Instance(BattleField2.Renderers.IGameRenderer)">

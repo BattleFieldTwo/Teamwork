@@ -4,9 +4,63 @@
         <name>BattleField2.WpfGUI</name>
     </assembly>
     <members>
+        <member name="T:BattleField2.WpfGUI.CellDecorator.CellDecorator">
+            <summary>
+            This is an abstract decorator implementation for the Cell class.
+            Implementing Decorator design pattern
+            </summary>
+        </member>
+        <member name="T:BattleField2.WpfGUI.CellDecorator.ObservableCellDecorator">
+            <summary>
+            This is a concrete decorator implementation for the Cell class.
+            Needed to pass additional info to the XAML View
+            Implementing Decorator design pattern
+            </summary>
+        </member>
+        <member name="T:BattleField2.WpfGUI.CellTemplateSelector">
+            <summary>
+            This is template selector class, determing which specific Cell template
+            is passed to the XAML Canvas of the View.
+            </summary>
+        </member>
+        <member name="T:BattleField2.WpfGUI.Converter.GridMarginConverter">
+            <summary>
+            This is an converter, passing values for defining the margin of the Grid element
+            in which all the Cells are placed in the XAML View.
+            </summary>
+        </member>
+        <member name="T:BattleField2.WpfGUI.Converter.PositionConverter">
+            <summary>
+            This is an converter, passing values for positioning Cells in the XAML Canvas of the View.
+            </summary>
+        </member>
+        <member name="T:BattleField2.WpfGUI.RelayCommand">
+            <summary>
+            This is an ICommand implementation for all the commands in the ViewModel.
+            This class implements Command design pattern.
+            </summary>
+        </member>
         <member name="T:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel">
             <summary>
             Interaction logic for BattlefieldView.xaml
+            This is the game ViewModel class.
+            Implements MVVM Architectural pattern
+            </summary>
+        </member>
+        <member name="T:BattleField2.WpfGUI.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
             </summary>
         </member>
         <member name="T:WpfGUI.App">
@@ -25,22 +79,6 @@
         <member name="M:WpfGUI.App.Main">
             <summary>
             Application Entry Point.
-            </summary>
-        </member>
-        <member name="T:BattleField2.WpfGUI.Properties.Resources">
-            <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
-            </summary>
-        </member>
-        <member name="P:BattleField2.WpfGUI.Properties.Resources.ResourceManager">
-            <summary>
-              Returns the cached ResourceManager instance used by this class.
-            </summary>
-        </member>
-        <member name="P:BattleField2.WpfGUI.Properties.Resources.Culture">
-            <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
             </summary>
         </member>
         <member name="T:WpfGUI.BattlefieldView">
