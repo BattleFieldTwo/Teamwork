@@ -1,6 +1,4 @@
-﻿using BattleField2.WpfGUI.CellDecorator;
-
-namespace BattleField2.WpfGUI.ViewModels
+﻿namespace BattleField2.WpfGUI.ViewModels
 {
     using System.ComponentModel;
     using System.Windows;
@@ -11,11 +9,14 @@ namespace BattleField2.WpfGUI.ViewModels
     using BattleField2.Common;
     using BattleField2.Models.Field;
     using BattleField2.Models.Player;
+    using BattleField2.WpfGUI.CellDecorator;
 
     /// <summary>
     /// Interaction logic for BattlefieldView.xaml
     /// This is the game ViewModel class.
-    /// Implements MVVM Architectural pattern
+    /// Implements MVVM Architectural pattern.
+    /// It also implements Observer design pattern as
+    /// its public properties are observed by elements from XAML View bound to them.
     /// </summary>
     public class BattlefieldViewModel : Window, INotifyPropertyChanged
     {
@@ -34,6 +35,9 @@ namespace BattleField2.WpfGUI.ViewModels
         private ObservableCollection<ObservableCellDecorator> cells;
         private Player currentPlayer;
 
+        /// <summary>
+        /// BattlefieldViewModel constructor
+        /// </summary>
         public BattlefieldViewModel()
         {
             this.FieldSizeInput = "5";
@@ -49,6 +53,9 @@ namespace BattleField2.WpfGUI.ViewModels
             this.DetonateCell = new RelayCommand(this.OnDetonateCellExecute, this.OnDetonateCellCanExecute);
         }
 
+        /// <summary>
+        /// The size of the field property defined by the user
+        /// </summary>
         public string FieldSizeInput
         {
             get { return fieldSizeInput; }
@@ -62,6 +69,9 @@ namespace BattleField2.WpfGUI.ViewModels
             }
         }
 
+        /// <summary>
+        /// The name of the player property defined by the user
+        /// </summary>
         public string PlayerName
         {
             get { return playerName; }
@@ -75,6 +85,9 @@ namespace BattleField2.WpfGUI.ViewModels
             }
         }
 
+        /// <summary>
+        /// The current score of the player property defined by the user
+        /// </summary>
         public int PlayerScore
         {
             get { return playerScore; }
@@ -88,6 +101,11 @@ namespace BattleField2.WpfGUI.ViewModels
             }
         }
 
+        /// <summary>
+        /// Property defining if the start screen is visible
+        /// On the start of the App it is visible
+        /// It is changed to hidden when the user gives appropriate FieldSize and PlayerName input
+        /// </summary>
         public Visibility StartUpVisibility
         {
             get { return startUpVisibility; }
@@ -101,6 +119,11 @@ namespace BattleField2.WpfGUI.ViewModels
             }
         }
 
+        /// <summary>
+        /// Property defining if the game field is visible
+        /// On the start of the App it is hidden
+        /// It is changed to visible after user gives appropriate FieldSize and PlayerName input
+        /// </summary>
         public Visibility GameVisibility
         {
             get { return gameVisibility; }
@@ -114,6 +137,11 @@ namespace BattleField2.WpfGUI.ViewModels
             }
         }
 
+        /// <summary>
+        /// Property defining if the game over screen is visible
+        /// On the start of the App it is hidden
+        /// It is changed to visible after the player clears all the mines on the field
+        /// </summary>
         public Visibility GameOverVisibility
         {
             get { return gameOverVisibility; }
@@ -127,6 +155,9 @@ namespace BattleField2.WpfGUI.ViewModels
             }
         }
 
+        /// <summary>
+        /// The number of detonated mines property
+        /// </summary>
         public int DetonatedMines
         {
             get { return detonatedMines; }
@@ -140,6 +171,9 @@ namespace BattleField2.WpfGUI.ViewModels
             }
         }
 
+        /// <summary>
+        /// The number of remaining mines property
+        /// </summary>
         public int RemainingMines
         {
             get { return remainingMines; }
@@ -152,6 +186,10 @@ namespace BattleField2.WpfGUI.ViewModels
             }
         }
 
+        /// <summary>
+        /// Public Field property, holding information about the field
+        /// the positioning of mines, detonated and empty cells
+        /// </summary>
         public Field BattleField
         {
             get { return battleField; }
@@ -160,12 +198,18 @@ namespace BattleField2.WpfGUI.ViewModels
             set { battleField = value; }
         }
 
+        /// <summary>
+        /// Observable collection to which the XAML game view is binded
+        /// </summary>
         public ObservableCollection<ObservableCellDecorator> Cells
         {
             get { return cells; }
             set { cells = value; }
         }
 
+        /// <summary>
+        /// Property holding information about the player
+        /// </summary>
         public Player CurrentPlayer
         {
             get { return currentPlayer; }
@@ -174,9 +218,23 @@ namespace BattleField2.WpfGUI.ViewModels
             set { currentPlayer = value; }
         }
 
+        /// <summary>
+        /// Command, triggered when the initial user input is send
+        /// Part of the implementation of Command design pattern
+        /// </summary>
         public RelayCommand SendInitialInfo { get; set; }
+
+        /// <summary>
+        /// Command, triggered when a mine is clicked (detonated)
+        /// Part of the implementation of Command design pattern
+        /// </summary>
         public RelayCommand DetonateCell { get; set; }
 
+        /// <summary>
+        /// Event handler for a change in the public property of the BattlefieldViewModel object instance
+        /// It is part of Observer design pattern as
+        /// elements of the XAML View are binded to properties from current class
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void OnPropertyChanged(string propertyName)
