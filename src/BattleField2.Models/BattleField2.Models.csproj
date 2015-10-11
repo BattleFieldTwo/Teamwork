@@ -50,6 +50,7 @@
     <Compile Include="Cells\DetonatedCell.cs" />
     <Compile Include="Cells\EmptyCell.cs" />
     <Compile Include="Cells\Cell.cs" />
+    <Compile Include="Field\IField.cs" />
     <Compile Include="Mines\IExplosive.cs" />
     <Compile Include="Mines\Mine.cs" />
     <Compile Include="Mines\MineLevelOneUpgrade.cs" />

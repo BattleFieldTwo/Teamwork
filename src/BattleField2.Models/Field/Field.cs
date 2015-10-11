@@ -6,7 +6,7 @@
     using BattleField2.Models.Coordinates;
     using BattleField2.Models.Mines;
 
-    public class Field
+    public class Field : IField
     {
         private Cell[,] fieldPositions;
         private int detonatedMines;
