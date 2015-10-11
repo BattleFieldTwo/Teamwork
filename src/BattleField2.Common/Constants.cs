@@ -12,7 +12,7 @@ namespace BattleField2.Common
         /// <summary>
         /// Predefined game start up welcoming message. 
         /// </summary>
-        public const string WELCOME_MESSAGE = "Welcome to the Battle Field game";
+        public const string WELCOME_MESSAGE = "--=== BATTLE FIELD 2 ===--";
         /// <summary>
         /// In-game information message.
         /// </summary>
@@ -77,6 +77,11 @@ namespace BattleField2.Common
         /// In-game messages top position coordinate.
         /// </summary>
         public const int MESSAGE_TOP_POSSITION = 10;
+
+        /// <summary>
+        /// Constant variable that stores the relative path to the Highscore file.
+        /// </summary>
+        public const string HIGH_SCORE_FILE_PATH = @"..\..\highscore.txt";
 
         /// <summary>
         /// Regex pattern that checks the validity of the Player name value on input.

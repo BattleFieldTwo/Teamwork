@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BattleField2.Common</name>
+    </assembly>
+    <members>
+        <member name="T:BattleField2.Common.Constants">
+            <summary>
+            This class consists of predefined CONSTANT values that we use
+            in the application
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.WELCOME_MESSAGE">
+            <summary>
+            Predefined game start up welcoming message. 
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.INVITE_TO_ENTER_SIZE_MESSAGE">
+            <summary>
+            In-game information message.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.INVITE_TO_ENTER_NAME_MESSAGE">
+            <summary>
+            In-game information message.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.HI_MESSAGE">
+            <summary>
+            In-game information message.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.INVITE_TO_ENTER_COORDINATES_MESSAGE">
+            <summary>
+            In-game information message.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.MINES_COUNT_MESSAGE">
+            <summary>
+            In-game information message.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.SCORE_MESSAGE">
+            <summary>
+            In-game information message.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.INVALID_MOVE_NOTIFICATION_MESSAGE">
+            <summary>
+            In-game warning message.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.GAME_OVER_MESSAGE">
+            <summary>
+            In-game warning message.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.APP_WIDTH">
+            <summary>
+            Console window width on start-up.
+            NOTE: This will be set to the current system Console maximum width 
+            in case of an exception.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.APP_HEIGHT">
+            <summary>
+            Console window height on start-up.
+            NOTE: This will be set to the current system Console maximum height 
+            in case of an exception.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.MIN_FIELDSIZE">
+            <summary>
+            Minimum field size property;
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.MAX_FIELDSIZE">
+            <summary>
+            Maximum field-size property.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.MESSAGE_LEFT_POSSITION">
+            <summary>
+            In-game messages left position coordinate.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.MESSAGE_TOP_POSSITION">
+            <summary>
+            In-game messages top position coordinate.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.HIGH_SCORE_FILE_PATH">
+            <summary>
+            Constant variable that stores the relative path to the Highscore file.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.PLAYER_NAME_REGEX_PATTERN">
+            <summary>
+            Regex pattern that checks the validity of the Player name value on input.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.EMPTY_CELL_COLOR">
+            <summary>
+            Gives to ConsoleColor the color value for the EmptyCell type. 
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.MINE_CELL_COLOR">
+            <summary>
+            Gives to ConsoleColor the color value for the Mine cell type. 
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.EXPLODED_CELL_COLOR">
+            <summary>
+            Gives to ConsoleColor the color value for the Exploded type. 
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.DEFAULT_COLOR">
+            <summary>
+            Gives to ConsoleColor the default color value. 
+            </summary>
+        </member>
+        <member name="F:BattleField2.Common.Constants.DEFAULT_MESSAGE_COLOR">
+            <summary>
+            Gives to ConsoleColor the default message color value.
+            </summary>
+        </member>
+        <member name="T:BattleField2.Common.Validator">
+            <summary>
+            Class that holds various validation methods that are used
+            throughout the application.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Common.Validator.IsValidInputFieldSize(System.String)">
+            <summary>
+            Method that validates the field size value.
+            </summary>
+            <param name="inputFieldSize">The field size value input given by the current Player.</param>
+            <returns>Returns a boolean value representing the validity of the field size.</returns>
+        </member>
+        <member name="M:BattleField2.Common.Validator.IsValidInputCoordinates(System.String,System.Int32)">
+            <summary>
+            Method that validates the input coordinates for the current battlefield size.
+            </summary>
+            <param name="inputCoordinates">Coordinates input by the user.</param>
+            <param name="fieldSize">The current battlefield size.</param>
+            <returns>Returns a boolean value representing the validity of the input coordinates.</returns>
+        </member>
+        <member name="M:BattleField2.Common.Validator.isValidPlayerScore(System.Int32)">
+            <summary>
+            Method that validates the current player's score.
+            </summary>
+            <param name="score">Current score accumulated in the game.</param>
+            <returns>Returns a boolean value representing the validity of the accumulated score.</returns>
+        </member>
+        <member name="M:BattleField2.Common.Validator.isValidPlayerName(System.String)">
+            <summary>
+            Method that validates the new Player's name.
+            </summary>
+            <param name="name">The value string inputed by the current Player.</param>
+            <returns>Returns boolean value representing the vaidity of the Player name.</returns>
+        </member>
+        <member name="M:BattleField2.Common.Validator.IsValidMenuChoice(System.Int32,System.String)">
+            <summary>
+            Validation method that validates the Menu choice input by the current player.
+            </summary>
+            <param name="count">The amount of elements in the game menu.</param>
+            <param name="choice">The menu choice input made by the current player.</param>
+            <returns>Boolean value representing the validity of the Player input.</returns>
+        </member>
+    </members>
+</doc>

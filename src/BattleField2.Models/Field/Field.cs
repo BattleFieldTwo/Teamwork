@@ -6,7 +6,7 @@
     using BattleField2.Models.Coordinates;
     using BattleField2.Models.Mines;
 
-    public class Field
+    public class Field : IField
     {
         private Cell[,] fieldPositions;
         private int detonatedMines;
@@ -90,7 +90,7 @@
             {
                 for (int j = 0; j < currentFieldSize; j++)
                 {
-                    if ((this.FieldPositions[i, j] is Explosive))
+                    if ((this.FieldPositions[i, j] is Mine))
                         count++;
                 }
             }

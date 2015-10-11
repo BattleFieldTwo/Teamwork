@@ -94,5 +94,25 @@
             }
             return true;
         }
+
+        /// <summary>
+        /// Validation method that validates the Menu choice input by the current player.
+        /// </summary>
+        /// <param name="count">The amount of elements in the game menu.</param>
+        /// <param name="choice">The menu choice input made by the current player.</param>
+        /// <returns>Boolean value representing the validity of the Player input.</returns>
+        public static bool IsValidMenuChoice(int count, string choice)
+        {
+            int temp = 0;
+            if (!Int32.TryParse(choice, out temp))
+            {
+                return false;
+            }
+            if(!(temp > 0 && temp <= count))
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
