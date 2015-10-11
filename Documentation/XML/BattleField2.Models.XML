@@ -55,6 +55,88 @@
             to output their given in-game representations.
             </summary>
         </member>
+        <member name="T:BattleField2.Models.Field.IField">
+            <summary>
+            IField interface to be inherited by a concrete Field class implementation.
+            </summary>
+        </member>
+        <member name="P:BattleField2.Models.Field.IField.FieldPositions">
+            <summary>
+            Cell property for the field position.
+            </summary>
+        </member>
+        <member name="P:BattleField2.Models.Field.IField.DetonatedMines">
+            <summary>
+            Detonated mines setter and getter properties.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Field.IField.GenerateField">
+            <summary>
+            Field generating method.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Field.IField.PositionMines">
+            <summary>
+            Mine positioning method.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Field.IField.CountRemainingMines">
+            <summary>
+            Remaining mines counter method.
+            </summary>
+            <returns>Returns the number of mines remaining on the field.</returns>
+        </member>
+        <member name="M:BattleField2.Models.Field.IField.ValidateMoveCoordinates(BattleField2.Models.Coordinates.Coordinates)">
+            <summary>
+            Method that validates the inputed coordinates.
+            </summary>
+            <param name="inputCoordinates">Input coordinates.</param>
+            <returns>Return the validity of the input coordinates.</returns>
+        </member>
+        <member name="T:BattleField2.Models.Field.Field">
+            <summary>
+            Field class implementing the IField interface. 
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Field.Field.#ctor(System.Int32)">
+            <summary>
+            Field consturctor method that gets a given field size parameter and generates the appropriate field.
+            </summary>
+            <param name="currentFieldSize">A valid size value for the game field size.</param>
+        </member>
+        <member name="P:BattleField2.Models.Field.Field.FieldPositions">
+            <summary>
+            A Cell defined property that sets and gets the current position in the game field.
+            </summary>
+        </member>
+        <member name="P:BattleField2.Models.Field.Field.DetonatedMines">
+            <summary>
+            Public property that gets/sets the number of detonated mines.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Field.Field.GenerateField">
+            <summary>
+            Method that generates a random game field.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Field.Field.PositionMines">
+            <summary>
+            Method that positions the mines on random after the field creation.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Field.Field.CountRemainingMines">
+            <summary>
+            Method that counts the current amount of mines on the field.
+            </summary>
+            <returns>Returns the number of mines remaining on the field.</returns>
+        </member>
+        <member name="M:BattleField2.Models.Field.Field.ValidateMoveCoordinates(BattleField2.Models.Coordinates.Coordinates)">
+            <summary>
+            Method that validates the coordinates inputed by the current Player.
+            </summary>
+            <param name="inputCoordinates">Input coordinates to be validated.</param>
+            <returns>Return boolean representing the validity of the input coordinates.</returns>
+        </member>
         <member name="T:BattleField2.Models.Coordinates.Coordinates">
             <summary>
             Coordinates struct defines and handles the game field coordinates.
