@@ -13,7 +13,8 @@
         private int row;
 
         /// <summary>
-        /// COnstructor taking as arguments Cell and two numbers - for the position of the cell
+        /// Initializes a new instance of the <see cref="ObservableCellDecorator" /> class.
+        /// Constructor taking as arguments Cell and two numbers - for the position of the cell
         /// </summary>
         public ObservableCellDecorator(Cell cellToBeDecorated, int row, int col)
             :base(cellToBeDecorated)
@@ -24,7 +25,7 @@
         }
 
         /// <summary>
-        /// Col position property of the Cell
+        /// Gets or sets col position property of the Cell
         /// </summary>
         public int Col
         {
@@ -33,7 +34,7 @@
         }
 
         /// <summary>
-        /// Row position property of the Cell
+        /// Gets or sets row position property of the Cell
         /// </summary>
         public int Row
         {

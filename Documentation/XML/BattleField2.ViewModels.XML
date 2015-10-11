@@ -22,11 +22,45 @@
             provides most of the main methods that we use inside the GameEngine class.
             </summary>
         </member>
-        <member name="P:BattleField2.Renderers.ConsoleGameRenderer.Instance">
+        <member name="T:BattleField2.Renderers.IGameRenderer">
             <summary>
-            ConsoleGameRenderer that checks for an existing class instance 
-            and creates it if missing. Returns the current instance in both cases.
+            IGameRenderer interface to be implemented and inherited.
             </summary>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.DisplayMessage(System.String)">
+            <summary>
+            Method to handle the incoming messages to display.
+            </summary>
+            <param name="message">String input to be handled</param>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.DrawField(BattleField2.Models.Cells.Cell[0:,0:])">
+            <summary>
+            Method that draws a gamefield based on given input array of cells.
+            </summary>
+            <param name="fieldPositions">Valid field positioning cells.</param>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.Clear">
+            <summary>
+            Method that clears the input on the screen.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.EnterCommand">
+            <summary>
+            Method that accepts a given in-game command.
+            </summary>
+            <returns>Returns the result of the command input.</returns>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.Wait">
+            <summary>
+            Method that is used to hold the execution of the application.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Renderers.IGameRenderer.SetSize(System.Int32,System.Int32)">
+            <summary>
+            Method that sets the size of the game window.
+            </summary>
+            <param name="width">Current window width.</param>
+            <param name="height">Current window height.</param>
         </member>
         <member name="M:BattleField2.Renderers.ConsoleGameRenderer.DisplayMessage(System.String)">
             <summary>
@@ -74,45 +108,11 @@
             <param name="width">Game field width.</param>
             <param name="height">Game field height.</param>
         </member>
-        <member name="T:BattleField2.Renderers.IGameRenderer">
+        <member name="P:BattleField2.Renderers.ConsoleGameRenderer.Instance">
             <summary>
-            IGameRenderer interface to be implemented and inherited.
+            ConsoleGameRenderer that checks for an existing class instance 
+            and creates it if missing. Returns the current instance in both cases.
             </summary>
-        </member>
-        <member name="M:BattleField2.Renderers.IGameRenderer.DisplayMessage(System.String)">
-            <summary>
-            Method to handle the incoming messages to display.
-            </summary>
-            <param name="message">String input to be handled</param>
-        </member>
-        <member name="M:BattleField2.Renderers.IGameRenderer.DrawField(BattleField2.Models.Cells.Cell[0:,0:])">
-            <summary>
-            Method that draws a gamefield based on given input array of cells.
-            </summary>
-            <param name="fieldPositions">Valid field positioning cells.</param>
-        </member>
-        <member name="M:BattleField2.Renderers.IGameRenderer.Clear">
-            <summary>
-            Method that clears the input on the screen.
-            </summary>
-        </member>
-        <member name="M:BattleField2.Renderers.IGameRenderer.EnterCommand">
-            <summary>
-            Method that accepts a given in-game command.
-            </summary>
-            <returns>Returns the result of the command input.</returns>
-        </member>
-        <member name="M:BattleField2.Renderers.IGameRenderer.Wait">
-            <summary>
-            Method that is used to hold the execution of the application.
-            </summary>
-        </member>
-        <member name="M:BattleField2.Renderers.IGameRenderer.SetSize(System.Int32,System.Int32)">
-            <summary>
-            Method that sets the size of the game window.
-            </summary>
-            <param name="width">Current window width.</param>
-            <param name="height">Current window height.</param>
         </member>
         <member name="T:BattleField2.ViewModels.Contracts.NamespaceDoc">
             <summary>

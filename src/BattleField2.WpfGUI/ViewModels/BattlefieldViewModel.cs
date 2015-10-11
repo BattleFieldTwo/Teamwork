@@ -36,6 +36,7 @@
         private Player currentPlayer;
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="BattlefieldViewModel" /> class.
         /// BattlefieldViewModel constructor
         /// </summary>
         public BattlefieldViewModel()
@@ -54,55 +55,55 @@
         }
 
         /// <summary>
-        /// The size of the field property defined by the user
+        /// Gets or sets the size of the field property defined by the user
         /// </summary>
         public string FieldSizeInput
         {
-            get { return fieldSizeInput; }
+            get { return this.fieldSizeInput; }
             set
             {
-                if (value != fieldSizeInput)
+                if (value != this.fieldSizeInput)
                 {
-                    fieldSizeInput = value;
+                    this.fieldSizeInput = value;
                     OnPropertyChanged("FieldSizeInput");
                 }
             }
         }
 
         /// <summary>
-        /// The name of the player property defined by the user
+        /// Gets or sets the name of the player property defined by the user
         /// </summary>
         public string PlayerName
         {
-            get { return playerName; }
+            get { return this.playerName; }
             set
             {
-                if (value != playerName)
+                if (value != this.playerName)
                 {
-                    playerName = value;
+                    this.playerName = value;
                     OnPropertyChanged("PlayerName");
                 }
             }
         }
 
         /// <summary>
-        /// The current score of the player property defined by the user
+        /// Gets or sets the current score of the player property defined by the user
         /// </summary>
         public int PlayerScore
         {
-            get { return playerScore; }
+            get { return this.playerScore; }
             set
             {
-                if (value != playerScore)
+                if (value != this.playerScore)
                 {
-                    playerScore = value;
+                    this.playerScore = value;
                     OnPropertyChanged("PlayerScore");
                 }
             }
         }
 
         /// <summary>
-        /// Property defining if the start screen is visible
+        /// Gets or sets property defining if the start screen is visible
         /// On the start of the App it is visible
         /// It is changed to hidden when the user gives appropriate FieldSize and PlayerName input
         /// </summary>
@@ -111,121 +112,131 @@
             get { return startUpVisibility; }
             set
             {
-                if (value != startUpVisibility)
+                if (value != this.startUpVisibility)
                 {
-                    startUpVisibility = value;
+                    this.startUpVisibility = value;
                     OnPropertyChanged("StartUpVisibility");
                 }
             }
         }
 
         /// <summary>
-        /// Property defining if the game field is visible
+        /// Gets or sets property defining if the game field is visible
         /// On the start of the App it is hidden
         /// It is changed to visible after user gives appropriate FieldSize and PlayerName input
         /// </summary>
         public Visibility GameVisibility
         {
-            get { return gameVisibility; }
+            get { return this.gameVisibility; }
             set
             {
-                if (value != gameVisibility)
+                if (value != this.gameVisibility)
                 {
-                    gameVisibility = value;
+                    this.gameVisibility = value;
                     OnPropertyChanged("GameVisibility");
                 }
             }
         }
 
         /// <summary>
-        /// Property defining if the game over screen is visible
+        /// Gets or sets property defining if the game over screen is visible
         /// On the start of the App it is hidden
         /// It is changed to visible after the player clears all the mines on the field
         /// </summary>
         public Visibility GameOverVisibility
         {
-            get { return gameOverVisibility; }
+            get { return this.gameOverVisibility; }
             set
             {
-                if (value != gameOverVisibility)
+                if (value != this.gameOverVisibility)
                 {
-                    gameOverVisibility = value;
+                    this.gameOverVisibility = value;
                     OnPropertyChanged("GameOverVisibility");
                 }
             }
         }
 
         /// <summary>
-        /// The number of detonated mines property
+        /// Gets or sets the number of detonated mines property
         /// </summary>
         public int DetonatedMines
         {
-            get { return detonatedMines; }
+            get { return this.detonatedMines; }
             set
             {
-                if (value != detonatedMines)
+                if (value != this.detonatedMines)
                 {
-                    detonatedMines = value;
+                    this.detonatedMines = value;
                     OnPropertyChanged("DetonatedMines");
                 }
             }
         }
 
         /// <summary>
-        /// The number of remaining mines property
+        /// Gets or sets the number of remaining mines property
         /// </summary>
         public int RemainingMines
         {
-            get { return remainingMines; }
+            get { return this.remainingMines; }
             set
             {
-                if (value != remainingMines)
+                if (value != this.remainingMines)
                 {
-                    remainingMines = value;
+                    this.remainingMines = value;
                 }
             }
         }
 
         /// <summary>
-        /// Public Field property, holding information about the field
+        /// Gets or sets public Field property, holding information about the field
         /// the positioning of mines, detonated and empty cells
         /// </summary>
         public Field BattleField
         {
-            get { return battleField; }
+            get { return this.battleField; }
 
-            // TODO: Implement checks!
-            set { battleField = value; }
+            set
+            {
+                if (value != this.battleField)
+                {
+                    this.battleField = value;
+                }
+            }
         }
 
         /// <summary>
-        /// Observable collection to which the XAML game view is binded
+        /// Gets or sets observable collection to which the XAML game view is bound
         /// </summary>
         public ObservableCollection<ObservableCellDecorator> Cells
         {
-            get { return cells; }
-            set { cells = value; }
+            get { return this.cells; }
+            set { this.cells = value; }
         }
 
         /// <summary>
-        /// Property holding information about the player
+        /// Gets or sets property holding information about the player
         /// </summary>
         public Player CurrentPlayer
         {
-            get { return currentPlayer; }
+            get { return this.currentPlayer; }
 
-            // TODO: Implement checks!
-            set { currentPlayer = value; }
+            set
+            {
+                if (value != this.currentPlayer)
+                {
+                    this.currentPlayer = value;
+                }
+            }
         }
 
         /// <summary>
-        /// Command, triggered when the initial user input is send
+        /// Gets or sets command, triggered when the initial user input is send
         /// Part of the implementation of Command design pattern
         /// </summary>
         public RelayCommand SendInitialInfo { get; set; }
 
         /// <summary>
-        /// Command, triggered when a mine is clicked (detonated)
+        /// Gets or sets command, triggered when a mine is clicked (detonated)
         /// Part of the implementation of Command design pattern
         /// </summary>
         public RelayCommand DetonateCell { get; set; }
@@ -233,7 +244,7 @@
         /// <summary>
         /// Event handler for a change in the public property of the BattlefieldViewModel object instance
         /// It is part of Observer design pattern as
-        /// elements of the XAML View are binded to properties from current class
+        /// elements of the XAML View are bound to properties from current class
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 

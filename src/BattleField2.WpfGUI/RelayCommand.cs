@@ -3,7 +3,14 @@
     using System;
     using System.Windows.Input;
 
+    /// <summary>
+    /// A delegate containing the method to be executed after validation
+    /// </summary>
     public delegate void ExecuteDelegate(object obj);
+
+    /// <summary>
+    /// Delegate passed to validate if the command should be executed
+    /// </summary>
     public delegate bool CanExecuteDelegate(object obj);
 
     /// <summary>
@@ -17,6 +24,7 @@
         private CanExecuteDelegate canExecute;
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="RelayCommand" /> class.
         /// Command constructor.
         /// Takes one argument - a delegate to be executed in case the command is triggered.
         /// </summary>
@@ -26,7 +34,7 @@
         }
 
         /// <summary>
-        /// Command constructor.
+        /// Initializes a new instance of the <see cref="RelayCommand" /> class.
         /// Takes arguments - a delegate to executed and
         /// a validation to check if the delegate execution would be valid
         /// </summary>
@@ -57,6 +65,11 @@
             this.execute(parameter);
         }
 
+        /// <summary>
+        /// Event holding information if there is change
+        /// in the conditions that must be validated in order to execute the command
+        /// It is not used but it is implemented as it comes from ICommand interface
+        /// </summary>
         public event EventHandler CanExecuteChanged;
     }
 }

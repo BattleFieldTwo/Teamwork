@@ -14,48 +14,48 @@
     }
 
     /// <summary>
-    /// This is template selector class, determing which specific Cell template
+    /// This is template selector class, pointing which specific Cell template
     /// is passed to the XAML Canvas of the View.
     /// </summary>
     class CellTemplateSelector : DataTemplateSelector
     {
         /// <summary>
-        /// Data template for representing Mine one in XAML view
+        /// Gets or sets data template for representing Mine one in XAML view
         /// </summary>
         public DataTemplate SelectorMineOneTemplate { get; set; }
 
         /// <summary>
-        /// Data template for representing Mine two in XAML view
+        /// Gets or sets data template for representing Mine two in XAML view
         /// </summary>
         public DataTemplate SelectorMineTwoTemplate { get; set; }
 
         /// <summary>
-        /// Data template for representing Mine three in XAML view
+        /// Gets or sets data template for representing Mine three in XAML view
         /// </summary>
         public DataTemplate SelectorMineThreeTemplate { get; set; }
 
         /// <summary>
-        /// Data template for representing Mine four in XAML view
+        /// Gets or sets data template for representing Mine four in XAML view
         /// </summary>
         public DataTemplate SelectorMineFourTemplate { get; set; }
 
         /// <summary>
-        /// Data template for representing Mine five in XAML view
+        /// Gets or sets data template for representing Mine five in XAML view
         /// </summary>
         public DataTemplate SelectorMineFiveTemplate { get; set; }
 
         /// <summary>
-        /// Data template for representing Empty cell in XAML view
+        /// Gets or sets data template for representing Empty cell in XAML view
         /// </summary>
         public DataTemplate SelectorEmptyCellTemplate { get; set; }
 
         /// <summary>
-        /// Data template for representing Detonated cell in XAML view
+        /// Gets or sets data template for representing Detonated cell in XAML view
         /// </summary>
         public DataTemplate SelectorDetonatedCellTemplate { get; set; }
 
         /// <summary>
-        /// Data template method, based on the type of the input cell
+        /// Method that returns data template, based on the type of the input cell
         /// </summary>
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {

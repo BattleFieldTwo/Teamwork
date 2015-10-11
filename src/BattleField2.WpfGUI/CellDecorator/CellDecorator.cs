@@ -11,6 +11,7 @@
         protected Cell cellToBeDecorated;
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="CellDecorator" /> class.
         /// Cell Decorator constructor taking as parameter Cell to be decorated
         /// </summary>
         public CellDecorator(Cell cellToBeDecorated)
@@ -19,7 +20,7 @@
         }
 
         /// <summary>
-        /// An instance on Cell that is being decorated
+        /// Gets or sets an instance on Cell that is being decorated
         /// </summary>
         public Cell CellToBeDecorated
         {

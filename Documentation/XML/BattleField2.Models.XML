@@ -43,11 +43,6 @@
             Enumeration value representing the Detonated cell type.
             </summary>
         </member>
-        <member name="T:BattleField2.Models.Cells.NamespaceDoc">
-            <summary>
-            Namespace that holds all the object models used in the application.
-            </summary>
-        </member>
         <member name="T:BattleField2.Models.Cells.Cell">
             <summary>
             The Cell class is an abstract class to be inherited 
@@ -60,19 +55,14 @@
             to output their given in-game representations.
             </summary>
         </member>
+        <member name="T:BattleField2.Models.Cells.NamespaceDoc">
+            <summary>
+            Namespace that holds all the object models used in the application.
+            </summary>
+        </member>
         <member name="T:BattleField2.Models.Field.IField">
             <summary>
             IField interface to be inherited by a concrete Field class implementation.
-            </summary>
-        </member>
-        <member name="P:BattleField2.Models.Field.IField.FieldPositions">
-            <summary>
-            Cell property for the field position.
-            </summary>
-        </member>
-        <member name="P:BattleField2.Models.Field.IField.DetonatedMines">
-            <summary>
-            Detonated mines setter and getter properties.
             </summary>
         </member>
         <member name="M:BattleField2.Models.Field.IField.GenerateField">
@@ -98,49 +88,15 @@
             <param name="inputCoordinates">Input coordinates.</param>
             <returns>Return the validity of the input coordinates.</returns>
         </member>
-        <member name="T:BattleField2.Models.Field.Field">
+        <member name="P:BattleField2.Models.Field.IField.FieldPositions">
             <summary>
-            Field class implementing the IField interface. 
+            Cell property for the field position.
             </summary>
         </member>
-        <member name="M:BattleField2.Models.Field.Field.#ctor(System.Int32)">
+        <member name="P:BattleField2.Models.Field.IField.DetonatedMines">
             <summary>
-            Field consturctor method that gets a given field size parameter and generates the appropriate field.
+            Detonated mines setter and getter properties.
             </summary>
-            <param name="currentFieldSize">A valid size value for the game field size.</param>
-        </member>
-        <member name="P:BattleField2.Models.Field.Field.FieldPositions">
-            <summary>
-            A Cell defined property that sets and gets the current position in the game field.
-            </summary>
-        </member>
-        <member name="P:BattleField2.Models.Field.Field.DetonatedMines">
-            <summary>
-            Public property that gets/sets the number of detonated mines.
-            </summary>
-        </member>
-        <member name="M:BattleField2.Models.Field.Field.GenerateField">
-            <summary>
-            Method that generates a random game field.
-            </summary>
-        </member>
-        <member name="M:BattleField2.Models.Field.Field.PositionMines">
-            <summary>
-            Method that positions the mines on random after the field creation.
-            </summary>
-        </member>
-        <member name="M:BattleField2.Models.Field.Field.CountRemainingMines">
-            <summary>
-            Method that counts the current amount of mines on the field.
-            </summary>
-            <returns>Returns the number of mines remaining on the field.</returns>
-        </member>
-        <member name="M:BattleField2.Models.Field.Field.ValidateMoveCoordinates(BattleField2.Models.Coordinates.Coordinates)">
-            <summary>
-            Method that validates the coordinates inputed by the current Player.
-            </summary>
-            <param name="inputCoordinates">Input coordinates to be validated.</param>
-            <returns>Return boolean representing the validity of the input coordinates.</returns>
         </member>
         <member name="T:BattleField2.Models.Mines.IExplosive">
             <summary>
@@ -168,6 +124,79 @@
             <param name="fieldPositions">Position parameter.</param>
             <param name="currentCoordinates">Coordinates parameter.</param>
             <returns></returns>
+        </member>
+        <member name="T:BattleField2.Models.Coordinates.Coordinates">
+            <summary>
+            Coordinates struct defines and handles the game field coordinates.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Models.Coordinates.Coordinates.Row">
+            <summary>
+            Readonly properties representing the Row and Column in the game field.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Models.Coordinates.Coordinates.Col">
+            <summary>
+            Readonly properties representing the Row and Column in the game field.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Coordinates.Coordinates.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Coordinates method that sets the current coordinates by given properties.
+            </summary>
+            <param name="row">Row coordinate parameter.</param>
+            <param name="col">Column coordinate parameter.</param>
+        </member>
+        <member name="M:BattleField2.Models.Coordinates.Coordinates.ToString">
+            <summary>
+            Overwritten ToString() method for the string representation
+            of the game field coordinates. 
+            </summary>
+            <returns>Returns the string representation of the given game field coordinates.</returns>
+        </member>
+        <member name="T:BattleField2.Models.Field.Field">
+            <summary>
+            Field class implementing the IField interface. 
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Field.Field.#ctor(System.Int32)">
+            <summary>
+            Field consturctor method that gets a given field size parameter and generates the appropriate field.
+            </summary>
+            <param name="currentFieldSize">A valid size value for the game field size.</param>
+        </member>
+        <member name="M:BattleField2.Models.Field.Field.GenerateField">
+            <summary>
+            Method that generates a random game field.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Field.Field.PositionMines">
+            <summary>
+            Method that positions the mines on random after the field creation.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Field.Field.CountRemainingMines">
+            <summary>
+            Method that counts the current amount of mines on the field.
+            </summary>
+            <returns>Returns the number of mines remaining on the field.</returns>
+        </member>
+        <member name="M:BattleField2.Models.Field.Field.ValidateMoveCoordinates(BattleField2.Models.Coordinates.Coordinates)">
+            <summary>
+            Method that validates the coordinates inputed by the current Player.
+            </summary>
+            <param name="inputCoordinates">Input coordinates to be validated.</param>
+            <returns>Return boolean representing the validity of the input coordinates.</returns>
+        </member>
+        <member name="P:BattleField2.Models.Field.Field.FieldPositions">
+            <summary>
+            A Cell defined property that sets and gets the current position in the game field.
+            </summary>
+        </member>
+        <member name="P:BattleField2.Models.Field.Field.DetonatedMines">
+            <summary>
+            Public property that gets/sets the number of detonated mines.
+            </summary>
         </member>
         <member name="T:BattleField2.Models.Mines.MineFactory">
             <summary>
@@ -227,35 +256,6 @@
             None type.
             </summary>
         </member>
-        <member name="T:BattleField2.Models.Coordinates.Coordinates">
-            <summary>
-            Coordinates struct defines and handles the game field coordinates.
-            </summary>
-        </member>
-        <member name="F:BattleField2.Models.Coordinates.Coordinates.Row">
-            <summary>
-            Readonly properties representing the Row and Column in the game field.
-            </summary>
-        </member>
-        <member name="F:BattleField2.Models.Coordinates.Coordinates.Col">
-            <summary>
-            Readonly properties representing the Row and Column in the game field.
-            </summary>
-        </member>
-        <member name="M:BattleField2.Models.Coordinates.Coordinates.#ctor(System.Int32,System.Int32)">
-            <summary>
-            Coordinates method that sets the current coordinates by given properties.
-            </summary>
-            <param name="row">Row coordinate parameter.</param>
-            <param name="col">Column coordinate parameter.</param>
-        </member>
-        <member name="M:BattleField2.Models.Coordinates.Coordinates.ToString">
-            <summary>
-            Overwritten ToString() method for the string representation
-            of the game field coordinates. 
-            </summary>
-            <returns>Returns the string representation of the given game field coordinates.</returns>
-        </member>
         <member name="T:BattleField2.Models.Player.HighScore">
             <summary>
             HighScore class handles the procedures involving the storage of the Players scores
@@ -293,6 +293,14 @@
             </summary>
             <param name="name">A player name value to be validated.</param>
         </member>
+        <member name="M:BattleField2.Models.Player.Player.CalculateScore(System.Int32,System.Int32)">
+            <summary>
+            Method that calculates the current score of the player.
+            </summary>
+            <param name="previousMinesCount">The number of mines before last detonation.</param>
+            <param name="nextMinesCount">The number of mines after the last detonation.</param>
+            <returns>The updated player score based on last detonation.</returns>
+        </member>
         <member name="P:BattleField2.Models.Player.Player.Name">
             <summary>
             Public player name property that gets/sets the current player name.
@@ -302,14 +310,6 @@
             <summary>
             Public property that gets/sets the current player score.
             </summary>
-        </member>
-        <member name="M:BattleField2.Models.Player.Player.CalculateScore(System.Int32,System.Int32)">
-            <summary>
-            Method that calculates the current score of the player.
-            </summary>
-            <param name="previousMinesCount">The number of mines before last detonation.</param>
-            <param name="nextMinesCount">The number of mines after the last detonation.</param>
-            <returns>The updated player score based on last detonation.</returns>
         </member>
     </members>
 </doc>

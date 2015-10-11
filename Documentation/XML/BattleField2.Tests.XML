@@ -4,5 +4,10 @@
         <name>BattleField2.Tests</name>
     </assembly>
     <members>
+        <member name="T:BattleField2.Tests.CellTests.NamespaceDoc">
+            <summary>
+            Namespace that holds all the tests for the application.
+            </summary>
+        </member>
     </members>
 </doc>

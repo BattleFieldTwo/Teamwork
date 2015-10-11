@@ -10,6 +10,22 @@
             Implementing Decorator design pattern
             </summary>
         </member>
+        <member name="M:BattleField2.WpfGUI.CellDecorator.CellDecorator.#ctor(BattleField2.Models.Cells.Cell)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BattleField2.WpfGUI.CellDecorator.CellDecorator"/> class.
+            Cell Decorator constructor taking as parameter Cell to be decorated
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.CellDecorator.CellDecorator.CellToBeDecorated">
+            <summary>
+            Gets or sets an instance on Cell that is being decorated
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.CellDecorator.CellDecorator.StringRepresentation">
+            <summary>
+            Override of the StringRepresentation property from base class Cell
+            </summary>
+        </member>
         <member name="T:BattleField2.WpfGUI.CellDecorator.ObservableCellDecorator">
             <summary>
             This is a concrete decorator implementation for the Cell class.
@@ -17,10 +33,71 @@
             Implementing Decorator design pattern
             </summary>
         </member>
+        <member name="M:BattleField2.WpfGUI.CellDecorator.ObservableCellDecorator.#ctor(BattleField2.Models.Cells.Cell,System.Int32,System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BattleField2.WpfGUI.CellDecorator.ObservableCellDecorator"/> class.
+            Constructor taking as arguments Cell and two numbers - for the position of the cell
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.CellDecorator.ObservableCellDecorator.Col">
+            <summary>
+            Gets or sets col position property of the Cell
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.CellDecorator.ObservableCellDecorator.Row">
+            <summary>
+            Gets or sets row position property of the Cell
+            </summary>
+        </member>
+        <member name="T:BattleField2.WpfGUI.NamespaceDoc">
+            <summary>
+            Namespace that holds the WPF GUI Logic and classes.
+            </summary>
+        </member>
         <member name="T:BattleField2.WpfGUI.CellTemplateSelector">
             <summary>
-            This is template selector class, determing which specific Cell template
+            This is template selector class, pointing which specific Cell template
             is passed to the XAML Canvas of the View.
+            </summary>
+        </member>
+        <member name="M:BattleField2.WpfGUI.CellTemplateSelector.SelectTemplate(System.Object,System.Windows.DependencyObject)">
+            <summary>
+            Method that returns data template, based on the type of the input cell
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.CellTemplateSelector.SelectorMineOneTemplate">
+            <summary>
+            Gets or sets data template for representing Mine one in XAML view
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.CellTemplateSelector.SelectorMineTwoTemplate">
+            <summary>
+            Gets or sets data template for representing Mine two in XAML view
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.CellTemplateSelector.SelectorMineThreeTemplate">
+            <summary>
+            Gets or sets data template for representing Mine three in XAML view
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.CellTemplateSelector.SelectorMineFourTemplate">
+            <summary>
+            Gets or sets data template for representing Mine four in XAML view
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.CellTemplateSelector.SelectorMineFiveTemplate">
+            <summary>
+            Gets or sets data template for representing Mine five in XAML view
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.CellTemplateSelector.SelectorEmptyCellTemplate">
+            <summary>
+            Gets or sets data template for representing Empty cell in XAML view
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.CellTemplateSelector.SelectorDetonatedCellTemplate">
+            <summary>
+            Gets or sets data template for representing Detonated cell in XAML view
             </summary>
         </member>
         <member name="T:BattleField2.WpfGUI.Converter.GridMarginConverter">
@@ -29,9 +106,45 @@
             in which all the Cells are placed in the XAML View.
             </summary>
         </member>
+        <member name="M:BattleField2.WpfGUI.Converter.GridMarginConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convertion method taking info prom the current cells collection
+            and transforming it in input for positioning the whole cell field in the XAML view canvas
+            </summary>
+        </member>
+        <member name="M:BattleField2.WpfGUI.Converter.GridMarginConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convertion back method taking info prom the XAML view canvas
+            and returning it the number of cells.
+            Not used at the moment, but implemented as part of IValueConverter interface
+            </summary>
+        </member>
         <member name="T:BattleField2.WpfGUI.Converter.PositionConverter">
             <summary>
             This is an converter, passing values for positioning Cells in the XAML Canvas of the View.
+            </summary>
+        </member>
+        <member name="M:BattleField2.WpfGUI.Converter.PositionConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convertion method taking info prom the current cell 
+            and transforming it in input for positioning the cell template in the XAML view canvas
+            </summary>
+        </member>
+        <member name="M:BattleField2.WpfGUI.Converter.PositionConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Convertion back method taking info prom the XAML view canvas
+            and returning it to the cell.
+            Not used at the moment, but implemented as part of IValueConverter interface
+            </summary>
+        </member>
+        <member name="T:BattleField2.WpfGUI.ExecuteDelegate">
+            <summary>
+            A delegate containing the method to be executed after validation
+            </summary>
+        </member>
+        <member name="T:BattleField2.WpfGUI.CanExecuteDelegate">
+            <summary>
+            Delegate passed to validate if the command should be executed
             </summary>
         </member>
         <member name="T:BattleField2.WpfGUI.RelayCommand">
@@ -40,27 +153,131 @@
             This class implements Command design pattern.
             </summary>
         </member>
+        <member name="M:BattleField2.WpfGUI.RelayCommand.#ctor(BattleField2.WpfGUI.ExecuteDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BattleField2.WpfGUI.RelayCommand"/> class.
+            Command constructor.
+            Takes one argument - a delegate to be executed in case the command is triggered.
+            </summary>
+        </member>
+        <member name="M:BattleField2.WpfGUI.RelayCommand.#ctor(BattleField2.WpfGUI.ExecuteDelegate,BattleField2.WpfGUI.CanExecuteDelegate)">
+            <summary>
+            Initializes a new instance of the <see cref="T:BattleField2.WpfGUI.RelayCommand"/> class.
+            Takes arguments - a delegate to executed and
+            a validation to check if the delegate execution would be valid
+            </summary>
+        </member>
+        <member name="M:BattleField2.WpfGUI.RelayCommand.CanExecute(System.Object)">
+            <summary>
+            Validation for valid state, so the the delegate execution would be valid
+            </summary>
+        </member>
+        <member name="M:BattleField2.WpfGUI.RelayCommand.Execute(System.Object)">
+            <summary>
+            Method to be executed in case this command is triggered and the state is valid.
+            </summary>
+        </member>
+        <member name="E:BattleField2.WpfGUI.RelayCommand.CanExecuteChanged">
+            <summary>
+            Event holding information if there is change
+            in the conditions that must be validated in order to execute the command
+            It is not used but it is implemented as it comes from ICommand interface
+            </summary>
+        </member>
         <member name="T:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel">
             <summary>
             Interaction logic for BattlefieldView.xaml
             This is the game ViewModel class.
-            Implements MVVM Architectural pattern
+            Implements MVVM Architectural pattern.
+            It also implements Observer design pattern as
+            its public properties are observed by elements from XAML View bound to them.
             </summary>
         </member>
-        <member name="T:BattleField2.WpfGUI.Properties.Resources">
+        <member name="M:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.#ctor">
             <summary>
-              A strongly-typed resource class, for looking up localized strings, etc.
+            Initializes a new instance of the <see cref="T:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel"/> class.
+            BattlefieldViewModel constructor
             </summary>
         </member>
-        <member name="P:BattleField2.WpfGUI.Properties.Resources.ResourceManager">
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.FieldSizeInput">
             <summary>
-              Returns the cached ResourceManager instance used by this class.
+            Gets or sets the size of the field property defined by the user
             </summary>
         </member>
-        <member name="P:BattleField2.WpfGUI.Properties.Resources.Culture">
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.PlayerName">
             <summary>
-              Overrides the current thread's CurrentUICulture property for all
-              resource lookups using this strongly typed resource class.
+            Gets or sets the name of the player property defined by the user
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.PlayerScore">
+            <summary>
+            Gets or sets the current score of the player property defined by the user
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.StartUpVisibility">
+            <summary>
+            Gets or sets property defining if the start screen is visible
+            On the start of the App it is visible
+            It is changed to hidden when the user gives appropriate FieldSize and PlayerName input
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.GameVisibility">
+            <summary>
+            Gets or sets property defining if the game field is visible
+            On the start of the App it is hidden
+            It is changed to visible after user gives appropriate FieldSize and PlayerName input
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.GameOverVisibility">
+            <summary>
+            Gets or sets property defining if the game over screen is visible
+            On the start of the App it is hidden
+            It is changed to visible after the player clears all the mines on the field
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.DetonatedMines">
+            <summary>
+            Gets or sets the number of detonated mines property
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.RemainingMines">
+            <summary>
+            Gets or sets the number of remaining mines property
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.BattleField">
+            <summary>
+            Gets or sets public Field property, holding information about the field
+            the positioning of mines, detonated and empty cells
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.Cells">
+            <summary>
+            Gets or sets observable collection to which the XAML game view is bound
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.CurrentPlayer">
+            <summary>
+            Gets or sets property holding information about the player
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.SendInitialInfo">
+            <summary>
+            Gets or sets command, triggered when the initial user input is send
+            Part of the implementation of Command design pattern
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.DetonateCell">
+            <summary>
+            Gets or sets command, triggered when a mine is clicked (detonated)
+            Part of the implementation of Command design pattern
+            </summary>
+        </member>
+        <member name="E:BattleField2.WpfGUI.ViewModels.BattlefieldViewModel.PropertyChanged">
+            <summary>
+            Event handler for a change in the public property of the BattlefieldViewModel object instance
+            It is part of Observer design pattern as
+            elements of the XAML View are bound to properties from current class
             </summary>
         </member>
         <member name="T:WpfGUI.App">
@@ -79,6 +296,22 @@
         <member name="M:WpfGUI.App.Main">
             <summary>
             Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:BattleField2.WpfGUI.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:BattleField2.WpfGUI.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
             </summary>
         </member>
         <member name="T:WpfGUI.BattlefieldView">

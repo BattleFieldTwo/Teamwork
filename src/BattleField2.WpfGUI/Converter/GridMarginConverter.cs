@@ -11,7 +11,7 @@
     public class GridMarginConverter : IValueConverter
     {
         /// <summary>
-        /// Convertion method thaking info prom the current cells collection
+        /// Convertion method taking info prom the current cells collection
         /// and transforming it in input for positioning the whole cell field in the XAML view canvas
         /// </summary>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -21,7 +21,7 @@
         }
 
         /// <summary>
-        /// Convertion back method thaking info prom the XAML view canvas
+        /// Convertion back method taking info prom the XAML view canvas
         /// and returning it the number of cells.
         /// Not used at the moment, but implemented as part of IValueConverter interface
         /// </summary>

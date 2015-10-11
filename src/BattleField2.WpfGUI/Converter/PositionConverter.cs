@@ -10,7 +10,7 @@
     public class PositionConverter : IValueConverter
     {
         /// <summary>
-        /// Convertion method thaking info prom the current cell 
+        /// Convertion method taking info prom the current cell 
         /// and transforming it in input for positioning the cell template in the XAML view canvas
         /// </summary>
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
@@ -20,7 +20,7 @@
         }
 
         /// <summary>
-        /// Convertion back method thaking info prom the XAML view canvas
+        /// Convertion back method taking info prom the XAML view canvas
         /// and returning it to the cell.
         /// Not used at the moment, but implemented as part of IValueConverter interface
         /// </summary>
