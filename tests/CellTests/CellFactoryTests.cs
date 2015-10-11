@@ -4,6 +4,14 @@
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using Moq;
     using Models.Cells;
+    /// <summary>
+    /// Namespace that holds all the tests for the application.
+    /// </summary>
+    [System.Runtime.CompilerServices.CompilerGenerated]
+    class NamespaceDoc
+    {
+
+    }
 
     [TestClass]
     public class CellFactoryTests

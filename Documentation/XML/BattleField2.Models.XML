@@ -43,6 +43,11 @@
             Enumeration value representing the Detonated cell type.
             </summary>
         </member>
+        <member name="T:BattleField2.Models.Cells.NamespaceDoc">
+            <summary>
+            Namespace that holds all the object models used in the application.
+            </summary>
+        </member>
         <member name="T:BattleField2.Models.Cells.Cell">
             <summary>
             The Cell class is an abstract class to be inherited 

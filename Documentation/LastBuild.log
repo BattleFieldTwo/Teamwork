@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<shfbBuild product="Sandcastle Help File Builder" version="2015.1.12.0" projectFile="C:\Users\Ivan\OneDrive\Documents\test.shfbproj" started="10/12/2015 12:46:18 AM">
+<shfbBuild product="Sandcastle Help File Builder" version="2015.1.12.0" projectFile="C:\Users\Ivan\OneDrive\Documents\test.shfbproj" started="10/12/2015 12:54:40 AM">
 <buildStep step="Initializing">
 Finding tools...
 The Sandcastle tools are located in &#39;C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\&#39;
@@ -41,16 +41,16 @@ Copying XML comments files
 <buildStep step="GenerateSharedContent">
 Generating shared content files (en-US, English (United States))...
 <plugIn name="Lightweight Website Style" behavior="After" priority="1000">
-</plugIn>    Last step completed in 00:00:00.0555
+</plugIn>    Last step completed in 00:00:00.0450
 </buildStep>
 <buildStep step="GenerateApiFilter">
 Generating API filter for MRefBuilder...
-    Last step completed in 00:00:00.1239
+    Last step completed in 00:00:00.1571
 </buildStep>
 <buildStep step="GenerateReflectionInfo">
 Generating reflection information...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 10/12/2015 12:46:21 AM.
+Build started 10/12/2015 12:54:43 AM.
 Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\GenerateRefInfo.proj&quot; on node 1 (default targets).
 PrepareForBuild:
   Creating directory &quot;obj\Debug\&quot;.
@@ -69,13 +69,13 @@ Done Building Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentatio
 
 Build succeeded.
 
-Time Elapsed 00:00:06.30
-    Last step completed in 00:00:07.4720
+Time Elapsed 00:00:05.62
+    Last step completed in 00:00:06.5715
 </buildStep>
 <buildStep step="TransformReflectionInfo">
 Transforming reflection output...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 10/12/2015 12:46:28 AM.
+Build started 10/12/2015 12:54:50 AM.
 Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\TransformManifest.proj&quot; on node 1 (default targets).
 TransformManifest:
   XslTransform (v2015.1.12.0)
@@ -95,26 +95,26 @@ Done Building Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentatio
 
 Build succeeded.
 
-Time Elapsed 00:00:04.16
-    Last step completed in 00:00:05.1186
+Time Elapsed 00:00:04.10
+    Last step completed in 00:00:05.2687
 </buildStep>
 <buildStep step="GenerateNamespaceSummaries">
 Generating namespace summary information...
-    Last step completed in 00:00:00.0936
+    Last step completed in 00:00:00.1976
 </buildStep>
 <buildStep step="CopyAdditionalContent">
 Copying additional content files...
 No additional content to copy
-    Last step completed in 00:00:00.0591
+    Last step completed in 00:00:00.0075
 </buildStep>
 <buildStep step="MergeTablesOfContents">
 Merging conceptual and additional tables of contents...
-    Last step completed in 00:00:00.0343
+    Last step completed in 00:00:00.0030
 </buildStep>
 <buildStep step="GenerateIntermediateTableOfContents">
 Generating intermediate table of contents file...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 10/12/2015 12:46:34 AM.
+Build started 10/12/2015 12:54:55 AM.
 Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\GenerateIntermediateTOC.proj&quot; on node 1 (default targets).
 GenerateIntermediateTOC:
   XslTransform (v2015.1.12.0)
@@ -125,24 +125,24 @@ Done Building Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentatio
 
 Build succeeded.
 
-Time Elapsed 00:00:03.08
+Time Elapsed 00:00:03.67
 Generating conceptual content intermediate TOC file...
-    Last step completed in 00:00:04.1638
+    Last step completed in 00:00:04.9564
 </buildStep>
 <buildStep step="CreateBuildAssemblerConfigs">
 Creating Sandcastle configuration files...
     sandcastle.config
-    Last step completed in 00:00:00.4632
+    Last step completed in 00:00:00.7927
 </buildStep>
 <buildStep step="MergeCustomConfigs">
 Merging custom build component configurations
 C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\sandcastle.config
-    Last step completed in 00:00:00.1341
+    Last step completed in 00:00:00.0791
 </buildStep>
 <buildStep step="BuildReferenceTopics">
 Building reference help topics...
 [C:\Windows\Microsoft.NET\Framework64\v4.0.30319\MSBuild.exe]
-Build started 10/12/2015 12:46:39 AM.
+Build started 10/12/2015 12:55:01 AM.
 Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj&quot; on node 1 (default targets).
 BuildReferenceTopics:
   BuildAssembler (v2015.1.12.0)
@@ -150,8 +150,6 @@ BuildReferenceTopics:
   Portions Copyright c 2006-2014, Eric Woodruff, All Rights Reserved.
   Loading configuration...
   Processing topics...
-BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.GameLogic] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Models.Cells] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Models.Coordinates] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Models.Field] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.Models.Mines] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
@@ -228,26 +226,25 @@ BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTes
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTests.PlayerBaseClassTests.VerifyThatPlayerScoreIsSetCorrectlyIfValidDataIsProvided_ValidScoreNotZero] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTests.PlayerBaseClassTests.VerifyThatPlayerScoreIsSetCorrectlyIfValidDataIsProvided_Zero] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.Tests.PlayerTests.PlayerBaseClassTests.VerifyThatPlayerScoreIsSetTZeroIfInvalidDataIsProvided_NegativeNumber] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
-BuildAssembler : warning : ShowMissingComponent: [N:BattleField2.ViewModels.Contracts] Missing &lt;summary&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GameOver(System.String,System.Int32)] Missing &lt;param name=&quot;gameOverMessage&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GameOver(System.String,System.Int32)] Missing &lt;param name=&quot;detonatedMines&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GetFieldSize(System.String)] Missing &lt;param name=&quot;inviteToGiveSizeMessage&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GetInputCoordinates(System.String)] Missing &lt;param name=&quot;inviteToEnterCoordinatesMessage&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
 BuildAssembler : warning : ShowMissingComponent: [M:BattleField2.ViewModels.Contracts.IViewModel.GiveMinesCount(System.Int32)] Missing &lt;param name=&quot;count&quot;/&gt; documentation [C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj]
   Processed 224 topic(s)
-  84 warning(s)
+  81 warning(s)
   CopyFromIndexComponent: &quot;reflection&quot; in-memory cache entries used: 2 of 15.
   CopyFromIndexComponent: &quot;comments&quot; in-memory cache entries used: 5 of 30.
 Done Building Project &quot;C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\BuildReferenceTopics.proj&quot; (default targets).
 
 Build succeeded.
 
-Time Elapsed 00:00:26.94
-    Last step completed in 00:00:28.8658
+Time Elapsed 00:00:28.17
+    Last step completed in 00:00:30.0328
 </buildStep>
 <buildStep step="CombiningIntermediateTocFiles">
 Combining conceptual and API intermediate TOC files...
-    Last step completed in 00:00:00.0350
+    Last step completed in 00:00:00.0285
 </buildStep>
 <buildStep step="ExtractingHtmlInfo">
 Extracting HTML info for HTML Help 1 and/or website...
@@ -263,7 +260,7 @@ Processed 224 HTML files
 Sorting keywords and generating See Also indices
 Saving HTML Help 1 keyword index to C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Documentation.hhk
 Saving HTML Help 1 table of contents to C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Documentation.hhc
-    Last step completed in 00:00:03.1342
+    Last step completed in 00:00:02.8219
 </buildStep>
 <buildStep step="CopyStandardHelpContent">
 Copying standard help content...
@@ -330,19 +327,19 @@ C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyle
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-CN.css -&gt; C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\HtmlHelp1\styles\branding-zh-CN.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding-zh-TW.css -&gt; C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\HtmlHelp1\styles\branding-zh-TW.css
 C:\Program Files (x86)\EWSoftware\Sandcastle Help File Builder\PresentationStyles\VS2013\styles\branding.css -&gt; C:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\HtmlHelp1\styles\branding.css
-    Last step completed in 00:00:01.9569
+    Last step completed in 00:00:02.1153
 </buildStep>
 <buildStep step="GenerateHelpFormatTableOfContents">
 Generating HTML Help 1 table of contents file...
-    Last step completed in 00:00:00.0310
+    Last step completed in 00:00:00.0251
 </buildStep>
 <buildStep step="GenerateHelpFileIndex">
 Generating HTML Help 1 index file...
-    Last step completed in 00:00:00.0375
+    Last step completed in 00:00:00.0213
 </buildStep>
 <buildStep step="GenerateHelpProject">
 Generating HTML Help 1 project file...
-    Last step completed in 00:00:00.0480
+    Last step completed in 00:00:00.0290
 </buildStep>
 <buildStep step="CompilingHelpFile">
 Compiling HTML Help 1 file...
@@ -371,19 +368,19 @@ Compiling HTML Help 1 file...
   
   
   
-  Created c:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\HtmlHelp1\Documentation.chm, 292,091 bytes
+  Created c:\Users\Ivan\Documents\GitHub\Teamwork\Documentation\Working\Output\HtmlHelp1\Documentation.chm, 292,203 bytes
   
-  Compression decreased file by 1,548,480 bytes.
+  Compression decreased file by 1,548,307 bytes.
   
-    Last step completed in 00:00:07.1058
+    Last step completed in 00:00:06.5137
 </buildStep>
 <buildStep step="CleanIntermediates">
 Removing intermediate files...
-    Last step completed in 00:00:00.6619
+    Last step completed in 00:00:00.6796
 </buildStep>
 <buildStep step="Completed">
 
-Build completed successfully at 10/12/2015 12:47:20 AM.  Total time: 00:01:02.6885
+Build completed successfully at 10/12/2015 12:55:43 AM.  Total time: 00:01:02.8727
 
 </buildStep>
 </shfbBuild>
