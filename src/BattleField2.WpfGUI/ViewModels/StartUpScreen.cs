@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BattleField2.Models.Coordinates;
+using BattleField2.Models.Mines;
 
 namespace BattleField2.WpfGUI.ViewModels
 {
@@ -30,20 +32,57 @@ using System.Collections.ObjectModel;
     {
         private string fieldSizeInput = "5";
         private string playerNameImput = "YourName";
-        private Visibility startUpVisibility = Visibility.Visible;
-        private Visibility gameVisibility = Visibility.Hidden;
+        private Visibility startUpVisibility = Visibility.Hidden;
+        private Visibility gameVisibility = Visibility.Visible;
         private Visibility gameOverVisibility = Visibility.Visible;
+        private int detonatedMines;
 
         private Field battleField;
 
-        public ObservableCollection<Cell> Cells;
+        private ObservableCollection<ObservableCell> cells;
+
+        public int DetonatedMines
+        {
+            get { return detonatedMines; }
+            set { detonatedMines = value; }
+        }
         
-        
+
+        public ObservableCollection<ObservableCell> Cells
+        {
+            get { return cells; }
+            set { cells = value; }
+        }
+
+        public RelayCommand DetonateCell { get; set; }
 
         public StartUpScreen()
         {
-            this.SendInitialInfo = new RelayCommand(this.OnSendInitialInfoExecute, this.OnSendInitialInfoCanExecute);
+            this.DetonateCell = new RelayCommand(this.OnDetonateCellExecute, this.OnDetonateCellCanExecute);
+            int fieldSize = 5;
+            this.BattleField = new Field(fieldSize);
+            this.Cells = new ObservableCollection<ObservableCell>();
+            this.DetonatedMines = 0;
+            this.BattleField.DetonatedMines = 0;
+
+            this.BattleField.GenerateField();
+
+            this.BattleField.PositionMines();
+
+            for (int i = 0; i < fieldSize; i++)
+            {
+                for (int j = 0; j < fieldSize; j++)
+                {
+                    this.Cells.Add(new ObservableCell(this.BattleField.FieldPositions[i, j], i, j));
+                }
+            }
+            
+            // this.SendInitialInfo = new RelayCommand(this.OnSendInitialInfoExecute, this.OnSendInitialInfoCanExecute);
         }
+
+
+
+       
 
         public RelayCommand SendInitialInfo { get; set; }
 
@@ -141,13 +180,56 @@ using System.Collections.ObjectModel;
             this.InitializeGame();
         }
 
+        private bool OnDetonateCellCanExecute(object sender)
+        {
+            if (sender is ObservableCell)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private void OnDetonateCellExecute(object sender)
+        {
+            int row = (sender as ObservableCell).Row;
+            int col = (sender as ObservableCell).Col;
+            Coordinates currentCoordinates = new Coordinates(row, col);
+
+            this.BattleField.FieldPositions = (this.battleField.FieldPositions[row, col] as Explosive).Detonate(
+                    this.BattleField.FieldPositions, currentCoordinates);
+            ReloadPositions();
+        }
+
+        private void ReloadPositions()
+        {
+            int fieldSize = this.BattleField.FieldPositions.GetLength(0); 
+            
+            for (int i = 0; i < fieldSize; i++)
+            {
+                for (int j = 0; j < fieldSize; j++)
+                {
+                    this.Cells.Add(new ObservableCell(this.BattleField.FieldPositions[i, j], i, j));
+                }
+            }
+        }
+
         private void InitializeGame()
         {
-            this.BattleField = new Field(int.Parse(this.FieldSizeInput));
+            int fieldSize = int.Parse(this.FieldSizeInput);
+            this.BattleField = new Field(fieldSize);
+            this.Cells = new ObservableCollection<ObservableCell>();
 
             this.battleField.GenerateField();
 
             this.battleField.PositionMines();
+
+            for (int i = 0; i < fieldSize; i++)
+            {
+                for (int j = 0; j < fieldSize; j++)
+                {
+                    this.Cells.Add(new ObservableCell(this.BattleField.FieldPositions[i, j], i, j));
+                }
+            }
         }
     }
 }

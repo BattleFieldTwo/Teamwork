@@ -54,12 +54,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="CellTemplateSelector.cs" />
+    <Compile Include="Converter\GridMarginConverter.cs" />
+    <Compile Include="Converter\PositionConverter.cs" />
+    <Compile Include="ObservableCell.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="ViewModels\StartUpScreen.cs" />
-    <Page Include="ButtonRecources.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="CellTemplates.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -111,15 +110,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Icons\BlueBerry-01.png" />
-    <Resource Include="Icons\Egg-01.png" />
-    <Resource Include="Icons\Fox-01.png" />
-    <Resource Include="Icons\Hen-01.png" />
-    <Resource Include="Icons\Lamb-01.png" />
-    <Resource Include="Icons\Milk-01.png" />
-    <Resource Include="Icons\Rabbit-01.png" />
-    <Resource Include="Icons\RaspBerry-01.png" />
-    <Resource Include="Icons\Wolf-01.png" />
+    <Resource Include="Icons\Detonated.png" />
+    <Resource Include="Icons\Empty.png" />
+    <Resource Include="Icons\Mine1.png" />
+    <Resource Include="Icons\Mine2.png" />
+    <Resource Include="Icons\Mine3.png" />
+    <Resource Include="Icons\Mine4.png" />
+    <Resource Include="Icons\Mine5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

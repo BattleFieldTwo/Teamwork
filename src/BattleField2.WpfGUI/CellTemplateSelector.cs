@@ -7,39 +7,39 @@ namespace BattleField2.WpfGUI
 {
     class CellTemplateSelector : DataTemplateSelector
     {
-        public DataTemplate MineFiveTemplate { get; set; }
+        public DataTemplate SelectorMineOneTemplate { get; set; }
 
-        public DataTemplate MineFourTemplate { get; set; }
+        public DataTemplate SelectorMineTwoTemplate { get; set; }
 
-        public DataTemplate MineThreeTemplate { get; set; }
+        public DataTemplate SelectorMineThreeTemplate { get; set; }
 
-        public DataTemplate MineTwoTemplate { get; set; }
+        public DataTemplate SelectorMineFourTemplate { get; set; }
 
-        public DataTemplate MineOneTemplate { get; set; }
+        public DataTemplate SelectorMineFiveTemplate { get; set; }
 
-        public DataTemplate EmptyCellTemplate { get; set; }
+        public DataTemplate SelectorEmptyCellTemplate { get; set; }
 
-        public DataTemplate DetonatedCellTemplate { get; set; }
+        public DataTemplate SelectorDetonatedCellTemplate { get; set; }
 
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
-            Cell o = item as Cell;
-            switch (o.GetType().Name)
+            ObservableCell o = item as ObservableCell;
+            switch (o.CurrentCell.GetType().Name)
             {
                 case "MineLevelOneUpgrade":
-                    return MineOneTemplate;
+                    return SelectorMineOneTemplate;
                 case "MineLevelTwoUpgrade":
-                    return MineTwoTemplate;
+                    return SelectorMineTwoTemplate;
                 case "MineLevelThreeUpgrade":
-                    return MineThreeTemplate;
+                    return SelectorMineThreeTemplate;
                 case "MineLevelFourUpgrade":
-                    return MineFourTemplate;
+                    return SelectorMineFourTemplate;
                 case "MineLevelFiveUpgrade":
-                    return MineFiveTemplate;
+                    return SelectorMineFiveTemplate;
                 case "EmptyCell":
-                    return EmptyCellTemplate;
+                    return SelectorEmptyCellTemplate;
                 case "DetonatedCell":
-                    return DetonatedCellTemplate;
+                    return SelectorDetonatedCellTemplate;
                 default: return null;
             }
         }
