@@ -4,9 +4,18 @@ namespace BattleField2.Models.Mines
     using Cells;
     using Coordinates;
     using System.Collections.Generic;
-
+    /// <summary>
+    /// Mine abstract class to be inherited by a concrete Mine types.
+    /// </summary>
     public abstract class Mine : Cell, IExplosive
     {
+        /// <summary>
+        /// Detonate abstract method coming from the IExplosive interface.
+        /// Defines the detonation logic of a given mine.
+        /// </summary>
+        /// <param name="fieldPositions">Position parameter.</param>
+        /// <param name="currentCoordinates">Coordinates parameter.</param>
+        /// <returns></returns>
         public abstract Cell[,] Detonate(Cell[,] fieldPositions, Coordinates currentCoordinates);
 
         //Checking if entered coordinates are valid
