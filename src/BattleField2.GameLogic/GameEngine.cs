@@ -91,7 +91,6 @@
             this.currentPlayer = new Player(inputPlayerName);
         }
 
-        //TODO refactor this method
         private Coordinates EnterInputCoordinates()
         {
 
