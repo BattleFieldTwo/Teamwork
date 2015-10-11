@@ -20,7 +20,7 @@ using BattleField2.Models.Mines;
 namespace BattleField2.WpfGUI.ViewModels
 {
 
-    using BattleField2.Common;
+using BattleField2.Common;
 using BattleField2.Models.Cells;
 using BattleField2.Models.Field;
 using System.Collections.ObjectModel;
@@ -195,7 +195,7 @@ using System.Collections.ObjectModel;
             int col = (sender as ObservableCell).Col;
             Coordinates currentCoordinates = new Coordinates(row, col);
 
-            this.BattleField.FieldPositions = (this.battleField.FieldPositions[row, col] as Explosive).Detonate(
+            this.BattleField.FieldPositions = (this.battleField.FieldPositions[row, col] as IExplosive).Detonate(
                     this.BattleField.FieldPositions, currentCoordinates);
             ReloadPositions();
         }
