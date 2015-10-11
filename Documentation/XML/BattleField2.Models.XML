@@ -137,6 +137,73 @@
             <param name="inputCoordinates">Input coordinates to be validated.</param>
             <returns>Return boolean representing the validity of the input coordinates.</returns>
         </member>
+        <member name="T:BattleField2.Models.Mines.IExplosive">
+            <summary>
+            Interface IExplosive to be implemented by a concrete Explosive class.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Mines.IExplosive.Detonate(BattleField2.Models.Cells.Cell[0:,0:],BattleField2.Models.Coordinates.Coordinates)">
+            <summary>
+            Method that should implement a detonation logic for the mines.
+            </summary>
+            <param name="fieldPositions">Detonation position.</param>
+            <param name="currentCoordinates">Coordinates on the field.</param>
+            <returns></returns>
+        </member>
+        <member name="T:BattleField2.Models.Mines.Mine">
+            <summary>
+            Mine abstract class to be inherited by a concrete Mine types.
+            </summary>
+        </member>
+        <member name="M:BattleField2.Models.Mines.Mine.Detonate(BattleField2.Models.Cells.Cell[0:,0:],BattleField2.Models.Coordinates.Coordinates)">
+            <summary>
+            Detonate abstract method coming from the IExplosive interface.
+            Defines the detonation logic of a given mine.
+            </summary>
+            <param name="fieldPositions">Position parameter.</param>
+            <param name="currentCoordinates">Coordinates parameter.</param>
+            <returns></returns>
+        </member>
+        <member name="T:BattleField2.Models.Mines.MineType">
+            <summary>
+            Enumeration that holds the MineType types.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Models.Mines.MineType.MineOne">
+            <summary>
+            Mine of type one.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Models.Mines.MineType.MineTwo">
+            <summary>
+            Mime of type two.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Models.Mines.MineType.MineThree">
+            <summary>
+            Mine of type three.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Models.Mines.MineType.MineFour">
+            <summary>
+            Mine of type four.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Models.Mines.MineType.MineFive">
+            <summary>
+            Mine of type five.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Models.Mines.MineType.MineCount">
+            <summary>
+            Mine count.
+            </summary>
+        </member>
+        <member name="F:BattleField2.Models.Mines.MineType.None">
+            <summary>
+            None type.
+            </summary>
+        </member>
         <member name="T:BattleField2.Models.Coordinates.Coordinates">
             <summary>
             Coordinates struct defines and handles the game field coordinates.
