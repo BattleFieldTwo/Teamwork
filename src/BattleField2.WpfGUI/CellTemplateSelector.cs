@@ -11,20 +11,44 @@
     /// </summary>
     class CellTemplateSelector : DataTemplateSelector
     {
+        /// <summary>
+        /// Data template for representing Mine one in XAML view
+        /// </summary>
         public DataTemplate SelectorMineOneTemplate { get; set; }
 
+        /// <summary>
+        /// Data template for representing Mine two in XAML view
+        /// </summary>
         public DataTemplate SelectorMineTwoTemplate { get; set; }
 
+        /// <summary>
+        /// Data template for representing Mine three in XAML view
+        /// </summary>
         public DataTemplate SelectorMineThreeTemplate { get; set; }
 
+        /// <summary>
+        /// Data template for representing Mine four in XAML view
+        /// </summary>
         public DataTemplate SelectorMineFourTemplate { get; set; }
 
+        /// <summary>
+        /// Data template for representing Mine five in XAML view
+        /// </summary>
         public DataTemplate SelectorMineFiveTemplate { get; set; }
 
+        /// <summary>
+        /// Data template for representing Empty cell in XAML view
+        /// </summary>
         public DataTemplate SelectorEmptyCellTemplate { get; set; }
 
+        /// <summary>
+        /// Data template for representing Detonated cell in XAML view
+        /// </summary>
         public DataTemplate SelectorDetonatedCellTemplate { get; set; }
 
+        /// <summary>
+        /// Data template method, based on the type of the input cell
+        /// </summary>
         public override DataTemplate SelectTemplate(object item, DependencyObject container)
         {
             ObservableCellDecorator o = item as ObservableCellDecorator;

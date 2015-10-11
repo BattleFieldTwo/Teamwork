@@ -12,6 +12,9 @@
         private int col;
         private int row;
 
+        /// <summary>
+        /// COnstructor taking as arguments Cell and two numbers - for the position of the cell
+        /// </summary>
         public ObservableCellDecorator(Cell cellToBeDecorated, int row, int col)
             :base(cellToBeDecorated)
         {
@@ -20,12 +23,18 @@
             this.Col = col;
         }
 
+        /// <summary>
+        /// Col position property of the Cell
+        /// </summary>
         public int Col
         {
             get { return col; }
             set { col = value; }
         }
 
+        /// <summary>
+        /// Row position property of the Cell
+        /// </summary>
         public int Row
         {
             get { return row; }
