@@ -2,6 +2,11 @@
 {
     using BattleField2.Models.Cells;
 
+    /// <summary>
+    /// This is a concrete decorator implementation for the Cell class.
+    /// Needed to pass additional info to the XAML View
+    /// Implementing Decorator design pattern
+    /// </summary>
     public class ObservableCellDecorator : CellDecorator
     {
         private int col;

@@ -4,6 +4,10 @@
     using System.Globalization;
     using System.Windows.Data;
 
+    /// <summary>
+    /// This is an converter, passing values for defining the margin of the Grid element
+    /// in which all the Cells are placed in the XAML View.
+    /// </summary>
     public class GridMarginConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

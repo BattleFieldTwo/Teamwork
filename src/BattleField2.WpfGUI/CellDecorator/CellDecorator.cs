@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BattleField2.WpfGUI.CellDecorator
+﻿namespace BattleField2.WpfGUI.CellDecorator
 {
     using BattleField2.Models.Cells;
 
+    /// <summary>
+    /// This is an abstract decorator implementation for the Cell class.
+    /// Implementing Decorator design pattern
+    /// </summary>
     public abstract class CellDecorator : Cell
     {
         protected Cell cellToBeDecorated;

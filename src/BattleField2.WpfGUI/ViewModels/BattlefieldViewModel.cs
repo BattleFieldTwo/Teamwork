@@ -14,6 +14,8 @@ namespace BattleField2.WpfGUI.ViewModels
 
     /// <summary>
     /// Interaction logic for BattlefieldView.xaml
+    /// This is the game ViewModel class.
+    /// Implements MVVM Architectural pattern
     /// </summary>
     public class BattlefieldViewModel : Window, INotifyPropertyChanged
     {

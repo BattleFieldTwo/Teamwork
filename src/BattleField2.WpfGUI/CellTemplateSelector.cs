@@ -5,6 +5,10 @@
 
     using BattleField2.WpfGUI.CellDecorator;
 
+    /// <summary>
+    /// This is template selector class, determing which specific Cell template
+    /// is passed to the XAML Canvas of the View.
+    /// </summary>
     class CellTemplateSelector : DataTemplateSelector
     {
         public DataTemplate SelectorMineOneTemplate { get; set; }
